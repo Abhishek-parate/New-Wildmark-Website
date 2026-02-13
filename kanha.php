@@ -7,21 +7,7 @@ include 'includes/header.php';
 ?>
 <style>
 
-    .container { width:100%; max-width:100%; margin-left:auto; margin-right:auto; padding-left:1rem; padding-right:1rem; }
-    @media(min-width:640px){.container{max-width:640px}}
-    @media(min-width:768px){.container{max-width:768px}}
-    @media(min-width:1024px){.container{max-width:1024px}}
-    @media(min-width:1280px){.container{max-width:1200px}}
 
-    /* Nav dropdown */
-    .dropdown:hover .mega-menu, .dropdown .mega-menu:hover { display:block; }
-    .mega-menu { display:none; position:absolute; padding-top:1rem; margin-top:-1rem; }
-
-    /* Mobile menu */
-    .mobile-menu { max-height:0; overflow:hidden; transition:max-height .3s ease-out; }
-    .mobile-menu.active { max-height:800px; }
-    .mobile-packages-dropdown { max-height:0; overflow:hidden; transition:max-height .3s ease-in-out; }
-    .mobile-packages-dropdown.active { max-height:500px; }
 
     /* ── HERO ── */
     .kanha-hero {
@@ -337,7 +323,7 @@ include 'includes/header.php';
     
   </style>
 
-<header class="relative h-[70vh] md:h-[80vh] lg:h-[90vh] flex items-end"
+<header class="relative h-[50vh] md:h-[60vh] lg:h-[80vh] flex items-end"
         style="background: url('images/home3.webp') center/cover no-repeat">
         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
 </header>
@@ -1620,36 +1606,8 @@ include 'includes/header.php';
     </svg>
   </a>
 
-  <!-- AOS -->
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    AOS.init({ duration: 900, once: true, offset: 80 });
 
-    // Hero bg load effect
-    window.addEventListener('load', () => {
-      document.getElementById('heroBg')?.classList.add('loaded');
-    });
-
-    // Mobile nav
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const mobilePackagesBtn = document.getElementById('mobilePackagesBtn');
-    const mobilePackagesDropdown = document.getElementById('mobilePackagesDropdown');
-    const packagesArrow = document.getElementById('packagesArrow');
-
-    mobileMenuBtn?.addEventListener('click', e => { e.stopPropagation(); mobileMenu.classList.toggle('active'); });
-    mobilePackagesBtn?.addEventListener('click', e => {
-      e.preventDefault(); e.stopPropagation();
-      mobilePackagesDropdown.classList.toggle('active');
-      packagesArrow.style.transform = mobilePackagesDropdown.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
-    });
-    document.addEventListener('click', e => {
-      if (!mobileMenu?.contains(e.target) && !mobileMenuBtn?.contains(e.target)) {
-        mobileMenu?.classList.remove('active');
-        mobilePackagesDropdown?.classList.remove('active');
-        if (packagesArrow) packagesArrow.style.transform = 'rotate(0deg)';
-      }
-    });
 
     // Flora/Fauna Tabs - RENAMED FUNCTION
     function switchFloraFaunaTab(tab, btn) {
