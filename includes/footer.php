@@ -5,7 +5,7 @@
         <!-- About -->
         <div>
           <!-- Logo -->
-          <a href="home.php" class="flex items-center">
+          <a href="index.php" class="flex items-center">
             <img 
               src="images/WILD.png" 
               alt="Wildmark Resort Kanha Logo" 
@@ -36,7 +36,7 @@
           </h4>
           <ul class="space-y-2 text-sm">
             <li>
-              <a href="home.php" class="text-gray-400 hover:text-amber-500 transition">Home</a>
+              <a href="index.php" class="text-gray-400 hover:text-amber-500 transition">Home</a>
             </li>
             <li>
               <a href="Wildmark.php" class="text-gray-400 hover:text-amber-500 transition">Wildmark</a>

@@ -219,278 +219,139 @@ include 'includes/header.php';
 
     </div>
 </section>
-<!-- FAQs Section - Contact Page Related -->
+<!-- FAQs Section - Contact Page -->
 <section class="py-16 md:py-24 bg-black">
-    <div class="container mx-auto max-w-4xl px-4 md:px-6">
-        <div class="text-center mb-12 md:mb-16">
-            <p class="text-amber-500 text-xs tracking-widest mb-4 font-light" data-aos="fade-down">
-                QUICK ANSWERS
-            </p>
-            <h2 class="text-3xl md:text-5xl font-serif mb-6" data-aos="zoom-in">
-                Frequently Asked Questions
-            </h2>
-            <p class="text-sm md:text-base text-gray-300 max-w-2xl mx-auto leading-relaxed" data-aos="fade-up"
-                data-aos-delay="200">
-                Get instant answers to common questions about bookings and our resort
-            </p>
-        </div>
-
-        <div class="space-y-4" data-aos="fade-up" data-aos-duration="1000">
-            <!-- FAQ 1 -->
-            <div class="faq-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
-                <button
-                    class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
-                    <span class="text-base md:text-lg font-serif text-white pr-4">How can I make a booking at Wildmark
-                        Resort Kanha?</span>
-                    <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300"
-                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                </button>
-                <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                    <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
-                        <p class="text-sm md:text-base text-gray-300 leading-relaxed mb-3">
-                            You can make a booking through multiple convenient methods:
-                        </p>
-                        <ul class="text-sm md:text-base text-gray-300 space-y-2 ml-4">
-                            <li class="flex items-start gap-2">
-                                <span class="text-amber-500">•</span>
-                                <span><strong>Call us directly:</strong> +91 9405529731 or +91 7719806444</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="text-amber-500">•</span>
-                                <span><strong>Email us:</strong> kanhawildmark@gmail.com</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="text-amber-500">•</span>
-                                <span><strong>WhatsApp:</strong> Click the floating WhatsApp button on our
-                                    website</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="text-amber-500">•</span>
-                                <span><strong>Contact form:</strong> Fill out the form on this page and we'll respond
-                                    within 24 hours</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ 2 -->
-            <div class="faq-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
-                <button
-                    class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
-                    <span class="text-base md:text-lg font-serif text-white pr-4">What is the best time to visit
-                        Wildmark Resort Kanha?</span>
-                    <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300"
-                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                </button>
-                <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                    <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
-                        <p class="text-sm md:text-base text-gray-300 leading-relaxed mb-3">
-                            Kanha National Park is open from mid-October to end of June. The best time to visit depends
-                            on your preferences:
-                        </p>
-                        <ul class="text-sm md:text-base text-gray-300 space-y-2 ml-4">
-                            <li class="flex items-start gap-2">
-                                <span class="text-amber-500">•</span>
-                                <span><strong>November to February:</strong> Cool weather, pleasant climate, ideal for
-                                    safaris</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="text-amber-500">•</span>
-                                <span><strong>March to June:</strong> Summer months, best for tiger sightings as animals
-                                    come to water holes</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="text-amber-500">•</span>
-                                <span><strong>Peak Season:</strong> December to March offers the best overall
-                                    experience</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ 3 -->
-            <div class="faq-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
-                <button
-                    class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
-                    <span class="text-base md:text-lg font-serif text-white pr-4">How quickly will I receive a response
-                        to my inquiry?</span>
-                    <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300"
-                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                </button>
-                <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                    <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
-                        <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-                            We pride ourselves on quick response times! Phone and WhatsApp inquiries are typically
-                            answered within a few hours during business hours (9 AM to 8 PM IST). Email and contact form
-                            submissions receive responses within 24 hours. For urgent booking requests or last-minute
-                            queries, we recommend calling us directly or using WhatsApp for the fastest response.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ 4 -->
-            <div class="faq-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
-                <button
-                    class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
-                    <span class="text-base md:text-lg font-serif text-white pr-4">Can you help me arrange safari
-                        bookings at Kanha National Park?</span>
-                    <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300"
-                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                </button>
-                <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                    <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
-                        <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-                            Yes, absolutely! We provide complete safari booking assistance as an additional service. Our
-                            team has expert knowledge of all safari zones (Kanha, Kisli, Mukki, and Sarhi) and can help
-                            you secure permits for both morning and evening safaris. We also provide experienced
-                            naturalist guides who can maximize your wildlife sighting opportunities. Contact us as early
-                            as possible, as safari permits are limited and book quickly during peak season.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ 5 -->
-            <div class="faq-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
-                <button
-                    class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
-                    <span class="text-base md:text-lg font-serif text-white pr-4">How far is Wildmark Resort from the
-                        nearest airport and railway station?</span>
-                    <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300"
-                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                </button>
-                <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                    <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
-                        <p class="text-sm md:text-base text-gray-300 leading-relaxed mb-3">
-                            Wildmark Resort is well-connected to major transportation hubs:
-                        </p>
-                        <ul class="text-sm md:text-base text-gray-300 space-y-2 ml-4">
-                            <li class="flex items-start gap-2">
-                                <span class="text-amber-500">•</span>
-                                <span><strong>Nearest Airport:</strong> Jabalpur Airport (170 km, approximately 4 hours)
-                                    and Nagpur Airport (250 km, approximately 5 hours)</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="text-amber-500">•</span>
-                                <span><strong>Nearest Railway Station:</strong> Jabalpur Railway Station (170 km) and
-                                    Gondia Railway Station (145 km)</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="text-amber-500">•</span>
-                                <span><strong>Airport/Railway Pick-up:</strong> We can arrange pick-up and drop services
-                                    at additional cost. Please inquire when booking.</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ 6 -->
-            <div class="faq-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
-                <button
-                    class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
-                    <span class="text-base md:text-lg font-serif text-white pr-4">What payment methods do you accept for
-                        bookings?</span>
-                    <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300"
-                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                </button>
-                <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                    <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
-                        <p class="text-sm md:text-base text-gray-300 leading-relaxed mb-3">
-                            We accept multiple payment methods for your convenience:
-                        </p>
-                        <ul class="text-sm md:text-base text-gray-300 space-y-2 ml-4">
-                            <li class="flex items-start gap-2">
-                                <span class="text-amber-500">•</span>
-                                <span><strong>Bank Transfer/NEFT/RTGS:</strong> Direct bank transfers</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="text-amber-500">•</span>
-                                <span><strong>Online Payment:</strong> UPI, Paytm, PhonePe, Google Pay</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="text-amber-500">•</span>
-                                <span><strong>Credit/Debit Cards:</strong> All major cards accepted</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="text-amber-500">•</span>
-                                <span><strong>Cash:</strong> Accepted at the resort for on-site payments</span>
-                            </li>
-                        </ul>
-                        <p class="text-sm md:text-base text-gray-300 leading-relaxed mt-3">
-                            Advance payment is required to confirm your booking. Our team will provide complete payment
-                            details upon booking confirmation.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ 7 -->
-            <div class="faq-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
-                <button
-                    class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
-                    <span class="text-base md:text-lg font-serif text-white pr-4">Do you offer customized packages for
-                        special occasions?</span>
-                    <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300"
-                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                </button>
-                <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                    <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
-                        <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-                            Yes! We love creating memorable experiences for special occasions. Whether it's a honeymoon,
-                            anniversary, birthday celebration, family reunion, or corporate retreat, we can customize
-                            packages to suit your needs. Special arrangements may include private dinners, decorated
-                            rooms, special amenities, customized safari schedules, and more. Contact us with your
-                            requirements, and our team will create a personalized package that makes your celebration
-                            truly special.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ 8 -->
-            <div class="faq-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
-                <button
-                    class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
-                    <span class="text-base md:text-lg font-serif text-white pr-4">Can I visit the resort to see the
-                        facilities before booking?</span>
-                    <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300"
-                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                </button>
-                <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                    <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
-                        <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-                            Absolutely! We welcome guests who wish to visit and inspect our facilities before making a
-                            booking. We recommend calling ahead to schedule your visit so we can ensure someone from our
-                            team is available to show you around and answer your questions. You can also check our photo
-                            gallery on the website, or request a virtual tour via video call. Our office in Nagpur
-                            (address: B.No. 8, Rajlaxmi Apartment Near Bhende Layout, Pannase Layout, Nagpur – 440022)
-                            is also open for in-person consultations.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="container mx-auto max-w-4xl px-4 md:px-6">
+    <div class="text-center mb-12 md:mb-16">
+      <p class="text-amber-500 text-xs tracking-widest mb-4 font-light" data-aos="fade-down">
+        QUICK ANSWERS
+      </p>
+      <h2 class="text-3xl md:text-5xl font-serif mb-6" data-aos="zoom-in">
+        Frequently Asked Questions
+      </h2>
+      <p class="text-sm md:text-base text-gray-300 max-w-2xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+        Common questions about contacting and booking with Wildmark Resort Kanha
+      </p>
     </div>
+
+    <div class="space-y-4" data-aos="fade-up" data-aos-duration="1000">
+
+      <!-- FAQ 1 -->
+      <div class="faq-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
+        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
+          <span class="text-base md:text-lg font-serif text-white pr-4">
+            How can I contact Wildmark Resort for booking inquiries?
+          </span>
+          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+          <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
+            <p class="text-sm md:text-base text-gray-300 leading-relaxed">
+              You can contact us via phone, WhatsApp, email, or by filling out the contact form on this page. Our team will assist you with resort and safari bookings.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="faq-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
+        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
+          <span class="text-base md:text-lg font-serif text-white pr-4">
+            What is the fastest way to get a response?
+          </span>
+          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+          <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
+            <p class="text-sm md:text-base text-gray-300 leading-relaxed">
+              Calling us directly or sending a WhatsApp message is the fastest way. These are usually answered within a few hours during working hours.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="faq-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
+        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
+          <span class="text-base md:text-lg font-serif text-white pr-4">
+            How long does it take to reply to emails or form submissions?
+          </span>
+          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+          <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
+            <p class="text-sm md:text-base text-gray-300 leading-relaxed">
+              We respond to all emails and contact form messages within 24 hours.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="faq-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
+        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
+          <span class="text-base md:text-lg font-serif text-white pr-4">
+            Can you help with Kanha safari bookings through this page?
+          </span>
+          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+          <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
+            <p class="text-sm md:text-base text-gray-300 leading-relaxed">
+              Yes, you can contact us here for both resort stay and Mukki Gate safari bookings. We’ll guide you through the full process.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 5 -->
+      <div class="faq-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
+        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
+          <span class="text-base md:text-lg font-serif text-white pr-4">
+            Where is your office located for in-person consultation?
+          </span>
+          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+          <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
+            <p class="text-sm md:text-base text-gray-300 leading-relaxed">
+              You can visit our Nagpur office for consultation. Please call us in advance to schedule your visit.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 6 -->
+      <div class="faq-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
+        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
+          <span class="text-base md:text-lg font-serif text-white pr-4">
+            Can I visit the resort before making a booking?
+          </span>
+          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+          <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
+            <p class="text-sm md:text-base text-gray-300 leading-relaxed">
+              Yes, you’re welcome to visit the resort to see the facilities. Please contact us in advance so we can arrange a proper visit or virtual tour.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
 
 <!-- Page-specific styles -->

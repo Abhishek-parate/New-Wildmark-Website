@@ -1,59 +1,13 @@
-<!doctype html>
-<html lang="en">
+<?php 
+// Set page-specific title
+$pageTitle = "About Us - Wildmark Resort Kanha";
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-  <title>About Us - Wildmark Resort Kanha | Luxury Wildlife Resort Experience</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
-  <!-- AOS Library -->
-  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&display=swap"
-    rel="stylesheet" />
-
-  <!-- Font Awesome 6 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+// Include header
+include 'includes/header.php'; 
+?>
 
   <style>
-    /* CRITICAL OVERFLOW FIXES */
-    * {
-      box-sizing: border-box;
-    }
-
-    html,
-    body {
-      max-width: 100vw;
-      overflow-x: hidden;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: "Roboto Mono", monospace;
-    }
-
-    .font-serif {
-      font-family: "Roboto Slab", serif;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: "Roboto Slab", serif;
-    }
-
+  
     /* Responsive Container */
     .container {
       width: 100%;
@@ -162,10 +116,6 @@
       border-radius: 50%;
     }
 
-    /* Smooth scrolling */
-    html {
-      scroll-behavior: smooth;
-    }
 
     /* Feature Cards */
     .feature-card {
@@ -198,141 +148,8 @@
       color: #2d5a47;
     }
   </style>
-</head>
 
-<body class="bg-neutral-900 text-white overflow-x-hidden">
-  <!-- Navigation -->
-  <nav class="fixed w-full bg-black z-50 py-3 md:py-2 border-b border-neutral-800" data-aos="fade-down"
-    data-aos-duration="800">
-    <div class="container mx-auto px-3 md:px-6">
-      <!-- Mobile Layout -->
-      <div class="flex md:hidden justify-between items-center relative">
-        <!-- Mobile Hamburger -->
-        <button id="mobileMenuBtn" class="text-white hover:text-amber-500 transition z-20 p-1">
-          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
 
-        <!-- Center Logo on Mobile -->
-        <div class="absolute left-1/2 transform -translate-x-1/2">
-          <a href="home.php" class="flex items-center">
-            <img src="images/WILD.png" alt="Wildmark Resort Kanha Logo" class="h-14 w-auto object-contain" />
-          </a>
-        </div>
-
-        <!-- Right Side - Only Book Now Button -->
-        <div class="flex items-center">
-          <a href="contact.php" class="bg-amber-600 hover:bg-amber-700 px-3 py-2 transition text-xs font-semibold">
-            BOOK NOW
-          </a>
-        </div>
-      </div>
-
-      <!-- Desktop Layout -->
-      <div class="hidden md:flex justify-between items-center">
-        <!-- Left - Logo Desktop -->
-        <div class="flex items-center">
-          <a href="home.php" class="flex items-center">
-            <img src="images/WILD.png" alt="Wildmark Resort Kanha Logo"
-              class="h-12 md:h-14 lg:h-16 w-auto object-contain" />
-          </a>
-        </div>
-
-        <!-- Center - Menu Items Desktop -->
-        <div class="flex-1 flex justify-center">
-          <div class="flex space-x-4 lg:space-x-8 text-xs lg:text-sm font-light tracking-wider items-center">
-            <a href="home.php" class="hover:text-amber-500 transition">Home</a>
-            <a href="about.php" class="hover:text-amber-500 transition">About</a>
-            <a href="How-to-Reach.php" class="hover:text-amber-500 transition">How to Reach</a>
-            <a href="kanha.php" class="hover:text-amber-500 transition">Kanha</a>
-
-            <!-- Packages Dropdown -->
-            <div class="relative dropdown group">
-              <button class="hover:text-amber-500 transition flex items-center">
-                Packages
-                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                </svg>
-              </button>
-              <div class="mega-menu absolute left-0 top-full bg-black border border-neutral-800 shadow-2xl w-64">
-                <div class="p-6 space-y-3">
-                  <a href="Kanha-Tour-Package.php"
-                    class="block text-white hover:text-amber-500 transition py-2">Kanha Tour Package</a>
-                  <a href="Kanha-Safari-Tour-Package.php"
-                    class="block text-white hover:text-amber-500 transition py-2">Kanha Safari Tour Package</a>
-                  <a href="Kanha-Kisli-Tour-Package.php"
-                    class="block text-white hover:text-amber-500 transition py-2">Kanha Kisli Tour Package</a>
-                  <a href="Mukki-Zone-Tour-Package.php"
-                    class="block text-white hover:text-amber-500 transition py-2">Mukki Zone Tour Package</a>
-                  <a href="Kanha-Tiger-Safari-Tour-Package.php"
-                    class="block text-white hover:text-amber-500 transition py-2">Kanha Tiger Safari Tour Package</a>
-                </div>
-              </div>
-            </div>
-
-            <a href="Wildmark.php" class="hover:text-amber-500 transition">Wildmark</a>
-          </div>
-        </div>
-
-        <!-- Right - Book Now Button Desktop -->
-        <div class="flex items-center">
-          <a href="contact.php"
-            class="text-sm font-light tracking-wider bg-amber-600 hover:bg-amber-700 px-6 py-2 transition whitespace-nowrap">BOOK NOW</a>
-        </div>
-      </div>
-
-      <!-- Mobile Menu -->
-      <div id="mobileMenu" class="mobile-menu md:hidden mt-4">
-        <div class="flex flex-col space-y-3 py-4">
-          <a href="home.php" class="text-white hover:text-amber-500 py-2 border-b border-neutral-800">Home</a>
-          <a href="How-to-Reach.php" class="hover:text-amber-500 transition py-2 border-b border-neutral-800">How to Reach</a>
-          <a href="about.php" class="hover:text-amber-500 transition py-2 border-b border-neutral-800">About</a>
-          <a href="kanha.php" class="hover:text-amber-500 transition py-2 border-b border-neutral-800">Kanha</a>
-
-          <!-- Packages Dropdown -->
-          <div class="border-b border-neutral-800">
-            <button id="mobilePackagesBtn"
-              class="w-full text-left text-white hover:text-amber-500 py-2 flex justify-between items-center">
-              <span>Packages</span>
-              <svg id="packagesArrow" class="w-5 h-5 transition-transform duration-300" fill="none"
-                stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-              </svg>
-            </button>
-
-            <!-- Dropdown Content -->
-            <div id="mobilePackagesDropdown" class="mobile-packages-dropdown">
-              <div class="flex flex-col pl-4 space-y-2 pb-3 pt-2">
-                <a href="Kanha-Tour-Package.php"
-                  class="text-gray-300 hover:text-amber-400 py-2 text-sm border-l-2 border-neutral-700 pl-3 hover:border-amber-500 transition">
-                  Kanha Tour Package
-                </a>
-                <a href="Kanha-Safari-Tour-Package.php"
-                  class="text-gray-300 hover:text-amber-400 py-2 text-sm border-l-2 border-neutral-700 pl-3 hover:border-amber-500 transition">
-                  Kanha Safari Tour Package
-                </a>
-                <a href="Kanha-Kisli-Tour-Package.php"
-                  class="text-gray-300 hover:text-amber-400 py-2 text-sm border-l-2 border-neutral-700 pl-3 hover:border-amber-500 transition">
-                  Kanha Kisli Tour Package
-                </a>
-                <a href="Mukki-Zone-Tour-Package.php"
-                  class="text-gray-300 hover:text-amber-400 py-2 text-sm border-l-2 border-neutral-700 pl-3 hover:border-amber-500 transition">
-                  Mukki Zone Tour Package
-                </a>
-                <a href="Kanha-Tiger-Safari-Tour-Package.php"
-                  class="text-gray-300 hover:text-amber-400 py-2 text-sm border-l-2 border-neutral-700 pl-3 hover:border-amber-500 transition">
-                  Kanha Tiger Safari Tour Package
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <a href="Wildmark.php" class="hover:text-amber-500 transition py-2 border-b border-neutral-800">Wildmark</a>
-        </div>
-      </div>
-    </div>
-  </nav>
 <header class="relative h-[90vh] md:h-[80vh] lg:h-[90vh] flex items-end"
         style="background: url('images/about3.webp') center/cover no-repeat">
         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
@@ -729,34 +546,34 @@
 
     </div>
   </section>
-  <!-- FAQs Section - About Page Related -->
 <section class="py-16 md:py-24 bg-[#121212]">
-  <div class="container mx-auto max-w-4xl px-4 md:px-6">
+  <div class="container mx-auto max-w-5xl px-4 md:px-6">
     <div class="text-center mb-12 md:mb-16">
       <p class="text-amber-500 text-xs tracking-widest mb-4 font-light" data-aos="fade-down">
-        YOUR QUESTIONS ANSWERED
+        ABOUT WILDMARK • FAQs
       </p>
       <h2 class="text-3xl md:text-5xl font-serif mb-6" data-aos="zoom-in">
-        Frequently Asked Questions
+        About Wildmark Resort Kanha – FAQs
       </h2>
       <p class="text-sm md:text-base text-gray-300 max-w-2xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
-        Everything you need to know about Wildmark Resort Kanha
+        Answers based only on our About page information
       </p>
     </div>
 
-    <div class="space-y-4" data-aos="fade-up" data-aos-duration="1000">
+    <div class="space-y-4 max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
+
       <!-- FAQ 1 -->
       <div class="faq-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
-        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
-          <span class="text-base md:text-lg font-serif text-white pr-4">What makes Wildmark Resort unique compared to other resorts in Kanha?</span>
-          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <button class="faq-question w-full text-left px-5 md:px-6 py-4 md:py-5 flex justify-between items-center hover:bg-neutral-800 transition">
+          <span class="text-base md:text-lg font-serif text-white pr-4">Where is Wildmark Resort located in Kanha?</span>
+          <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
-        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-          <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
+        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+          <div class="px-5 md:px-6 py-4 md:py-5 bg-neutral-800/50 border-t border-neutral-700">
             <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-              Wildmark Resort stands out with its perfect blend of luxury and nature. Located in a pristine natural setting near Kanha National Park, we offer premium accommodations with modern amenities while maintaining an authentic wilderness experience. Our multiple TripAdvisor Travellers' Choice Awards (2020, 2021, 2022, 2025) reflect our commitment to exceptional hospitality, expert safari guidance, and sustainable tourism practices.
+              Wildmark Resort is located near the famous Khatiya Gate in Kanha Tiger Reserve, surrounded by the Khatiya Buffer Zone and lush forest landscapes.
             </p>
           </div>
         </div>
@@ -764,16 +581,16 @@
 
       <!-- FAQ 2 -->
       <div class="faq-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
-        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
-          <span class="text-base md:text-lg font-serif text-white pr-4">How close is Wildmark Resort to Kanha National Park?</span>
-          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <button class="faq-question w-full text-left px-5 md:px-6 py-4 md:py-5 flex justify-between items-center hover:bg-neutral-800 transition">
+          <span class="text-base md:text-lg font-serif text-white pr-4">What kind of surroundings does the resort offer?</span>
+          <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
-        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-          <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
+        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+          <div class="px-5 md:px-6 py-4 md:py-5 bg-neutral-800/50 border-t border-neutral-700">
             <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-              We are strategically located at the doorstep of Kanha National Park, offering easy access to both Kanha-Kisli and Mukki safari zones. This prime location allows you to reach the park gates quickly for early morning safaris, maximizing your chances of wildlife sightings while enjoying the comfort of returning to our resort within minutes.
+              The resort is set in tranquil forests with lush greenery, offering peaceful sunrise and sunset views along with melodious bird calls every morning.
             </p>
           </div>
         </div>
@@ -781,16 +598,16 @@
 
       <!-- FAQ 3 -->
       <div class="faq-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
-        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
-          <span class="text-base md:text-lg font-serif text-white pr-4">What type of accommodation and amenities does Wildmark Resort offer?</span>
-          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <button class="faq-question w-full text-left px-5 md:px-6 py-4 md:py-5 flex justify-between items-center hover:bg-neutral-800 transition">
+          <span class="text-base md:text-lg font-serif text-white pr-4">What types of rooms are available at Wildmark Resort?</span>
+          <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
-        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-          <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
+        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+          <div class="px-5 md:px-6 py-4 md:py-5 bg-neutral-800/50 border-t border-neutral-700">
             <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-              Our resort features luxury rooms with modern architecture and premium amenities including comfortable bedding, private sit-outs with garden views, attached bathrooms with hot water, air conditioning, and all essential facilities. We also offer multi-cuisine dining, 24/7 room service, safari booking assistance, expert naturalist guidance, and recreational facilities—all set in a lush green natural environment.
+              We offer Super Deluxe Rooms and Family Rooms with modern amenities, garden views, private sit-outs, and open shower facilities.
             </p>
           </div>
         </div>
@@ -798,16 +615,16 @@
 
       <!-- FAQ 4 -->
       <div class="faq-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
-        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
-          <span class="text-base md:text-lg font-serif text-white pr-4">Does Wildmark Resort follow eco-friendly and sustainable practices?</span>
-          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <button class="faq-question w-full text-left px-5 md:px-6 py-4 md:py-5 flex justify-between items-center hover:bg-neutral-800 transition">
+          <span class="text-base md:text-lg font-serif text-white pr-4">Is Wildmark Resort suitable for wildlife lovers and photographers?</span>
+          <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
-        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-          <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
+        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+          <div class="px-5 md:px-6 py-4 md:py-5 bg-neutral-800/50 border-t border-neutral-700">
             <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-              Yes, sustainability is one of our core values. We are committed to eco-friendly practices that minimize our environmental footprint. We actively participate in wildlife conservation efforts, support local communities, practice responsible waste management, use energy-efficient systems, and promote sustainable tourism. Our goal is to ensure that future generations can experience Kanha's natural beauty just as you do today.
+              Yes, the resort is ideal for wildlife enthusiasts and photographers as it is close to Kanha Tiger Reserve and surrounded by rich natural beauty.
             </p>
           </div>
         </div>
@@ -815,118 +632,25 @@
 
       <!-- FAQ 5 -->
       <div class="faq-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
-        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
-          <span class="text-base md:text-lg font-serif text-white pr-4">What can guests expect to see in Kanha National Park during their stay?</span>
-          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <button class="faq-question w-full text-left px-5 md:px-6 py-4 md:py-5 flex justify-between items-center hover:bg-neutral-800 transition">
+          <span class="text-base md:text-lg font-serif text-white pr-4">Is Wildmark Resort pet-friendly and accessible?</span>
+          <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
-        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-          <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
+        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+          <div class="px-5 md:px-6 py-4 md:py-5 bg-neutral-800/50 border-t border-neutral-700">
             <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-              Kanha National Park spans 940 square kilometers and is home to diverse wildlife including the Royal Bengal Tiger, Barasingha (the jewel of Kanha), leopards, sloth bears, Indian wild dogs, spotted deer, sambar deer, gaur, and over 300 species of birds. Our expert naturalists and safari guides will help maximize your wildlife sighting opportunities during both morning and evening safaris.
+              Yes, Wildmark Resort is pet-friendly and also accessible for specially abled guests with wheelchair support and easy access facilities.
             </p>
           </div>
         </div>
       </div>
 
-      <!-- FAQ 6 -->
-      <div class="faq-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
-        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
-          <span class="text-base md:text-lg font-serif text-white pr-4">Is Wildmark Resort suitable for families with children?</span>
-          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </button>
-        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-          <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
-            <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-              Absolutely! Wildmark Resort is perfect for families. We provide a safe, comfortable environment where children can experience nature and wildlife in a controlled setting. Our spacious rooms, multi-cuisine dining, garden areas, and family-friendly atmosphere make it an ideal destination for creating lasting memories with loved ones. We also offer recreational facilities and can arrange educational nature walks for children.
-            </p>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
-  <!-- Footer -->
-  <footer class="bg-black py-12 border-t border-neutral-800">
-    <div class="max-w-7xl mx-auto px-4 md:px-6">
-      <div class="grid md:grid-cols-4 gap-8 mb-8">
-        <!-- About -->
-        <div>
-          <a href="home.php" class="flex items-center">
-            <img src="images/WILD.png" alt="Wildmark Resort Kanha Logo"
-              class="h-12 md:h-16 lg:h-20 w-auto object-contain" />
-          </a>
-          <p class="text-gray-400 text-sm mb-4">
-            Unforgettable Wildlife Adventure Await at Kanha Jungle Safari. See tigers, deer, leopards & more on a personalized jungle safari.
-          </p>
-          <div class="flex gap-3">
-            <a href="#" class="text-gray-400 hover:text-amber-500 transition">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" class="text-gray-400 hover:text-amber-500 transition">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#" class="text-gray-400 hover:text-amber-500 transition">
-              <i class="fab fa-youtube"></i>
-            </a>
-          </div>
-        </div>
 
-        <!-- Quick Links -->
-        <div>
-          <h4 class="text-lg font-serif font-bold text-amber-100 mb-4">Quick Links</h4>
-          <ul class="space-y-2 text-sm">
-            <li><a href="home.php" class="text-gray-400 hover:text-amber-500 transition">Home</a></li>
-            <li><a href="Wildmark.php" class="text-gray-400 hover:text-amber-500 transition">Wildmark</a></li>
-            <li><a href="How-to-Reach.php" class="text-gray-400 hover:text-amber-500 transition">How to Reach</a></li>
-            <li><a href="gallery.php" class="text-gray-400 hover:text-amber-500 transition">Gallery</a></li>
-            <li><a href="contact.php" class="text-gray-400 hover:text-amber-500 transition">Contact Us</a></li>
-          </ul>
-        </div>
-
-        <!-- Help Center -->
-        <div>
-          <h4 class="text-lg font-serif font-bold text-amber-100 mb-4">Help Center</h4>
-          <ul class="space-y-2 text-sm">
-            <li><a href="Privacy-Policy.php" class="text-gray-400 hover:text-amber-500 transition">Privacy Policy</a></li>
-            <li><a href="Terms-and-Conditions.php" class="text-gray-400 hover:text-amber-500 transition">Terms and Conditions</a></li>
-            <li><a href="Cancellation-Policy.php" class="text-gray-400 hover:text-amber-500 transition">Cancellation Policy</a></li>
-          </ul>
-        </div>
-
-        <!-- Contact Info -->
-        <div>
-          <h4 class="text-lg font-serif font-bold text-amber-100 mb-4">Contact Info</h4>
-          <ul class="space-y-3 text-sm text-gray-400">
-            <li class="flex items-start gap-2">
-              <i class="fa-solid fa-location-dot text-amber-500 mt-1"></i>
-              <span>B.No. 8, Rajlaxmi Apartment Near Bhende Layout, Pannase Layout, Nagpur – 440022.</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <i class="fa-solid fa-envelope text-amber-500"></i>
-              <a href="mailto:kanhawildmark@gmail.com" class="text-gray-400 hover:text-amber-500 transition">kanhawildmark@gmail.com</a>
-            </li>
-            <li class="flex items-center gap-2">
-              <i class="fa-solid fa-phone text-amber-500"></i>
-              <a href="tel:9405529731" class="text-gray-400 hover:text-amber-500 transition">+91 9405529731</a>
-            </li>
-            <li class="flex items-center gap-2">
-              <i class="fa-solid fa-phone text-amber-500"></i>
-              <a href="tel:7719806444" class="text-gray-400 hover:text-amber-500 transition">+91 7719806444</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Bottom Bar -->
-      <div class="border-t border-neutral-800 pt-6 text-center">
-        <p class="text-gray-500 text-xs">© 2025 Wildmark Resort Kanha. All Rights Reserved.</p>
-      </div>
-    </div>
-  </footer>
 
   <!-- WhatsApp Floating Button -->
   <a href="https://wa.me/9405529731" target="_blank"
@@ -937,64 +661,11 @@
     </svg>
   </a>
 
-  <!-- AOS Init -->
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
   <script>
-    // Initialize AOS
-    AOS.init({
-      duration: 900,
-      once: true,
-      offset: 80,
-    });
-
-    // Mobile Menu Toggle
-    const mobileMenuBtn = document.getElementById("mobileMenuBtn");
-    const mobileMenu = document.getElementById("mobileMenu");
-
-    if (mobileMenuBtn && mobileMenu) {
-      mobileMenuBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        mobileMenu.classList.toggle("active");
-      });
-    }
-
-    // Mobile Packages Dropdown Toggle
-    const mobilePackagesBtn = document.getElementById("mobilePackagesBtn");
-    const mobilePackagesDropdown = document.getElementById("mobilePackagesDropdown");
-    const packagesArrow = document.getElementById("packagesArrow");
-
-    if (mobilePackagesBtn && mobilePackagesDropdown) {
-      mobilePackagesBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        mobilePackagesDropdown.classList.toggle("active");
-        if (mobilePackagesDropdown.classList.contains("active")) {
-          packagesArrow.style.transform = "rotate(180deg)";
-        } else {
-          packagesArrow.style.transform = "rotate(0deg)";
-        }
-      });
-    }
-
-    // Close mobile menu when clicking outside
-    document.addEventListener("click", (e) => {
-      if (mobileMenu && mobileMenuBtn) {
-        if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-          mobileMenu.classList.remove("active");
-          if (mobilePackagesDropdown) {
-            mobilePackagesDropdown.classList.remove("active");
-            if (packagesArrow) {
-              packagesArrow.style.transform = "rotate(0deg)";
-            }
-          }
-        }
-      }
-    });
 
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      anchor.addEventListener("click", function (e) {
+      anchor.addEventListener("click", function (e) { 
         const href = this.getAttribute("href");
         if (href !== "#" && href !== "#book") {
           e.preventDefault();
@@ -1050,7 +721,7 @@
     });
   });
 </script>
-
-</body>
-
-</html>
+<?php 
+// Include footer
+include 'includes/footer.php'; 
+?>

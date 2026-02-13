@@ -1,130 +1,11 @@
-<!doctype html>
-<html lang="en">
+<?php 
+// Set page-specific title
+$pageTitle = "Family Double Bedded Rooms - Wildmark Resort Kanha";
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-  <title>Family Double Bedded Rooms - Wildmark Resort Kanha</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-
-  <!-- AOS Library -->
-  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&display=swap"
-    rel="stylesheet" />
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <style>
-    /* CRITICAL OVERFLOW FIXES */
-    * {
-      box-sizing: border-box;
-    }
-
-    html,
-    body {
-      max-width: 100vw;
-      overflow-x: hidden;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: "Roboto Mono", monospace;
-    }
-
-    .font-serif {
-      font-family: "Roboto Slab", serif;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: "Roboto Slab", serif;
-    }
-
-    /* Responsive Container */
-    .container {
-      width: 100%;
-      max-width: 100%;
-      margin-left: auto;
-      margin-right: auto;
-      padding-left: 1rem;
-      padding-right: 1rem;
-    }
-
-    @media (min-width: 640px) {
-      .container {
-        max-width: 640px;
-      }
-    }
-
-    @media (min-width: 768px) {
-      .container {
-        max-width: 768px;
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .container {
-        max-width: 1024px;
-      }
-    }
-
-    @media (min-width: 1280px) {
-      .container {
-        max-width: 1200px;
-      }
-    }
-
-    /* IMPROVED DROPDOWN */
-    .dropdown {
-      position: relative;
-    }
-
-    .dropdown:hover .mega-menu,
-    .dropdown .mega-menu:hover {
-      display: block;
-    }
-
-    .mega-menu {
-      display: none;
-      position: absolute;
-      padding-top: 1rem;
-      margin-top: -1rem;
-    }
-
-    /* Mobile menu */
-    .mobile-menu {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease-out;
-    }
-
-    .mobile-menu.active {
-      max-height: 800px;
-    }
-
-    .mobile-packages-dropdown {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease-in-out;
-    }
-
-    .mobile-packages-dropdown.active {
-      max-height: 500px;
-    }
+// Include header
+include 'includes/header.php'; 
+?>
+<style>
 
     /* Feature Cards with Icons */
     .feature-card {
@@ -219,144 +100,8 @@
       display: block;
     }
   </style>
-</head>
 
-<body class="bg-neutral-900 text-white overflow-x-hidden">
-  <!-- Navigation -->
-  <nav class="fixed w-full bg-black z-50 py-3 md:py-2 border-b border-neutral-800" data-aos="fade-down"
-    data-aos-duration="800">
-    <div class="container mx-auto px-3 md:px-6">
-      <!-- Mobile Layout -->
-      <div class="flex md:hidden justify-between items-center relative">
-        <!-- Mobile Hamburger -->
-        <button id="mobileMenuBtn" class="text-white hover:text-amber-500 transition z-20 p-1">
-          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
 
-        <!-- Center Logo on Mobile -->
-        <div class="absolute left-1/2 transform -translate-x-1/2">
-          <a href="home.php" class="flex items-center">
-            <img src="images/WILD.png" alt="Wildmark Resort Kanha Logo" class="h-14 w-auto object-contain" />
-          </a>
-        </div>
-
-        <!-- Right Side - Only Book Now Button -->
-        <div class="flex items-center">
-          <a href="contact.php" class="bg-amber-600 hover:bg-amber-700 px-3 py-2 transition text-xs font-semibold">
-            BOOK NOW
-          </a>
-        </div>
-      </div>
-
-      <!-- Desktop Layout -->
-      <div class="hidden md:flex justify-between items-center">
-        <!-- Left - Logo Desktop -->
-        <div class="flex items-center">
-          <a href="home.php" class="flex items-center">
-            <img src="images/WILD.png" alt="Wildmark Resort Kanha Logo"
-              class="h-12 md:h-14 lg:h-16 w-auto object-contain" />
-          </a>
-        </div>
-
-        <!-- Center - Menu Items Desktop -->
-        <div class="flex-1 flex justify-center">
-          <div class="flex space-x-4 lg:space-x-8 text-xs lg:text-sm font-light tracking-wider items-center">
-            
-            <a href="home.php" class="hover:text-amber-500 transition">Home</a>
-            <a href="about.php" class="hover:text-amber-500 transition">About</a>
-            <a href="How-to-Reach.php" class="hover:text-amber-500 transition">How to Reach</a>
-            <a href="kanha.php" class="hover:text-amber-500 transition">Kanha</a>
-
-            <!-- Packages Dropdown -->
-            <div class="relative dropdown group">
-              <button class="hover:text-amber-500 transition flex items-center">
-                Packages
-                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                </svg>
-              </button>
-              <div class="mega-menu absolute left-0 top-full bg-black border border-neutral-800 shadow-2xl w-64">
-                <div class="p-6 space-y-3">
-                  <a href="Kanha-Tour-Package.php"
-                    class="block text-white hover:text-amber-500 transition py-2">Kanha Tour Package</a>
-                  <a href="Kanha-Safari-Tour-Package.php"
-                    class="block text-white hover:text-amber-500 transition py-2">Kanha Safari Tour Package</a>
-                  <a href="Kanha-Kisli-Tour-Package.php"
-                    class="block text-white hover:text-amber-500 transition py-2">Kanha Kisli Tour Package</a>
-                  <a href="Mukki-Zone-Tour-Package.php"
-                    class="block text-white hover:text-amber-500 transition py-2">Mukki Zone Tour Package</a>
-                  <a href="Kanha-Tiger-Safari-Tour-Package.php"
-                    class="block text-white hover:text-amber-500 transition py-2">Kanha Tiger Safari Tour Package</a>
-           
-                </div>
-              </div>
-            </div>
-
-            <a href="Wildmark.php" class="hover:text-amber-500 transition">Wildmark</a>
-          </div>
-        </div>
-
-        <!-- Right - Book Now Button Desktop -->
-        <div class="flex items-center">
-          <a href="contact.php"
-            class="text-sm font-light tracking-wider bg-amber-600 hover:bg-amber-700 px-6 py-2 transition whitespace-nowrap">BOOK
-            NOW</a>
-        </div>
-      </div>
-
-      <!-- Mobile Menu -->
-      <div id="mobileMenu" class="mobile-menu md:hidden mt-4">
-        <div class="flex flex-col space-y-3 py-4">
-          <a href="home.php" class="text-white hover:text-amber-500 py-2 border-b border-neutral-800">Home</a>
-          <a href="How-to-Reach.php" class="hover:text-amber-500 transition py-2 border-b border-neutral-800">How to
-            Reach</a>
-            <a href="kanha.php" class="hover:text-amber-500 transition">Kanha</a>
-            <a href="about.php" class="hover:text-amber-500 transition">About</a>
-
-          <!-- Packages Dropdown -->
-          <div class="border-b border-neutral-800">
-            <button id="mobilePackagesBtn"
-              class="w-full text-left text-white hover:text-amber-500 py-2 flex justify-between items-center">
-              <span>Packages</span>
-              <svg id="packagesArrow" class="w-5 h-5 transition-transform duration-300" fill="none"
-                stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-              </svg>
-            </button>
-
-            <div id="mobilePackagesDropdown" class="mobile-packages-dropdown">
-              <div class="flex flex-col pl-4 space-y-2 pb-3 pt-2">
-                <a href="Kanha-Tour-Package.php"
-                  class="text-gray-300 hover:text-amber-400 py-2 text-sm border-l-2 border-neutral-700 pl-3 hover:border-amber-500 transition">
-                  Kanha Tour Package
-                </a>
-                <a href="Kanha-Safari-Tour-Package.php"
-                  class="text-gray-300 hover:text-amber-400 py-2 text-sm border-l-2 border-neutral-700 pl-3 hover:border-amber-500 transition">
-                  Kanha Safari Tour Package
-                </a>
-                <a href="Kanha-Kisli-Tour-Package.php"
-                  class="text-gray-300 hover:text-amber-400 py-2 text-sm border-l-2 border-neutral-700 pl-3 hover:border-amber-500 transition">
-                  Kanha Kisli Tour Package
-                </a>
-                <a href="Mukki-Zone-Tour-Package.php"
-                  class="text-gray-300 hover:text-amber-400 py-2 text-sm border-l-2 border-neutral-700 pl-3 hover:border-amber-500 transition">
-                  Mukki Zone Tour Package
-                </a>
-                <a href="Kanha-Tiger-Safari-Tour-Package.php"
-                  class="text-gray-300 hover:text-amber-400 py-2 text-sm border-l-2 border-neutral-700 pl-3 hover:border-amber-500 transition">
-                  Kanha Tiger Safari Tour Package
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <a href="Wildmark.php" class="hover:text-amber-500 transition py-2 border-b border-neutral-800">Wildmark</a>
-        </div>
-      </div>
-    </div>
-  </nav>
 
   <!-- Hero Section -->
   <section class="relative h-[60vh] md:h-[70vh] flex items-center justify-center overflow-hidden pt-16" data-aos="fade">
@@ -1099,30 +844,33 @@
 <section class="py-16 md:py-24 bg-neutral-900">
   <div class="container mx-auto max-w-4xl px-4 md:px-6">
     <div class="text-center mb-12 md:mb-16">
-      <p class="text-amber-500 text-xs tracking-widest mb-4 font-light" data-aos="fade-down">
+      <p class="text-amber-500 text-xs tracking-widest mb-4 font-light">
         COMMON QUERIES
       </p>
-      <h2 class="text-3xl md:text-5xl font-serif mb-6" data-aos="zoom-in">
+      <h2 class="text-3xl md:text-5xl font-serif mb-6">
         Family Room FAQs
       </h2>
-      <p class="text-sm md:text-base text-gray-300 max-w-2xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+      <p class="text-sm md:text-base text-gray-300 max-w-2xl mx-auto leading-relaxed">
         Everything you need to know about our Family Double Bedded Rooms
       </p>
     </div>
 
-    <div class="space-y-4" data-aos="fade-up" data-aos-duration="1000">
+    <div class="space-y-4">
+
       <!-- FAQ 1 -->
       <div class="faq-item bg-black border border-neutral-800 rounded-xl overflow-hidden">
         <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
-          <span class="text-base md:text-lg font-serif text-white pr-4">How many guests can comfortably stay in a Family Double Bedded Room?</span>
-          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <span class="text-base md:text-lg font-serif text-white pr-4">
+            How many guests can stay in a Family Double Bedded Room?
+          </span>
+          <svg class="faq-icon w-6 h-6 text-amber-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
-        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
           <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
-            <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-              Our Family Double Bedded Rooms are designed to comfortably accommodate up to 4 guests. The room features two beds (king or double size) providing flexible sleeping arrangements for families or groups of friends. The spacious layout ensures everyone has enough personal space and comfort during their stay at Wildmark Resort.
+            <p class="text-gray-300">
+              Our Family Double Bedded Rooms are designed to comfortably accommodate up to 4 guests. The room includes two spacious beds, making it ideal for families, small groups, or friends traveling together.
             </p>
           </div>
         </div>
@@ -1131,42 +879,18 @@
       <!-- FAQ 2 -->
       <div class="faq-item bg-black border border-neutral-800 rounded-xl overflow-hidden">
         <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
-          <span class="text-base md:text-lg font-serif text-white pr-4">What amenities are included in the Family Double Bedded Room?</span>
-          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <span class="text-base md:text-lg font-serif text-white pr-4">
+            Are the Family Rooms air-conditioned?
+          </span>
+          <svg class="faq-icon w-6 h-6 text-amber-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
-        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
           <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
-            <p class="text-sm md:text-base text-gray-300 leading-relaxed mb-3">
-              Our Family Rooms come fully equipped with modern amenities including:
+            <p class="text-gray-300">
+              Yes, all Family Double Bedded Rooms are fully air-conditioned to ensure a comfortable stay in every season.
             </p>
-            <ul class="text-sm md:text-base text-gray-300 space-y-2 ml-4">
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span>Air conditioning for climate control</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span>Private sit-out area with garden views</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span>Modern attached bathroom with hot water 24/7</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span>Wi-Fi connectivity</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span>Mini-bar (in select rooms)</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span>Quality bedding and furniture</span>
-              </li>
-            </ul>
           </div>
         </div>
       </div>
@@ -1174,15 +898,17 @@
       <!-- FAQ 3 -->
       <div class="faq-item bg-black border border-neutral-800 rounded-xl overflow-hidden">
         <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
-          <span class="text-base md:text-lg font-serif text-white pr-4">Can we request extra bedding for children in the Family Room?</span>
-          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <span class="text-base md:text-lg font-serif text-white pr-4">
+            Do the rooms have a garden view?
+          </span>
+          <svg class="faq-icon w-6 h-6 text-amber-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
-        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
           <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
-            <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-              Yes, absolutely! We can provide extra bedding or rollaway beds for children upon request. Please inform us at the time of booking or contact us in advance so we can arrange this for you. Additional charges may apply for extra bedding. We want to ensure your entire family has a comfortable night's sleep during your wildlife adventure.
+            <p class="text-gray-300">
+              Yes, most of our Family Rooms offer a peaceful garden-facing view, allowing you to relax amidst greenery and natural surroundings.
             </p>
           </div>
         </div>
@@ -1191,15 +917,17 @@
       <!-- FAQ 4 -->
       <div class="faq-item bg-black border border-neutral-800 rounded-xl overflow-hidden">
         <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
-          <span class="text-base md:text-lg font-serif text-white pr-4">Are the Family Double Bedded Rooms suitable for elderly guests or those with mobility issues?</span>
-          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <span class="text-base md:text-lg font-serif text-white pr-4">
+            Is extra bedding available for children or additional guests?
+          </span>
+          <svg class="faq-icon w-6 h-6 text-amber-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
-        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
           <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
-            <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-              Yes, our resort is designed to be accessible for all guests. We offer wheelchair-accessible rooms and ground floor room options for elderly guests or those with mobility concerns. Our staff is trained to provide assistance as needed. We also have doctor-on-call facility available 24/7 for medical emergencies. Please mention any special requirements at the time of booking so we can allocate the most suitable room for your needs.
+            <p class="text-gray-300">
+              Yes, extra bedding can be provided on request for children or additional guests. Please inform us at the time of booking.
             </p>
           </div>
         </div>
@@ -1208,38 +936,18 @@
       <!-- FAQ 5 -->
       <div class="faq-item bg-black border border-neutral-800 rounded-xl overflow-hidden">
         <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
-          <span class="text-base md:text-lg font-serif text-white pr-4">What dining options are available for families staying at the resort?</span>
-          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <span class="text-base md:text-lg font-serif text-white pr-4">
+            Are the Family Rooms suitable for senior citizens?
+          </span>
+          <svg class="faq-icon w-6 h-6 text-amber-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
-        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
           <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
-            <p class="text-sm md:text-base text-gray-300 leading-relaxed mb-3">
-              We offer comprehensive dining options perfect for families:
+            <p class="text-gray-300">
+              Absolutely. Our resort is wheelchair accessible and offers ground-floor room options, making it comfortable for senior citizens and differently-abled guests.
             </p>
-            <ul class="text-sm md:text-base text-gray-300 space-y-2 ml-4">
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Multi-cuisine restaurant:</strong> Indian, Continental, and local specialties</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Kid-friendly menu:</strong> Special meals for children available</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Dietary accommodations:</strong> Vegetarian, vegan, and special dietary requirements catered to</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Bush-style dining:</strong> Outdoor meals and bonfire dinners</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Flexible meal times:</strong> Early/late breakfast options for safari schedules</span>
-              </li>
-            </ul>
           </div>
         </div>
       </div>
@@ -1247,15 +955,17 @@
       <!-- FAQ 6 -->
       <div class="faq-item bg-black border border-neutral-800 rounded-xl overflow-hidden">
         <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
-          <span class="text-base md:text-lg font-serif text-white pr-4">Are pets allowed in the Family Double Bedded Rooms?</span>
-          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <span class="text-base md:text-lg font-serif text-white pr-4">
+            Is Wi-Fi available in the Family Rooms?
+          </span>
+          <svg class="faq-icon w-6 h-6 text-amber-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
-        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
           <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
-            <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-              Yes, Wildmark Resort is pet-friendly! We welcome your furry family members in our Family Double Bedded Rooms. However, we request that you inform us in advance about bringing pets so we can make appropriate arrangements and provide you with our pet policy guidelines. Please note that pets must be well-behaved and supervised at all times, especially in common areas. Additional cleaning charges may apply.
+            <p class="text-gray-300">
+              Yes, complimentary high-speed Wi-Fi is available in all rooms and public areas of the resort.
             </p>
           </div>
         </div>
@@ -1264,42 +974,18 @@
       <!-- FAQ 7 -->
       <div class="faq-item bg-black border border-neutral-800 rounded-xl overflow-hidden">
         <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
-          <span class="text-base md:text-lg font-serif text-white pr-4">What activities are available for children at the resort?</span>
-          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <span class="text-base md:text-lg font-serif text-white pr-4">
+            Are pets allowed in Family Double Bedded Rooms?
+          </span>
+          <svg class="faq-icon w-6 h-6 text-amber-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
-        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
           <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
-            <p class="text-sm md:text-base text-gray-300 leading-relaxed mb-3">
-              We offer plenty of activities to keep children entertained and engaged:
+            <p class="text-gray-300">
+              Yes, we are a pet-friendly resort. Please inform us in advance if you are traveling with your pet so we can make suitable arrangements.
             </p>
-            <ul class="text-sm md:text-base text-gray-300 space-y-2 ml-4">
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span>Kids' play area with safe outdoor equipment</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span>Swimming pool with designated children's section</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span>Nature walks and birdwatching (age-appropriate)</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span>Indoor games like carrom, chess, and board games</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span>Outdoor sports facilities</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span>Evening wildlife documentaries and bonfire stories</span>
-              </li>
-            </ul>
           </div>
         </div>
       </div>
@@ -1307,15 +993,17 @@
       <!-- FAQ 8 -->
       <div class="faq-item bg-black border border-neutral-800 rounded-xl overflow-hidden">
         <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
-          <span class="text-base md:text-lg font-serif text-white pr-4">Can you help arrange safari bookings for our family?</span>
-          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <span class="text-base md:text-lg font-serif text-white pr-4">
+            Is room service available?
+          </span>
+          <svg class="faq-icon w-6 h-6 text-amber-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
-        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
           <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
-            <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-              Absolutely! We provide complete safari booking assistance for all zones of Kanha National Park including Kanha, Kisli, Mukki, and Sarhi zones. Our team can arrange both morning and evening safaris, provide experienced naturalist guides, and coordinate pick-up/drop services. We recommend booking safaris well in advance, especially during peak season, as permits are limited. Our naturalists are skilled at making safari experiences educational and exciting for children of all ages.
+            <p class="text-gray-300">
+              Yes, we provide room service for food and beverages during designated hours.
             </p>
           </div>
         </div>
@@ -1324,15 +1012,17 @@
       <!-- FAQ 9 -->
       <div class="faq-item bg-black border border-neutral-800 rounded-xl overflow-hidden">
         <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
-          <span class="text-base md:text-lg font-serif text-white pr-4">Is there a minimum stay requirement for booking Family Rooms?</span>
-          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <span class="text-base md:text-lg font-serif text-white pr-4">
+            Do the rooms have attached bathrooms?
+          </span>
+          <svg class="faq-icon w-6 h-6 text-amber-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
-        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
           <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
-            <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-              During regular season, we accept single-night bookings for Family Double Bedded Rooms. However, during peak season (especially December-March) and long weekends/holidays (Christmas, New Year), we may have a minimum 2-3 night stay requirement. We recommend staying at least 2 nights to fully experience both morning and evening safaris and enjoy the resort's amenities. Contact us directly for specific requirements based on your travel dates.
+            <p class="text-gray-300">
+              Yes, each Family Room has a private attached bathroom with 24/7 hot water and modern amenities.
             </p>
           </div>
         </div>
@@ -1341,131 +1031,26 @@
       <!-- FAQ 10 -->
       <div class="faq-item bg-black border border-neutral-800 rounded-xl overflow-hidden">
         <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
-          <span class="text-base md:text-lg font-serif text-white pr-4">What safety measures are in place for families with young children?</span>
-          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <span class="text-base md:text-lg font-serif text-white pr-4">
+            How can I book a Family Double Bedded Room?
+          </span>
+          <svg class="faq-icon w-6 h-6 text-amber-500 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
-        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
           <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
-            <p class="text-sm md:text-base text-gray-300 leading-relaxed mb-3">
-              Safety is our top priority, especially for families with children:
+            <p class="text-gray-300">
+              You can book directly through our website, by calling us, or via the contact page. Our team will assist you with availability and packages.
             </p>
-            <ul class="text-sm md:text-base text-gray-300 space-y-2 ml-4">
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span>24/7 security staff on premises</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span>Doctor-on-call facility available round the clock</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span>First aid kits in all common areas</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span>Secure compound with controlled access</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span>Child-safe swimming pool with supervision</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span>Well-lit pathways and common areas</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span>Age-appropriate safari guidelines and safety briefings</span>
-              </li>
-            </ul>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
-  <!-- Footer -->
-  <footer class="bg-black py-12 border-t border-neutral-800">
-    <div class="max-w-7xl mx-auto px-4 md:px-6">
-      <div class="grid md:grid-cols-4 gap-8 mb-8">
-        <!-- About -->
-        <div>
-          <a href="home.php" class="flex items-center">
-            <img src="images/WILD.png" alt="Wildmark Resort Kanha Logo"
-              class="h-12 md:h-16 lg:h-20 w-auto object-contain" />
-          </a>
-          <p class="text-gray-400 text-sm mb-4">
-            Unforgettable Wildlife Adventure Await at Kanha Jungle Safari.
-          </p>
-          <div class="flex gap-3">
-            <a href="#" class="text-gray-400 hover:text-amber-500 transition">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" class="text-gray-400 hover:text-amber-500 transition">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#" class="text-gray-400 hover:text-amber-500 transition">
-              <i class="fab fa-youtube"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Quick Links -->
-        <div>
-          <h4 class="text-lg font-serif font-bold text-amber-100 mb-4">Quick Links</h4>
-          <ul class="space-y-2 text-sm">
-            <li><a href="home.php" class="text-gray-400 hover:text-amber-500 transition">Home</a></li>
-            <li><a href="Wildmark.php" class="text-gray-400 hover:text-amber-500 transition">Wildmark</a></li>
-            <li><a href="How-to-Reach.php" class="text-gray-400 hover:text-amber-500 transition">How to Reach</a></li>
-            <li>
-              <a href="gallery.php" class="text-gray-400 hover:text-amber-500 transition">Gallery</a>
-            </li>
-            <li><a href="contact.php" class="text-gray-400 hover:text-amber-500 transition">Contact Us</a></li>
-          </ul>
-        </div>
-
-        <!-- Help Center -->
-        <div>
-          <h4 class="text-lg font-serif font-bold text-amber-100 mb-4">Help Center</h4>
-          <ul class="space-y-2 text-sm">
-            <li><a href="Privacy-Policy.php" class="text-gray-400 hover:text-amber-500 transition">Privacy Policy</a>
-            </li>
-            <li><a href="Terms-and-Conditions.php" class="text-gray-400 hover:text-amber-500 transition">Terms and
-                Conditions</a></li>
-            <li><a href="Cancellation-Policy.php" class="text-gray-400 hover:text-amber-500 transition">Cancellation
-                Policy</a></li>
-          </ul>
-        </div>
-
-        <!-- Contact Info -->
-        <div>
-          <h4 class="text-lg font-serif font-bold text-amber-100 mb-4">Contact Info</h4>
-          <ul class="space-y-3 text-sm text-gray-400">
-            <li class="flex items-start gap-2">
-              <i class="fa-solid fa-location-dot text-amber-500 mt-1"></i>
-              <span>Rajlaxmi Apartment, Pannase Layout, Nagpur – 440022</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <i class="fa-solid fa-envelope text-amber-500"></i>
-              <a href="/cdn-cgi/l/email-protection#ee858f80868f9987828a838f9c85ae89838f8782c08d8183" class="hover:text-amber-500 transition"><span class="__cf_email__" data-cfemail="c6ada7a8aea7b1afaaa2aba7b4ad86a1aba7afaae8a5a9ab">[email&#160;protected]</span></a>
-            </li>
-            <li class="flex items-center gap-2">
-              <i class="fa-solid fa-phone text-amber-500"></i>
-              <a href="tel:9405529731" class="hover:text-amber-500 transition">+91 9405529731</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="border-t border-neutral-800 pt-6 text-center">
-        <p class="text-gray-500 text-xs">© 2025 Wildmark Resort Kanha. All Rights Reserved.</p>
-      </div>
-    </div>
-  </footer>
-
+  
   <!-- WhatsApp Floating Button -->
   <a href="https://wa.me/9405529731" target="_blank"
     class="fixed bottom-4 right-4 md:bottom-8 md:right-8 bg-green-500 hover:bg-green-600 w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-2xl z-50 transition transform hover:scale-110">
@@ -1476,59 +1061,15 @@
   </a>
 
   <!-- AOS Init -->
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  
 
   <script>
-    // Initialize AOS
-    AOS.init({
-      duration: 900,
-      once: true,
-      offset: 80,
-    });
+ 
+   
 
-    // Mobile Menu Toggle
-    const mobileMenuBtn = document.getElementById("mobileMenuBtn");
-    const mobileMenu = document.getElementById("mobileMenu");
+   
 
-    if (mobileMenuBtn && mobileMenu) {
-      mobileMenuBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        mobileMenu.classList.toggle("active");
-      });
-    }
-
-    // Mobile Packages Dropdown
-    const mobilePackagesBtn = document.getElementById("mobilePackagesBtn");
-    const mobilePackagesDropdown = document.getElementById("mobilePackagesDropdown");
-    const packagesArrow = document.getElementById("packagesArrow");
-
-    if (mobilePackagesBtn && mobilePackagesDropdown) {
-      mobilePackagesBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        mobilePackagesDropdown.classList.toggle("active");
-        if (mobilePackagesDropdown.classList.contains("active")) {
-          packagesArrow.style.transform = "rotate(180deg)";
-        } else {
-          packagesArrow.style.transform = "rotate(0deg)";
-        }
-      });
-    }
-
-    // Close mobile menu on outside click
-    document.addEventListener("click", (e) => {
-      if (mobileMenu && mobileMenuBtn) {
-        if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-          mobileMenu.classList.remove("active");
-          if (mobilePackagesDropdown) {
-            mobilePackagesDropdown.classList.remove("active");
-            if (packagesArrow) {
-              packagesArrow.style.transform = "rotate(0deg)";
-            }
-          }
-        }
-      }
-    });
+    
 
     // Tab functionality
     const tabButtons = document.querySelectorAll('.tab-button');
@@ -1583,6 +1124,7 @@
     });
   });
 </script>
-</body>
-
-</html>
+<?php 
+// Include footer
+include 'includes/footer.php'; 
+?>

@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php 
+// Set page-specific title
+$pageTitle = "Kanha Safari Tour Package - Wildmark Resort Kanha";
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kanha Safari Tour Package</title>
+// Include header
+include 'includes/header.php'; 
+?>
 
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -343,148 +343,6 @@
       max-height: 500px;
     }
   </style>
-</head>
-
-<body class="bg-black text-white">
-  <nav class="fixed w-full bg-black z-50 py-3 md:py-2 border-b border-neutral-800" data-aos="fade-down"
-    data-aos-duration="800">
-    <div class="container mx-auto px-3 md:px-6">
-      <!-- Mobile Layout -->
-      <div class="flex md:hidden justify-between items-center relative">
-        <!-- Mobile Hamburger -->
-        <button id="mobileMenuBtn" class="text-white hover:text-amber-500 transition z-20 p-1">
-          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
-
-        <!-- Center Logo on Mobile - INCREASED SIZE -->
-        <div class="absolute left-1/2 transform -translate-x-1/2">
-          <a href="home.php" class="flex items-center">
-            <img src="images/WILD.png" alt="Wildmark Resort Kanha Logo" class="h-14 w-auto object-contain" />
-          </a>
-        </div>
-
-        <!-- Right Side - Only Book Now Button -->
-        <div class="flex items-center">
-          <!-- Book Now Button -->
-          <a href="contact.php" class="bg-amber-600 hover:bg-amber-700 px-3 py-2 transition text-xs font-semibold"
-            title="Book Now">
-            BOOK NOW
-          </a>
-        </div>
-      </div>
-
-      <!-- Desktop Layout -->
-      <div class="hidden md:flex justify-between items-center">
-        <!-- Left - Logo Desktop -->
-        <div class="flex items-center">
-          <a href="home.php" class="flex items-center">
-            <img src="images/WILD.png" alt="Wildmark Resort Kanha Logo"
-              class="h-12 md:h-14 lg:h-16 w-auto object-contain" />
-          </a>
-        </div>
-
-        <!-- Center - Menu Items Desktop -->
-        <div class="flex-1 flex justify-center">
-          <div class="flex space-x-4 lg:space-x-8 text-xs lg:text-sm font-light tracking-wider items-center">
-            <a href="home.php" class="hover:text-amber-500 transition">Home</a>
-            <a href="about.php" class="hover:text-amber-500 transition">About</a>
-            <a href="How-to-Reach.php" class="hover:text-amber-500 transition">How to Reach</a>
-            <a href="kanha.php" class="hover:text-amber-500 transition">Kanha</a>
-
-            <!-- Packages Dropdown -->
-            <div class="relative dropdown group">
-              <button class="hover:text-amber-500 transition flex items-center">
-                Packages
-                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                </svg>
-              </button>
-              <div class="mega-menu absolute left-0 top-full bg-black border border-neutral-800 shadow-2xl w-64">
-                <div class="p-6 space-y-3">
-                  <a href="Kanha-Tour-Package.php"
-                    class="block text-white hover:text-amber-500 transition py-2">Kanha Tour Package</a>
-                  <a href="Kanha-Safari-Tour-Package.php"
-                    class="block text-white hover:text-amber-500 transition py-2">Kanha Safari Tour Package</a>
-                  <a href="Kanha-Kisli-Tour-Package.php"
-                    class="block text-white hover:text-amber-500 transition py-2">Kanha Kisli Tour Package</a>
-                  <a href="Mukki-Zone-Tour-Package.php"
-                    class="block text-white hover:text-amber-500 transition py-2">Mukki Zone Tour Package</a>
-                  <a href="Kanha-Tiger-Safari-Tour-Package.php"
-                    class="block text-white hover:text-amber-500 transition py-2">Kanha Tiger Safari Tour Package</a>
-                   
-                </div>
-              </div>
-            </div>
-
-            <a href="Wildmark.php" class="hover:text-amber-500 transition">Wildmark</a>
-          </div>
-        </div>
-
-        <!-- Right - Book Now Button Desktop -->
-        <div class="flex items-center">
-          <a href="contact.php"
-            class="text-sm font-light tracking-wider bg-amber-600 hover:bg-amber-700 px-6 py-2 transition whitespace-nowrap">BOOK
-            NOW</a>
-        </div>
-      </div>
-
-      <!-- Mobile Menu -->
-      <div id="mobileMenu" class="mobile-menu md:hidden mt-4">
-        <div class="flex flex-col space-y-3 py-4">
-          <a href="home.php" class="text-white hover:text-amber-500 py-2 border-b border-neutral-800">Home</a>
-          <a href="How-to-Reach.php" class="hover:text-amber-500 transition py-2 border-b border-neutral-800">How to
-            Reach</a>
-          
-          <a href="about.php" class="hover:text-amber-500 transition py-2 border-b border-neutral-800">About</a>
-          <a href="kanha.php" class="hover:text-amber-500 transition py-2 border-b border-neutral-800">Kanha</a>
-
-          <!-- Packages Dropdown -->
-          <div class="border-b border-neutral-800">
-            <button id="mobilePackagesBtn"
-              class="w-full text-left text-white hover:text-amber-500 py-2 flex justify-between items-center">
-              <span>Packages</span>
-              <svg id="packagesArrow" class="w-5 h-5 transition-transform duration-300" fill="none"
-                stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-              </svg>
-            </button>
-
-            <!-- Dropdown Content -->
-            <div id="mobilePackagesDropdown"
-              class="mobile-packages-dropdown overflow-hidden max-h-0 transition-all duration-300 ease-in-out">
-              <div class="flex flex-col pl-4 space-y-2 pb-3 pt-2">
-                <a href="Kanha-Tour-Package.php"
-                  class="text-gray-300 hover:text-amber-400 py-2 text-sm border-l-2 border-neutral-700 pl-3 hover:border-amber-500 transition">
-                  Kanha Tour Package
-                </a>
-                <a href="Kanha-Safari-Tour-Package.php"
-                  class="text-gray-300 hover:text-amber-400 py-2 text-sm border-l-2 border-neutral-700 pl-3 hover:border-amber-500 transition">
-                  Kanha Safari Tour Package
-                </a>
-                <a href="Kanha-Kisli-Tour-Package.php"
-                  class="text-gray-300 hover:text-amber-400 py-2 text-sm border-l-2 border-neutral-700 pl-3 hover:border-amber-500 transition">
-                  Kanha Kisli Tour Package
-                </a>
-                <a href="Mukki-Zone-Tour-Package.php"
-                  class="text-gray-300 hover:text-amber-400 py-2 text-sm border-l-2 border-neutral-700 pl-3 hover:border-amber-500 transition">
-                  Mukki Zone Tour Package
-                </a>
-                <a href="Kanha-Tiger-Safari-Tour-Package.php"
-                  class="text-gray-300 hover:text-amber-400 py-2 text-sm border-l-2 border-neutral-700 pl-3 hover:border-amber-500 transition">
-                  Kanha Tiger Safari Tour Package
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <a href="Wildmark.php" class="hover:text-amber-500 transition py-2 border-b border-neutral-800">Wildmark</a>
-        </div>
-      </div>
-    </div>
-  </nav>
-
   <!-- Spacer for fixed nav -->
   <div class="h-[60px] md:h-[80px]"></div>
 
@@ -1147,7 +1005,7 @@
   </section>
 <!-- FAQs Section - Kanha Safari Tour Package -->
 <section class="py-16 md:py-24 bg-neutral-900">
-  <div class="container mx-auto max-w-4xl px-4 md:px-6">
+  <div class="container mx-auto max-w-5xl px-4 md:px-6">
     <div class="text-center mb-12 md:mb-16">
       <p class="text-amber-500 text-xs tracking-widest mb-4 font-light" data-aos="fade-down">
         PACKAGE GUIDE
@@ -1160,18 +1018,18 @@
       </p>
     </div>
 
-    <div class="space-y-4" data-aos="fade-up" data-aos-duration="1000">
+    <div class="space-y-4 max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
       
       <!-- FAQ 1 -->
       <div class="faq-item bg-black border border-neutral-800 rounded-xl overflow-hidden">
-        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
+        <button class="faq-question w-full text-left px-5 md:px-6 py-4 md:py-5 flex justify-between items-center hover:bg-neutral-800 transition">
           <span class="text-base md:text-lg font-serif text-white pr-4">What does the 2N/3D Kanha Safari Tour Package include?</span>
-          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
         <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-          <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
+          <div class="px-5 md:px-6 py-4 md:py-5 bg-neutral-800/50 border-t border-neutral-700">
             <p class="text-sm md:text-base text-gray-300 leading-relaxed mb-3">
               This comprehensive package includes:
             </p>
@@ -1203,14 +1061,14 @@
 
       <!-- FAQ 2 -->
       <div class="faq-item bg-black border border-neutral-800 rounded-xl overflow-hidden">
-        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
+        <button class="faq-question w-full text-left px-5 md:px-6 py-4 md:py-5 flex justify-between items-center hover:bg-neutral-800 transition">
           <span class="text-base md:text-lg font-serif text-white pr-4">Which safari zones are covered in this package?</span>
-          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
         <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-          <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
+          <div class="px-5 md:px-6 py-4 md:py-5 bg-neutral-800/50 border-t border-neutral-700">
             <p class="text-sm md:text-base text-gray-300 leading-relaxed mb-3">
               This package covers two premium safari zones:
             </p>
@@ -1230,70 +1088,14 @@
 
       <!-- FAQ 3 -->
       <div class="faq-item bg-black border border-neutral-800 rounded-xl overflow-hidden">
-        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
-          <span class="text-base md:text-lg font-serif text-white pr-4">What is the complete day-wise itinerary?</span>
-          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </button>
-        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-          <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
-            <div class="space-y-4">
-              <div>
-                <p class="text-sm md:text-base text-gray-300 leading-relaxed mb-2">
-                  <strong class="text-amber-400">Day 1 - Arrival & Relaxation</strong>
-                </p>
-                <ul class="text-sm md:text-base text-gray-300 space-y-1 ml-4">
-                  <li>• Arrival at Jabalpur Airport/Railway Station</li>
-                  <li>• Transfer to Kanha Wildmark Resort (approximately 4-5 hours)</li>
-                  <li>• Check-in and welcome refreshments</li>
-                  <li>• Afternoon free to relax and enjoy resort amenities</li>
-                  <li>• Dinner served at 8:30 PM</li>
-                </ul>
-              </div>
-              
-              <div>
-                <p class="text-sm md:text-base text-gray-300 leading-relaxed mb-2">
-                  <strong class="text-amber-400">Day 2 - Full Safari Day</strong>
-                </p>
-                <ul class="text-sm md:text-base text-gray-300 space-y-1 ml-4">
-                  <li>• Early morning wake-up call</li>
-                  <li>• Morning safari in Kanha Core Zone (5:30 AM - 11:00 AM approx)</li>
-                  <li>• Breakfast served inside the safari (packed breakfast experience)</li>
-                  <li>• Return to resort and relax by the pool</li>
-                  <li>• Lunch at 1:00 PM</li>
-                  <li>• Afternoon safari in Kisli Core Zone (2:30 PM - 6:00 PM approx)</li>
-                  <li>• Hi-tea after returning from safari</li>
-                  <li>• Dinner at 8:30 PM</li>
-                </ul>
-              </div>
-              
-              <div>
-                <p class="text-sm md:text-base text-gray-300 leading-relaxed mb-2">
-                  <strong class="text-amber-400">Day 3 - Departure</strong>
-                </p>
-                <ul class="text-sm md:text-base text-gray-300 space-y-1 ml-4">
-                  <li>• Breakfast at 8:30 AM</li>
-                  <li>• Leisure time at the resort</li>
-                  <li>• Check-out by 11:30 AM</li>
-                  <li>• Transfer back to Jabalpur Airport/Railway Station</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ 4 -->
-      <div class="faq-item bg-black border border-neutral-800 rounded-xl overflow-hidden">
-        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
+        <button class="faq-question w-full text-left px-5 md:px-6 py-4 md:py-5 flex justify-between items-center hover:bg-neutral-800 transition">
           <span class="text-base md:text-lg font-serif text-white pr-4">Is breakfast included during the morning safari?</span>
-          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
         <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-          <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
+          <div class="px-5 md:px-6 py-4 md:py-5 bg-neutral-800/50 border-t border-neutral-700">
             <p class="text-sm md:text-base text-gray-300 leading-relaxed mb-3">
               Yes! On Day 2, breakfast is served during the morning safari in Kanha Core Zone. This is a unique experience where you enjoy a packed breakfast amidst the wilderness of Kanha National Park.
             </p>
@@ -1315,16 +1117,16 @@
         </div>
       </div>
 
-      <!-- FAQ 5 -->
+      <!-- FAQ 4 -->
       <div class="faq-item bg-black border border-neutral-800 rounded-xl overflow-hidden">
-        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
+        <button class="faq-question w-full text-left px-5 md:px-6 py-4 md:py-5 flex justify-between items-center hover:bg-neutral-800 transition">
           <span class="text-base md:text-lg font-serif text-white pr-4">What is the cancellation and refund policy?</span>
-          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
         <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-          <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
+          <div class="px-5 md:px-6 py-4 md:py-5 bg-neutral-800/50 border-t border-neutral-700">
             <ul class="text-sm md:text-base text-gray-300 space-y-2 ml-4">
               <li class="flex items-start gap-2">
                 <span class="text-amber-500">•</span>
@@ -1351,90 +1153,16 @@
         </div>
       </div>
 
-      <!-- FAQ 6 -->
+      <!-- FAQ 5 -->
       <div class="faq-item bg-black border border-neutral-800 rounded-xl overflow-hidden">
-        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
-          <span class="text-base md:text-lg font-serif text-white pr-4">Can I relax at the resort between safaris?</span>
-          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </button>
-        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-          <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
-            <p class="text-sm md:text-base text-gray-300 leading-relaxed mb-3">
-              Absolutely! On Day 2, after returning from the morning safari, you have plenty of time to relax before the afternoon safari:
-            </p>
-            <ul class="text-sm md:text-base text-gray-300 space-y-2 ml-4">
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Pool Time:</strong> Take a refreshing dip in the resort's swimming pool</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Rest & Rejuvenate:</strong> Relax in your comfortable room</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Resort Amenities:</strong> Explore the property and enjoy the natural surroundings</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Leisure Time:</strong> Approximately 3-4 hours between morning safari return and afternoon safari departure</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ 7 -->
-      <div class="faq-item bg-black border border-neutral-800 rounded-xl overflow-hidden">
-        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
-          <span class="text-base md:text-lg font-serif text-white pr-4">What are the additional charges not included in the package?</span>
-          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </button>
-        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-          <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
-            <p class="text-sm md:text-base text-gray-300 leading-relaxed mb-3">
-              The following are not included and will be charged separately:
-            </p>
-            <ul class="text-sm md:text-base text-gray-300 space-y-2 ml-4">
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Camera Charges:</strong> Forest department fees for still cameras and video cameras (mandatory if carrying photography equipment)</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Safari Water:</strong> Water bottles consumed during safaris (resort water is complimentary)</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Extra Food & Beverages:</strong> Any additional food or drinks ordered beyond the meal plan</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Personal Expenses:</strong> Laundry, telephone calls, tips, shopping, etc.</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Travel Insurance:</strong> Optional but recommended</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ 8 -->
-      <div class="faq-item bg-black border border-neutral-800 rounded-xl overflow-hidden">
-        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
+        <button class="faq-question w-full text-left px-5 md:px-6 py-4 md:py-5 flex justify-between items-center hover:bg-neutral-800 transition">
           <span class="text-base md:text-lg font-serif text-white pr-4">Is this package good for couples or honeymooners?</span>
-          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
         <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-          <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
+          <div class="px-5 md:px-6 py-4 md:py-5 bg-neutral-800/50 border-t border-neutral-700">
             <p class="text-sm md:text-base text-gray-300 leading-relaxed mb-3">
               Yes, this package is perfect for couples and honeymooners! Here's why:
             </p>
@@ -1467,203 +1195,9 @@
         </div>
       </div>
 
-      <!-- FAQ 9 -->
-      <div class="faq-item bg-black border border-neutral-800 rounded-xl overflow-hidden">
-        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
-          <span class="text-base md:text-lg font-serif text-white pr-4">What is the best season to book this package?</span>
-          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </button>
-        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-          <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
-            <p class="text-sm md:text-base text-gray-300 leading-relaxed mb-3">
-              Kanha National Park is open from <strong>October to June</strong>. Each season offers unique experiences:
-            </p>
-            <ul class="text-sm md:text-base text-gray-300 space-y-3 ml-4">
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>November to February (Winter - Peak Season):</strong> Pleasant weather (10-25°C), excellent for safaris, high tiger sighting chances, comfortable temperatures, ideal for photography. <em>Book 45-60 days in advance!</em></span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>March to June (Summer):</strong> Hot weather (25-45°C), BEST for tiger sightings as animals gather near water sources, less crowded than winter, great for serious wildlife enthusiasts</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>October to November (Post-Monsoon):</strong> Lush green landscapes, pleasant weather, excellent for photography, good mix of wildlife and scenery</span>
-              </li>
-            </ul>
-            <p class="text-sm md:text-base text-gray-300 leading-relaxed mt-3">
-              <strong>Package rates:</strong> Considered as per weekend pricing. Weekday travel may offer marginal discounts.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ 10 -->
-      <div class="faq-item bg-black border border-neutral-800 rounded-xl overflow-hidden">
-        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
-          <span class="text-base md:text-lg font-serif text-white pr-4">Why should I choose this package over other Kanha packages?</span>
-          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </button>
-        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-          <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
-            <p class="text-sm md:text-base text-gray-300 leading-relaxed mb-3">
-              This package is perfect if you want:
-            </p>
-            <ul class="text-sm md:text-base text-gray-300 space-y-2 ml-4">
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Balanced Experience:</strong> Not too short (1N/2D) or too long (3N/4D) - just right at 2N/3D</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Two Safari Zones:</strong> Experience both Kanha and Kisli zones for diverse wildlife sightings</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Quality Over Quantity:</strong> 2 well-timed safaris (morning + afternoon) instead of cramming multiple safaris</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Relaxation Time:</strong> Enjoy the resort and pool - not just back-to-back safaris</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Value for Money:</strong> All-inclusive with transfers, meals, and safaris</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Weekend Getaway:</strong> Perfect for a long weekend trip from major cities</span>
-              </li>
-            </ul>
-            <p class="text-sm md:text-base text-gray-300 leading-relaxed mt-3">
-              Compare with our other packages: 1N/2D Holiday Package (1 safari only), 2N/3D Kisli Package (4 safaris, more intense), or 3N/4D Tiger Safari (6 safaris, longer duration).
-            </p>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
-
-<!-- FAQ JavaScript -->
-
-  <!-- Footer -->
-  <footer class="bg-black py-12 border-t border-neutral-800">
-    <div class="max-w-7xl mx-auto px-4 md:px-6">
-      <div class="grid md:grid-cols-4 gap-8 mb-8">
-        <!-- About -->
-        <div>
-          <!-- Center Logo Desktop -->
-          <a href="home.php" class="flex items-center">
-            <img src="images/WILD.png" alt="Wildmark Resort Kanha Logo"
-              class="h-12 md:h-16 lg:h-20 w-auto object-contain" />
-          </a>
-          <p class="text-gray-400 text-sm mb-4">
-            Unforgettable Wildlife Adventure Await at Kanha Jungle Safari. See
-            tigers, deer, leopards & more on a personalized jungle safari.
-            Visit & book online.
-          </p>
-          <div class="flex gap-3">
-            <a href="#" class="text-gray-400 hover:text-amber-500 transition">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" class="text-gray-400 hover:text-amber-500 transition">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#" class="text-gray-400 hover:text-amber-500 transition">
-              <i class="fab fa-youtube"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Quick Links -->
-        <div>
-          <h4 class="text-lg font-serif font-bold text-amber-100 mb-4">
-            Quick Links
-          </h4>
-          <ul class="space-y-2 text-sm">
-            <li>
-              <a href="home.php" class="text-gray-400 hover:text-amber-500 transition">Home</a>
-            </li>
-           
-            <li>
-              <a href="Wildmark.php" class="text-gray-400 hover:text-amber-500 transition">Wildmark</a>
-            </li>
-            <li>
-              <a href="How-to-Reach.php" class="text-gray-400 hover:text-amber-500 transition">How to Reach</a>
-            </li>
-            <li>
-              <a href="gallery.php" class="text-gray-400 hover:text-amber-500 transition">Gallery</a>
-            </li>
-            <li>
-              <a href="contact.php" class="text-gray-400 hover:text-amber-500 transition">Contact Us</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Newsletter -->
-        <div>
-          <h4 class="text-lg font-serif font-bold text-amber-100 mb-4">
-            Help Center
-          </h4>
-          <ul class="space-y-2 text-sm">
-            <li>
-              <a href="Privacy-Policy.php" class="text-gray-400 hover:text-amber-500 transition">Privacy Policy
-              </a>
-            </li>
-            <li>
-              <a href="Terms-and-Conditions.php" class="text-gray-400 hover:text-amber-500 transition">
-                Terms and Conditions</a>
-            </li>
-            <li>
-              <a href="Cancellation-Policy.php" class="text-gray-400 hover:text-amber-500 transition">Cancellation
-                Policy</a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Contact Info -->
-        <div>
-          <h4 class="text-lg font-serif font-bold text-amber-100 mb-4">
-            Contact Info
-          </h4>
-          <ul class="space-y-3 text-sm text-gray-400">
-            <li class="flex items-start gap-2">
-              <i class="fa-solid fa-location-dot text-amber-500 mt-1"></i>
-              <span>B.No. 8, Rajlaxmi Apartment Near Bhende Layout, Pannase
-                Layout, Nagpur – 440022.</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <i class="fa-solid fa-envelope text-amber-500"></i>
-              <a href="mailto:kanhawildmark@gmail.com"
-                class="text-gray-400 hover:text-amber-500 transition">kanhawildmark@gmail.com</a>
-            </li>
-            <li class="flex items-center gap-2">
-              <i class="fa-solid fa-phone text-amber-500"></i>
-              <a href="tel:9405529731" class="text-gray-400 hover:text-amber-500 transition">+91 9405529731</a>
-            </li>
-            <li class="flex items-center gap-2">
-              <i class="fa-solid fa-phone text-amber-500"></i>
-              <a href="tel:7719806444" class="text-gray-400 hover:text-amber-500 transition">+91 7719806444</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Bottom Bar -->
-      <div class="border-t border-neutral-800 pt-6 text-center">
-        <p class="text-gray-500 text-xs">
-          © 2025 Wildmark Resort Kanha. All Rights Reserved.
-        </p>
-      </div>
-    </div>
-  </footer>
   <!-- WhatsApp Floating Button -->
   <a href="https://wa.me/9405529731" target="_blank"
     class="fixed bottom-4 right-4 md:bottom-8 md:right-8 bg-green-500 hover:bg-green-600 w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-2xl z-50 transition transform hover:scale-110"
@@ -1673,79 +1207,13 @@
         d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
     </svg>
   </a>
-
-  <!-- AOS & Scripts -->
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
-    // ===================================
-    // Initialize AOS
-    // ===================================
-    AOS.init({
-      duration: 800,
-      once: true,
-    });
+   
 
-    // ===================================
-    // Mobile Menu Toggle
-    // ===================================
-    const mobileMenuBtn = document.getElementById("mobileMenuBtn");
-    const mobileMenu = document.getElementById("mobileMenu");
-
-    if (mobileMenuBtn && mobileMenu) {
-      mobileMenuBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        mobileMenu.classList.toggle("active");
-      });
-    }
-
-    // ===================================
-    // Mobile Packages Dropdown Toggle
-    // ===================================
-    const mobilePackagesBtn = document.getElementById("mobilePackagesBtn");
-    const mobilePackagesDropdown = document.getElementById(
-      "mobilePackagesDropdown"
-    );
-    const packagesArrow = document.getElementById("packagesArrow");
-
-    if (mobilePackagesBtn && mobilePackagesDropdown && packagesArrow) {
-      mobilePackagesBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-
-        // Toggle dropdown
-        mobilePackagesDropdown.classList.toggle("active");
-
-        // Rotate arrow
-        if (mobilePackagesDropdown.classList.contains("active")) {
-          packagesArrow.style.transform = "rotate(180deg)";
-        } else {
-          packagesArrow.style.transform = "rotate(0deg)";
-        }
-      });
-    }
-
-    // ===================================
-    // Close mobile menu when clicking outside
-    // ===================================
-    document.addEventListener("click", (e) => {
-      if (mobileMenu && mobileMenuBtn) {
-        if (
-          !mobileMenu.contains(e.target) &&
-          !mobileMenuBtn.contains(e.target)
-        ) {
-          mobileMenu.classList.remove("active");
-
-          // Also close packages dropdown
-          if (mobilePackagesDropdown) {
-            mobilePackagesDropdown.classList.remove("active");
-          }
-          if (packagesArrow) {
-            packagesArrow.style.transform = "rotate(0deg)";
-          }
-        }
-      }
-    });
+  
+    
+    
 
     // ===================================
     // Close menu when clicking on a package link
@@ -1899,6 +1367,7 @@
     });
   });
 </script>
-</body>
+<?php 
 
-</html>
+include 'includes/footer.php'; 
+?>

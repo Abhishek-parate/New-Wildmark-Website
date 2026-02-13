@@ -1,23 +1,11 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-  <title>About Kanha Tiger Reserve - Wildmark Resort Kanha</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<?php 
+// Set page-specific title
+$pageTitle = "Kanha - Wildmark Resort Kanha";
 
-  <style>
-    * { box-sizing: border-box; }
-    html, body { max-width: 100vw; overflow-x: hidden; margin: 0; padding: 0; scroll-behavior: smooth; }
-    body { font-family: "Roboto Mono", monospace; background: #171717; color: #fff; }
-    h1,h2,h3,h4,h5,h6 { font-family: "Roboto Slab", serif; }
+// Include header
+include 'includes/header.php'; 
+?>
+<style>
 
     .container { width:100%; max-width:100%; margin-left:auto; margin-right:auto; padding-left:1rem; padding-right:1rem; }
     @media(min-width:640px){.container{max-width:640px}}
@@ -348,86 +336,7 @@
   }
     
   </style>
-</head>
 
-<body class="bg-neutral-900 text-white overflow-x-hidden">
-
-  <!-- ═══════════════════════════════════════════ NAVIGATION ═══ -->
-  <nav class="fixed w-full bg-black z-50 py-3 md:py-2 border-b border-neutral-800">
-    <div class="container mx-auto px-3 md:px-6">
-      <!-- Mobile -->
-      <div class="flex md:hidden justify-between items-center relative">
-        <button id="mobileMenuBtn" class="text-white hover:text-amber-500 transition z-20 p-1">
-          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-        </button>
-        <div class="absolute left-1/2 transform -translate-x-1/2">
-          <a href="home.php"><img src="images/WILD.png" alt="Wildmark Resort" class="h-14 w-auto object-contain"/></a>
-        </div>
-        <a href="contact.php" class="bg-amber-600 hover:bg-amber-700 px-3 py-2 transition text-xs font-semibold">BOOK NOW</a>
-      </div>
-
-      <!-- Desktop -->
-      <div class="hidden md:flex justify-between items-center">
-        <a href="home.php"><img src="images/WILD.png" alt="Wildmark Resort" class="h-12 md:h-14 lg:h-16 w-auto object-contain"/></a>
-        <div class="flex-1 flex justify-center">
-          <div class="flex space-x-4 lg:space-x-8 text-xs lg:text-sm font-light tracking-wider items-center">
-            <a href="home.php" class="hover:text-amber-500 transition">Home</a>
-            <a href="about.php" class="hover:text-amber-500 transition">About</a>
-            <a href="How-to-Reach.php" class="hover:text-amber-500 transition">How to Reach</a>
-            <a href="kanha.php" class="text-amber-500">Kanha</a>
-            <div class="relative dropdown group">
-              <button class="hover:text-amber-500 transition flex items-center">
-                Packages
-                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-              </button>
-              <div class="mega-menu absolute left-0 top-full bg-black border border-neutral-800 shadow-2xl w-64">
-                <div class="p-6 space-y-3">
-                  <a href="Kanha-Tour-Package.php" class="block text-white hover:text-amber-500 transition py-2">Kanha Tour Package</a>
-                  <a href="Kanha-Safari-Tour-Package.php" class="block text-white hover:text-amber-500 transition py-2">Kanha Safari Tour Package</a>
-                  <a href="Kanha-Kisli-Tour-Package.php" class="block text-white hover:text-amber-500 transition py-2">Kanha Kisli Tour Package</a>
-                  <a href="Mukki-Zone-Tour-Package.php" class="block text-white hover:text-amber-500 transition py-2">Mukki Zone Tour Package</a>
-                  <a href="Kanha-Tiger-Safari-Tour-Package.php" class="block text-white hover:text-amber-500 transition py-2">Kanha Tiger Safari Tour Package</a>
-                 
-                </div>
-              </div>
-            </div>
-            <a href="Wildmark.php" class="hover:text-amber-500 transition">Wildmark</a>
-            
-          </div>
-        </div>
-        <a href="contact.php" class="text-sm font-light tracking-wider bg-amber-600 hover:bg-amber-700 px-6 py-2 transition whitespace-nowrap">BOOK NOW</a>
-      </div>
-
-      <!-- Mobile Menu -->
-      <div id="mobileMenu" class="mobile-menu md:hidden mt-4">
-        <div class="flex flex-col space-y-3 py-4">
-          <a href="home.php" class="text-white hover:text-amber-500 py-2 border-b border-neutral-800">Home</a>
-          <a href="How-to-Reach.php" class="hover:text-amber-500 transition py-2 border-b border-neutral-800">How to Reach</a>
-          <a href="about.php" class="hover:text-amber-500 transition py-2 border-b border-neutral-800">About</a>
-          <a href="kanha.php" class="text-amber-500 py-2 border-b border-neutral-800">Kanha</a>
-          <div class="border-b border-neutral-800">
-            <button id="mobilePackagesBtn" class="w-full text-left text-white hover:text-amber-500 py-2 flex justify-between items-center">
-              <span>Packages</span>
-              <svg id="packagesArrow" class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-            </button>
-            <div id="mobilePackagesDropdown" class="mobile-packages-dropdown">
-              <div class="flex flex-col pl-4 space-y-2 pb-3 pt-2">
-                <a href="Kanha-Tour-Package.php" class="text-gray-300 hover:text-amber-400 py-2 text-sm border-l-2 border-neutral-700 pl-3 hover:border-amber-500 transition">Kanha Tour Package</a>
-                <a href="Kanha-Safari-Tour-Package.php" class="text-gray-300 hover:text-amber-400 py-2 text-sm border-l-2 border-neutral-700 pl-3 hover:border-amber-500 transition">Kanha Safari Tour Package</a>
-                <a href="Kanha-Kisli-Tour-Package.php" class="text-gray-300 hover:text-amber-400 py-2 text-sm border-l-2 border-neutral-700 pl-3 hover:border-amber-500 transition">Kanha Kisli Tour Package</a>
-                <a href="Mukki-Zone-Tour-Package.php" class="text-gray-300 hover:text-amber-400 py-2 text-sm border-l-2 border-neutral-700 pl-3 hover:border-amber-500 transition">Mukki Zone Tour Package</a>
-                <a href="Kanha-Tiger-Safari-Tour-Package.php" class="text-gray-300 hover:text-amber-400 py-2 text-sm border-l-2 border-neutral-700 pl-3 hover:border-amber-500 transition">Kanha Tiger Safari Tour Package</a>
-              </div>
-            </div>
-          </div>
-          <a href="Wildmark.php" class="hover:text-amber-500 transition py-2 border-b border-neutral-800">Wildmark</a>
-          
-        </div>
-      </div>
-    </div>
-  </nav>
 <header class="relative h-[70vh] md:h-[80vh] lg:h-[90vh] flex items-end"
         style="background: url('images/home3.webp') center/cover no-repeat">
         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
@@ -1425,7 +1334,7 @@
 <!-- Add this section before the CTA BANNER section in kanha.php -->
 
 <section class="py-16 md:py-24 bg-neutral-900">
-  <div class="container mx-auto max-w-4xl px-4 md:px-6">
+  <div class="container mx-auto max-w-5xl px-4 md:px-6">
     <div class="text-center mb-12 md:mb-16">
       <p class="text-amber-500 text-xs tracking-widest mb-4 font-light" data-aos="fade-down">
         KANHA INFORMATION
@@ -1434,423 +1343,185 @@
         Kanha Tiger Reserve FAQs
       </h2>
       <p class="text-sm md:text-base text-gray-300 max-w-2xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
-        Everything you need to know about Kanha National Park - India's premier tiger reserve
+        Everything you need to know about Kanha National Park — India's premier tiger reserve
       </p>
     </div>
 
-    <div class="space-y-4" data-aos="fade-up" data-aos-duration="1000">
-      
+    <div class="space-y-4 max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
+
       <!-- FAQ 1 -->
       <div class="faq-item bg-black border border-neutral-800 rounded-xl overflow-hidden">
-        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
-          <span class="text-base md:text-lg font-serif text-white pr-4">What makes Kanha Tiger Reserve special among India's national parks?</span>
-          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <button class="faq-question w-full text-left px-5 md:px-6 py-4 md:py-5 flex justify-between items-center gap-4 hover:bg-neutral-800 transition" style="padding-right:30px;">
+          <span class="text-base md:text-lg font-serif text-white" style="padding-left:30px;">How big is Kanha Tiger Reserve and which districts does it cover?</span>
+          <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
-        <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-in-out;">
-          <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
+        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+          <div class="px-5 md:px-6 py-4 md:py-5 bg-neutral-800/50 border-t border-neutral-700">
             <p class="text-sm md:text-base text-gray-300 leading-relaxed mb-3">
-              Kanha Tiger Reserve stands out for several unique features:
+              Kanha Tiger Reserve is Central India's largest national park:
             </p>
             <ul class="text-sm md:text-base text-gray-300 space-y-2 ml-4">
               <li class="flex items-start gap-2">
                 <span class="text-amber-500">•</span>
-                <span><strong>India's Only Barasingha Habitat:</strong> Home to the hard-ground swamp deer found nowhere else in the world</span>
+                <span><strong>Core Area:</strong> 940 sq. km of protected wilderness</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-amber-500">•</span>
-                <span><strong>940 Sq. Km Wilderness:</strong> Central India's largest national park with diverse landscapes</span>
+                <span><strong>Buffer Area:</strong> Surrounding 1,067 sq. km of ecological transition zones</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-amber-500">•</span>
-                <span><strong>~60 Royal Bengal Tigers:</strong> Thriving tiger population including famous tigresses like Neelam</span>
+                <span><strong>Districts:</strong> Spreads across Mandla and Balaghat districts of Madhya Pradesh</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-amber-500">•</span>
-                <span><strong>Jungle Book Inspiration:</strong> The very landscape that inspired Rudyard Kipling's legendary tale</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>50+ Years Conservation Success:</strong> Project Tiger reserve since 1973 with remarkable conservation achievements</span>
+                <span><strong>Location:</strong> Situated in the Maikal Hills of the Satpura range</span>
               </li>
             </ul>
           </div>
         </div>
       </div>
-
+      
       <!-- FAQ 2 -->
       <div class="faq-item bg-black border border-neutral-800 rounded-xl overflow-hidden">
-        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
-          <span class="text-base md:text-lg font-serif text-white pr-4">Which safari zone is best for tiger sightings in Kanha?</span>
-          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <button class="faq-question w-full text-left px-5 md:px-6 py-4 md:py-5 flex justify-between items-center gap-4 hover:bg-neutral-800 transition"  style="padding-right:30px;">
+          <span class="text-base md:text-lg font-serif text-white"  style="padding-left:30px;">How many safari zones are there in Kanha and what are they?</span>
+          <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
-        <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-in-out;">
-          <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
+        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+          <div class="px-5 md:px-6 py-4 md:py-5 bg-neutral-800/50 border-t border-neutral-700">
             <p class="text-sm md:text-base text-gray-300 leading-relaxed mb-3">
-              Each of Kanha's four zones offers unique wildlife experiences:
+              Kanha has 4 core safari zones, each offering a unique experience:
             </p>
             <ul class="text-sm md:text-base text-gray-300 space-y-2 ml-4">
               <li class="flex items-start gap-2">
                 <span class="text-amber-500">•</span>
-                <span><strong>Kanha Zone (Best for Tigers):</strong> Open meadows ruled by Tigress Neelam (Mataram of Kanha). Highest tiger sighting probability with famous residents like Sunaina, Mohini, and Neelima</span>
+                <span><strong>Kanha Zone:</strong> Open meadows ruled by Tigress Neelam. Famous for Barasingha and tiger sightings</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-amber-500">•</span>
-                <span><strong>Kisli Zone (Excellent Sightings):</strong> Graceful Sal forests via Khatia Gate. Tiger sightings practically guaranteed with dense forest cover</span>
+                <span><strong>Kisli Zone:</strong> Dense Sal forests with high tiger sighting chances. Entry via Khatia Gate</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-amber-500">•</span>
-                <span><strong>Mukki Zone (Great for Big Cats):</strong> Renowned for incredible tiger and leopard sightings in pristine saal and bamboo forests</span>
+                <span><strong>Mukki Zone:</strong> Dense forests with water bodies. Excellent for Barasingha and migratory birds</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-amber-500">•</span>
-                <span><strong>Sarhi Zone (For Barasingha):</strong> Home to legendary Barasingha at Saunf meadow. Serene, less-crowded experience</span>
+                <span><strong>Sarhi Zone:</strong> Peaceful, less-crowded zone great for undisturbed photography</span>
               </li>
             </ul>
-            <p class="text-sm md:text-base text-gray-300 leading-relaxed mt-3">
-              <strong>Pro Tip:</strong> Wildmark Resort is closest to Khatia Gate (less than 1 km), providing easy access to both Kanha and Kisli zones!
-            </p>
           </div>
         </div>
       </div>
 
       <!-- FAQ 3 -->
       <div class="faq-item bg-black border border-neutral-800 rounded-xl overflow-hidden">
-        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
-          <span class="text-base md:text-lg font-serif text-white pr-4">What is the best time to visit Kanha Tiger Reserve?</span>
-          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <button class="faq-question w-full text-left px-5 md:px-6 py-4 md:py-5 flex justify-between items-center gap-4 hover:bg-neutral-800 transition"  style="padding-right:30px;">
+          <span class="text-base md:text-lg font-serif text-white"  style="padding-left:30px;">How many tigers are there in Kanha and which are the famous ones?</span>
+          <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
-        <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-in-out;">
-          <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
+        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+          <div class="px-5 md:px-6 py-4 md:py-5 bg-neutral-800/50 border-t border-neutral-700">
             <p class="text-sm md:text-base text-gray-300 leading-relaxed mb-3">
-              Kanha is open from October to June. Each season offers unique experiences:
+              Kanha has approximately <strong>60 Royal Bengal Tigers</strong>. Some legendary residents:
             </p>
             <ul class="text-sm md:text-base text-gray-300 space-y-2 ml-4">
               <li class="flex items-start gap-2">
                 <span class="text-amber-500">•</span>
-                <span><strong>Winter (Oct - Feb) - BEST OVERALL:</strong> Pleasant weather (10-25°C), comfortable safaris, excellent birdwatching with 200+ species including migratory birds from across Asia</span>
+                <span><strong>Neelam — "Mataram of Kanha":</strong> Most iconic tigress and queen of Kanha zone</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-amber-500">•</span>
-                <span><strong>Summer (Mar - Jun) - BEST FOR TIGERS:</strong> Hot weather (25-45°C) but highest tiger sighting probability as animals gather at water holes. Golden hour photography opportunities</span>
+                <span><strong>T20 — Umarpani:</strong> Legendary male tiger known for strength and grace</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-amber-500">•</span>
-                <span><strong>Monsoon (Jul - Sep) - CLOSED:</strong> Park closed for forest regeneration and breeding season</span>
+                <span><strong>Balwan & Jr. Bajrang:</strong> Dominant males commanding vast territories</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-amber-500">•</span>
+                <span><strong>Sunaina, Mohini & Neelima:</strong> Making Kanha one of India's most tiger-dense areas</span>
               </li>
             </ul>
-            <p class="text-sm md:text-base text-gray-300 leading-relaxed mt-3">
-              <strong>Ideal Visit:</strong> December to March offers the perfect balance of pleasant weather and active wildlife!
-            </p>
           </div>
         </div>
       </div>
 
       <!-- FAQ 4 -->
       <div class="faq-item bg-black border border-neutral-800 rounded-xl overflow-hidden">
-        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
-          <span class="text-base md:text-lg font-serif text-white pr-4">What famous tigers can I see in Kanha?</span>
-          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <button class="faq-question w-full text-left px-5 md:px-6 py-4 md:py-5 flex justify-between items-center gap-4 hover:bg-neutral-800 transition"  style="padding-right:30px;">
+          <span class="text-base md:text-lg font-serif text-white"  style="padding-left:30px;">What wildlife can I see besides tigers in Kanha?</span>
+          <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
-        <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-in-out;">
-          <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
+        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+          <div class="px-5 md:px-6 py-4 md:py-5 bg-neutral-800/50 border-t border-neutral-700">
             <p class="text-sm md:text-base text-gray-300 leading-relaxed mb-3">
-              Kanha's tigers are legendary among wildlife enthusiasts:
+              Kanha is home to extraordinary wildlife:
             </p>
             <ul class="text-sm md:text-base text-gray-300 space-y-2 ml-4">
               <li class="flex items-start gap-2">
                 <span class="text-amber-500">•</span>
-                <span><strong>Neelam - "Mataram of Kanha":</strong> The undisputed queen of Kanha zone, known affectionately as the mother of Kanha</span>
+                <span><strong>Barasingha:</strong> Hard-ground swamp deer found only in Kanha — state animal of MP</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-amber-500">•</span>
-                <span><strong>T20 - Umarpani:</strong> Iconic male tiger embodying strength and regal grace</span>
+                <span><strong>Indian Leopard:</strong> Elusive big cats in dense forests</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-amber-500">•</span>
-                <span><strong>Nilam & Cubs:</strong> Ever-visible tigress currently raising three cubs - a delight for every safari visitor</span>
+                <span><strong>Sloth Bear:</strong> Frequently seen in Kanha and Kisli zones</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-amber-500">•</span>
-                <span><strong>Balwan & Jr. Bajrang:</strong> Dominant male tigers commanding vast territories across core zones</span>
+                <span><strong>Dhole (Wild Dog):</strong> Pack hunters in Mukki and Sarhi zones</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-amber-500">•</span>
-                <span><strong>Sunaina, Mohini & Neelima:</strong> Fierce and graceful companions of Neelam making Kanha one of India's most tiger-dense areas</span>
+                <span><strong>300+ Bird Species:</strong> Including eagles, hornbills, peacocks, and migratory birds</span>
               </li>
             </ul>
-            <p class="text-sm md:text-base text-gray-300 leading-relaxed mt-3">
-              With ~60 Royal Bengal Tigers thriving across 940 sq km, Kanha offers some of the best tiger sighting opportunities in India!
-            </p>
           </div>
         </div>
       </div>
 
       <!-- FAQ 5 -->
       <div class="faq-item bg-black border border-neutral-800 rounded-xl overflow-hidden">
-        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
-          <span class="text-base md:text-lg font-serif text-white pr-4">How many safaris can I do per day in Kanha?</span>
-          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <button class="faq-question w-full text-left px-5 md:px-6 py-4 md:py-5 flex justify-between items-center gap-4 hover:bg-neutral-800 transition"  style="padding-right:30px;">
+          <span class="text-base md:text-lg font-serif text-white"  style="padding-left:30px;">What is the best time to visit Kanha Tiger Reserve?</span>
+          <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
           </svg>
         </button>
-        <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-in-out;">
-          <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
+        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+          <div class="px-5 md:px-6 py-4 md:py-5 bg-neutral-800/50 border-t border-neutral-700">
             <p class="text-sm md:text-base text-gray-300 leading-relaxed mb-3">
-              Safari timings and booking details:
+              Kanha is open from <strong>October to June</strong>:
             </p>
             <ul class="text-sm md:text-base text-gray-300 space-y-2 ml-4">
               <li class="flex items-start gap-2">
                 <span class="text-amber-500">•</span>
-                <span><strong>Two Safaris Daily:</strong> Morning session (starting ~6:00 AM) and afternoon session (starting ~3:00 PM)</span>
+                <span><strong>Winter (Oct–Feb):</strong> Pleasant weather, great birdwatching, high tiger sightings. Ideal for families</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-amber-500">•</span>
-                <span><strong>Duration:</strong> Each session lasts approximately 3-4 hours exploring the wilderness</span>
+                <span><strong>Summer (Mar–Jun):</strong> BEST for tigers as animals gather near water. Perfect for photography</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="text-amber-500">•</span>
-                <span><strong>Online Booking:</strong> Available through MP Forest Department portal. Wildmark Resort offers full assistance with safari bookings</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Early Morning Advantage:</strong> Be among the first to enter at 6:00 AM from Wildmark Resort (less than 1 km from Khatia Gate)</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Quick Returns:</strong> Return in minutes for breakfast and relaxation between safaris</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ 6 -->
-      <div class="faq-item bg-black border border-neutral-800 rounded-xl overflow-hidden">
-        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
-          <span class="text-base md:text-lg font-serif text-white pr-4">What other wildlife can I see besides tigers in Kanha?</span>
-          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </button>
-        <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-in-out;">
-          <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
-            <p class="text-sm md:text-base text-gray-300 leading-relaxed mb-3">
-              Kanha's rich biodiversity includes:
-            </p>
-            <div class="grid md:grid-cols-2 gap-3 text-sm md:text-base text-gray-300">
-              <div>
-                <p class="font-semibold text-white mb-2">Large Mammals:</p>
-                <ul class="space-y-1 ml-4">
-                  <li>• Barasingha (hard-ground swamp deer)</li>
-                  <li>• Indian Leopards (elusive)</li>
-                  <li>• Indian Gaur (world's largest wild bovine)</li>
-                  <li>• Sloth Bears (nocturnal)</li>
-                  <li>• Dhol/Wild Dogs (pack hunters)</li>
-                  <li>• Spotted Deer (most abundant)</li>
-                  <li>• Sambar Deer</li>
-                  <li>• Black Bucks</li>
-                  <li>• Smooth Otters (rare)</li>
-                </ul>
-              </div>
-              <div>
-                <p class="font-semibold text-white mb-2">Birds (200+ species):</p>
-                <ul class="space-y-1 ml-4">
-                  <li>• Crested Serpent Eagle</li>
-                  <li>• Indian Pitta</li>
-                  <li>• Pied Kingfisher</li>
-                  <li>• Brown Fish Owl</li>
-                  <li>• Black Ibis</li>
-                  <li>• Malabar Pied Hornbill</li>
-                  <li>• Indian Roller</li>
-                  <li>• Changeable Hawk Eagle</li>
-                  <li>• Winter migratory birds (Oct-Feb)</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ 7 -->
-      <div class="faq-item bg-black border border-neutral-800 rounded-xl overflow-hidden">
-        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
-          <span class="text-base md:text-lg font-serif text-white pr-4">What activities can I do in Kanha besides safaris?</span>
-          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </button>
-        <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-in-out;">
-          <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
-            <p class="text-sm md:text-base text-gray-300 leading-relaxed mb-3">
-              Beyond safaris, Kanha offers diverse experiences:
-            </p>
-            <ul class="text-sm md:text-base text-gray-300 space-y-2 ml-4">
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Khatiya Bicycle Trail:</strong> Explore buffer zone trails by bicycle for a peaceful, eco-friendly morning experience</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Bamni Dadar Sunset:</strong> Watch spectacular golden hour hues at Kanha's famous sunset point</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Kanha Museum:</strong> Discover cool artifacts and conservation stories at the forest museum</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Birdwatching Walks:</strong> Guided nature walks to spot 200+ species of resident and migratory birds</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Village Visits:</strong> Experience authentic mud villages and warmth of local tribal culture</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Wildlife Photography:</strong> Kanha's light and landscape are legendary - golden hour is unmissable</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Buffer Zone Walks:</strong> Guided naturalist walks on designated trails for intimate jungle encounters</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ 8 -->
-      <div class="faq-item bg-black border border-neutral-800 rounded-xl overflow-hidden">
-        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
-          <span class="text-base md:text-lg font-serif text-white pr-4">How do I reach Kanha from Nagpur?</span>
-          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </button>
-        <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-in-out;">
-          <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
-            <p class="text-sm md:text-base text-gray-300 leading-relaxed mb-3">
-              Kanha is well-connected to major transportation hubs:
-            </p>
-            <ul class="text-sm md:text-base text-gray-300 space-y-2 ml-4">
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>From Nagpur:</strong> Approximately 260 km (~5 hours by road). Closest major airport and railway station</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>From Raipur:</strong> Alternative major city with good connectivity</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>From Jabalpur:</strong> Another nearby major city with airport and railway connections</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Transfer Services:</strong> Wildmark Resort offers pickup & drop services from Nagpur Airport/Railway Station directly to the resort</span>
+                <span><strong>Monsoon (Jul–Sep):</strong> Park closed for forest regeneration</span>
               </li>
             </ul>
             <p class="text-sm md:text-base text-gray-300 leading-relaxed mt-3">
-              <strong>Contact:</strong> Call <a href="tel:9405529731" class="text-amber-400 hover:text-amber-300">+91 9405529731</a> for transfer arrangements and current rates!
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ 9 -->
-      <div class="faq-item bg-black border border-neutral-800 rounded-xl overflow-hidden">
-        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
-          <span class="text-base md:text-lg font-serif text-white pr-4">What should I bring on a Kanha safari?</span>
-          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </button>
-        <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-in-out;">
-          <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
-            <p class="text-sm md:text-base text-gray-300 leading-relaxed mb-3">
-              Essential items for the perfect safari experience:
-            </p>
-            <ul class="text-sm md:text-base text-gray-300 space-y-2 ml-4">
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Clothing:</strong> Wear earthy, neutral tones like khaki, olive, or brown. Avoid white and bright colors that can disturb wildlife</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Layering:</strong> Light jacket for cool mornings (especially in winter). Temperatures can drop to 10°C</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Photography:</strong> Good camera with telephoto lens. Kanha's light and landscape are legendary among photographers</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Binoculars:</strong> Essential for birdwatching and spotting distant wildlife</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Sun Protection:</strong> Sunscreen, hat, and sunglasses (especially for summer safaris)</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Essentials:</strong> Water bottle, small snacks, and any personal medications</span>
-              </li>
-            </ul>
-            <p class="text-sm md:text-base text-gray-300 leading-relaxed mt-3">
-              Wildmark Resort can arrange all safari essentials and provide expert packing guidance!
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ 10 -->
-      <div class="faq-item bg-black border border-neutral-800 rounded-xl overflow-hidden">
-        <button class="faq-question w-full text-left px-6 py-5 flex justify-between items-center hover:bg-neutral-800 transition">
-          <span class="text-base md:text-lg font-serif text-white pr-4">What is unique about Kanha's flora and vegetation?</span>
-          <svg class="faq-icon w-6 h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-          </svg>
-        </button>
-        <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-in-out;">
-          <div class="px-6 py-5 bg-neutral-800/50 border-t border-neutral-700">
-            <p class="text-sm md:text-base text-gray-300 leading-relaxed mb-3">
-              Kanha's diverse vegetation creates the perfect wildlife habitat:
-            </p>
-            <ul class="text-sm md:text-base text-gray-300 space-y-2 ml-4">
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Sal Forests:</strong> Dense evergreen Sal trees form the iconic backbone - vibrant green throughout the year</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Bamboo Groves:</strong> Vast thickets provide essential cover and food for sloth bears, tigers, and birds</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Open Meadows (Maidans):</strong> Sprawling grasslands where most wildlife sightings occur. Perfect for Barasingha</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Medicinal Plants:</strong> Rich with Ayurvedic treasures - ghost trees, Sindoor trees, sacred fig</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Riparian Vegetation:</strong> Lush riverside plants create havens for crocodiles, kingfishers, and otters</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-500">•</span>
-                <span><strong>Teak Plantations:</strong> Buffer zones with majestic teak groves serving as transition areas</span>
-              </li>
-            </ul>
-            <p class="text-sm md:text-base text-gray-300 leading-relaxed mt-3">
-              This diverse landscape inspired Rudyard Kipling's <em>The Jungle Book</em> - lush Sal forests, emerald meadows, and sparkling streams paint a breathtaking canvas!
+              <strong>Ideal:</strong> December to March for perfect weather and maximum wildlife activity!
             </p>
           </div>
         </div>
@@ -1939,55 +1610,7 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════ FOOTER ═══ -->
-  <footer class="bg-black py-12 border-t border-neutral-800">
-    <div class="max-w-7xl mx-auto px-4 md:px-6">
-      <div class="grid md:grid-cols-4 gap-8 mb-8">
-        <div>
-          <a href="home.php"><img src="images/WILD.png" alt="Wildmark Resort" class="h-12 md:h-16 lg:h-20 w-auto object-contain mb-4"/></a>
-          <p class="text-gray-400 text-sm mb-4">Unforgettable Wildlife Adventure Await at Kanha Jungle Safari. See tigers, deer, leopards & more on a personalized jungle safari.</p>
-          <div class="flex gap-3">
-            <a href="#" class="text-gray-400 hover:text-amber-500 transition"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="text-gray-400 hover:text-amber-500 transition"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="text-gray-400 hover:text-amber-500 transition"><i class="fab fa-youtube"></i></a>
-          </div>
-        </div>
-        <div>
-          <h4 class="text-lg font-serif font-bold text-amber-100 mb-4">Quick Links</h4>
-          <ul class="space-y-2 text-sm">
-            <li><a href="home.php" class="text-gray-400 hover:text-amber-500 transition">Home</a></li>
-            <li><a href="Wildmark.php" class="text-gray-400 hover:text-amber-500 transition">Wildmark</a></li>
-            <li><a href="kanha.php" class="text-amber-500">About Kanha</a></li>
-            <li><a href="How-to-Reach.php" class="text-gray-400 hover:text-amber-500 transition">How to Reach</a></li>
-            <li>
-              <a href="gallery.php" class="text-gray-400 hover:text-amber-500 transition">Gallery</a>
-            </li>
-            <li><a href="contact.php" class="text-gray-400 hover:text-amber-500 transition">Contact Us</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="text-lg font-serif font-bold text-amber-100 mb-4">Help Center</h4>
-          <ul class="space-y-2 text-sm">
-            <li><a href="Privacy-Policy.php" class="text-gray-400 hover:text-amber-500 transition">Privacy Policy</a></li>
-            <li><a href="Terms-and-Conditions.php" class="text-gray-400 hover:text-amber-500 transition">Terms and Conditions</a></li>
-            <li><a href="Cancellation-Policy.php" class="text-gray-400 hover:text-amber-500 transition">Cancellation Policy</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="text-lg font-serif font-bold text-amber-100 mb-4">Contact Info</h4>
-          <ul class="space-y-3 text-sm text-gray-400">
-            <li class="flex items-start gap-2"><i class="fa-solid fa-location-dot text-amber-500 mt-1"></i><span>B.No. 8, Rajlaxmi Apartment Near Bhende Layout, Pannase Layout, Nagpur – 440022.</span></li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-envelope text-amber-500"></i><a href="mailto:kanhawildmark@gmail.com" class="hover:text-amber-500 transition">kanhawildmark@gmail.com</a></li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-phone text-amber-500"></i><a href="tel:9405529731" class="hover:text-amber-500 transition">+91 9405529731</a></li>
-            <li class="flex items-center gap-2"><i class="fa-solid fa-phone text-amber-500"></i><a href="tel:7719806444" class="hover:text-amber-500 transition">+91 7719806444</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="border-t border-neutral-800 pt-6 text-center">
-        <p class="text-gray-500 text-xs">© 2025 Wildmark Resort Kanha. All Rights Reserved.</p>
-      </div>
-    </div>
-  </footer>
+  
 
   <!-- WhatsApp Floating Button -->
   <a href="https://wa.me/9405529731" target="_blank"
@@ -2070,5 +1693,9 @@
       btn.classList.add('active');
     }
   </script>
-</body>
-</html>
+<?php 
+
+
+// Include header
+include 'includes/footer.php'; 
+?>

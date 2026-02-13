@@ -152,7 +152,7 @@
 
       <!-- Center Logo on Mobile -->
       <div class="absolute left-1/2 transform -translate-x-1/2">
-        <a href="home.php" class="flex items-center">
+        <a href="index.php" class="flex items-center">
           <img 
             src="images/WILD.png" 
             alt="Wildmark Resort Kanha Logo" 
@@ -175,7 +175,7 @@
       
       <!-- Left - Logo Desktop -->
       <div class="flex items-center">
-        <a href="home.php" class="flex items-center">
+        <a href="index.php" class="flex items-center">
           <img 
             src="images/WILD.png" 
             alt="Wildmark Resort Kanha Logo" 
@@ -187,7 +187,7 @@
       <!-- Center - Menu Items Desktop -->
       <div class="flex-1 flex justify-center">
         <div class="flex space-x-4 lg:space-x-8 text-xs lg:text-sm font-light tracking-wider items-center">
-          <a href="home.php" class="hover:text-amber-500 transition">Home</a>
+          <a href="index.php" class="hover:text-amber-500 transition">Home</a>
           <a href="about.php" class="hover:text-amber-500 transition">About</a>
           <a href="How-to-Reach.php" class="hover:text-amber-500 transition">How to Reach</a>
 
@@ -222,31 +222,11 @@
             </div>
           </div>
 
-          <!-- Rooms Dropdown -->
-          <div class="dropdown">
-            <button class="hover:text-amber-500 transition flex items-center gap-1">
-              Rooms
-              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-              </svg>
-            </button>
-            <div class="mega-menu">
-              <div class="bg-neutral-900 border border-neutral-800 p-4 shadow-xl">
-                <div class="grid gap-2">
-                  <a href="Super-Deluxe-Rooms.php" class="hover:text-amber-500 py-1 text-xs whitespace-nowrap">
-                    Super Deluxe Rooms
-                  </a>
-                  <a href="Family-Double-Bedded-Rooms.php" class="hover:text-amber-500 py-1 text-xs whitespace-nowrap">
-                    Family Double Bedded Rooms
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+        
 
           <a href="Wildmark.php" class="hover:text-amber-500 transition">Wildmark</a>
           <a href="kanha.php" class="hover:text-amber-500 transition">Kanha</a>
-          <a href="resort-activities.php" class="hover:text-amber-500 transition">Resort Activities</a>
+          
           <a href="gallery.php" class="hover:text-amber-500 transition">Gallery</a>
         </div>
       </div>
@@ -262,7 +242,7 @@
     <!-- Mobile Menu -->
     <div id="mobileMenu" class="mobile-menu md:hidden bg-black border-t border-neutral-800 mt-3">
       <div class="py-4 space-y-1">
-        <a href="home.php" class="block px-4 py-2 hover:bg-neutral-900 hover:text-amber-500 transition text-sm">
+        <a href="index.php" class="block px-4 py-2 hover:bg-neutral-900 hover:text-amber-500 transition text-sm">
           Home
         </a>
         <a href="about.php" class="block px-4 py-2 hover:bg-neutral-900 hover:text-amber-500 transition text-sm">
@@ -307,26 +287,7 @@
         </div>
 
         <!-- Mobile Rooms -->
-        <div>
-          <button id="mobileRoomsBtn"
-            class="w-full flex justify-between items-center px-4 py-2 hover:bg-neutral-900 hover:text-amber-500 transition text-sm">
-            <span>Rooms</span>
-            <svg id="roomsArrow" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor"
-              viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div id="mobileRoomsDropdown" class="mobile-packages-dropdown bg-neutral-900">
-            <a href="Super-Deluxe-Rooms.php"
-              class="block px-8 py-2 hover:bg-neutral-800 hover:text-amber-500 transition text-xs">
-              Super Deluxe Rooms
-            </a>
-            <a href="Family-Double-Bedded-Rooms.php"
-              class="block px-8 py-2 hover:bg-neutral-800 hover:text-amber-500 transition text-xs">
-              Family Double Bedded Rooms
-            </a>
-          </div>
-        </div>
+        
 
         <a href="Wildmark.php" class="block px-4 py-2 hover:bg-neutral-900 hover:text-amber-500 transition text-sm">
           Wildmark
@@ -334,10 +295,7 @@
         <a href="kanha.php" class="block px-4 py-2 hover:bg-neutral-900 hover:text-amber-500 transition text-sm">
           Kanha
         </a>
-        <a href="resort-activities.php"
-          class="block px-4 py-2 hover:bg-neutral-900 hover:text-amber-500 transition text-sm">
-          Resort Activities
-        </a>
+        
         <a href="gallery.php" class="block px-4 py-2 hover:bg-neutral-900 hover:text-amber-500 transition text-sm">
           Gallery
         </a>
