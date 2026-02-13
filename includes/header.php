@@ -25,18 +25,33 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+       
+       html {
+  overflow-x: hidden !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+}
 
-        body {
-            font-family: "Roboto Mono", monospace;
-            overflow-x: hidden;
-            width: 100%;
-            max-width: 100vw;
-        }
+body {
+  overflow-x: hidden !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Step 2: Har element ko box-sizing de do */
+*, *::before, *::after {
+  box-sizing: border-box !important;
+}
+
+/* Step 3: Sabhi sections ko contain kar do */
+section {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+  width: 100% !important;
+}
+
 
         .font-serif {
             font-family: "Roboto Slab", serif;
@@ -227,7 +242,7 @@
           <a href="Wildmark.php" class="hover:text-amber-500 transition">Wildmark</a>
           <a href="kanha.php" class="hover:text-amber-500 transition">Kanha</a>
           
-          <a href="gallery.php" class="hover:text-amber-500 transition">Gallery</a>
+          
         </div>
       </div>
 
@@ -296,9 +311,7 @@
           Kanha
         </a>
         
-        <a href="gallery.php" class="block px-4 py-2 hover:bg-neutral-900 hover:text-amber-500 transition text-sm">
-          Gallery
-        </a>
+        
       </div>
     </div>
   </div>

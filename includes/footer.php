@@ -87,12 +87,9 @@
             </li>
             <li class="flex items-center gap-2">
               <i class="fa-solid fa-phone text-amber-500"></i>
-              <a href="tel:9405529731" class="text-gray-400 hover:text-amber-500 transition">+91 9405529731</a>
+              <a href="tel:8830996719" class="text-gray-400 hover:text-amber-500 transition">+91 8830996719</a>
             </li>
-            <li class="flex items-center gap-2">
-              <i class="fa-solid fa-phone text-amber-500"></i>
-              <a href="tel:7719806444" class="text-gray-400 hover:text-amber-500 transition">+91 7719806444</a>
-            </li>
+           
           </ul>
         </div>
       </div>
@@ -107,7 +104,7 @@
   </footer>
 
   <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/9405529731" target="_blank"
+  <a href="https://wa.me/8830996719" target="_blank"
     class="fixed bottom-4 right-4 md:bottom-8 md:right-8 bg-green-500 hover:bg-green-600 w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-2xl z-50 transition transform hover:scale-110"
     data-aos="zoom-in" data-aos-delay="1000" aria-label="WhatsApp">
     <svg class="w-6 h-6 md:w-8 md:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
