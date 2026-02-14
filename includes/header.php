@@ -26,21 +26,45 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
-       
-       html {
-  overflow-x: hidden !important;
-  width: 100% !important;
-  max-width: 100vw !important;
-}
-
+/* Hide scrollbar for entire body/page */
 body {
-  overflow-x: hidden !important;
-  width: 100% !important;
-  max-width: 100vw !important;
-  margin: 0 !important;
-  padding: 0 !important;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
 }
 
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+/* Hide scrollbar for all sections */
+section {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+section::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for html element too */
+html {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+/* If you have any div with overflow */
+div {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+div::-webkit-scrollbar {
+    display: none;
+}
 /* Step 2: Har element ko box-sizing de do */
 *, *::before, *::after {
   box-sizing: border-box !important;
