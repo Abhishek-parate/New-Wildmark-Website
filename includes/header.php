@@ -175,7 +175,7 @@ section {
 <body class="bg-black text-white">
 <nav class="fixed w-full bg-black z-50 py-3 md:py-2 border-b border-neutral-800" data-aos="fade-down"
   data-aos-duration="800">
-  <div class="container mx-auto px-3 md:px-6">
+  <div class="w-full max-w-[1400px] mx-auto px-3 md:px-6">
 
     <!-- Mobile Layout -->
     <div class="flex md:hidden justify-between items-center relative">
@@ -207,15 +207,15 @@ section {
     </div>
 
     <!-- Desktop Layout -->
-    <div class="hidden md:flex justify-between items-center">
+    <div class="hidden md:flex items-center gap-8">
       
       <!-- Left - Logo Desktop -->
-      <div class="flex items-center">
-        <a href="index.php" class="flex items-center">
+      <div class="flex-shrink-0" style="width: 180px;">
+        <a href="index.php" class="flex items-start">
           <img 
             src="images/WILD.png" 
             alt="Wildmark Resort Kanha Logo" 
-            class="h-12 md:h-14 lg:h-16 w-auto object-contain "
+            class="h-12 md:h-14 lg:h-16 w-auto object-contain"
           />
         </a>
       </div>
@@ -258,18 +258,15 @@ section {
             </div>
           </div>
 
-        
-
           <a href="Wildmark.php" class="hover:text-amber-500 transition">Wildmark</a>
           <a href="kanha.php" class="hover:text-amber-500 transition">Kanha</a>
-          
           
         </div>
       </div>
 
       <!-- Right - Book Now Button -->
-      <div>
-        <a href="contact.php" class="bg-amber-600 hover:bg-amber-700 px-4 py-2 text-xs lg:text-sm transition font-semibold">
+      <div class="flex-shrink-0" style="width: 150px;">
+        <a href="contact.php" class="bg-amber-600 hover:bg-amber-700 px-4 py-2 text-xs lg:text-sm transition font-semibold block text-center">
           BOOK NOW
         </a>
       </div>
@@ -322,16 +319,12 @@ section {
           </div>
         </div>
 
-        <!-- Mobile Rooms -->
-        
-
         <a href="Wildmark.php" class="block px-4 py-2 hover:bg-neutral-900 hover:text-amber-500 transition text-sm">
           Wildmark
         </a>
         <a href="kanha.php" class="block px-4 py-2 hover:bg-neutral-900 hover:text-amber-500 transition text-sm">
           Kanha
         </a>
-        
         
       </div>
     </div>
