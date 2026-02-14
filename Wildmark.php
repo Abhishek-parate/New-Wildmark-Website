@@ -23,13 +23,14 @@ include 'includes/header.php';
 
 /* Smooth scroll for popup content */
 #specialOfferPopup > div {
-    scrollbar-width: thin;
-    scrollbar-color: #d97706 #1c1917;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
 }
 
 #specialOfferPopup > div::-webkit-scrollbar {
-    width: 6px;
+    display: none; /* Chrome/Safari/Opera */
 }
+
 
 #specialOfferPopup > div::-webkit-scrollbar-track {
     background: #1c1917;
