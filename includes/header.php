@@ -175,144 +175,80 @@
             <!-- Desktop Layout -->
             <div class="hidden md:flex justify-between items-center">
 
-                <!-- Left - Logo Desktop -->
-                <div class="flex items-center">
-                    <a href="index.php" class="flex items-center">
-                        <img src="images/WILD.png" alt="Wildmark Resort Kanha Logo"
-                            class="h-12 md:h-14 lg:h-16 w-auto object-contain" />
-                    </a>
-                </div>
-
-                <!-- Center - Menu Items Desktop -->
-                <div class="flex-1 flex justify-center">
-                    <div class="flex space-x-4 lg:space-x-8 text-xs lg:text-sm font-light tracking-wider items-center">
-                        <a href="index.php" class="hover:text-amber-500 transition">Home</a>
-                        <a href="about.php" class="hover:text-amber-500 transition">About</a>
-                        <a href="How-to-Reach.php" class="hover:text-amber-500 transition">How to Reach</a>
-
-                        <!-- Packages Dropdown -->
-                        <div class="dropdown">
-                            <button class="hover:text-amber-500 transition flex items-center gap-1">
-                                Packages
-                                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 9l-7 7-7-7"></path>
-                                </svg>
-                            </button>
-                            <div class="mega-menu">
-                                <div class="bg-neutral-900 border border-neutral-800 p-4 shadow-xl">
-                                    <div class="grid gap-2">
-                                        <a href="Kanha-Tour-Package.php"
-                                            class="hover:text-amber-500 py-1 text-xs whitespace-nowrap">
-                                            Kanha Tour Package
-                                        </a>
-                                        <a href="Kanha-Tiger-Safari-Tour-Package.php"
-                                            class="hover:text-amber-500 py-1 text-xs whitespace-nowrap">
-                                            Kanha Tiger Safari Tour Package
-                                        </a>
-                                        <a href="Kanha-Safari-Tour-Package.php"
-                                            class="hover:text-amber-500 py-1 text-xs whitespace-nowrap">
-                                            Kanha Safari Tour Package
-                                        </a>
-                                        <a href="Mukki-Zone-Tour-Package.php"
-                                            class="hover:text-amber-500 py-1 text-xs whitespace-nowrap">
-                                            Mukki Zone Tour Package
-                                        </a>
-                                        <a href="Kanha-Kisli-Tour-Package.php"
-                                            class="hover:text-amber-500 py-1 text-xs whitespace-nowrap">
-                                            Kanha Kisli Tour Package
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                        <a href="Wildmark.php" class="hover:text-amber-500 transition">Wildmark</a>
-                        <a href="kanha.php" class="hover:text-amber-500 transition">Kanha</a>
-
-                        <a href="gallery.php" class="hover:text-amber-500 transition">Gallery</a>
-                    </div>
-                </div>
-
-                <!-- Right - Book Now Button -->
-                <div>
-                    <a href="contact.php"
-                        class="bg-amber-600 hover:bg-amber-700 px-4 py-2 text-xs lg:text-sm transition font-semibold">
-                        BOOK NOW
-                    </a>
-                </div>
-            </div>
-
-            <!-- Mobile Menu -->
-            <div id="mobileMenu" class="mobile-menu md:hidden bg-black border-t border-neutral-800 mt-3">
-                <div class="py-4 space-y-1">
-                    <a href="index.php"
-                        class="block px-4 py-2 hover:bg-neutral-900 hover:text-amber-500 transition text-sm">
-                        Home
-                    </a>
-                    <a href="about.php"
-                        class="block px-4 py-2 hover:bg-neutral-900 hover:text-amber-500 transition text-sm">
-                        About
-                    </a>
-                    <a href="How-to-Reach.php"
-                        class="block px-4 py-2 hover:bg-neutral-900 hover:text-amber-500 transition text-sm">
-                        How to Reach
-                    </a>
-
-                    <!-- Mobile Packages -->
-                    <div>
-                        <button id="mobilePackagesBtn"
-                            class="w-full flex justify-between items-center px-4 py-2 hover:bg-neutral-900 hover:text-amber-500 transition text-sm">
-                            <span>Packages</span>
-                            <svg id="packagesArrow" class="w-4 h-4 transition-transform" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </button>
-                        <div id="mobilePackagesDropdown" class="mobile-packages-dropdown bg-neutral-900">
-                            <a href="Kanha-Tour-Package.php"
-                                class="block px-8 py-2 hover:bg-neutral-800 hover:text-amber-500 transition text-xs">
-                                Kanha Tour Package
-                            </a>
-                            <a href="Kanha-Tiger-Safari-Tour-Package.php"
-                                class="block px-8 py-2 hover:bg-neutral-800 hover:text-amber-500 transition text-xs">
-                                Kanha Tiger Safari Tour Package
-                            </a>
-                            <a href="Kanha-Safari-Tour-Package.php"
-                                class="block px-8 py-2 hover:bg-neutral-800 hover:text-amber-500 transition text-xs">
-                                Kanha Safari Tour Package
-                            </a>
-                            <a href="Mukki-Zone-Tour-Package.php"
-                                class="block px-8 py-2 hover:bg-neutral-800 hover:text-amber-500 transition text-xs">
-                                Mukki Zone Tour Package
-                            </a>
-                            <a href="Kanha-Kisli-Tour-Package.php"
-                                class="block px-8 py-2 hover:bg-neutral-800 hover:text-amber-500 transition text-xs">
-                                Kanha Kisli Tour Package
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Mobile Rooms -->
-
-
-                    <a href="Wildmark.php"
-                        class="block px-4 py-2 hover:bg-neutral-900 hover:text-amber-500 transition text-sm">
-                        Wildmark
-                    </a>
-                    <a href="kanha.php"
-                        class="block px-4 py-2 hover:bg-neutral-900 hover:text-amber-500 transition text-sm">
-                        Kanha
-                    </a>
-
-                    <a href="gallery.php"
-                        class="block px-4 py-2 hover:bg-neutral-900 hover:text-amber-500 transition text-sm">
-                        Gallery
-                    </a>
-                </div>
-            </div>
+          <a href="Wildmark.php" class="hover:text-amber-500 transition">Wildmark</a>
+          <a href="kanha.php" class="hover:text-amber-500 transition">Kanha</a>
+          
+          
         </div>
-    </nav>
+      </div>
+
+      <!-- Right - Book Now Button -->
+      <div>
+        <a href="contact.php" class="bg-amber-600 hover:bg-amber-700 px-4 py-2 text-xs lg:text-sm transition font-semibold">
+          BOOK NOW
+        </a>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu md:hidden bg-black border-t border-neutral-800 mt-3">
+      <div class="py-4 space-y-1">
+        <a href="index.php" class="block px-4 py-2 hover:bg-neutral-900 hover:text-amber-500 transition text-sm">
+          Home
+        </a>
+        <a href="about.php" class="block px-4 py-2 hover:bg-neutral-900 hover:text-amber-500 transition text-sm">
+          About
+        </a>
+        <a href="How-to-Reach.php" class="block px-4 py-2 hover:bg-neutral-900 hover:text-amber-500 transition text-sm">
+          How to Reach
+        </a>
+
+        <!-- Mobile Packages -->
+        <div>
+          <button id="mobilePackagesBtn"
+            class="w-full flex justify-between items-center px-4 py-2 hover:bg-neutral-900 hover:text-amber-500 transition text-sm">
+            <span>Packages</span>
+            <svg id="packagesArrow" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div id="mobilePackagesDropdown" class="mobile-packages-dropdown bg-neutral-900">
+            <a href="Kanha-Tour-Package.php"
+              class="block px-8 py-2 hover:bg-neutral-800 hover:text-amber-500 transition text-xs">
+              Kanha Tour Package
+            </a>
+            <a href="Kanha-Tiger-Safari-Tour-Package.php"
+              class="block px-8 py-2 hover:bg-neutral-800 hover:text-amber-500 transition text-xs">
+              Kanha Tiger Safari Tour Package
+            </a>
+            <a href="Kanha-Safari-Tour-Package.php"
+              class="block px-8 py-2 hover:bg-neutral-800 hover:text-amber-500 transition text-xs">
+              Kanha Safari Tour Package
+            </a>
+            <a href="Mukki-Zone-Tour-Package.php"
+              class="block px-8 py-2 hover:bg-neutral-800 hover:text-amber-500 transition text-xs">
+              Mukki Zone Tour Package
+            </a>
+            <a href="Kanha-Kisli-Tour-Package.php"
+              class="block px-8 py-2 hover:bg-neutral-800 hover:text-amber-500 transition text-xs">
+              Kanha Kisli Tour Package
+            </a>
+          </div>
+        </div>
+
+        <!-- Mobile Rooms -->
+        
+
+        <a href="Wildmark.php" class="block px-4 py-2 hover:bg-neutral-900 hover:text-amber-500 transition text-sm">
+          Wildmark
+        </a>
+        <a href="kanha.php" class="block px-4 py-2 hover:bg-neutral-900 hover:text-amber-500 transition text-sm">
+          Kanha
+        </a>
+        
+        
+      </div>
+    </div>
+  </div>
+</nav>

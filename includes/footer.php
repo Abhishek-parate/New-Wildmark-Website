@@ -102,17 +102,32 @@
             </div>
         </div>
 
-        <!-- Bottom Bar -->
-        <div class="border-t border-neutral-800 pt-6 text-center">
-            <p class="text-gray-500 text-xs">
-                © 2025 Wildmark Resort Kanha. All Rights Reserved.
-            </p>
+        <!-- Contact Info -->
+        <div>
+          <h4 class="text-lg font-serif font-bold text-amber-100 mb-4">
+            Contact Info
+          </h4>
+          <ul class="space-y-3 text-sm text-gray-400">
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-location-dot text-amber-500 mt-1"></i>
+              <span>B.No. 8, Rajlaxmi Apartment Near Bhende Layout, Pannase Layout, Nagpur – 440022.</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-envelope text-amber-500"></i>
+              <a href="mailto:info@wildmarkresort.com" class="text-gray-400 hover:text-amber-500 transition">info@wildmarkresort.com</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-phone text-amber-500"></i>
+              <a href="tel:8830996719" class="text-gray-400 hover:text-amber-500 transition">+91 8830996719</a>
+            </li>
+           
+          </ul>
         </div>
     </div>
 </footer>
 
-<!-- WhatsApp Floating Button -->
-<a href="https://wa.me/9405529731" target="_blank"
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/8830996719" target="_blank"
     class="fixed bottom-4 right-4 md:bottom-8 md:right-8 bg-green-500 hover:bg-green-600 w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-2xl z-50 transition transform hover:scale-110"
     data-aos="zoom-in" data-aos-delay="1000" aria-label="WhatsApp">
     <svg class="w-6 h-6 md:w-8 md:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
