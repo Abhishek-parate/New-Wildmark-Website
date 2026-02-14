@@ -6,7 +6,39 @@ $pageTitle = "Wildmark - Wildmark Resort Kanha";
 include 'includes/header.php'; 
 ?>
 <style>
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
 
+.animate-slideIn {
+    animation: slideIn 0.3s ease-out;
+}
+
+/* Smooth scroll for popup content */
+#specialOfferPopup > div {
+    scrollbar-width: thin;
+    scrollbar-color: #d97706 #1c1917;
+}
+
+#specialOfferPopup > div::-webkit-scrollbar {
+    width: 6px;
+}
+
+#specialOfferPopup > div::-webkit-scrollbar-track {
+    background: #1c1917;
+}
+
+#specialOfferPopup > div::-webkit-scrollbar-thumb {
+    background: #d97706;
+    border-radius: 3px;
+}
     /* Amenities Icon Colors */
     .amenity-icon {
         color: #d4a574;
@@ -1116,6 +1148,156 @@ include 'includes/header.php';
     </div><!-- END FAQ GRID -->
   </div>
 </section>
+<button id="specialOfferBtn" 
+    class="fixed bottom-20 right-4 md:bottom-24 mb-8 md:right-8 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-2xl z-50 transition transform hover:scale-110 animate-pulse"
+    aria-label="Special Offer"
+    onclick="toggleSpecialOfferPopup()">
+    <!-- Price Tag Icon -->
+    <svg class="w-8 h-8 md:w-10 md:h-10" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
+    </svg>
+    <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold px-1.5 py-0.5 rounded-full animate-bounce">
+        New
+    </span>
+</button>
+<!-- Special Offer Popup Modal -->
+<div id="specialOfferPopup" 
+    class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[100] hidden items-center justify-center p-4"
+    onclick="closeIfClickedOutside(event)">
+    
+    <div class="bg-neutral-900 border-2 border-amber-500/50 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto relative animate-slideIn"
+         onclick="event.stopPropagation()">
+        
+        <!-- Close Button -->
+        <button onclick="toggleSpecialOfferPopup()" 
+            class="absolute top-4 right-4 text-white hover:text-amber-500 transition z-10">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+
+        <!-- Header with Gradient -->
+        <div class="bg-gradient-to-r from-amber-600 to-amber-500 p-6 md:p-8 rounded-t-2xl">
+            <div class="flex items-center gap-3 mb-2">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"></path>
+                </svg>
+                <h3 class="text-2xl md:text-3xl font-serif font-bold text-white">Special Offers</h3>
+            </div>
+            <p class="text-amber-100 text-sm">Limited time deals on resort packages & safari tours</p>
+        </div>
+
+        <!-- Offers Content -->
+        <div class="p-6 md:p-8 space-y-6">
+            
+            <!-- Offer 1 - Resort + Safari Package -->
+            <div class="bg-black border border-amber-500/30 rounded-xl p-5 hover:border-amber-500 transition">
+                <div class="flex items-start justify-between mb-3">
+                    <div>
+                        <span class="inline-block bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-full mb-2">
+                            BESTSELLER
+                        </span>
+                        <h4 class="text-xl font-serif font-bold text-white">2N/3D Resort + Safari Package</h4>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-gray-400 text-sm line-through">₹15,000</p>
+                        <p class="text-2xl font-bold text-amber-500">₹12,499</p>
+                    </div>
+                </div>
+                <ul class="text-gray-300 text-sm space-y-2 mb-4">
+                    <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-amber-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        2 Nights Stay at Wildmark Resort (Near Khatia Gate)
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-amber-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        4 Jungle Safaris (Morning + Evening)
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-amber-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        All Meals Included (Breakfast, Lunch, Dinner)
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-amber-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                        </svg>
+                        Complimentary Safari Permit Assistance
+                    </li>
+                </ul>
+                <div class="flex gap-3">
+                    <a href="contact.php" class="flex-1 bg-amber-500 hover:bg-amber-600 text-black font-bold py-2 px-4 rounded-lg text-center text-sm transition">
+                        BOOK NOW
+                    </a>
+                    
+                </div>
+            </div>
+
+            <!-- Offer 2 - Early Bird Discount -->
+            <div class="bg-black border border-amber-500/30 rounded-xl p-5 hover:border-amber-500 transition">
+                <div class="flex items-start justify-between mb-3">
+                    <div>
+                        <span class="inline-block bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-2">
+                            EARLY BIRD
+                        </span>
+                        <h4 class="text-xl font-serif font-bold text-white">Advance Booking Discount</h4>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-2xl font-bold text-green-500">20% OFF</p>
+                    </div>
+                </div>
+                <p class="text-gray-300 text-sm mb-4">
+                    Book 30 days in advance and save 20% on all resort packages. Valid for bookings made before March 31, 2025.
+                </p>
+                <div class="flex gap-3">
+                    <a href="contact.php" class="flex-1 bg-amber-500 hover:bg-amber-600 text-black font-bold py-2 px-4 rounded-lg text-center text-sm transition">
+                        BOOK NOW
+                    </a>
+                   
+                </div>
+            </div>
+
+            <!-- Offer 3 - Group Discount -->
+            <div class="bg-black border border-amber-500/30 rounded-xl p-5 hover:border-amber-500 transition">
+                <div class="flex items-start justify-between mb-3">
+                    <div>
+                        <span class="inline-block bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-2">
+                            GROUP OFFER
+                        </span>
+                        <h4 class="text-xl font-serif font-bold text-white">Group Booking Special</h4>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-2xl font-bold text-blue-500">₹10,999</p>
+                        <p class="text-xs text-gray-400">per person</p>
+                    </div>
+                </div>
+                <p class="text-gray-300 text-sm mb-4">
+                    Special rates for groups of 6+ people. Perfect for families, corporate outings, and wildlife photography tours.
+                </p>
+                <div class="flex gap-3">
+                    <a href="contact.php" class="flex-1 bg-amber-500 hover:bg-amber-600 text-black font-bold py-2 px-4 rounded-lg text-center text-sm transition">
+                        Book Now
+                    </a>
+                    
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="bg-amber-500/10 border-t border-amber-500/30 p-4 text-center rounded-b-2xl">
+            <p class="text-amber-500 text-sm font-semibold">
+                ⏰ Offers valid till March 31, 2025 | Terms & Conditions Apply
+            </p>
+        </div>
+
+    </div>
+</div>
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/8830996719" target="_blank"
         class="fixed bottom-4 right-4 md:bottom-8 md:right-8 bg-green-500 hover:bg-green-600 w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-2xl z-50 transition transform hover:scale-110"
@@ -1198,6 +1380,38 @@ include 'includes/header.php';
       });
     });
     </script>
+    <script>
+// Toggle Special Offer Popup
+function toggleSpecialOfferPopup() {
+    const popup = document.getElementById('specialOfferPopup');
+    if (popup.classList.contains('hidden')) {
+        popup.classList.remove('hidden');
+        popup.classList.add('flex');
+        document.body.style.overflow = 'hidden'; // Prevent background scroll
+    } else {
+        popup.classList.add('hidden');
+        popup.classList.remove('flex');
+        document.body.style.overflow = ''; // Restore scroll
+    }
+}
+
+// Close popup when clicking outside
+function closeIfClickedOutside(event) {
+    if (event.target.id === 'specialOfferPopup') {
+        toggleSpecialOfferPopup();
+    }
+}
+
+// Close popup with Escape key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        const popup = document.getElementById('specialOfferPopup');
+        if (!popup.classList.contains('hidden')) {
+            toggleSpecialOfferPopup();
+        }
+    }
+});
+</script>
 <?php 
 
 include 'includes/footer.php'; 
