@@ -5,85 +5,10 @@ $pageTitle = "Mukki Zone Tour Package- Wildmark Resort Kanha";
 // Include header
 include 'includes/header.php'; 
 ?>
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- AOS -->
-  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&display=swap"
-    rel="stylesheet" />
-
-  <!-- Font Awesome 6 Free (icons) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    referrerpolicy="no-referrer" />
+ 
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: "Roboto Mono", monospace;
-      overflow-x: hidden;
-      width: 100%;
-    }
-
-    .font-serif {
-      font-family: "Roboto Slab", serif;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: "Roboto Slab", serif;
-    }
-
-    /* Fixed dropdown behavior */
-    .dropdown {
-      position: relative;
-    }
-
-    .dropdown:hover .mega-menu,
-    .dropdown .mega-menu:hover {
-      display: block;
-    }
-
-    .mega-menu {
-      display: none;
-      position: absolute;
-      padding-top: 1rem;
-      margin-top: -1rem;
-      min-width: 200px;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    /* Navbar variables */
-    :root {
-      --nav-h: 60px;
-      --tabs-gap: 0px;
-      --tabs-offset: calc(var(--nav-h) + var(--tabs-gap));
-      scroll-padding-top: calc(var(--tabs-offset) + 20px);
-    }
-
-    @media (min-width: 768px) {
-      :root {
-        --nav-h: 80px;
-      }
-    }
+   
 
     /* Tabs styling */
     .tab-btn {
@@ -175,27 +100,7 @@ include 'includes/header.php';
       color: #e5e5e5;
     }
 
-    /* Mobile Menu */
-    .mobile-menu {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease-in-out;
-    }
-
-    .mobile-menu.active {
-      max-height: 500px;
-    }
-
-    /* Prevent horizontal overflow */
-    .container {
-      width: 100%;
-      max-width: 100%;
-    }
-
-    section {
-      width: 100%;
-      overflow-x: hidden;
-    }
+    
 
     /* Swiper Carousel Styles */
     .packageSwiper {
@@ -271,76 +176,7 @@ include 'includes/header.php';
       }
     }
 
-    /* CRITICAL OVERFLOW FIXES */
-    * {
-      box-sizing: border-box;
-    }
-
-    html,
-    body {
-      max-width: 100vw;
-      overflow-x: hidden;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Roboto Mono', monospace;
-    }
-
-    .font-serif {
-      font-family: 'Roboto Slab', serif;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: 'Roboto Slab', serif;
-    }
-
-    /* IMPROVED DROPDOWN */
-    .dropdown {
-      position: relative;
-    }
-
-    .dropdown:hover .mega-menu,
-    .dropdown .mega-menu:hover {
-      display: block;
-    }
-
-    .mega-menu {
-      display: none;
-      position: absolute;
-      padding-top: 1rem;
-      margin-top: -1rem;
-      min-width: 200px;
-    }
-
-    /* Mobile menu */
-    .mobile-menu {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease-out;
-    }
-
-    .mobile-menu.active {
-      max-height: 800px;
-      /* Increased to accommodate dropdown */
-    }
-
-    /* Mobile Packages Dropdown */
-    .mobile-packages-dropdown {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease-in-out;
-    }
-
-    .mobile-packages-dropdown.active {
-      max-height: 500px;
-    }
+    
   </style>
 
   <!-- Spacer for fixed nav -->

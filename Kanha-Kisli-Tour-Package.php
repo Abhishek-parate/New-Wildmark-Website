@@ -7,66 +7,6 @@ include 'includes/header.php';
 ?>
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: "Roboto Mono", monospace;
-      overflow-x: hidden;
-      width: 100%;
-    }
-
-    .font-serif {
-      font-family: "Roboto Slab", serif;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: "Roboto Slab", serif;
-    }
-
-    /* Fixed dropdown behavior */
-    .dropdown {
-      position: relative;
-    }
-
-    .dropdown:hover .mega-menu,
-    .dropdown .mega-menu:hover {
-      display: block;
-    }
-
-    .mega-menu {
-      display: none;
-      position: absolute;
-      padding-top: 1rem;
-      margin-top: -1rem;
-      min-width: 200px;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    /* Navbar variables */
-    :root {
-      --nav-h: 60px;
-      --tabs-gap: 0px;
-      --tabs-offset: calc(var(--nav-h) + var(--tabs-gap));
-      scroll-padding-top: calc(var(--tabs-offset) + 20px);
-    }
-
-    @media (min-width: 768px) {
-      :root {
-        --nav-h: 80px;
-      }
-    }
 
     /* Tabs styling */
     .tab-btn {
@@ -158,74 +98,7 @@ include 'includes/header.php';
       color: #e5e5e5;
     }
 
-    /* Mobile Menu */
-    .mobile-menu {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease-in-out;
-    }
 
-    .mobile-menu.active {
-      max-height: 500px;
-    }
-
-    /* Prevent horizontal overflow — BUT NOT on swiper section */
-    .container {
-      width: 100%;
-      max-width: 100%;
-    }
-
-    /* FIX: Remove overflow-x:hidden from section globally — it breaks Swiper */
-    /* Instead apply it only where needed */
-
-    /* CRITICAL OVERFLOW FIXES */
-    html,
-    body {
-      max-width: 100vw;
-      overflow-x: hidden;
-      margin: 0;
-      padding: 0;
-    }
-
-    /* IMPROVED DROPDOWN */
-    .dropdown {
-      position: relative;
-    }
-
-    .dropdown:hover .mega-menu,
-    .dropdown .mega-menu:hover {
-      display: block;
-    }
-
-    .mega-menu {
-      display: none;
-      position: absolute;
-      padding-top: 1rem;
-      margin-top: -1rem;
-      min-width: 200px;
-    }
-
-    /* Mobile menu */
-    .mobile-menu {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease-out;
-    }
-
-    .mobile-menu.active {
-      max-height: 800px;
-    }
-
-    /* Mobile Packages Dropdown */
-    .mobile-packages-dropdown {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease-in-out;
-    }
-
-    .mobile-packages-dropdown.active {
-      max-height: 500px;
-    }
 
     /* Line clamp utility */
     .line-clamp-2 {
@@ -234,18 +107,6 @@ include 'includes/header.php';
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
-
-    /* ================================================
-       SWIPER FIX — THE ROOT CAUSE OF THE BROKEN CARDS
-       ================================================
-       Problem: section { overflow-x: hidden } was
-       clipping Swiper slides that extend outside bounds.
-       
-       Solution:
-       1. The #recommended section must NOT have overflow hidden
-       2. Wrap swiper in a clip container instead
-       3. Swiper itself needs overflow: visible to render slides
-    ================================================ */
 
     /* The section containing swiper — no overflow:hidden here */
     #recommended {
@@ -339,8 +200,6 @@ include 'includes/header.php';
     }
   </style>
 
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <!-- Spacer for fixed nav -->
   <div class="h-[60px] md:h-[80px]"></div>

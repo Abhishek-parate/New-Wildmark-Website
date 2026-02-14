@@ -11,7 +11,9 @@
 
     <!-- AOS -->
     <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
+    <!-- Tailwind -->
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,219 +27,153 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
-       
-       html {
-  overflow-x: hidden !important;
-  width: 100% !important;
-  max-width: 100vw !important;
-}
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-body {
-  overflow-x: hidden !important;
-  width: 100% !important;
-  max-width: 100vw !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
+    body {
+        font-family: "Roboto Mono", monospace;
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100vw;
+    }
 
-/* Step 2: Har element ko box-sizing de do */
-*, *::before, *::after {
-  box-sizing: border-box !important;
-}
+    .font-serif {
+        font-family: "Roboto Slab", serif;
+    }
 
-/* Step 3: Sabhi sections ko contain kar do */
-section {
-  overflow-x: hidden !important;
-  max-width: 100vw !important;
-  width: 100% !important;
-}
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Roboto Slab", serif;
+    }
 
+    html {
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+    }
 
-        .font-serif {
-            font-family: "Roboto Slab", serif;
+    /* Dropdown */
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdown:hover .mega-menu,
+    .dropdown .mega-menu:hover {
+        display: block;
+    }
+
+    .mega-menu {
+        display: none;
+        position: absolute;
+        padding-top: 1rem;
+        margin-top: -1rem;
+        min-width: 200px;
+    }
+
+    /* Mobile menu */
+    .mobile-menu {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        width: 100%;
+    }
+
+    .mobile-menu.active {
+        max-height: 800px;
+        overflow-y: auto;
+    }
+
+    /* Mobile Packages Dropdown */
+    .mobile-packages-dropdown {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .mobile-packages-dropdown.active {
+        max-height: 500px;
+    }
+
+    .mobile-menu a,
+    .mobile-menu button,
+    .mobile-menu span {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
+        max-width: 100%;
+    }
+
+    section {
+        overflow-x: hidden;
+    }
+
+    @media (max-width: 768px) {
+        body {
+            font-size: 14px;
         }
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-family: "Roboto Slab", serif;
+        h2 {
+            font-size: 1.5rem;
         }
 
-        html {
-            overflow-x: hidden;
-            scroll-behavior: smooth;
+        h3 {
+            font-size: 1.25rem;
         }
 
-        /* Dropdown */
-        .dropdown {
-            position: relative;
-        }
-
-        .dropdown:hover .mega-menu,
-        .dropdown .mega-menu:hover {
-            display: block;
-        }
-
-        .mega-menu {
-            display: none;
-            position: absolute;
-            padding-top: 1rem;
-            margin-top: -1rem;
-            min-width: 200px;
-        }
-
-        /* Mobile menu */
-        .mobile-menu {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-            width: 100%;
-        }
-
-        .mobile-menu.active {
-            max-height: 800px;
-            overflow-y: auto;
-        }
-
-        /* Mobile Packages Dropdown */
-        .mobile-packages-dropdown {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-in-out;
-        }
-
-        .mobile-packages-dropdown.active {
-            max-height: 500px;
-        }
-
-        .mobile-menu a,
-        .mobile-menu button,
-        .mobile-menu span {
+        p,
+        span,
+        a,
+        li {
             word-wrap: break-word;
             overflow-wrap: break-word;
-            word-break: break-word;
-            hyphens: auto;
-            max-width: 100%;
         }
-
-        section {
-            overflow-x: hidden;
-        }
-
-        @media (max-width: 768px) {
-            body {
-                font-size: 14px;
-            }
-
-            h2 {
-                font-size: 1.5rem;
-            }
-
-            h3 {
-                font-size: 1.25rem;
-            }
-
-            p,
-            span,
-            a,
-            li {
-                word-wrap: break-word;
-                overflow-wrap: break-word;
-            }
-        }
+    }
     </style>
 </head>
 
 <body class="bg-black text-white">
-<nav class="fixed w-full bg-black z-50 py-3 md:py-2 border-b border-neutral-800" data-aos="fade-down"
-  data-aos-duration="800">
-  <div class="container mx-auto px-3 md:px-6">
+    <nav class="fixed w-full bg-black z-50 py-3 md:py-2 border-b border-neutral-800" data-aos="fade-down"
+        data-aos-duration="800">
+        <div class="container mx-auto px-3 md:px-6">
 
-    <!-- Mobile Layout -->
-    <div class="flex md:hidden justify-between items-center relative">
-      <!-- Mobile Hamburger -->
-      <button id="mobileMenuBtn" class="text-white hover:text-amber-500 transition z-20 p-1">
-        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
+            <!-- Mobile Layout -->
+            <div class="flex md:hidden justify-between items-center relative">
+                <!-- Mobile Hamburger -->
+                <button id="mobileMenuBtn" class="text-white hover:text-amber-500 transition z-20 p-1">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
 
-      <!-- Center Logo on Mobile -->
-      <div class="absolute left-1/2 transform -translate-x-1/2">
-        <a href="index.php" class="flex items-center">
-          <img 
-            src="images/WILD.png" 
-            alt="Wildmark Resort Kanha Logo" 
-            class="h-14 w-auto object-contain"
-          />
-        </a>
-      </div>
-
-      <!-- Right Side - Only Book Now Button -->
-      <div class="flex items-center">
-        <!-- Book Now Button -->
-        <a href="contact.php" class="bg-amber-600 hover:bg-amber-700 px-3 py-2 transition text-xs font-semibold" title="Book Now">
-          BOOK NOW
-        </a>
-      </div>
-    </div>
-
-    <!-- Desktop Layout -->
-    <div class="hidden md:flex justify-between items-center">
-      
-      <!-- Left - Logo Desktop -->
-      <div class="flex items-center">
-        <a href="index.php" class="flex items-center">
-          <img 
-            src="images/WILD.png" 
-            alt="Wildmark Resort Kanha Logo" 
-            class="h-12 md:h-14 lg:h-16 w-auto object-contain"
-          />
-        </a>
-      </div>
-
-      <!-- Center - Menu Items Desktop -->
-      <div class="flex-1 flex justify-center">
-        <div class="flex space-x-4 lg:space-x-8 text-xs lg:text-sm font-light tracking-wider items-center">
-          <a href="index.php" class="hover:text-amber-500 transition">Home</a>
-          <a href="about.php" class="hover:text-amber-500 transition">About</a>
-          <a href="How-to-Reach.php" class="hover:text-amber-500 transition">How to Reach</a>
-
-          <!-- Packages Dropdown -->
-          <div class="dropdown">
-            <button class="hover:text-amber-500 transition flex items-center gap-1">
-              Packages
-              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-              </svg>
-            </button>
-            <div class="mega-menu">
-              <div class="bg-neutral-900 border border-neutral-800 p-4 shadow-xl">
-                <div class="grid gap-2">
-                  <a href="Kanha-Tour-Package.php" class="hover:text-amber-500 py-1 text-xs whitespace-nowrap">
-                    Kanha Tour Package
-                  </a>
-                  <a href="Kanha-Tiger-Safari-Tour-Package.php" class="hover:text-amber-500 py-1 text-xs whitespace-nowrap">
-                    Kanha Tiger Safari Tour Package
-                  </a>
-                  <a href="Kanha-Safari-Tour-Package.php" class="hover:text-amber-500 py-1 text-xs whitespace-nowrap">
-                    Kanha Safari Tour Package
-                  </a>
-                  <a href="Mukki-Zone-Tour-Package.php" class="hover:text-amber-500 py-1 text-xs whitespace-nowrap">
-                    Mukki Zone Tour Package
-                  </a>
-                  <a href="Kanha-Kisli-Tour-Package.php" class="hover:text-amber-500 py-1 text-xs whitespace-nowrap">
-                    Kanha Kisli Tour Package
-                  </a>
+                <!-- Center Logo on Mobile -->
+                <div class="absolute left-1/2 transform -translate-x-1/2">
+                    <a href="index.php" class="flex items-center">
+                        <img src="images/WILD.png" alt="Wildmark Resort Kanha Logo"
+                            class="h-14 w-auto object-contain" />
+                    </a>
                 </div>
-              </div>
-            </div>
-          </div>
 
-        
+                <!-- Right Side - Only Book Now Button -->
+                <div class="flex items-center">
+                    <!-- Book Now Button -->
+                    <a href="contact.php"
+                        class="bg-amber-600 hover:bg-amber-700 px-3 py-2 transition text-xs font-semibold"
+                        title="Book Now">
+                        BOOK NOW
+                    </a>
+                </div>
+            </div>
+
+            <!-- Desktop Layout -->
+            <div class="hidden md:flex justify-between items-center">
 
           <a href="Wildmark.php" class="hover:text-amber-500 transition">Wildmark</a>
           <a href="kanha.php" class="hover:text-amber-500 transition">Kanha</a>

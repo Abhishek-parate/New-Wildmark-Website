@@ -6,18 +6,25 @@ $pageTitle = "Kanha - Wildmark Resort Kanha";
 include 'includes/header.php'; 
 ?>
 <style>
-.container {
-    width: 100%;
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
 
-@media(min-width:640px) {
-    .container {
-        max-width: 640px
+
+
+    /* ── HERO ── */
+    .kanha-hero {
+      position: relative;
+      height: 100vh;
+      min-height: 600px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      overflow: hidden;
+      padding-bottom:70px ;
+    }
+    .kanha-hero-bg {
+      position: absolute; inset: 0;
+      background: url('image/8-5.png') center/cover no-repeat;
+      transform: scale(1.08);
+      transition: transform 8s ease;
     }
 }
 
@@ -531,9 +538,9 @@ include 'includes/header.php';
 }
 </style>
 
-<header class="relative h-[70vh] md:h-[80vh] lg:h-[90vh] flex items-end"
-    style="background: url('images/home3.webp') center/cover no-repeat">
-    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<header class="relative h-[50vh] md:h-[60vh] lg:h-[80vh] flex items-end"
+        style="background: url('images/home3.webp') center/cover no-repeat">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
 </header>
 
 <!-- ═══════════════════════════════════════════ HISTORY OF KANHA ═══ -->
@@ -2427,43 +2434,15 @@ document.addEventListener('DOMContentLoaded', function() {
     </svg>
 </a>
 
-<!-- AOS -->
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-AOS.init({
-    duration: 900,
-    once: true,
-    offset: 80
-});
+  <script>
 
-// Hero bg load effect
-window.addEventListener('load', () => {
-    document.getElementById('heroBg')?.classList.add('loaded');
-});
 
-// Mobile nav
-const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-const mobileMenu = document.getElementById('mobileMenu');
-const mobilePackagesBtn = document.getElementById('mobilePackagesBtn');
-const mobilePackagesDropdown = document.getElementById('mobilePackagesDropdown');
-const packagesArrow = document.getElementById('packagesArrow');
-
-mobileMenuBtn?.addEventListener('click', e => {
-    e.stopPropagation();
-    mobileMenu.classList.toggle('active');
-});
-mobilePackagesBtn?.addEventListener('click', e => {
-    e.preventDefault();
-    e.stopPropagation();
-    mobilePackagesDropdown.classList.toggle('active');
-    packagesArrow.style.transform = mobilePackagesDropdown.classList.contains('active') ? 'rotate(180deg)' :
-        'rotate(0deg)';
-});
-document.addEventListener('click', e => {
-    if (!mobileMenu?.contains(e.target) && !mobileMenuBtn?.contains(e.target)) {
-        mobileMenu?.classList.remove('active');
-        mobilePackagesDropdown?.classList.remove('active');
-        if (packagesArrow) packagesArrow.style.transform = 'rotate(0deg)';
+    // Flora/Fauna Tabs - RENAMED FUNCTION
+    function switchFloraFaunaTab(tab, btn) {
+      document.querySelectorAll('[id^="tab-"]').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.ff-tab').forEach(b => b.classList.remove('active'));
+      document.getElementById('tab-' + tab)?.classList.remove('hidden');
+      btn.classList.add('active');
     }
 });
 

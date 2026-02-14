@@ -150,7 +150,7 @@ include 'includes/header.php';
   </style>
 
 
-<header class="relative h-[90vh] md:h-[80vh] lg:h-[90vh] flex items-end"
+<header class="relative h-[50vh] md:h-[60vh] lg:h-[80vh] flex items-end"
         style="background: url('images/about3.webp') center/cover no-repeat">
         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
 </header>
