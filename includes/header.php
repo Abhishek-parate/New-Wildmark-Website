@@ -185,7 +185,7 @@ section {
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </button>
-
+       
       <!-- Center Logo on Mobile -->
       <div class="absolute left-1/2 transform -translate-x-1/2">
         <a href="index.php" class="flex items-center">
@@ -215,11 +215,11 @@ section {
           <img 
             src="images/WILD.png" 
             alt="Wildmark Resort Kanha Logo" 
-            class="h-12 md:h-14 lg:h-16 w-auto object-contain"
+            class="h-12 md:h-14 lg:h-16 w-auto object-contain "
           />
         </a>
       </div>
-
+      
       <!-- Center - Menu Items Desktop -->
       <div class="flex-1 flex justify-center">
         <div class="flex space-x-4 lg:space-x-8 text-xs lg:text-sm font-light tracking-wider items-center">
