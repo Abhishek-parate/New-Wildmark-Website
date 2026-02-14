@@ -6,7 +6,24 @@ $pageTitle = "Home - Wildmark Resort Kanha";
 include 'includes/header.php'; 
 ?>
 <style>
+.youtube-shorts-card iframe {
+  max-width: 100%;
+  display: block;
+}
 
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .youtube-shorts-card {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+/* Prevent layout shift */
+.youtube-shorts-card > div {
+  position: relative;
+  overflow: hidden;
+}
     /* Responsive Container */
     .container {
       width: 100%;
@@ -1455,7 +1472,7 @@ include 'includes/header.php';
   </section>
 
   <!-- Customer Testimonials - YouTube Shorts Section -->
-  <section class="py-12 md:py-20 px-4 md:px-6 bg-neutral-900 youtube-testimonials-section overflow-hidden">
+<section class="py-12 md:py-20 px-4 md:px-6 bg-neutral-900 youtube-testimonials-section overflow-hidden">
     <div class="container mx-auto max-w-7xl">
       <!-- Header -->
       <div class="text-center mb-10 md:mb-16">
@@ -1470,77 +1487,89 @@ include 'includes/header.php';
 
       <!-- YouTube Shorts Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        
         <!-- Video Card 1 -->
         <div class="youtube-shorts-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-          <div
-            class="relative bg-neutral-800 rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/20 group-hover:-translate-y-2">
-            <!-- Video Embed Container -->
-            <div class="relative aspect-[9/16] bg-black">
-              <!-- Replace with your YouTube Shorts embed URL -->
-              <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/LKek7gdP15A"
-                title="Guest Testimonial 1" frameborder="0" allow="
-                    accelerometer;
-                    autoplay;
-                    clipboard-write;
-                    encrypted-media;
-                    gyroscope;
-                    picture-in-picture;
-                  " allowfullscreen>
+          <div class="relative bg-neutral-800 rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/20 group-hover:-translate-y-2">
+            <!-- Video Embed Container - FIXED -->
+            <div class="relative w-full" style="padding-bottom: 177.78%; /* 9:16 aspect ratio */">
+              <iframe 
+                class="absolute top-0 left-0 w-full h-full" 
+                src="https://www.youtube.com/embed/LKek7gdP15A?rel=0&modestbranding=1" 
+                title="Guest Testimonial 1" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen
+                loading="lazy">
               </iframe>
             </div>
+            <!-- Guest Info -->
+            <div class="p-4 bg-gradient-to-t from-neutral-900 to-neutral-800">
+              <p class="text-amber-500 text-xs font-semibold mb-1">VERIFIED GUEST</p>
+              <p class="text-white text-sm">Amazing wildlife experience!</p>
+            </div>
           </div>
-
         </div>
 
         <!-- Video Card 2 -->
         <div class="youtube-shorts-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-          <div
-            class="relative bg-neutral-800 rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/20 group-hover:-translate-y-2">
-            <div class="relative aspect-[9/16] bg-black">
-              <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/dMn3NAYZuQ0"
-                title="Guest Testimonial 2" frameborder="0" allow="
-                    accelerometer;
-                    autoplay;
-                    clipboard-write;
-                    encrypted-media;
-                    gyroscope;
-                    picture-in-picture;
-                  " allowfullscreen>
+          <div class="relative bg-neutral-800 rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/20 group-hover:-translate-y-2">
+            <div class="relative w-full" style="padding-bottom: 177.78%;">
+              <iframe 
+                class="absolute top-0 left-0 w-full h-full" 
+                src="https://www.youtube.com/embed/dMn3NAYZuQ0?rel=0&modestbranding=1" 
+                title="Guest Testimonial 2" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen
+                loading="lazy">
               </iframe>
-
             </div>
-
-
+            <div class="p-4 bg-gradient-to-t from-neutral-900 to-neutral-800">
+              <p class="text-amber-500 text-xs font-semibold mb-1">VERIFIED GUEST</p>
+              <p class="text-white text-sm">Perfect resort near Khatia Gate!</p>
+            </div>
           </div>
-
-
         </div>
 
         <!-- Video Card 3 -->
         <div class="youtube-shorts-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-          <div
-            class="relative bg-neutral-800 rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/20 group-hover:-translate-y-2">
-            <div class="relative aspect-[9/16] bg-black">
-              <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/IU16dm75W-Y"
-                title="Guest Testimonial 3" frameborder="0" allow="
-                    accelerometer;
-                    autoplay;
-                    clipboard-write;
-                    encrypted-media;
-                    gyroscope;
-                    picture-in-picture;
-                  " allowfullscreen>
+          <div class="relative bg-neutral-800 rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/20 group-hover:-translate-y-2">
+            <div class="relative w-full" style="padding-bottom: 177.78%;">
+              <iframe 
+                class="absolute top-0 left-0 w-full h-full" 
+                src="https://www.youtube.com/embed/IU16dm75W-Y?rel=0&modestbranding=1" 
+                title="Guest Testimonial 3" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen
+                loading="lazy">
               </iframe>
             </div>
-
-
+            <div class="p-4 bg-gradient-to-t from-neutral-900 to-neutral-800">
+              <p class="text-amber-500 text-xs font-semibold mb-1">VERIFIED GUEST</p>
+              <p class="text-white text-sm">Unforgettable jungle safari!</p>
+            </div>
           </div>
-
         </div>
+
+      </div>
+
+      <!-- View More Button -->
+      <div class="text-center mt-10 md:mt-12" data-aos="fade-up" data-aos-delay="400">
+        <a href="https://www.youtube.com/@WildmarkResortKanha" target="_blank" 
+           class="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-black font-bold px-8 py-3 rounded-lg transition transform hover:scale-105">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path>
+          </svg>
+          Watch More on YouTube
+        </a>
       </div>
 
     </div>
-  </section>
+</section>
+
+
 
 
   
