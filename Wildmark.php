@@ -349,7 +349,7 @@ include 'includes/header.php';
         <!-- Know More Button for Family Double Bedded Rooms -->
         <div class="panel hidden md:col-span-2 text-center mt-8" data-tab="superdeluxe">
           <div class="flex justify-center">
-            <a href="Family-Deluxe-Rooms.php" 
+            <a href="Family-Double-Bedded-Rooms.php" 
                class="bg-amber-600 hover:bg-amber-700 text-white px-10 py-3 transition font-semibold text-base rounded-lg shadow-lg">
               KNOW MORE
             </a>

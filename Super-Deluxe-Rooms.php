@@ -6,45 +6,9 @@ $pageTitle = "Super Delux Rooms- Wildmark Resort Kanha";
 include 'includes/header.php'; 
 ?>
 <style>
-    
-    /* Responsive Container */
-    .container {
-      width: 100%;
-      max-width: 100%;
-      margin-left: auto;
-      margin-right: auto;
-      padding-left: 1rem;
-      padding-right: 1rem;
-    }
 
-    @media (min-width: 640px) {
-      .container {
-        max-width: 640px;
-      }
-    }
-
-    @media (min-width: 768px) {
-      .container {
-        max-width: 768px;
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .container {
-        max-width: 1024px;
-      }
-    }
-
-    @media (min-width: 1280px) {
-      .container {
-        max-width: 1200px;
-      }
-    }
-
-    
-
-    /* Room Feature Cards */
-    .room-feature-card {
+    /* Feature Cards with Icons */
+    .feature-card {
       background: rgba(0, 0, 0, 0.6);
       backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.1);
@@ -55,13 +19,13 @@ include 'includes/header.php';
       transition: all 0.3s ease;
     }
 
-    .room-feature-card:hover {
+    .feature-card:hover {
       transform: translateY(-5px);
       border-color: rgba(245, 158, 11, 0.3);
       box-shadow: 0 10px 30px rgba(245, 158, 11, 0.2);
     }
 
-    .room-feature-card .icon-wrapper {
+    .feature-card .icon-box {
       width: 60px;
       height: 60px;
       background: linear-gradient(135deg, #ffd4b8 0%, #ffb88c 100%);
@@ -69,11 +33,11 @@ include 'includes/header.php';
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 0 1.5rem 0;
+      margin-bottom: 1.5rem;
       box-shadow: 0 8px 20px rgba(245, 158, 11, 0.3);
     }
 
-    .room-feature-card .icon-wrapper i {
+    .feature-card .icon-box i {
       font-size: 1.75rem;
       color: #2d5a47;
     }
@@ -98,7 +62,45 @@ include 'includes/header.php';
     .gallery-item:hover img {
       transform: scale(1.1);
     }
+
+    /* Amenities List Styling */
+    .amenity-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .amenity-item i {
+      color: #f59e0b;
+      font-size: 1.25rem;
+      margin-top: 0.125rem;
+      flex-shrink: 0;
+    }
+
+    /* Tabs for different sections */
+    .tab-button {
+      position: relative;
+      padding: 1rem 1.5rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border-bottom: 3px solid transparent;
+    }
+
+    .tab-button.active {
+      color: #f59e0b;
+      border-bottom-color: #f59e0b;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
   </style>
+
 
 
   <!-- Hero Section -->
@@ -128,14 +130,8 @@ include 'includes/header.php';
   <section class="py-12 md:py-20 bg-neutral-900">
     <div class="container mx-auto max-w-6xl px-4 md:px-6">
       <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
-        <!-- Left - Image -->
-        <div class="order-2 lg:order-1" data-aos="fade-right" data-aos-duration="1000">
-          <img src="images/delux2.jpeg" alt="Super Deluxe Room Interior"
-            class="w-full h-[400px] md:h-[500px] object-cover rounded-2xl shadow-2xl" />
-        </div>
-
-        <!-- Right - Content -->
-        <div class="order-1 lg:order-2" data-aos="fade-left" data-aos-duration="1000">
+        <!-- Left - Content -->
+        <div data-aos="fade-right" data-aos-duration="1000">
           <p class="text-amber-500 text-xs tracking-widest mb-4 font-light">
             REFINED RETREAT
           </p>
@@ -149,16 +145,63 @@ include 'includes/header.php';
             a serene view for an unforgettable escape.
           </p>
 
-          <div class="flex flex-col sm:flex-row gap-4 mt-8">
+          <div class="bg-neutral-800 p-6 rounded-xl mb-6">
+  <h3 class="text-xl font-serif font-semibold mb-4 text-amber-400">Room Capacity & Features</h3>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <!-- Guests -->
+    <div class="flex items-center gap-2">
+      <i class="fas fa-users text-amber-500 text-2xl"></i>
+      <div>
+        <p class="text-2xl font-bold">2</p>
+        <p class="text-xs text-gray-400">Guests</p>
+      </div>
+    </div>
+    
+    <!-- Bed -->
+    <div class="flex items-center gap-2">
+      <i class="fas fa-bed text-amber-500 text-2xl"></i>
+      <div>
+        <p class="text-2xl font-bold">1</p>
+        <p class="text-xs text-gray-400">Bed</p>
+      </div>
+    </div>
+    
+    <!-- Room Size -->
+    <div class="flex items-center gap-2">
+      <i class="fas fa-expand-arrows-alt text-amber-500 text-2xl"></i>
+      <div>
+        <p class="text-2xl font-bold">350</p>
+        <p class="text-xs text-gray-400">Sq. Ft.</p>
+      </div>
+    </div>
+    
+    <!-- View Type -->
+    <div class="flex items-center gap-2">
+      <i class="fas fa-tree text-amber-500 text-2xl"></i>
+      <div>
+        <p class="text-lg font-bold">Garden</p>
+        <p class="text-xs text-gray-400">View</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+          <div class="flex flex-col sm:flex-row gap-4">
             <a href="contact.php"
               class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 transition font-light text-center">
               Book This Room
             </a>
-            <a href="#gallery"
+            <a href="#amenities"
               class="border border-white hover:bg-white hover:text-black text-white px-8 py-3 transition font-light text-center">
-              View Gallery
+              View Amenities
             </a>
           </div>
+        </div>
+
+        <!-- Right - Image -->
+        <div data-aos="fade-left" data-aos-duration="1000">
+          <img src="images/delux2.jpeg" alt="Super Deluxe Room Interior"
+            class="w-full h-[400px] md:h-[500px] object-cover rounded-2xl shadow-2xl" />
         </div>
       </div>
     </div>
@@ -166,207 +209,268 @@ include 'includes/header.php';
 
   <!-- Room Highlights Section -->
   <section class="py-12 md:py-20 bg-black">
-  <div class="container mx-auto max-w-7xl px-4 md:px-6">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-5xl font-serif mb-4" data-aos="zoom-in">
-        Room Highlights
-      </h2>
-      <h3 class="text-amber-500 text-base md:text-lg font-serif tracking-wide" data-aos="fade-up" data-aos-delay="100">
-  Experience Luxurious & comfort blended with thoughtful design in our meticulously crafted air-conditioned Super Deluxe Rooms.
-</h3>
+    <div class="container mx-auto max-w-7xl px-4 md:px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-5xl font-serif mb-4" data-aos="zoom-in">
+          Room Highlights
+        </h2>
+        <h3 class="text-amber-500 text-base md:text-lg font-serif tracking-wide" data-aos="fade-up" data-aos-delay="100">
+          Experience Luxurious & comfort blended with thoughtful design in our meticulously crafted air-conditioned Super Deluxe Rooms.
+        </h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <!-- Highlight 1 -->
+        <div class="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 hover:border-amber-600 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-16 h-16 rounded-full bg-amber-100 flex items-center justify-center mb-6">
+            <i class="fas fa-snowflake text-2xl text-neutral-800"></i>
+          </div>
+          <h4 class="text-xl font-serif font-semibold mb-3 text-white">Luxurious & AC Rooms</h4>
+          <p class="text-gray-300 text-sm leading-relaxed text-justify">
+            Enjoy the comfort of well-ventilated, air-conditioned rooms designed for your ultimate relaxation and luxury.
+          </p>
+        </div>
+
+        <!-- Highlight 2 -->
+        <div class="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 hover:border-amber-600 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-16 h-16 rounded-full bg-amber-100 flex items-center justify-center mb-6">
+            <i class="fas fa-temperature-low text-2xl text-neutral-800"></i>
+          </div>
+          <h4 class="text-xl font-serif font-semibold mb-3 text-white">Mini Fridge</h4>
+          <p class="text-gray-300 text-sm leading-relaxed text-justify">
+            Mini fridge for added convenience — keep your drinks and snacks fresh at any hour of your stay.
+          </p>
+        </div>
+
+        <!-- Highlight 3 -->
+        <div class="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 hover:border-amber-600 transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-16 h-16 rounded-full bg-amber-100 flex items-center justify-center mb-6">
+            <i class="fas fa-couch text-2xl text-neutral-800"></i>
+          </div>
+          <h4 class="text-xl font-serif font-semibold mb-3 text-white">Cozy Lounge Seating Area</h4>
+          <p class="text-gray-300 text-sm leading-relaxed text-justify">
+            A cozy lounge seating area to unwind, read, or simply enjoy the peaceful ambience of your private space.
+          </p>
+        </div>
+
+        <!-- Highlight 4 -->
+        <div class="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 hover:border-amber-600 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-16 h-16 rounded-full bg-amber-100 flex items-center justify-center mb-6">
+            <i class="fas fa-star text-2xl text-neutral-800"></i>
+          </div>
+          <h4 class="text-xl font-serif font-semibold mb-3 text-white">Private Sit-Out</h4>
+          <p class="text-gray-300 text-sm leading-relaxed text-justify">
+            Private sit-out overlooking the starry skies — your perfect spot for magical evenings under the open sky.
+          </p>
+        </div>
+
+        <!-- Highlight 5 -->
+        <div class="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 hover:border-amber-600 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-16 h-16 rounded-full bg-amber-100 flex items-center justify-center mb-6">
+            <i class="fas fa-shower text-2xl text-neutral-800"></i>
+          </div>
+          <h4 class="text-xl font-serif font-semibold mb-3 text-white">Open Shower Concept</h4>
+          <p class="text-gray-300 text-sm leading-relaxed">
+            Open shower concept for a refreshing experience — connecting you with nature while maintaining full privacy.
+          </p>
+        </div>
+
+        <!-- Highlight 6 -->
+        <div class="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 hover:border-amber-600 transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-16 h-16 rounded-full bg-amber-100 flex items-center justify-center mb-6">
+            <i class="fas fa-door-open text-2xl text-neutral-800"></i>
+          </div>
+          <h4 class="text-xl font-serif font-semibold mb-3 text-white">Spacious Dressing Area</h4>
+          <p class="text-gray-300 text-sm leading-relaxed text-justify">
+            Spacious dressing area with wardrobes to keep your belongings organized and your space clutter-free.
+          </p>
+        </div>
+
+        <!-- Highlight 7 -->
+        <div class="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 hover:border-amber-600 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-16 h-16 rounded-full bg-amber-100 flex items-center justify-center mb-6">
+            <i class="fas fa-spa text-2xl text-neutral-800"></i>
+          </div>
+          <h4 class="text-xl font-serif font-semibold mb-3 text-white">Premium Bathroom Amenities</h4>
+          <p class="text-gray-300 text-sm leading-relaxed text-justify">
+            Bathrooms equipped with modern & premium amenities for a truly luxurious and refreshing experience.
+          </p>
+        </div>
+
+        <!-- Highlight 8 -->
+        <div class="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 hover:border-amber-600 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-16 h-16 rounded-full bg-amber-100 flex items-center justify-center mb-6">
+            <i class="fas fa-leaf text-2xl text-neutral-800"></i>
+          </div>
+          <h4 class="text-xl font-serif font-semibold mb-3 text-white">Tranquil Garden Views</h4>
+          <p class="text-gray-300 text-sm leading-relaxed text-justify">
+            Surrounded by tranquil greenery, wake up to lush garden-facing views that soothe the mind and soul.
+          </p>
+        </div>
+
+        <!-- Highlight 9 -->
+        <div class="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 hover:border-amber-600 transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-16 h-16 rounded-full bg-amber-100 flex items-center justify-center mb-6">
+            <i class="fas fa-moon text-2xl text-neutral-800"></i>
+          </div>
+          <h4 class="text-xl font-serif font-semibold mb-3 text-white">Relaxed & Rejuvenating Stay</h4>
+          <p class="text-gray-300 text-sm leading-relaxed text-justify">
+            Designed to offer guests a relaxed, private, and rejuvenating stay amidst nature's finest beauty.
+          </p>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-      <!-- Highlight 1 -->
-      <div class="room-feature-card" data-aos="fade-up" data-aos-delay="100">
-        <div class="icon-wrapper">
-          <i class="fas fa-snowflake"></i>
-        </div>
-        <h4 class="text-xl font-serif font-semibold mb-3 text-white">Luxurious & AC Rooms</h4>
-        <p class="text-gray-300 text-sm leading-relaxed text-justify">
-  Enjoy the comfort of well-ventilated, air-conditioned rooms designed for your ultimate relaxation and luxury.
-</p>
-      </div>
-
-      <!-- Highlight 2 -->
-      <div class="room-feature-card" data-aos="fade-up" data-aos-delay="200">
-        <div class="icon-wrapper">
-          <i class="fas fa-temperature-low"></i>
-        </div>
-        <h4 class="text-xl font-serif font-semibold mb-3 text-white">Mini Fridge</h4>
-        <p class="text-gray-300 text-sm leading-relaxed text-justify">
-          Mini fridge for added convenience — keep your drinks and snacks fresh at any hour of your stay.
-        </p>
-      </div>
-
-      <!-- Highlight 3 -->
-      <div class="room-feature-card" data-aos="fade-up" data-aos-delay="300">
-        <div class="icon-wrapper">
-          <i class="fas fa-couch"></i>
-        </div>
-        <h4 class="text-xl font-serif font-semibold mb-3 text-white">Cozy Lounge Seating Area</h4>
-        <p class="text-gray-300 text-sm leading-relaxed text-justify">
-          A cozy lounge seating area to unwind, read, or simply enjoy the peaceful ambience of your private space.
-        </p>
-      </div>
-
-      <!-- Highlight 4 -->
-      <div class="room-feature-card" data-aos="fade-up" data-aos-delay="100">
-        <div class="icon-wrapper">
-          <i class="fas fa-star"></i>
-        </div>
-        <h4 class="text-xl font-serif font-semibold mb-3 text-white">Private Sit-Out</h4>
-        <p class="text-gray-300 text-sm leading-relaxed text-justify">
-          Private sit-out overlooking the starry skies — your perfect spot for magical evenings under the open sky.
-        </p>
-      </div>
-
-      <!-- Highlight 5 -->
-      <div class="room-feature-card" data-aos="fade-up" data-aos-delay="200">
-        <div class="icon-wrapper">
-          <i class="fas fa-shower"></i>
-        </div>
-        <h4 class="text-xl font-serif font-semibold mb-3 text-white">Open Shower Concept</h4>
-        <p class="text-gray-300 text-sm leading-relaxed">
-          Open shower concept for a refreshing experience — connecting you with nature while maintaining full privacy.
-        </p>
-      </div>
-
-      <!-- Highlight 6 -->
-      <div class="room-feature-card" data-aos="fade-up" data-aos-delay="300">
-        <div class="icon-wrapper">
-          <i class="fas fa-door-open"></i>
-        </div>
-        <h4 class="text-xl font-serif font-semibold mb-3 text-white">Spacious Dressing Area</h4>
-        <p class="text-gray-300 text-sm leading-relaxed text-justify">
-          Spacious dressing area with wardrobes to keep your belongings organized and your space clutter-free.
-        </p>
-      </div>
-
-      <!-- Highlight 7 -->
-      <div class="room-feature-card" data-aos="fade-up" data-aos-delay="100">
-        <div class="icon-wrapper">
-          <i class="fas fa-spa"></i>
-        </div>
-        <h4 class="text-xl font-serif font-semibold mb-3 text-white">Premium Bathroom Amenities</h4>
-        <p class="text-gray-300 text-sm leading-relaxed text-justify">
-          Bathrooms equipped with modern & premium amenities for a truly luxurious and refreshing experience.
-        </p>
-      </div>
-
-      <!-- Highlight 8 -->
-      <div class="room-feature-card" data-aos="fade-up" data-aos-delay="200">
-        <div class="icon-wrapper">
-          <i class="fas fa-leaf"></i>
-        </div>
-        <h4 class="text-xl font-serif font-semibold mb-3 text-white">Tranquil Garden Views</h4>
-        <p class="text-gray-300 text-sm leading-relaxed text-justify">
-          Surrounded by tranquil greenery, wake up to lush garden-facing views that soothe the mind and soul.
-        </p>
-      </div>
-
-      <!-- Highlight 9 -->
-      <div class="room-feature-card" data-aos="fade-up" data-aos-delay="300">
-        <div class="icon-wrapper">
-          <i class="fas fa-moon"></i>
-        </div>
-        <h4 class="text-xl font-serif font-semibold mb-3 text-white">Relaxed & Rejuvenating Stay</h4>
-        <p class="text-gray-300 text-sm leading-relaxed text-justify">
-          Designed to offer guests a relaxed, private, and rejuvenating stay amidst nature's finest beauty.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-  <!-- Why Choose This Room Section -->
-  <section class="py-12 md:py-20 bg-neutral-900">
+  <!-- Activities, Amenities & Features Section with Tabs -->
+  <section id="amenities" class="py-12 md:py-20 bg-neutral-900">
     <div class="container mx-auto max-w-7xl px-4 md:px-6">
       <div class="text-center mb-12">
         <p class="text-amber-500 text-xs tracking-widest mb-4 font-light" data-aos="fade-down">
-          UNIQUE FEATURES
+          COMPLETE EXPERIENCE
         </p>
-        <h2 class="text-3xl md:text-5xl font-serif mb-6" data-aos="zoom-in">
-          Why Choose Our Super Deluxe Room?
+        <h2 class="text-3xl md:text-5xl font-serif mb-8" data-aos="zoom-in">
+          What We Offer
         </h2>
-        <p class="text-gray-300 max-w-3xl mx-auto text-sm md:text-base leading-relaxed" data-aos="fade-up">
-          Experience the perfect balance of wilderness charm and modern luxury with our thoughtfully designed accommodations
-        </p>
       </div>
 
-      <div class="grid lg:grid-cols-2 gap-8 items-center">
-        <!-- Left Side - Image -->
-        <div data-aos="fade-right" data-aos-duration="1000">
-          <div class="relative rounded-2xl overflow-hidden shadow-2xl">
-            <img src="images/delux3.JPG" alt="Luxury Room Features" class="w-full h-[500px] object-cover">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-            <div class="absolute bottom-8 left-8 right-8">
-              <h3 class="text-2xl md:text-3xl font-serif text-white mb-2">Unmatched Comfort</h3>
-              <p class="text-gray-200 text-sm">Where nature meets luxury living</p>
+      <!-- Tabs Navigation -->
+      <div class="flex justify-center border-b border-neutral-800 mb-12 overflow-x-auto" data-aos="fade-up">
+        <button class="tab-button active text-sm md:text-base whitespace-nowrap" data-tab="activities">
+          Activities at Resort
+        </button>
+        <button class="tab-button text-sm md:text-base whitespace-nowrap" data-tab="amenitiesTab">
+          Room Amenities
+        </button>
+      </div>
+
+      <!-- Tab Content -->
+      <div>
+        <!-- Activities Tab -->
+        <div class="tab-content active" id="activities">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="amenity-item" data-aos="fade-up" data-aos-delay="50">
+              <i class="fa-solid fa-binoculars"></i>
+              <div>
+                <h4 class="font-semibold text-white mb-1">Jungle Safaris</h4>
+                <p class="text-sm text-gray-400">Guided jungle safaris with night drive options</p>
+              </div>
+            </div>
+
+            <div class="amenity-item" data-aos="fade-up" data-aos-delay="100">
+              <i class="fa-solid fa-dove"></i>
+              <div>
+                <h4 class="font-semibold text-white mb-1">Birdwatching & Nature Walks</h4>
+                <p class="text-sm text-gray-400">Early morning birdwatching tours with naturalists</p>
+              </div>
+            </div>
+
+            <div class="amenity-item" data-aos="fade-up" data-aos-delay="150">
+              <i class="fa-solid fa-fire"></i>
+              <div>
+                <h4 class="font-semibold text-white mb-1">Bonfire Evenings</h4>
+                <p class="text-sm text-gray-400">Private dining with bonfire under the stars</p>
+              </div>
+            </div>
+
+            <div class="amenity-item" data-aos="fade-up" data-aos-delay="200">
+              <i class="fa-solid fa-utensils"></i>
+              <div>
+                <h4 class="font-semibold text-white mb-1">Bush-Style Outdoor Meals</h4>
+                <p class="text-sm text-gray-400">Authentic outdoor dining experience in nature</p>
+              </div>
+            </div>
+
+            <div class="amenity-item" data-aos="fade-up" data-aos-delay="250">
+              <i class="fa-solid fa-table-tennis-paddle-ball"></i>
+              <div>
+                <h4 class="font-semibold text-white mb-1">Indoor & Outdoor Games</h4>
+                <p class="text-sm text-gray-400">Sports facilities and recreational activities</p>
+              </div>
+            </div>
+
+            <div class="amenity-item" data-aos="fade-up" data-aos-delay="300">
+              <i class="fa-solid fa-person-swimming"></i>
+              <div>
+                <h4 class="font-semibold text-white mb-1">Swimming Pool</h4>
+                <p class="text-sm text-gray-400">Kids' play area and swimming pool facilities</p>
+              </div>
+            </div>
+
+            <div class="amenity-item" data-aos="fade-up" data-aos-delay="350">
+              <i class="fa-solid fa-map-location-dot"></i>
+              <div>
+                <h4 class="font-semibold text-white mb-1">Nearby Attractions</h4>
+                <p class="text-sm text-gray-400">Guided visits to local villages and attractions</p>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Right Side - Features List -->
-        <div data-aos="fade-left" data-aos-duration="1000">
-          <div class="space-y-6">
-            <!-- Feature 1 -->
-            <div class="flex gap-4 bg-neutral-800 p-6 rounded-xl hover:bg-neutral-700 transition">
-              <div class="flex-shrink-0">
-                <div class="w-14 h-14 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center">
-                  <i class="fas fa-star text-white text-xl"></i>
-                </div>
-              </div>
+        <!-- Amenities Tab -->
+        <div class="tab-content" id="amenitiesTab">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="amenity-item" data-aos="fade-up" data-aos-delay="50">
+              <i class="fa-solid fa-bed"></i>
               <div>
-                <h4 class="text-lg font-serif font-semibold text-white mb-2">Premium Location</h4>
-                <p class="text-gray-300 text-sm leading-relaxed">
-                  Strategically located just minutes from Kanha National Park's Khatia Gate, offering easy access to early morning safaris while maintaining peaceful privacy.
-                </p>
+                <h4 class="font-semibold text-white mb-1">Spacious AC Rooms</h4>
+                <p class="text-sm text-gray-400">Comfortable rooms with private sit-outs</p>
               </div>
             </div>
 
-            <!-- Feature 2 -->
-            <div class="flex gap-4 bg-neutral-800 p-6 rounded-xl hover:bg-neutral-700 transition">
-              <div class="flex-shrink-0">
-                <div class="w-14 h-14 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center">
-                  <i class="fas fa-spa text-white text-xl"></i>
-                </div>
-              </div>
+            <div class="amenity-item" data-aos="fade-up" data-aos-delay="100">
+              <i class="fa-solid fa-wifi"></i>
               <div>
-                <h4 class="text-lg font-serif font-semibold text-white mb-2">Wellness & Relaxation</h4>
-                <p class="text-gray-300 text-sm leading-relaxed">
-                  Experience true rejuvenation with our unique open shower design, connecting you with nature's elements while ensuring complete privacy and luxury.
-                </p>
+                <h4 class="font-semibold text-white mb-1">Wi-Fi Available</h4>
+                <p class="text-sm text-gray-400">Stay connected with high-speed internet</p>
               </div>
             </div>
 
-            <!-- Feature 3 -->
-            <div class="flex gap-4 bg-neutral-800 p-6 rounded-xl hover:bg-neutral-700 transition">
-              <div class="flex-shrink-0">
-                <div class="w-14 h-14 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center">
-                  <i class="fas fa-concierge-bell text-white text-xl"></i>
-                </div>
-              </div>
+            <div class="amenity-item" data-aos="fade-up" data-aos-delay="150">
+              <i class="fa-solid fa-bath"></i>
               <div>
-                <h4 class="text-lg font-serif font-semibold text-white mb-2">Personalized Service</h4>
-                <p class="text-gray-300 text-sm leading-relaxed">
-                  Our dedicated staff ensures your stay is memorable with 24/7 assistance, safari booking support, and customized dining experiences upon request.
-                </p>
+                <h4 class="font-semibold text-white mb-1">Modern Washrooms</h4>
+                <p class="text-sm text-gray-400">Clean, well-maintained bathrooms with hot water</p>
               </div>
             </div>
 
-            <!-- Feature 4 -->
-            <div class="flex gap-4 bg-neutral-800 p-6 rounded-xl hover:bg-neutral-700 transition">
-              <div class="flex-shrink-0">
-                <div class="w-14 h-14 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center">
-                  <i class="fas fa-shield-alt text-white text-xl"></i>
-                </div>
-              </div>
+            <div class="amenity-item" data-aos="fade-up" data-aos-delay="200">
+              <i class="fa-solid fa-wine-bottle"></i>
               <div>
-                <h4 class="text-lg font-serif font-semibold text-white mb-2">Safety & Hygiene</h4>
-                <p class="text-gray-300 text-sm leading-relaxed">
-                  Maintaining highest standards of cleanliness and safety protocols, ensuring a worry-free and comfortable stay for all our guests.
-                </p>
+                <h4 class="font-semibold text-white mb-1">Mini-Bar Available</h4>
+                <p class="text-sm text-gray-400">Select rooms equipped with mini-bar facilities</p>
+              </div>
+            </div>
+
+            <div class="amenity-item" data-aos="fade-up" data-aos-delay="250">
+              <i class="fa-solid fa-user-doctor"></i>
+              <div>
+                <h4 class="font-semibold text-white mb-1">Doctor on Call</h4>
+                <p class="text-sm text-gray-400">24/7 medical assistance available</p>
+              </div>
+            </div>
+
+            <div class="amenity-item" data-aos="fade-up" data-aos-delay="300">
+              <i class="fa-solid fa-wheelchair"></i>
+              <div>
+                <h4 class="font-semibold text-white mb-1">Accessible & Pet-Friendly</h4>
+                <p class="text-sm text-gray-400">Wheelchair-accessible and pet-friendly rooms</p>
+              </div>
+            </div>
+
+            <div class="amenity-item" data-aos="fade-up" data-aos-delay="350">
+              <i class="fa-solid fa-bowl-food"></i>
+              <div>
+                <h4 class="font-semibold text-white mb-1">Multi-Cuisine Restaurant</h4>
+                <p class="text-sm text-gray-400">In-house restaurant with diverse menu options</p>
+              </div>
+            </div>
+
+            <div class="amenity-item" data-aos="fade-up" data-aos-delay="400">
+              <i class="fa-solid fa-route"></i>
+              <div>
+                <h4 class="font-semibold text-white mb-1">Safari Assistance</h4>
+                <p class="text-sm text-gray-400">Safari booking and pick-up/drop services</p>
               </div>
             </div>
           </div>
@@ -375,154 +479,295 @@ include 'includes/header.php';
     </div>
   </section>
 
-  <!-- Guest Experience & Amenities Showcase -->
+  <!-- Perfect For Section -->
   <section class="py-12 md:py-20 bg-black">
     <div class="container mx-auto max-w-7xl px-4 md:px-6">
       <div class="text-center mb-12">
         <p class="text-amber-500 text-xs tracking-widest mb-4 font-light" data-aos="fade-down">
-          COMPLETE EXPERIENCE
+          IDEAL ACCOMMODATION
         </p>
         <h2 class="text-3xl md:text-5xl font-serif mb-6" data-aos="zoom-in">
-          Your Perfect Jungle Retreat Experience
+          Perfect For Every Type of Traveler
         </h2>
+        <p class="text-gray-300 max-w-3xl mx-auto text-sm md:text-base leading-relaxed" data-aos="fade-up">
+          Our Super Deluxe Rooms cater to diverse needs, ensuring comfort and memorable experiences for all
+        </p>
       </div>
 
-      <!-- Experience Timeline -->
-      <div class="grid md:grid-cols-3 gap-8 mb-16">
-        <!-- Morning -->
-        <div class="text-center" data-aos="fade-up" data-aos-delay="100">
-          <div class="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full flex items-center justify-center shadow-2xl">
-            <i class="fas fa-sun text-white text-4xl"></i>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Couples & Honeymooners -->
+        <div class="bg-gradient-to-br from-neutral-900 to-neutral-800 p-8 rounded-2xl border border-neutral-700 hover:border-amber-500/50 transition group" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition">
+            <i class="fas fa-heart text-white text-3xl"></i>
           </div>
-          <h3 class="text-2xl font-serif mb-4 text-amber-400">Morning</h3>
-          <p class="text-gray-300 text-sm leading-relaxed mb-4">
-            Wake up to the melodious chirping of exotic birds. Enjoy your morning tea/coffee on your private sit-out as the jungle comes alive.
+          <h3 class="text-xl font-serif font-bold text-center mb-4 text-white">Couples & Honeymooners</h3>
+          <p class="text-gray-300 text-sm text-center leading-relaxed mb-4">
+            Perfect romantic getaway with private sit-outs and open shower experience for intimate moments amidst nature.
           </p>
-          <ul class="text-left text-gray-400 text-sm space-y-2">
-            <li><i class="fas fa-check text-amber-500 mr-2"></i>Early morning safari at 6:00 AM</li>
-            <li><i class="fas fa-check text-amber-500 mr-2"></i>Fresh breakfast at the restaurant</li>
-            <li><i class="fas fa-check text-amber-500 mr-2"></i>Bird watching sessions</li>
+          <ul class="space-y-2 text-gray-400 text-xs">
+            <li class="flex items-center gap-2">
+              <i class="fas fa-check-circle text-amber-500"></i>
+              <span>Romantic private sit-out</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fas fa-check-circle text-amber-500"></i>
+              <span>Special honeymoon packages</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fas fa-check-circle text-amber-500"></i>
+              <span>Candlelight dinner options</span>
+            </li>
           </ul>
         </div>
 
-        <!-- Afternoon -->
-        <div class="text-center" data-aos="fade-up" data-aos-delay="200">
-          <div class="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center shadow-2xl">
-            <i class="fas fa-cloud-sun text-white text-4xl"></i>
+        <!-- Solo Travelers -->
+        <div class="bg-gradient-to-br from-neutral-900 to-neutral-800 p-8 rounded-2xl border border-neutral-700 hover:border-amber-500/50 transition group" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition">
+            <i class="fas fa-user text-white text-3xl"></i>
           </div>
-          <h3 class="text-2xl font-serif mb-4 text-amber-400">Afternoon</h3>
-          <p class="text-gray-300 text-sm leading-relaxed mb-4">
-            Relax and rejuvenate in your air-conditioned room or take a refreshing dip in the pool. Explore the resort's lush gardens.
+          <h3 class="text-xl font-serif font-bold text-center mb-4 text-white">Solo Travelers</h3>
+          <p class="text-gray-300 text-sm text-center leading-relaxed mb-4">
+            Ideal retreat for those seeking solitude and self-reflection in nature's peaceful embrace.
           </p>
-          <ul class="text-left text-gray-400 text-sm space-y-2">
-            <li><i class="fas fa-check text-amber-500 mr-2"></i>Swimming pool access</li>
-            <li><i class="fas fa-check text-amber-500 mr-2"></i>Multi-cuisine lunch</li>
-            <li><i class="fas fa-check text-amber-500 mr-2"></i>Nature walks in buffer zones</li>
+          <ul class="space-y-2 text-gray-400 text-xs">
+            <li class="flex items-center gap-2">
+              <i class="fas fa-check-circle text-amber-500"></i>
+              <span>Private peaceful sanctuary</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fas fa-check-circle text-amber-500"></i>
+              <span>Nature meditation spaces</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fas fa-check-circle text-amber-500"></i>
+              <span>Wildlife photography opportunities</span>
+            </li>
           </ul>
         </div>
 
-        <!-- Evening -->
-        <div class="text-center" data-aos="fade-up" data-aos-delay="300">
-          <div class="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-amber-600 to-orange-700 rounded-full flex items-center justify-center shadow-2xl">
-            <i class="fas fa-moon text-white text-4xl"></i>
+        <!-- Nature Enthusiasts -->
+        <div class="bg-gradient-to-br from-neutral-900 to-neutral-800 p-8 rounded-2xl border border-neutral-700 hover:border-amber-500/50 transition group" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-amber-600 to-orange-700 rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition">
+            <i class="fas fa-tree text-white text-3xl"></i>
           </div>
-          <h3 class="text-2xl font-serif mb-4 text-amber-400">Evening</h3>
-          <p class="text-gray-300 text-sm leading-relaxed mb-4">
-            Experience magical sunset views followed by an evening safari. End your day with a delightful dinner under the stars.
+          <h3 class="text-xl font-serif font-bold text-center mb-4 text-white">Nature Enthusiasts</h3>
+          <p class="text-gray-300 text-sm text-center leading-relaxed mb-4">
+            For wildlife lovers who want to stay close to nature with unique open shower and garden views.
           </p>
-          <ul class="text-left text-gray-400 text-sm space-y-2">
-            <li><i class="fas fa-check text-amber-500 mr-2"></i>Sunset safari adventures</li>
-            <li><i class="fas fa-check text-amber-500 mr-2"></i>Bonfire & cultural programs</li>
-            <li><i class="fas fa-check text-amber-500 mr-2"></i>Special dining experiences</li>
+          <ul class="space-y-2 text-gray-400 text-xs">
+            <li class="flex items-center gap-2">
+              <i class="fas fa-check-circle text-amber-500"></i>
+              <span>Bird watching from sit-out</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fas fa-check-circle text-amber-500"></i>
+              <span>Safari guidance available</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fas fa-check-circle text-amber-500"></i>
+              <span>Naturalist consultations</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Weekend Getaway -->
+        <div class="bg-gradient-to-br from-neutral-900 to-neutral-800 p-8 rounded-2xl border border-neutral-700 hover:border-amber-500/50 transition group" data-aos="fade-up" data-aos-delay="400">
+          <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-amber-700 to-orange-800 rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition">
+            <i class="fas fa-suitcase-rolling text-white text-3xl"></i>
+          </div>
+          <h3 class="text-xl font-serif font-bold text-center mb-4 text-white">Weekend Getaway</h3>
+          <p class="text-gray-300 text-sm text-center leading-relaxed mb-4">
+            Perfect quick escape from city life to recharge in luxury wilderness accommodations.
+          </p>
+          <ul class="space-y-2 text-gray-400 text-xs">
+            <li class="flex items-center gap-2">
+              <i class="fas fa-check-circle text-amber-500"></i>
+              <span>Quick relaxation retreat</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fas fa-check-circle text-amber-500"></i>
+              <span>Convenient location</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fas fa-check-circle text-amber-500"></i>
+              <span>Weekend packages available</span>
+            </li>
           </ul>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- In-Room Amenities Grid -->
-      <div class="bg-neutral-900 rounded-2xl p-8 md:p-12">
-        <h3 class="text-2xl md:text-3xl font-serif text-center mb-10 text-amber-400" data-aos="fade-up">
-          In-Room Premium Amenities
-        </h3>
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
-          <!-- Amenity Items -->
-          <div class="text-center" data-aos="zoom-in" data-aos-delay="50">
-            <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-amber-400/20 to-amber-600/20 rounded-full flex items-center justify-center border border-amber-500/30">
-              <i class="fas fa-wifi text-amber-400 text-2xl"></i>
+  <!-- Complete Day Experience Section -->
+  <section class="py-12 md:py-20 bg-neutral-900">
+    <div class="container mx-auto max-w-7xl px-4 md:px-6">
+      <div class="text-center mb-12">
+        <p class="text-amber-500 text-xs tracking-widest mb-4 font-light" data-aos="fade-down">
+          YOUR PERFECT DAY
+        </p>
+        <h2 class="text-3xl md:text-5xl font-serif mb-6" data-aos="zoom-in">
+          A Day at Wildmark Resort
+        </h2>
+        <p class="text-gray-300 max-w-3xl mx-auto text-sm md:text-base leading-relaxed" data-aos="fade-up">
+          Experience the perfect blend of adventure, relaxation, and wilderness exploration
+        </p>
+      </div>
+       
+      <!-- Timeline -->
+      <div class="relative">
+        <!-- Vertical Line (hidden on mobile) -->
+        <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-amber-500 via-amber-600 to-amber-700"></div>
+
+        <!-- Timeline Items -->
+        <div class="space-y-12">
+          <!-- 5:30 AM - Morning Safari -->
+          <div class="relative" data-aos="fade-right">
+            <div class="md:flex items-center">
+              <div class="md:w-1/2 md:pr-12 mb-4 md:mb-0 md:text-right">
+                <div class="inline-block bg-neutral-800 px-6 py-8 rounded-2xl shadow-xl border border-neutral-700 hover:border-amber-500/50 transition">
+                  <div class="flex items-center gap-4 mb-4 md:flex-row-reverse">
+                    <div class="w-16 h-16 bg-gradient-to-br from-orange-400 to-amber-500 rounded-full flex items-center justify-center shadow-lg">
+                      <i class="fas fa-utensils text-white text-2xl"></i>
+                    </div>
+                    <div>
+                      <p class="text-2xl font-bold text-amber-400">5:30 AM</p>
+                      <p class="text-sm text-gray-400">Early Start</p>
+                    </div>
+                  </div>
+                  <h4 class="text-xl font-serif font-bold text-white mb-3">Morning Safari Adventure</h4>
+                  <p class="text-gray-300 text-sm leading-relaxed">
+                    Wake up to nature's alarm clock. Enjoy complimentary tea/coffee before heading out for the thrilling morning safari. The best time to spot tigers and other wildlife as they're most active during dawn.
+                  </p>
+                </div>
+              </div>
+              <div class="hidden md:block w-8 h-8 bg-amber-500 rounded-full border-4 border-neutral-900 absolute left-1/2 transform -translate-x-1/2 shadow-lg"></div>
+              <div class="md:w-1/2"></div>
             </div>
-            <p class="text-white text-sm font-semibold mb-1">High-Speed</p>
-            <p class="text-gray-400 text-xs">Wi-Fi</p>
           </div>
 
-          <div class="text-center" data-aos="zoom-in" data-aos-delay="100">
-            <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-amber-400/20 to-amber-600/20 rounded-full flex items-center justify-center border border-amber-500/30">
-              <i class="fas fa-tv text-amber-400 text-2xl"></i>
+          <!-- 9:00 AM - Breakfast -->
+          <div class="relative" data-aos="fade-left">
+            <div class="md:flex items-center md:flex-row-reverse">
+              <div class="md:w-1/2 md:pl-12 mb-4 md:mb-0">
+                <div class="inline-block bg-neutral-800 px-6 py-8 rounded-2xl shadow-xl border border-neutral-700 hover:border-amber-500/50 transition">
+                  <div class="flex items-center gap-4 mb-4">
+                    <div class="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center shadow-lg">
+                      <i class="fas fa-utensils text-white text-2xl"></i>
+                    </div>
+                    <div>
+                      <p class="text-2xl font-bold text-amber-400">9:00 AM</p>
+                      <p class="text-sm text-gray-400">Breakfast Time</p>
+                    </div>
+                  </div>
+                  <h4 class="text-xl font-serif font-bold text-white mb-3">Multi-Cuisine Breakfast</h4>
+                  <p class="text-gray-300 text-sm leading-relaxed">
+                    Return from safari to a hearty breakfast spread. Choose from Indian, Continental, and local specialties. Share your safari stories with fellow travelers in our dining area.
+                  </p>
+                </div>
+              </div>
+              <div class="hidden md:block w-8 h-8 bg-amber-500 rounded-full border-4 border-neutral-900 absolute left-1/2 transform -translate-x-1/2 shadow-lg"></div>
+              <div class="md:w-1/2"></div>
             </div>
-            <p class="text-white text-sm font-semibold mb-1">Smart LED</p>
-            <p class="text-gray-400 text-xs">Television</p>
           </div>
 
-          <div class="text-center" data-aos="zoom-in" data-aos-delay="150">
-            <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-amber-400/20 to-amber-600/20 rounded-full flex items-center justify-center border border-amber-500/30">
-              <i class="fas fa-coffee text-amber-400 text-2xl"></i>
+          <!-- 11:00 AM - Relaxation -->
+          <div class="relative" data-aos="fade-right">
+            <div class="md:flex items-center">
+              <div class="md:w-1/2 md:pr-12 mb-4 md:mb-0 md:text-right">
+                <div class="inline-block bg-neutral-800 px-6 py-8 rounded-2xl shadow-xl border border-neutral-700 hover:border-amber-500/50 transition">
+                  <div class="flex items-center gap-4 mb-4 md:flex-row-reverse">
+                    <div class="w-16 h-16 bg-gradient-to-br from-amber-600 to-orange-700 rounded-full flex items-center justify-center shadow-lg">
+                      <i class="fas fa-swimming-pool text-white text-2xl"></i>
+                    </div>
+                    <div>
+                      <p class="text-2xl font-bold text-amber-400">11:00 AM</p>
+                      <p class="text-sm text-gray-400">Leisure Time</p>
+                    </div>
+                  </div>
+                  <h4 class="text-xl font-serif font-bold text-white mb-3">Pool & Recreation</h4>
+                  <p class="text-gray-300 text-sm leading-relaxed">
+                    Take a refreshing dip in our swimming pool, relax in your air-conditioned room, or explore our beautiful gardens. Perfect time for bonding or simply unwinding.
+                  </p>
+                </div>
+              </div>
+              <div class="hidden md:block w-8 h-8 bg-amber-500 rounded-full border-4 border-neutral-900 absolute left-1/2 transform -translate-x-1/2 shadow-lg"></div>
+              <div class="md:w-1/2"></div>
             </div>
-            <p class="text-white text-sm font-semibold mb-1">Tea/Coffee</p>
-            <p class="text-gray-400 text-xs">Maker</p>
           </div>
 
-          <div class="text-center" data-aos="zoom-in" data-aos-delay="200">
-            <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-amber-400/20 to-amber-600/20 rounded-full flex items-center justify-center border border-amber-500/30">
-              <i class="fas fa-wind text-amber-400 text-2xl"></i>
+          <!-- 1:00 PM - Lunch -->
+          <div class="relative" data-aos="fade-left">
+            <div class="md:flex items-center md:flex-row-reverse">
+              <div class="md:w-1/2 md:pl-12 mb-4 md:mb-0">
+                <div class="inline-block bg-neutral-800 px-6 py-8 rounded-2xl shadow-xl border border-neutral-700 hover:border-amber-500/50 transition">
+                  <div class="flex items-center gap-4 mb-4">
+                    <div class="w-16 h-16 bg-gradient-to-br from-amber-700 to-orange-800 rounded-full flex items-center justify-center shadow-lg">
+                      <i class="fas fa-bowl-food text-white text-2xl"></i>
+                    </div>
+                    <div>
+                      <p class="text-2xl font-bold text-amber-400">1:00 PM</p>
+                      <p class="text-sm text-gray-400">Lunch Service</p>
+                    </div>
+                  </div>
+                  <h4 class="text-xl font-serif font-bold text-white mb-3">Delicious Lunch Spread</h4>
+                  <p class="text-gray-300 text-sm leading-relaxed">
+                    Savor authentic local cuisine along with international favorites. Our chefs prepare fresh, flavorful meals using locally sourced ingredients whenever possible.
+                  </p>
+                </div>
+              </div>
+              <div class="hidden md:block w-8 h-8 bg-amber-500 rounded-full border-4 border-neutral-900 absolute left-1/2 transform -translate-x-1/2 shadow-lg"></div>
+              <div class="md:w-1/2"></div>
             </div>
-            <p class="text-white text-sm font-semibold mb-1">Premium</p>
-            <p class="text-gray-400 text-xs">AC</p>
           </div>
 
-          <div class="text-center" data-aos="zoom-in" data-aos-delay="250">
-            <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-amber-400/20 to-amber-600/20 rounded-full flex items-center justify-center border border-amber-500/30">
-              <i class="fas fa-lock text-amber-400 text-2xl"></i>
+          <!-- 3:00 PM - Evening Safari -->
+          <div class="relative" data-aos="fade-right">
+            <div class="md:flex items-center">
+              <div class="md:w-1/2 md:pr-12 mb-4 md:mb-0 md:text-right">
+                <div class="inline-block bg-neutral-800 px-6 py-8 rounded-2xl shadow-xl border border-neutral-700 hover:border-amber-500/50 transition">
+                  <div class="flex items-center gap-4 mb-4 md:flex-row-reverse">
+                    <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-amber-600 rounded-full flex items-center justify-center shadow-lg">
+                      <i class="fas fa-binoculars text-white text-2xl"></i>
+                    </div>
+                    <div>
+                      <p class="text-2xl font-bold text-amber-400">3:00 PM</p>
+                      <p class="text-sm text-gray-400">Safari Time</p>
+                    </div>
+                  </div>
+                  <h4 class="text-xl font-serif font-bold text-white mb-3">Afternoon Wildlife Safari</h4>
+                  <p class="text-gray-300 text-sm leading-relaxed">
+                    Head out for another exciting safari session. Witness different wildlife behavior as animals prepare for the evening. Expert naturalists guide your journey through the forest.
+                  </p>
+                </div>
+              </div>
+              <div class="hidden md:block w-8 h-8 bg-amber-500 rounded-full border-4 border-neutral-900 absolute left-1/2 transform -translate-x-1/2 shadow-lg"></div>
+              <div class="md:w-1/2"></div>
             </div>
-            <p class="text-white text-sm font-semibold mb-1">Electronic</p>
-            <p class="text-gray-400 text-xs">Safe</p>
           </div>
 
-          <div class="text-center" data-aos="zoom-in" data-aos-delay="50">
-            <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-amber-400/20 to-amber-600/20 rounded-full flex items-center justify-center border border-amber-500/30">
-              <i class="fas fa-bath text-amber-400 text-2xl"></i>
+          <!-- 7:30 PM - Dinner & Entertainment -->
+          <div class="relative" data-aos="fade-left">
+            <div class="md:flex items-center md:flex-row-reverse">
+              <div class="md:w-1/2 md:pl-12">
+                <div class="inline-block bg-neutral-800 px-6 py-8 rounded-2xl shadow-xl border border-neutral-700 hover:border-amber-500/50 transition">
+                  <div class="flex items-center gap-4 mb-4">
+                    <div class="w-16 h-16 bg-gradient-to-br from-amber-800 to-orange-900 rounded-full flex items-center justify-center shadow-lg">
+                      <i class="fas fa-fire text-white text-2xl"></i>
+                    </div>
+                    <div>
+                      <p class="text-2xl font-bold text-amber-400">7:30 PM</p>
+                      <p class="text-sm text-gray-400">Evening Activities</p>
+                    </div>
+                  </div>
+                  <h4 class="text-xl font-serif font-bold text-white mb-3">Bonfire & Dinner</h4>
+                  <p class="text-gray-300 text-sm leading-relaxed">
+                    Gather around the bonfire for cultural performances and wildlife documentaries. Enjoy a sumptuous dinner under the starlit sky, ending your day on a perfect note.
+                  </p>
+                </div>
+              </div>
+              <div class="hidden md:block w-8 h-8 bg-amber-500 rounded-full border-4 border-neutral-900 absolute left-1/2 transform -translate-x-1/2 shadow-lg"></div>
+              <div class="md:w-1/2"></div>
             </div>
-            <p class="text-white text-sm font-semibold mb-1">Premium</p>
-            <p class="text-gray-400 text-xs">Toiletries</p>
-          </div>
-
-          <div class="text-center" data-aos="zoom-in" data-aos-delay="100">
-            <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-amber-400/20 to-amber-600/20 rounded-full flex items-center justify-center border border-amber-500/30">
-              <i class="fas fa-phone text-amber-400 text-2xl"></i>
-            </div>
-            <p class="text-white text-sm font-semibold mb-1">24/7</p>
-            <p class="text-gray-400 text-xs">Room Service</p>
-          </div>
-
-          <div class="text-center" data-aos="zoom-in" data-aos-delay="150">
-            <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-amber-400/20 to-amber-600/20 rounded-full flex items-center justify-center border border-amber-500/30">
-              <i class="fas fa-tshirt text-amber-400 text-2xl"></i>
-            </div>
-            <p class="text-white text-sm font-semibold mb-1">Laundry</p>
-            <p class="text-gray-400 text-xs">Service</p>
-          </div>
-
-          <div class="text-center" data-aos="zoom-in" data-aos-delay="200">
-            <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-amber-400/20 to-amber-600/20 rounded-full flex items-center justify-center border border-amber-500/30">
-              <i class="fas fa-newspaper text-amber-400 text-2xl"></i>
-            </div>
-            <p class="text-white text-sm font-semibold mb-1">Daily</p>
-            <p class="text-gray-400 text-xs">Newspaper</p>
-          </div>
-
-          <div class="text-center" data-aos="zoom-in" data-aos-delay="250">
-            <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-amber-400/20 to-amber-600/20 rounded-full flex items-center justify-center border border-amber-500/30">
-              <i class="fas fa-water text-amber-400 text-2xl"></i>
-            </div>
-            <p class="text-white text-sm font-semibold mb-1">Bottled</p>
-            <p class="text-gray-400 text-xs">Water</p>
           </div>
         </div>
       </div>
@@ -530,7 +775,7 @@ include 'includes/header.php';
   </section>
 
   <!-- Room Gallery Section -->
-  <section id="gallery" class="py-12 md:py-20 bg-neutral-900">
+  <section id="gallery" class="py-12 md:py-20 bg-black">
     <div class="container mx-auto max-w-7xl px-4 md:px-6">
       <div class="text-center mb-12">
         <p class="text-amber-500 text-xs tracking-widest mb-4 font-light" data-aos="fade-down">
@@ -572,13 +817,14 @@ include 'includes/header.php';
           class="bg-white text-amber-900 hover:bg-amber-100 px-10 py-4 transition font-semibold text-lg">
           BOOK NOW
         </a>
-        <a href="tel:+918830996719"
+        <a href="tel:+919405529731"
           class="border-2 border-white hover:bg-white hover:text-amber-900 text-white px-10 py-4 transition font-semibold text-lg">
           CALL US
         </a>
       </div>
     </div>
   </section>
+
   <section class="py-12 md:py-20 px-4 md:px-6 bg-black awards-section overflow-hidden">
     <div class="container mx-auto max-w-7xl">
       <!-- Header -->
@@ -639,7 +885,7 @@ include 'includes/header.php';
 
     </div>
   </section>
-<!-- FAQs Section - Super Deluxe Rooms -->
+<!-- FAQs Section - Family Double Bedded Rooms -->
 <style>
   .faq-grid {
     display: grid;
@@ -748,7 +994,7 @@ include 'includes/header.php';
   window.addEventListener('load', handleFaqResize);
   window.addEventListener('resize', handleFaqResize);
 </script>
-
+  <!-- FAQs Section - Super Deluxe Rooms -->
 <section class="py-12 md:py-20 px-4 md:px-6 bg-neutral-900">
   <div class="mx-auto w-full" style="max-width: 1280px; padding: 0 24px;">
 
@@ -1121,11 +1367,9 @@ include 'includes/header.php';
     </div><!-- END FAQ GRID -->
   </div>
 </section>
-
   
-
   <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/8830996719" target="_blank"
+  <a href="https://wa.me/9405529731" target="_blank"
     class="fixed bottom-4 right-4 md:bottom-8 md:right-8 bg-green-500 hover:bg-green-600 w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-2xl z-50 transition transform hover:scale-110">
     <svg class="w-6 h-6 md:w-8 md:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
       <path
@@ -1133,37 +1377,67 @@ include 'includes/header.php';
     </svg>
   </a>
 
-
-
-  
   <script>
-// FAQ Toggle Functionality
-document.querySelectorAll('.faq-question').forEach(button => {
-  button.addEventListener('click', () => {
-    const faqItem = button.parentElement;
-    const answer = faqItem.querySelector('.faq-answer');
-    const icon = button.querySelector('.faq-icon');
+ 
+   
+
+   
+
     
-    // Close all other FAQs
-    document.querySelectorAll('.faq-item').forEach(item => {
-      if (item !== faqItem) {
-        item.querySelector('.faq-answer').style.maxHeight = '0';
-        item.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
-      }
+
+    // Tab functionality
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const targetTab = button.getAttribute('data-tab');
+
+        // Remove active class from all buttons and contents
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        tabContents.forEach(content => content.classList.remove('active'));
+
+        // Add active class to clicked button and corresponding content
+        button.classList.add('active');
+        document.getElementById(targetTab).classList.add('active');
+      });
     });
+  </script>
+  <script>
+  // FAQ Accordion Functionality (add only if not already present)
+  document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq-item');
     
-    // Toggle current FAQ
-    if (answer.style.maxHeight && answer.style.maxHeight !== '0px') {
-      answer.style.maxHeight = '0';
-      icon.style.transform = 'rotate(0deg)';
-    } else {
-      answer.style.maxHeight = answer.scrollHeight + 'px';
-      icon.style.transform = 'rotate(180deg)';
-    }
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      const answer = item.querySelector('.faq-answer');
+      const icon = item.querySelector('.faq-icon');
+      
+      question.addEventListener('click', () => {
+        const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
+        
+        // Close all other FAQs
+        faqItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            const otherAnswer = otherItem.querySelector('.faq-answer');
+            const otherIcon = otherItem.querySelector('.faq-icon');
+            otherAnswer.style.maxHeight = '0';
+            otherIcon.style.transform = 'rotate(0deg)';
+          }
+        });
+        
+        // Toggle current FAQ
+        if (isOpen) {
+          answer.style.maxHeight = '0';
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+          icon.style.transform = 'rotate(180deg)';
+        }
+      });
+    });
   });
-});
 </script>
 <?php 
-
 include 'includes/footer.php'; 
 ?>

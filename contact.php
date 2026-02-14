@@ -9,11 +9,11 @@ include 'includes/header.php';
 <!-- Spacer -->
 <div class="h-[60px] md:h-[80px]"></div>
 
-<!-- Hero Banner -->
-<header class="relative h-[50vh] md:h-[60vh] lg:h-[70vh] flex items-end"
-    style="background: url('image/Kanha (8).jpg') center/cover no-repeat">
-    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-</header>
+    <!-- Hero Banner -->
+    <header class="relative h-[50vh] md:h-[60vh] lg:h-[70vh] flex items-end"
+        style="background: url('images/wildmark1.JPG') center/cover no-repeat">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+    </header>
 
 <!-- Contact Section -->
 <section class="py-12 md:py-16 bg-neutral-900">
