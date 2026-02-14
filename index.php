@@ -599,11 +599,120 @@ html {
     background: #d97706;
     border-radius: 3px;
 }
+.faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-items: start;
+}
+
+@media (max-width: 768px) {
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.faq-col {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    min-width: 0;
+}
 </style>
 
+<style>
+.faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-items: start;
+}
 
+@media (max-width: 768px) {
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+}
 
+.faq-col {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    min-width: 0;
+}
 
+.faq-question {
+    min-height: 64px;
+    height: 64px;
+}
+
+.faq-question span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    font-size: 15px !important;
+}
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Carousel Slides Wrapper */
+.carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+/* Individual Slide - IMPORTANT FIX */
+.carousel-slide {
+    min-width: 100%;
+    width: 100%;
+    flex-shrink: 0;
+    display: block;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Carousel Dots */
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.carousel-dot.active {
+    background-color: #f59e0b;
+    width: 30px;
+    border-radius: 5px;
+}
+
+.carousel-dot:hover {
+    background-color: rgba(245, 158, 11, 0.6);
+}
+
+/* Prevent text selection on arrows */
+button[onclick^="prevSlide"],
+button[onclick^="nextSlide"] {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+</style>
 <section id="home"
     class="relative h-[50vh] md:h-[60vh] lg:h-[80vh] flex items-center justify-center hero-section overflow-hidden">
     <div class="absolute inset-0 hero-carousel">
@@ -733,7 +842,6 @@ html {
     </div>
 </section>
 
-<!-- Safari Experiences Section -->
 <section class="py-12 md:py-20 px-4 md:px-6 bg-black extraordinary-section overflow-hidden">
     <div class="container mx-auto max-w-7xl">
         <div class="text-center mb-8 md:mb-12">
@@ -743,7 +851,7 @@ html {
                 Experience
             </p>
             <h2 class="text-3xl md:text-5xl font-serif mb-6 md:mb-8" data-aos="zoom-in" data-aos-duration="1000">
-                No matter where you’re going from, we take you there.
+                No matter where you're going from, we take you there.
             </h2>
             <p class="text-sm md:text-base text-gray-300 max-w-6xl mx-auto leading-relaxed mb-2" data-aos="fade-up"
                 data-aos-delay="200">
@@ -763,43 +871,51 @@ html {
             </p>
         </div>
 
+        <!-- FIXED CAROUSEL -->
         <div class="relative mt-10 md:mt-16" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
-            <div class="carousel-container overflow-hidden">
-                <div class="carousel-slides flex transition-transform duration-500" id="carousel">
-                    <div class="carousel-slide min-w-full flex-shrink-0">
+            <div class="carousel-container overflow-hidden rounded-lg">
+                <div class="carousel-slides flex transition-transform duration-500 ease-in-out" id="carousel">
+                    <!-- Slide 1 -->
+                    <div class="carousel-slide w-full flex-shrink-0">
                         <img src="images/home5.jpg" alt="Tiger Safari"
-                            class="w-full h-[300px] md:h-[500px] object-cover rounded-lg" />
+                            class="w-full h-[250px] sm:h-[350px] md:h-[450px] lg:h-[550px] object-cover" />
                     </div>
-                    <div class="carousel-slide min-w-full flex-shrink-0">
+                    <!-- Slide 2 -->
+                    <div class="carousel-slide w-full flex-shrink-0">
                         <img src="images/home6.webp" alt="Wildlife Experience"
-                            class="w-full h-[300px] md:h-[500px] object-cover rounded-lg" />
+                            class="w-full h-[250px] sm:h-[350px] md:h-[450px] lg:h-[550px] object-cover" />
                     </div>
-                    <div class="carousel-slide min-w-full flex-shrink-0">
+                    <!-- Slide 3 -->
+                    <div class="carousel-slide w-full flex-shrink-0">
                         <img src="images/home7.webp" alt="Safari Jeep"
-                            class="w-full h-[300px] md:h-[500px] object-cover rounded-lg" />
+                            class="w-full h-[250px] sm:h-[350px] md:h-[450px] lg:h-[550px] object-cover" />
                     </div>
                 </div>
             </div>
 
+            <!-- Left Arrow -->
             <button
-                class="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 bg-white text-black w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center hover:bg-gray-200 transition shadow-lg"
-                onclick="prevSlide()">
+                class="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 bg-white/90 backdrop-blur-sm text-black w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center hover:bg-white transition shadow-lg z-10"
+                onclick="prevSlide()" aria-label="Previous slide">
                 <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                 </svg>
             </button>
+
+            <!-- Right Arrow -->
             <button
-                class="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 bg-white text-black w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center hover:bg-gray-200 transition shadow-lg"
-                onclick="nextSlide()">
+                class="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 bg-white/90 backdrop-blur-sm text-black w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center hover:bg-white transition shadow-lg z-10"
+                onclick="nextSlide()" aria-label="Next slide">
                 <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                 </svg>
             </button>
 
+            <!-- Dots Indicator -->
             <div class="flex justify-center mt-6 md:mt-8 gap-2">
-                <button class="carousel-dot active" onclick="goToSlide(0)"></button>
-                <button class="carousel-dot" onclick="goToSlide(1)"></button>
-                <button class="carousel-dot" onclick="goToSlide(2)"></button>
+                <button class="carousel-dot active" onclick="goToSlide(0)" aria-label="Go to slide 1"></button>
+                <button class="carousel-dot" onclick="goToSlide(1)" aria-label="Go to slide 2"></button>
+                <button class="carousel-dot" onclick="goToSlide(2)" aria-label="Go to slide 3"></button>
             </div>
         </div>
     </div>
@@ -1744,127 +1860,9 @@ html {
 
     </div>
 </section>
-<style>
-.faq-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    align-items: start;
-}
-
-@media (max-width: 768px) {
-    .faq-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-.faq-col {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    width: 100%;
-    min-width: 0;
-}
-</style>
-
-<style>
-.faq-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    align-items: start;
-}
-
-@media (max-width: 768px) {
-    .faq-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-.faq-col {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    width: 100%;
-    min-width: 0;
-}
-
-.faq-question {
-    min-height: 64px;
-    height: 64px;
-}
-
-.faq-question span {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: block;
-    font-size: 15px !important;
-}
-</style>
 
 
-<style>
-.faq-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    align-items: start;
-}
 
-.faq-col {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    width: 100%;
-    min-width: 0;
-}
-
-.faq-question {
-    min-height: 64px;
-    height: 64px;
-}
-
-.faq-question span {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: block;
-    font-size: 15px !important;
-}
-
-@media screen and (max-width: 860px) {
-    .faq-grid {
-        grid-template-columns: 1fr !important;
-    }
-
-    .faq-question {
-        height: auto !important;
-        min-height: unset !important;
-    }
-
-    .faq-question span {
-        white-space: normal !important;
-        overflow: visible !important;
-        text-overflow: unset !important;
-        font-size: 14px !important;
-    }
-}
-</style>
-
-<script>
-function handleFaqResize() {
-    var grid = document.querySelector('.faq-grid');
-    if (!grid) return;
-    if (window.innerWidth <= 860) {
-        grid.style.gridTemplateColumns = '1fr';
-    } else {
-        grid.style.gridTemplateColumns = '1fr 1fr';
-    }
-}
-window.addEventListener('load', handleFaqResize);
-window.addEventListener('resize', handleFaqResize);
-</script>
 
 <section class="py-12 md:py-20 px-4 md:px-6 bg-neutral-900">
     <div class="mx-auto w-full" style="max-width: 1280px; padding: 0 24px;">
@@ -2335,34 +2333,7 @@ window.addEventListener('resize', handleFaqResize);
         </div><!-- END FAQ GRID -->
     </div>
 </section>
-<script>
-// FAQ Accordion
-document.addEventListener('DOMContentLoaded', function() {
-    const faqItems = document.querySelectorAll('.faq-item');
 
-    faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        const answer = item.querySelector('.faq-answer');
-        const icon = item.querySelector('.faq-icon');
-
-        question.addEventListener('click', () => {
-            const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
-
-            // Close all
-            faqItems.forEach(other => {
-                other.querySelector('.faq-answer').style.maxHeight = '0px';
-                other.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
-            });
-
-            // Open current if it was closed
-            if (!isOpen) {
-                answer.style.maxHeight = answer.scrollHeight + 'px';
-                icon.style.transform = 'rotate(180deg)';
-            }
-        });
-    });
-});
-</script>
 <button id="specialOfferBtn"
     class="fixed bottom-20 right-4 md:bottom-24 mb-8 md:right-8 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-2xl z-50 transition transform hover:scale-110 animate-pulse"
     aria-label="Special Offer" onclick="toggleSpecialOfferPopup()">
@@ -2544,7 +2515,100 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <!-- AOS Init -->
 
+<script>
+let currentSlide = 0;
+const totalSlides = 3;
 
+function updateCarousel() {
+    const carousel = document.getElementById('carousel');
+    const dots = document.querySelectorAll('.carousel-dot');
+    
+    // Calculate transform percentage
+    const translateX = -(currentSlide * 100);
+    carousel.style.transform = `translateX(${translateX}%)`;
+    
+    // Update dots
+    dots.forEach((dot, index) => {
+        if (index === currentSlide) {
+            dot.classList.add('active');
+        } else {
+            dot.classList.remove('active');
+        }
+    });
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateCarousel();
+}
+
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    updateCarousel();
+}
+
+function goToSlide(index) {
+    currentSlide = index;
+    updateCarousel();
+}
+
+// Auto-play carousel (optional)
+let autoplayInterval;
+
+function startAutoplay() {
+    autoplayInterval = setInterval(() => {
+        nextSlide();
+    }, 5000); // Change slide every 5 seconds
+}
+
+function stopAutoplay() {
+    if (autoplayInterval) {
+        clearInterval(autoplayInterval);
+    }
+}
+
+// Start autoplay on page load
+document.addEventListener('DOMContentLoaded', function() {
+    startAutoplay();
+});
+
+// Pause autoplay on hover
+const carouselContainer = document.querySelector('.carousel-container');
+if (carouselContainer) {
+    carouselContainer.addEventListener('mouseenter', stopAutoplay);
+    carouselContainer.addEventListener('mouseleave', startAutoplay);
+}
+
+// Touch/Swipe support for mobile
+let touchStartX = 0;
+let touchEndX = 0;
+
+const carouselElement = document.getElementById('carousel');
+if (carouselElement) {
+    carouselElement.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, false);
+
+    carouselElement.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    }, false);
+}
+
+function handleSwipe() {
+    const swipeThreshold = 50; // Minimum distance for swipe
+    
+    if (touchEndX < touchStartX - swipeThreshold) {
+        // Swiped left - next slide
+        nextSlide();
+    }
+    
+    if (touchEndX > touchStartX + swipeThreshold) {
+        // Swiped right - previous slide
+        prevSlide();
+    }
+}
+</script>
 <script>
 // ===================================
 // Close menu when clicking on a package link
@@ -2875,13 +2939,119 @@ document.addEventListener('keydown', function(event) {
     }
 });
 </script>
+<script>
+function handleFaqResize() {
+    var grid = document.querySelector('.faq-grid');
+    if (!grid) return;
+    if (window.innerWidth <= 860) {
+        grid.style.gridTemplateColumns = '1fr';
+    } else {
+        grid.style.gridTemplateColumns = '1fr 1fr';
+    }
+}
+window.addEventListener('load', handleFaqResize);
+window.addEventListener('resize', handleFaqResize);
+</script>
+<script>
+// FAQ Accordion
+document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq-item');
 
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.faq-icon');
 
+        question.addEventListener('click', () => {
+            const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
 
+            // Close all
+            faqItems.forEach(other => {
+                other.querySelector('.faq-answer').style.maxHeight = '0px';
+                other.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+            });
 
-
-
-
+            // Open current if it was closed
+            if (!isOpen) {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                icon.style.transform = 'rotate(180deg)';
+            }
+        });
+    });
+});
+</script>
+<script>
+// ===================================
+// ROOMS TABS - COMPLETE FIX
+// ===================================
+(function() {
+    'use strict';
+    
+    function initRoomTabs() {
+        const tabButtons = document.querySelectorAll('#rooms .tab-btn');
+        const panels = document.querySelectorAll('#rooms .panel');
+        
+        console.log('Tab buttons found:', tabButtons.length);
+        console.log('Panels found:', panels.length);
+        
+        if (tabButtons.length === 0 || panels.length === 0) {
+            console.error('Tabs or panels not found!');
+            return;
+        }
+        
+        // Function to show specific tab
+        function showTab(tabName) {
+            console.log('Showing tab:', tabName);
+            
+            // Remove active from all buttons
+            tabButtons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Add active to clicked button
+            tabButtons.forEach(btn => {
+                if (btn.getAttribute('data-tab') === tabName) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            // Show/hide panels
+            panels.forEach(panel => {
+                const panelTab = panel.getAttribute('data-tab');
+                if (panelTab === tabName) {
+                    panel.classList.remove('hidden');
+                    console.log('Showing panel:', panelTab);
+                } else {
+                    panel.classList.add('hidden');
+                    console.log('Hiding panel:', panelTab);
+                }
+            });
+        }
+        
+        // Add click event to each button
+        tabButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const tabName = this.getAttribute('data-tab');
+                showTab(tabName);
+            });
+        });
+        
+        // Show first tab by default
+        if (tabButtons.length > 0) {
+            const firstTab = tabButtons[0].getAttribute('data-tab');
+            showTab(firstTab);
+        }
+    }
+    
+    // Initialize when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initRoomTabs);
+    } else {
+        initRoomTabs();
+    }
+})();
+</script>
 
 <?php 
 // Include footer

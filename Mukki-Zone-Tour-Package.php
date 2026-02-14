@@ -208,7 +208,45 @@ include 'includes/header.php';
         font-size: 16px;
       }
     }
-
+  .faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-items: start;
+  }
+  .faq-col {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    min-width: 0;
+  }
+  .faq-question {
+    min-height: 64px;
+    height: 64px;
+  }
+  .faq-question span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    font-size: 15px !important;
+  }
+  @media screen and (max-width: 860px) {
+    .faq-grid {
+      grid-template-columns: 1fr !important;
+    }
+    .faq-question {
+      height: auto !important;
+      min-height: unset !important;
+    }
+    .faq-question span {
+      white-space: normal !important;
+      overflow: visible !important;
+      text-overflow: unset !important;
+      font-size: 14px !important;
+    }
+  }
     
   </style>
 
@@ -890,113 +928,9 @@ include 'includes/header.php';
     </div>
   </section>
 <!-- FAQs Section - Mukki Zone Tour Package -->
-<style>
-  .faq-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    align-items: start;
-  }
-  @media (max-width: 768px) {
-    .faq-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-  .faq-col {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    width: 100%;
-    min-width: 0;
-  }
-</style>
 
-<style>
-  .faq-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    align-items: start;
-  }
-  @media (max-width: 768px) {
-    .faq-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-  .faq-col {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    width: 100%;
-    min-width: 0;
-  }
-  .faq-question {
-    min-height: 64px;
-    height: 64px;
-  }
-  .faq-question span {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: block;
-    font-size: 15px !important;
-  }
-</style>
-<style>
-  .faq-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    align-items: start;
-  }
-  .faq-col {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    width: 100%;
-    min-width: 0;
-  }
-  .faq-question {
-    min-height: 64px;
-    height: 64px;
-  }
-  .faq-question span {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: block;
-    font-size: 15px !important;
-  }
-  @media screen and (max-width: 860px) {
-    .faq-grid {
-      grid-template-columns: 1fr !important;
-    }
-    .faq-question {
-      height: auto !important;
-      min-height: unset !important;
-    }
-    .faq-question span {
-      white-space: normal !important;
-      overflow: visible !important;
-      text-overflow: unset !important;
-      font-size: 14px !important;
-    }
-  }
-</style>
 
-<script>
-  function handleFaqResize() {
-    var grid = document.querySelector('.faq-grid');
-    if (!grid) return;
-    if (window.innerWidth <= 860) {
-      grid.style.gridTemplateColumns = '1fr';
-    } else {
-      grid.style.gridTemplateColumns = '1fr 1fr';
-    }
-  }
-  window.addEventListener('load', handleFaqResize);
-  window.addEventListener('resize', handleFaqResize);
-</script>
+
 
 <section class="py-12 md:py-20 px-4 md:px-6 bg-neutral-900">
   <div class="mx-auto w-full" style="max-width: 1280px; padding: 0 24px;">
@@ -1710,6 +1644,20 @@ document.addEventListener('keydown', function(event) {
         }
     }
 });
+</script>
+
+<script>
+  function handleFaqResize() {
+    var grid = document.querySelector('.faq-grid');
+    if (!grid) return;
+    if (window.innerWidth <= 860) {
+      grid.style.gridTemplateColumns = '1fr';
+    } else {
+      grid.style.gridTemplateColumns = '1fr 1fr';
+    }
+  }
+  window.addEventListener('load', handleFaqResize);
+  window.addEventListener('resize', handleFaqResize);
 </script>
 <?php 
 

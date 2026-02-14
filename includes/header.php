@@ -91,11 +91,7 @@ section {
             font-family: "Roboto Slab", serif;
         }
 
-        html {
-            overflow-x: hidden;
-            scroll-behavior: smooth;
-        }
-
+      
         /* Dropdown */
         .dropdown {
             position: relative;
