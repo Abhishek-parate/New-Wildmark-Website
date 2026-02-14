@@ -1495,7 +1495,7 @@ include 'includes/header.php';
             <div class="relative w-full" style="padding-bottom: 177.78%; /* 9:16 aspect ratio */">
               <iframe 
                 class="absolute top-0 left-0 w-full h-full" 
-                src="https://www.youtube.com/embed/LKek7gdP15A?rel=0&modestbranding=1" 
+                src="https://www.youtube.com/embed/LKek7gdP15A" 
                 title="Guest Testimonial 1" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -1517,7 +1517,7 @@ include 'includes/header.php';
             <div class="relative w-full" style="padding-bottom: 177.78%;">
               <iframe 
                 class="absolute top-0 left-0 w-full h-full" 
-                src="https://www.youtube.com/embed/dMn3NAYZuQ0?rel=0&modestbranding=1" 
+                src="https://www.youtube.com/embed/dMn3NAYZuQ0" 
                 title="Guest Testimonial 2" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -1538,7 +1538,7 @@ include 'includes/header.php';
             <div class="relative w-full" style="padding-bottom: 177.78%;">
               <iframe 
                 class="absolute top-0 left-0 w-full h-full" 
-                src="https://www.youtube.com/embed/IU16dm75W-Y?rel=0&modestbranding=1" 
+                src="https://www.youtube.com/embed/IU16dm75W-Y" 
                 title="Guest Testimonial 3" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
