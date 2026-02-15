@@ -599,62 +599,50 @@ html {
     background: #d97706;
     border-radius: 3px;
 }
-.faq-grid {
+ .faq-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
     align-items: start;
-}
-
-@media (max-width: 768px) {
-    .faq-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-.faq-col {
+  }
+  .faq-col {
     display: flex;
     flex-direction: column;
     gap: 14px;
     width: 100%;
     min-width: 0;
-}
-</style>
-
-<style>
-.faq-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    align-items: start;
-}
-
-@media (max-width: 768px) {
-    .faq-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-.faq-col {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    width: 100%;
-    min-width: 0;
-}
-
-.faq-question {
+  }
+  .faq-question {
     min-height: 64px;
     height: 64px;
-}
-
-.faq-question span {
+  }
+  .faq-question span {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     display: block;
     font-size: 15px !important;
-}
+  }
+  @media screen and (max-width: 860px) {
+    .faq-grid {
+      grid-template-columns: 1fr !important;
+    }
+    .faq-question {
+      height: auto !important;
+      min-height: unset !important;
+    }
+    .faq-question span {
+      white-space: normal !important;
+      overflow: visible !important;
+      text-overflow: unset !important;
+      font-size: 14px !important;
+    }
+  }
+
+</style>
+
+<style>
+
 .carousel-container {
     position: relative;
     overflow: hidden;
