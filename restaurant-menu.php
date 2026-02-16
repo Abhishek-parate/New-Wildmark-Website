@@ -1,13 +1,13 @@
 <?php 
 // Set page-specific title
-$pageTitle = "Resort Activities - Wildmark Resort Kanha";
+$pageTitle = "Restaurant - Wildmark Resort Kanha";
 
 // Include header
 include 'includes/header.php'; 
 ?>
 
 <style>
-    @keyframes slideIn {
+     @keyframes slideIn {
     from {
         opacity: 0;
         transform: scale(0.9) translateY(20px);
@@ -41,237 +41,769 @@ include 'includes/header.php';
     background: #d97706;
     border-radius: 3px;
 }
-/* Activity Cards Styling */
-.activity-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background: linear-gradient(135deg, #1a1a1a 0%, #262626 100%);
-    border: 1px solid rgba(217, 119, 6, 0.2);
+/* Modern Menu Tab Design */
+.modern-menu-container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 2rem;
+    min-height: 600px;
 }
 
-.activity-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 40px rgba(217, 119, 6, 0.3);
-    border-color: rgba(217, 119, 6, 0.5);
+@media (max-width: 768px) {
+    .modern-menu-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
 }
 
-.activity-icon {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
+/* Vertical Tab Navigation */
+.modern-tab-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+}
+
+@media (max-width: 768px) {
+    .modern-tab-nav {
+        position: static;
+        flex-direction: row;
+        overflow-x: auto;
+        gap: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+}
+
+.modern-tab-item {
+    background: rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+@media (max-width: 768px) {
+    .modern-tab-item {
+        flex-direction: column;
+        min-width: 120px;
+        padding: 0.75rem;
+        text-align: center;
+    }
+}
+
+.modern-tab-item:hover {
+    border-color: rgba(245, 158, 11, 0.5);
+    background: rgba(245, 158, 11, 0.1);
+    transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+    .modern-tab-item:hover {
+        transform: translateY(-3px);
+    }
+}
+
+.modern-tab-item.active {
+    border-color: #f59e0b;
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.2) 0%, rgba(217, 119, 6, 0.1) 100%);
+    box-shadow: 0 4px 20px rgba(245, 158, 11, 0.3);
+}
+
+.modern-tab-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #ffd4b8 0%, #ffb88c 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1.5rem;
-    box-shadow: 0 8px 20px rgba(217, 119, 6, 0.3);
-    transition: transform 0.3s ease;
+    flex-shrink: 0;
 }
 
-.activity-card:hover .activity-icon {
-    transform: scale(1.1) rotate(5deg);
+.modern-tab-icon i {
+    font-size: 1.2rem;
+    color: #7c2d12;
 }
 
-.activity-icon i {
-    font-size: 2rem;
-    color: #000;
+.modern-tab-label {
+    display: flex;
+    flex-direction: column;
 }
 
-/* FAQ Styling */
+.modern-tab-label h4 {
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0;
+    font-family: "Roboto Slab", serif;
+}
+
+.modern-tab-label p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.7rem;
+    margin: 0;
+    margin-top: 0.2rem;
+}
+
+/* Menu Content Panel */
+.modern-menu-panel {
+    display: none;
+    animation: fadeInUp 0.5s ease-in-out;
+}
+
+.modern-menu-panel.active {
+    display: block;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Premium Menu Cards */
+.premium-menu-card {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(20, 20, 20, 0.6) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 4px solid #f59e0b;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    transition: all 0.3s ease;
+}
+
+.premium-menu-card:hover {
+    border-left-color: #d97706;
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(20, 20, 20, 0.8) 100%);
+    transform: translateX(8px);
+    box-shadow: 0 8px 24px rgba(245, 158, 11, 0.2);
+}
+
+.premium-menu-card .dish-info {
+    flex: 1;
+}
+
+.premium-menu-card .dish-name {
+    font-family: "Roboto Slab", serif;
+    font-size: 1.1rem;
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.premium-menu-card .dish-desc {
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 1.6;
+}
+
+/* Veg/Non-veg Badges */
+.veg-badge, .nonveg-badge {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.veg-badge {
+    border: 2px solid #22c55e;
+}
+
+.veg-badge::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #22c55e;
+    border-radius: 50%;
+}
+
+.nonveg-badge {
+    border: 2px solid #ef4444;
+}
+
+.nonveg-badge::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #ef4444;
+    border-radius: 50%;
+}
+
+/* Buffet Highlight Card */
+.buffet-highlight {
+    background: linear-gradient(135deg, rgba(217, 119, 6, 0.15) 0%, rgba(180, 83, 9, 0.1) 100%);
+    border: 2px solid rgba(217, 119, 6, 0.4);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.buffet-highlight h4 {
+    font-family: "Roboto Slab", serif;
+    color: #f59e0b;
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.buffet-highlight ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.buffet-highlight ul li {
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.8);
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.buffet-highlight ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #f59e0b;
+    font-weight: bold;
+}
+
+/* Category Header */
+.category-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(245, 158, 11, 0.3);
+}
+
+.category-header-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #ffd4b8 0%, #ffb88c 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(245, 158, 11, 0.3);
+}
+
+.category-header-icon i {
+    font-size: 1.8rem;
+    color: #7c2d12;
+}
+
+.category-header-text h3 {
+    font-family: "Roboto Slab", serif;
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.category-header-text p {
+    color: #f59e0b;
+    font-size: 0.85rem;
+    margin: 0;
+    margin-top: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Dining Highlight Cards */
+.why-choose-card {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    padding: 1.5rem 1.5rem;
+    text-align: left;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.why-choose-card .icon-wrapper {
+    width: 50px; height: 50px;
+    background: linear-gradient(135deg, #ffd4b8 0%, #ffb88c 100%);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 0 1rem 0;
+    box-shadow: 0 8px 20px rgba(245, 158, 11, 0.2);
+}
+.why-choose-card .icon-wrapper i { font-size: 1.4rem; color: #2d5a47; }
+.why-choose-card h4 {
+    color: #ffffff; font-size: 1.1rem; font-weight: 600;
+    margin-bottom: 0.75rem;
+    font-family: "Roboto Slab", serif; line-height: 1.4;
+}
+.why-choose-card p {
+    color: rgba(255,255,255,0.8); font-size: 0.85rem;
+    line-height: 1.65; font-family: "Roboto Mono", monospace;
+}
+
+/* Awards */
+.award-card { transition: transform 0.3s ease; }
+.award-card:hover { transform: translateY(-4px); }
+.award-image { transition: transform 0.3s ease; }
+.award-card:hover .award-image { transform: scale(1.05); }
+@media (max-width: 768px) {
+    .award-card > div { min-height: 280px !important; }
+    .award-image { max-width: 220px; }
+}
+
+/* FAQ */
 .faq-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
     align-items: start;
 }
-
 .faq-col {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    width: 100%;
-    min-width: 0;
+    display: flex; flex-direction: column;
+    gap: 14px; width: 100%; min-width: 0;
 }
-
-.faq-question {
-    min-height: 64px;
-    height: 64px;
-}
-
+.faq-question { min-height: 64px; height: 64px; }
 .faq-question span {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: block;
-    font-size: 15px !important;
+    white-space: nowrap; overflow: hidden;
+    text-overflow: ellipsis; display: block; font-size: 15px !important;
 }
-
 @media screen and (max-width: 860px) {
-    .faq-grid {
-        grid-template-columns: 1fr !important;
-    }
-
-    .faq-question {
-        height: auto !important;
-        min-height: unset !important;
-    }
-
+    .faq-grid { grid-template-columns: 1fr !important; }
+    .faq-question { height: auto !important; min-height: unset !important; }
     .faq-question span {
-        white-space: normal !important;
-        overflow: visible !important;
-        text-overflow: unset !important;
-        font-size: 14px !important;
+        white-space: normal !important; overflow: visible !important;
+        text-overflow: unset !important; font-size: 14px !important;
     }
 }
 
-/* Awards Card Styling */
-.award-card {
-    transition: transform 0.3s ease;
-}
-
-.award-card:hover {
-    transform: translateY(-4px);
-}
-
-.award-image {
-    transition: transform 0.3s ease;
-}
-
-.award-card:hover .award-image {
-    transform: scale(1.05);
-}
-
-@media (max-width: 768px) {
-    .award-card>div {
-        min-height: 280px !important;
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
     }
-
-    .award-image {
-        max-width: 220px;
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
     }
+}
+
+.animate-slideIn {
+    animation: slideIn 0.3s ease-out;
+}
+
+#specialOfferPopup > div {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+#specialOfferPopup > div::-webkit-scrollbar {
+    display: none;
 }
 </style>
-  <header class="relative h-[50vh] md:h-[60vh] lg:h-[100vh] flex items-end"
+
+<!-- HERO -->
+<header class="relative h-[50vh] md:h-[60vh] lg:h-[100vh] flex items-end"
         style="background: url('images/home3.webp') center/cover no-repeat">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-    </header>
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+</header>
 
-<!-- Main Activities Section -->
-<section class="py-12 md:py-20 px-4 md:px-6 bg-neutral-900">
-    <div class="container mx-auto max-w-7xl">
+<!-- INTRO -->
+<section class="py-8 md:py-12 bg-[#121212]">
+    <div class="container mx-auto max-w-5xl text-center px-4 md:px-6">
+        <p class="text-amber-500 text-xs tracking-widest mb-3 font-light" data-aos="fade-down">
+            LOCAL CUISINE • MULTI-CUISINE • FRESHLY COOKED
+        </p>
+        <h2 class="text-3xl md:text-4xl font-serif font-light mb-5 text-white" data-aos="zoom-in">
+            Taste the Flavours of India at Wildmark
+        </h2>
+        <p class="text-sm md:text-base text-gray-300 leading-relaxed max-w-3xl mx-auto" data-aos="fade-up">
+            At Wildmark Resort, our restaurant brings you the best of South Indian, North Indian, Chinese, and local cuisine — all freshly prepared by our skilled chefs.
+        </p>
+    </div>
+</section>
+
+<!-- MODERN MENU SECTION -->
+<section id="menu" class="py-12 md:py-20 bg-neutral-900">
+    <div class="container mx-auto max-w-7xl px-4 md:px-6">
         
-        <!-- Section Header -->
-        <div class="text-center mb-10 md:mb-16">
-            <p class="text-amber-500 text-xs tracking-widest mb-3 md:mb-4 font-light" data-aos="fade-down">
-                ADVENTURE • CULTURE • RELAXATION
-            </p>
-            <h2 class="text-3xl md:text-5xl font-serif mb-6" data-aos="zoom-in" data-aos-duration="1000">
-                Experience Wildmark Resort
-            </h2>
-            <p class="text-sm md:text-base text-gray-300 max-w-4xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
-                From nature trails to cultural experiences, we offer a wide range of activities to make your stay memorable
-            </p>
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-5xl font-serif font-bold text-white mb-3">Our Menu</h2>
+            <p class="text-gray-400 text-sm">Click on a category to explore</p>
         </div>
 
-        <!-- Activities Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <!-- Modern Tab Layout -->
+        <div class="modern-menu-container">
             
-            <!-- Activity Card 1: Nature Trails -->
-            <div class="activity-card rounded-2xl p-6 md:p-8" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                <div class="activity-icon">
-                    <i class="fas fa-hiking"></i>
+            <!-- Vertical Tab Navigation -->
+            <div class="modern-tab-nav">
+                
+                <!-- Tab 1: South Indian -->
+                <div class="modern-tab-item active" data-menu="southindian">
+                    <div class="modern-tab-icon">
+                        <i class="fas fa-pepper-hot"></i>
+                    </div>
+                    <div class="modern-tab-label">
+                        <h4>South Indian</h4>
+                        <p>Traditional</p>
+                    </div>
                 </div>
-                <h3 class="text-xl md:text-2xl font-serif font-bold text-white mb-3 text-center">Nature Trails</h3>
-                <p class="text-sm md:text-base text-gray-300 leading-relaxed text-center">
-                    Explore the pristine beauty of Kanha's buffer zone with guided nature walks through lush forests and scenic landscapes.
-                </p>
+
+                <!-- Tab 2: North Indian -->
+                <div class="modern-tab-item" data-menu="northindian">
+                    <div class="modern-tab-icon">
+                        <i class="fas fa-drumstick-bite"></i>
+                    </div>
+                    <div class="modern-tab-label">
+                        <h4>North Indian</h4>
+                        <p>Punjabi Style</p>
+                    </div>
+                </div>
+
+                <!-- Tab 3: Chinese -->
+                <div class="modern-tab-item" data-menu="chinese">
+                    <div class="modern-tab-icon">
+                        <i class="fas fa-bowl-food"></i>
+                    </div>
+                    <div class="modern-tab-label">
+                        <h4>Chinese</h4>
+                        <p>Indo-Chinese</p>
+                    </div>
+                </div>
+
+                <!-- Tab 4: Fast Food -->
+                <div class="modern-tab-item" data-menu="fastfood">
+                    <div class="modern-tab-icon">
+                        <i class="fas fa-burger"></i>
+                    </div>
+                    <div class="modern-tab-label">
+                        <h4>Quick Bites</h4>
+                        <p>Snacks</p>
+                    </div>
+                </div>
+
+                <!-- Tab 5: Eggs -->
+                <div class="modern-tab-item" data-menu="eggs">
+                    <div class="modern-tab-icon">
+                        <i class="fas fa-egg"></i>
+                    </div>
+                    <div class="modern-tab-label">
+                        <h4>Egg Dishes</h4>
+                        <p>Protein Rich</p>
+                    </div>
+                </div>
+
             </div>
 
-            <!-- Activity Card 2: Bird Watching -->
-            <div class="activity-card rounded-2xl p-6 md:p-8" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                <div class="activity-icon">
-                    <i class="fas fa-binoculars"></i>
-                </div>
-                <h3 class="text-xl md:text-2xl font-serif font-bold text-white mb-3 text-center">Bird Watching</h3>
-                <p class="text-sm md:text-base text-gray-300 leading-relaxed text-center">
-                    Witness over 300 species of birds in their natural habitat. Perfect for ornithology enthusiasts and nature photographers.
-                </p>
-            </div>
+            <!-- Menu Content Panels -->
+            <div class="modern-menu-content">
+                
+                <!-- SOUTH INDIAN PANEL -->
+                <div class="modern-menu-panel active" data-menu="southindian">
+                    <div class="category-header" data-aos="fade-right">
+                        <div class="category-header-icon">
+                            <i class="fas fa-pepper-hot"></i>
+                        </div>
+                        <div class="category-header-text">
+                            <h3>South Indian Cuisine</h3>
+                            <p>Authentic Traditional Flavours</p>
+                        </div>
+                    </div>
 
-            <!-- Activity Card 3: Photography Classes -->
-            <div class="activity-card rounded-2xl p-6 md:p-8" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                <div class="activity-icon">
-                    <i class="fas fa-camera"></i>
-                </div>
-                <h3 class="text-xl md:text-2xl font-serif font-bold text-white mb-3 text-center">Photography Classes</h3>
-                <p class="text-sm md:text-base text-gray-300 leading-relaxed text-center">
-                    Learn wildlife and landscape photography from experienced naturalists. Capture the essence of Kanha's wilderness.
-                </p>
-            </div>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
+                        <div class="premium-menu-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="dish-info">
+                                <div class="dish-name">Idli</div>
+                                <div class="dish-desc">Soft steamed rice cakes served with chutney & sambar</div>
+                            </div>
+                            <div class="veg-badge"></div>
+                        </div>
 
-            <!-- Activity Card 4: Bi-cycling -->
-            <div class="activity-card rounded-2xl p-6 md:p-8" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                <div class="activity-icon">
-                    <i class="fas fa-bicycle"></i>
-                </div>
-                <h3 class="text-xl md:text-2xl font-serif font-bold text-white mb-3 text-center">Bi-cycling</h3>
-                <p class="text-sm md:text-base text-gray-300 leading-relaxed text-center">
-                    Cycle through village roads and forest paths. Experience the tranquility of rural Madhya Pradesh at your own pace.
-                </p>
-            </div>
+                        <div class="premium-menu-card" data-aos="fade-up" data-aos-delay="150">
+                            <div class="dish-info">
+                                <div class="dish-name">Dosa</div>
+                                <div class="dish-desc">Crispy fermented crepe served with chutney & sambar</div>
+                            </div>
+                            <div class="veg-badge"></div>
+                        </div>
 
-            <!-- Activity Card 5: Baiga Tribal Dance -->
-            <div class="activity-card rounded-2xl p-6 md:p-8" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                <div class="activity-icon">
-                    <i class="fas fa-drum"></i>
-                </div>
-                <h3 class="text-xl md:text-2xl font-serif font-bold text-white mb-3 text-center">Baiga Tribal Dance</h3>
-                <p class="text-sm md:text-base text-gray-300 leading-relaxed text-center">
-                    Experience the vibrant culture of Baiga tribe through their traditional dance performances and folk music.
-                </p>
-            </div>
+                        <div class="premium-menu-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="dish-info">
+                                <div class="dish-name">Medu Vada</div>
+                                <div class="dish-desc">Crunchy lentil doughnuts with chutney & sambar</div>
+                            </div>
+                            <div class="veg-badge"></div>
+                        </div>
 
-            <!-- Activity Card 6: Tribal Village Walk -->
-            <div class="activity-card rounded-2xl p-6 md:p-8" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                <div class="activity-icon">
-                    <i class="fas fa-home"></i>
-                </div>
-                <h3 class="text-xl md:text-2xl font-serif font-bold text-white mb-3 text-center">Tribal Village Walk</h3>
-                <p class="text-sm md:text-base text-gray-300 leading-relaxed text-center">
-                    Visit nearby tribal villages and learn about their unique lifestyle, traditions, and sustainable living practices.
-                </p>
-            </div>
+                        <div class="premium-menu-card" data-aos="fade-up" data-aos-delay="250">
+                            <div class="dish-info">
+                                <div class="dish-name">South Indian Chicken Dum Biryani</div>
+                                <div class="dish-desc">Famous slow-cooked South Indian style chicken biryani</div>
+                            </div>
+                            <div class="nonveg-badge"></div>
+                        </div>
 
-            <!-- Activity Card 7: Market Walk -->
-            <div class="activity-card rounded-2xl p-6 md:p-8" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                <div class="activity-icon">
-                    <i class="fas fa-shopping-bag"></i>
-                </div>
-                <h3 class="text-xl md:text-2xl font-serif font-bold text-white mb-3 text-center">Market Walk</h3>
-                <p class="text-sm md:text-base text-gray-300 leading-relaxed text-center">
-                    Explore local markets and shop for authentic tribal handicrafts, jewelry, and organic forest produce.
-                </p>
-            </div>
+                        <div class="premium-menu-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="dish-info">
+                                <div class="dish-name">Fish Curry</div>
+                                <div class="dish-desc">Fresh fish in a spiced South Indian coconut-based curry</div>
+                            </div>
+                            <div class="nonveg-badge"></div>
+                        </div>
 
-            <!-- Activity Card 8: Python Spot -->
-            <div class="activity-card rounded-2xl p-6 md:p-8" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                <div class="activity-icon">
-                    <i class="fas fa-search"></i>
-                </div>
-                <h3 class="text-xl md:text-2xl font-serif font-bold text-white mb-3 text-center">Python Spot</h3>
-                <p class="text-sm md:text-base text-gray-300 leading-relaxed text-center">
-                    Guided visits to python habitats for wildlife enthusiasts. Safe and educational experience with expert naturalists.
-                </p>
-            </div>
+                        <div class="premium-menu-card" data-aos="fade-up" data-aos-delay="350">
+                            <div class="dish-info">
+                                <div class="dish-name">Tawa Fish Fry</div>
+                                <div class="dish-desc">Spice-marinated fish, shallow-fried on a hot tawa</div>
+                            </div>
+                            <div class="nonveg-badge"></div>
+                        </div>
+                    </div>
 
-            <!-- Activity Card 9: Ancient Forts -->
-            <div class="activity-card rounded-2xl p-6 md:p-8" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                <div class="activity-icon">
-                    <i class="fas fa-landmark"></i>
+                    <div class="buffet-highlight" data-aos="fade-up">
+                        <h4><i class="fas fa-utensils"></i> Buffet South Indian Meals</h4>
+                        <ul>
+                            <li>Steamed White Rice</li>
+                            <li>Sambar with vegetables</li>
+                            <li>Rasam varieties</li>
+                            <li>Butter Milk</li>
+                            <li>Soft Chapathi</li>
+                            <li>Vegetable Poriyals</li>
+                            <li>Pickle & Appalam</li>
+                            <li>Payasam (dessert)</li>
+                        </ul>
+                    </div>
                 </div>
-                <h3 class="text-xl md:text-2xl font-serif font-bold text-white mb-3 text-center">Ancient Forts</h3>
-                <p class="text-sm md:text-base text-gray-300 leading-relaxed text-center">
-                    Explore historical forts and learn about the rich heritage and architectural marvels of central India.
-                </p>
+
+                <!-- NORTH INDIAN PANEL -->
+                <div class="modern-menu-panel" data-menu="northindian">
+                    <div class="category-header" data-aos="fade-right">
+                        <div class="category-header-icon">
+                            <i class="fas fa-drumstick-bite"></i>
+                        </div>
+                        <div class="category-header-text">
+                            <h3>North Indian Cuisine</h3>
+                            <p>Rich & Flavorful Punjabi Dishes</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
+                        <div class="premium-menu-card">
+                            <div class="dish-info">
+                                <div class="dish-name">Paneer Butter Masala</div>
+                                <div class="dish-desc">Cottage cheese in rich, creamy tomato-butter gravy</div>
+                            </div>
+                            <div class="veg-badge"></div>
+                        </div>
+
+                        <div class="premium-menu-card">
+                            <div class="dish-info">
+                                <div class="dish-name">Tandoori Items</div>
+                                <div class="dish-desc">Marinated meats & paneer char-grilled in the tandoor</div>
+                            </div>
+                            <div class="nonveg-badge"></div>
+                        </div>
+
+                        <div class="premium-menu-card">
+                            <div class="dish-info">
+                                <div class="dish-name">Saoji Chicken</div>
+                                <div class="dish-desc">Bold & fiery Nagpur-style chicken curry</div>
+                            </div>
+                            <div class="nonveg-badge"></div>
+                        </div>
+
+                        <div class="premium-menu-card">
+                            <div class="dish-info">
+                                <div class="dish-name">Various Dal Preparations</div>
+                                <div class="dish-desc">Dal Tadka, Dal Makhani & more slow-simmered classics</div>
+                            </div>
+                            <div class="veg-badge"></div>
+                        </div>
+                    </div>
+
+                    <div class="buffet-highlight">
+                        <h4><i class="fas fa-utensils"></i> Buffet North Indian Meals</h4>
+                        <ul>
+                            <li>Fresh Salad</li>
+                            <li>Roti (freshly made)</li>
+                            <li>Steamed Rice</li>
+                            <li>Dal</li>
+                            <li>Paneer Dish</li>
+                            <li>Seasonal Veg Sabji</li>
+                            <li>Egg/Chicken Curry</li>
+                            <li>Starter & Soup</li>
+                            <li>Pickle & Papad</li>
+                            <li>Dessert</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- CHINESE PANEL -->
+                <div class="modern-menu-panel" data-menu="chinese">
+                    <div class="category-header" data-aos="fade-right">
+                        <div class="category-header-icon">
+                            <i class="fas fa-bowl-food"></i>
+                        </div>
+                        <div class="category-header-text">
+                            <h3>Chinese Cuisine</h3>
+                            <p>Popular Indo-Chinese Favorites</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                        <div class="premium-menu-card">
+                            <div class="dish-info">
+                                <div class="dish-name">All Soup Varieties</div>
+                                <div class="dish-desc">Hot & sour, sweet corn, manchow soup & more</div>
+                            </div>
+                            <div class="veg-badge"></div>
+                        </div>
+
+                        <div class="premium-menu-card">
+                            <div class="dish-info">
+                                <div class="dish-name">All Chicken Varieties</div>
+                                <div class="dish-desc">Chilli chicken, chicken manchurian, crispy honey chicken</div>
+                            </div>
+                            <div class="nonveg-badge"></div>
+                        </div>
+
+                        <div class="premium-menu-card">
+                            <div class="dish-info">
+                                <div class="dish-name">Noodles</div>
+                                <div class="dish-desc">Veg, chicken & egg noodles — hakka & schezwan style</div>
+                            </div>
+                            <div class="nonveg-badge"></div>
+                        </div>
+
+                        <div class="premium-menu-card">
+                            <div class="dish-info">
+                                <div class="dish-name">Fried Rices</div>
+                                <div class="dish-desc">Veg, egg & chicken fried rice with wok-tossed flavour</div>
+                            </div>
+                            <div class="nonveg-badge"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAST FOOD PANEL -->
+                <div class="modern-menu-panel" data-menu="fastfood">
+                    <div class="category-header" data-aos="fade-right">
+                        <div class="category-header-icon">
+                            <i class="fas fa-burger"></i>
+                        </div>
+                        <div class="category-header-text">
+                            <h3>Quick Bites & Snacks</h3>
+                            <p>Fast & Delicious</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                        <div class="premium-menu-card">
+                            <div class="dish-info">
+                                <div class="dish-name">Maggi</div>
+                                <div class="dish-desc">Classic instant noodles — a jungle camp favourite</div>
+                            </div>
+                            <div class="veg-badge"></div>
+                        </div>
+
+                        <div class="premium-menu-card">
+                            <div class="dish-info">
+                                <div class="dish-name">Sandwiches</div>
+                                <div class="dish-desc">Freshly made veg & non-veg sandwiches with sauces</div>
+                            </div>
+                            <div class="nonveg-badge"></div>
+                        </div>
+
+                        <div class="premium-menu-card">
+                            <div class="dish-info">
+                                <div class="dish-name">Chai — Indian Tea</div>
+                                <div class="dish-desc">Freshly brewed spiced masala chai, served piping hot</div>
+                            </div>
+                            <div class="veg-badge"></div>
+                        </div>
+
+                        <div class="premium-menu-card">
+                            <div class="dish-info">
+                                <div class="dish-name">Coffee</div>
+                                <div class="dish-desc">Hot brewed coffee — perfect after a morning safari</div>
+                            </div>
+                            <div class="veg-badge"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EGG VARIETIES PANEL -->
+                <div class="modern-menu-panel" data-menu="eggs">
+                    <div class="category-header" data-aos="fade-right">
+                        <div class="category-header-icon">
+                            <i class="fas fa-egg"></i>
+                        </div>
+                        <div class="category-header-text">
+                            <h3>All Egg Varieties</h3>
+                            <p>Protein-Packed Goodness</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                        <div class="premium-menu-card">
+                            <div class="dish-info">
+                                <div class="dish-name">Omelette</div>
+                                <div class="dish-desc">Plain, masala & cheese omelettes made to order</div>
+                            </div>
+                            <div class="nonveg-badge"></div>
+                        </div>
+
+                        <div class="premium-menu-card">
+                            <div class="dish-info">
+                                <div class="dish-name">Egg Bhurji</div>
+                                <div class="dish-desc">Spiced scrambled eggs with onion, tomato & green chilli</div>
+                            </div>
+                            <div class="nonveg-badge"></div>
+                        </div>
+
+                        <div class="premium-menu-card">
+                            <div class="dish-info">
+                                <div class="dish-name">Egg Curry</div>
+                                <div class="dish-desc">Boiled eggs simmered in a rich onion-tomato gravy</div>
+                            </div>
+                            <div class="nonveg-badge"></div>
+                        </div>
+
+                        <div class="premium-menu-card">
+                            <div class="dish-info">
+                                <div class="dish-name">Boiled Eggs</div>
+                                <div class="dish-desc">Soft or hard boiled, served with seasoning</div>
+                            </div>
+                            <div class="nonveg-badge"></div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
         </div>
@@ -279,126 +811,73 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- Indoor & Outdoor Games Section -->
-<section class="py-12 md:py-20 px-4 md:px-6 bg-black">
+<!-- DINING HIGHLIGHTS -->
+<section class="py-12 md:py-20 px-4 md:px-6 bg-black overflow-hidden">
     <div class="container mx-auto max-w-7xl">
-        
         <div class="text-center mb-10 md:mb-16">
-            <p class="text-amber-500 text-xs tracking-widest mb-3 md:mb-4 font-light" data-aos="fade-down">
-                RECREATION • FUN • LEISURE
+            <p class="text-amber-500 text-xs tracking-widest mb-3 md:mb-4 font-light" data-aos="fade-down">FRESHNESS • VARIETY • HOSPITALITY</p>
+            <h2 class="text-3xl md:text-5xl font-serif mb-4 text-white" data-aos="zoom-in" data-aos-duration="1000">Why Dine at Wildmark</h2>
+            <p class="text-sm md:text-base text-gray-300 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+                Our kitchen is committed to fresh, wholesome cooking — every dish crafted with care and served with warmth in the heart of the jungle.
             </p>
-            <h2 class="text-3xl md:text-5xl font-serif mb-6" data-aos="zoom-in" data-aos-duration="1000">
-                Indoor & Outdoor Games
-            </h2>
         </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
-            
-            <!-- Indoor Games -->
-            <div class="bg-neutral-900 border border-amber-500/30 rounded-2xl p-6 md:p-8" data-aos="fade-right" data-aos-duration="1000">
-                <div class="activity-icon mb-6">
-                    <i class="fas fa-chess"></i>
-                </div>
-                <h3 class="text-2xl md:text-3xl font-serif font-bold text-white mb-4 text-center">Indoor Games</h3>
-                <ul class="space-y-3 text-gray-300">
-                    <li class="flex items-center gap-3">
-                        <i class="fas fa-check-circle text-amber-500"></i>
-                        <span>Carrom Board</span>
-                    </li>
-                    <li class="flex items-center gap-3">
-                        <i class="fas fa-check-circle text-amber-500"></i>
-                        <span>Chess & Board Games</span>
-                    </li>
-                    <li class="flex items-center gap-3">
-                        <i class="fas fa-check-circle text-amber-500"></i>
-                        <span>Playing Cards</span>
-                    </li>
-                    <li class="flex items-center gap-3">
-                        <i class="fas fa-check-circle text-amber-500"></i>
-                        <span>Table Tennis</span>
-                    </li>
-                </ul>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            <div class="why-choose-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                <div class="icon-wrapper"><i class="fas fa-leaf"></i></div>
+                <h4>Fresh Ingredients</h4>
+                <p>We use fresh, locally sourced ingredients daily to ensure every meal is flavorful, healthy, and satisfying.</p>
             </div>
-
-            <!-- Outdoor Games -->
-            <div class="bg-neutral-900 border border-amber-500/30 rounded-2xl p-6 md:p-8" data-aos="fade-left" data-aos-duration="1000">
-                <div class="activity-icon mb-6">
-                    <i class="fas fa-volleyball-ball"></i>
-                </div>
-                <h3 class="text-2xl md:text-3xl font-serif font-bold text-white mb-4 text-center">Outdoor Games</h3>
-                <ul class="space-y-3 text-gray-300">
-                    <li class="flex items-center gap-3">
-                        <i class="fas fa-check-circle text-amber-500"></i>
-                        <span>Badminton</span>
-                    </li>
-                    <li class="flex items-center gap-3">
-                        <i class="fas fa-check-circle text-amber-500"></i>
-                        <span>Volleyball</span>
-                    </li>
-                    <li class="flex items-center gap-3">
-                        <i class="fas fa-check-circle text-amber-500"></i>
-                        <span>Cricket</span>
-                    </li>
-                    <li class="flex items-center gap-3">
-                        <i class="fas fa-check-circle text-amber-500"></i>
-                        <span>Outdoor Games Area</span>
-                    </li>
-                </ul>
+            <div class="why-choose-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <div class="icon-wrapper"><i class="fas fa-globe-asia"></i></div>
+                <h4>Multi-Cuisine Variety</h4>
+                <p>From South Indian idlis to Punjabi dals and Chinese noodles — our menu has something for every palate.</p>
             </div>
-
+            <div class="why-choose-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                <div class="icon-wrapper"><i class="fas fa-fire"></i></div>
+                <h4>Made-to-Order</h4>
+                <p>Wide variety of Chicken, Mutton & Fish dishes prepared fresh based on guest request & ingredient availability.</p>
+            </div>
+            <div class="why-choose-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                <div class="icon-wrapper"><i class="fas fa-coffee"></i></div>
+                <h4>All-Day Dining</h4>
+                <p>From early morning chai before your safari to late night snacks — our kitchen stays ready for you all day.</p>
+            </div>
         </div>
-
     </div>
 </section>
 
-<!-- Mini Library Section -->
-<section class="py-12 md:py-20 px-4 md:px-6 bg-neutral-900">
-    <div class="container mx-auto max-w-6xl">
-        
-        <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
-            
-            <!-- Left: Image -->
-            <div class="relative h-[350px] md:h-[450px] rounded-2xl overflow-hidden shadow-2xl" data-aos="fade-right" data-aos-duration="1000">
-                <img src="images/room5.png" alt="Mini Library" class="w-full h-full object-cover">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-            </div>
-
-            <!-- Right: Content -->
-            <div data-aos="fade-left" data-aos-duration="1000">
-                <p class="text-amber-500 text-xs tracking-widest mb-4 font-light uppercase">
-                    READ • RELAX • REJUVENATE
-                </p>
-                <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6 text-white">
-                    Mini Library
-                </h2>
-                <p class="text-sm md:text-base text-gray-300 leading-relaxed mb-6">
-                    Unwind with a good book in our cozy mini library. We have a curated collection of books on wildlife, nature, local history, and fiction to enhance your stay experience.
-                </p>
-                <ul class="space-y-3 text-gray-300 mb-6">
-                    <li class="flex items-center gap-3">
-                        <i class="fas fa-book text-amber-500"></i>
-                        <span>Wildlife & Nature Books</span>
-                    </li>
-                    <li class="flex items-center gap-3">
-                        <i class="fas fa-book text-amber-500"></i>
-                        <span>Local History & Culture</span>
-                    </li>
-                    <li class="flex items-center gap-3">
-                        <i class="fas fa-book text-amber-500"></i>
-                        <span>Fiction & Bestsellers</span>
-                    </li>
-                    <li class="flex items-center gap-3">
-                        <i class="fas fa-book text-amber-500"></i>
-                        <span>Comfortable Reading Area</span>
-                    </li>
-                </ul>
-                <a href="contact.php" class="inline-block bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-lg transition font-semibold">
-                    Book Your Stay
-                </a>
-            </div>
-
+<!-- AWARDS -->
+<section class="py-12 md:py-20 px-4 md:px-6 bg-neutral-900 awards-section overflow-hidden">
+    <div class="container mx-auto max-w-7xl">
+        <div class="text-center mb-10 md:mb-16">
+            <p class="text-amber-500 text-xs tracking-widest mb-3 md:mb-4 font-light" data-aos="fade-down">EXCELLENCE • RECOGNITION • TRUST</p>
+            <h2 class="text-3xl md:text-5xl lg:text-6xl font-serif mb-4 md:mb-6 text-white" data-aos="zoom-in" data-aos-duration="1000">Awards and Recognitions</h2>
+            <p class="text-sm md:text-base text-gray-300 max-w-4xl mx-auto mb-2 md:mb-3 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+                Honored to receive Travellers' Choice Awards from TripAdvisor for our exceptional hospitality
+            </p>
         </div>
-
+        <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
+            <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                <div class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/30 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
+                    <img src="images/testimonials1.png" alt="TripAdvisor Travellers Choice Award 2020" class="w-full h-auto max-w-[280px] object-contain award-image">
+                </div>
+            </div>
+            <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <div class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/30 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
+                    <img src="images/testimonials2.png" alt="TripAdvisor Travellers Choice Award 2021" class="w-full h-auto max-w-[280px] object-contain award-image">
+                </div>
+            </div>
+            <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                <div class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/30 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
+                    <img src="images/testimonials3.png" alt="TripAdvisor Travellers Choice Award 2022" class="w-full h-auto max-w-[280px] object-contain award-image">
+                </div>
+            </div>
+            <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" style="background-color: #39DCA1; border-radius: 9px;">
+                <div class="bg-transparent rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 group-hover:shadow-emerald-500/40 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
+                    <img src="images/testimonials4.jpeg" alt="TripAdvisor Travelers Choice Award 2025" class="w-full h-full object-cover rounded-2xl award-image">
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -775,58 +1254,6 @@ include 'includes/header.php';
         </div><!-- END FAQ GRID -->
     </div>
 </section>
-
-<!-- Awards and Recognitions Section (From Index Page) -->
-<section class="py-12 md:py-20 px-4 md:px-6 bg-neutral-900 awards-section overflow-hidden">
-    <div class="container mx-auto max-w-7xl">
-        <!-- Header -->
-        <div class="text-center mb-10 md:mb-16">
-            <p class="text-amber-500 text-xs tracking-widest mb-3 md:mb-4 font-light" data-aos="fade-down">
-                EXCELLENCE • RECOGNITION • TRUST
-            </p>
-            <h2 class="text-3xl md:text-5xl lg:text-6xl font-serif mb-4 md:mb-6" data-aos="zoom-in" data-aos-duration="1000">
-                Awards and Recognitions
-            </h2>
-            <p class="text-sm md:text-base text-gray-300 max-w-4xl mx-auto mb-2 md:mb-3 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
-                Honored to receive Travellers' Choice Awards from TripAdvisor for our exceptional hospitality
-            </p>
-        </div>
-
-        <!-- Awards Grid -->
-        <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
-
-            <!-- Award Card 1 - 2020 -->
-            <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                <div class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/30 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
-                    <img src="images/testimonials1.png" alt="TripAdvisor Travellers' Choice Award 2020" class="w-full h-auto max-w-[280px] object-contain award-image">
-                </div>
-            </div>
-
-            <!-- Award Card 2 - 2021 -->
-            <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                <div class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/30 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
-                    <img src="images/testimonials2.png" alt="TripAdvisor Travellers' Choice Award 2021" class="w-full h-auto max-w-[280px] object-contain award-image">
-                </div>
-            </div>
-
-            <!-- Award Card 3 - 2022 -->
-            <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                <div class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/30 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
-                    <img src="images/testimonials3.png" alt="TripAdvisor Travellers' Choice Award 2022" class="w-full h-auto max-w-[280px] object-contain award-image">
-                </div>
-            </div>
-
-            <!-- Award Card 4 - 2025 (Green Background) -->
-            <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" style="background-color: #39DCA1;border-radius: 9px;">
-                <div class="bg-transparent rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 group-hover:shadow-emerald-500/40 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
-                    <img src="images/testimonials4.jpeg" alt="TripAdvisor Travelers' Choice Award 2025" class="w-full h-full object-cover rounded-2xl award-image">
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-</section>
 <button id="specialOfferBtn"
     class="fixed bottom-20 right-4 md:bottom-24 mb-8 md:right-8 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-2xl z-50 transition transform hover:scale-110 animate-pulse"
     aria-label="Special Offer" onclick="toggleSpecialOfferPopup()">
@@ -996,28 +1423,54 @@ include 'includes/header.php';
 
     </div>
 </div>
+<!-- WhatsApp Button -->
+<a href="https://wa.me/8830996719" target="_blank"
+    class="fixed bottom-4 right-4 md:bottom-8 md:right-8 bg-green-500 hover:bg-green-600 w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-2xl z-50 transition transform hover:scale-110">
+    <svg class="w-6 h-6 md:w-8 md:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+</a>
 
-<!-- JavaScript -->
 <script>
+// Modern Menu Tabs Functionality
+(function() {
+    'use strict';
+    
+    const tabItems = document.querySelectorAll('.modern-tab-item');
+    const menuPanels = document.querySelectorAll('.modern-menu-panel');
+    
+    function switchMenu(targetMenu) {
+        tabItems.forEach(tab => tab.classList.remove('active'));
+        menuPanels.forEach(panel => panel.classList.remove('active'));
+        
+        const activeTab = document.querySelector(`.modern-tab-item[data-menu="${targetMenu}"]`);
+        if (activeTab) activeTab.classList.add('active');
+        
+        const activePanel = document.querySelector(`.modern-menu-panel[data-menu="${targetMenu}"]`);
+        if (activePanel) activePanel.classList.add('active');
+    }
+    
+    tabItems.forEach(tab => {
+        tab.addEventListener('click', function() {
+            const targetMenu = this.getAttribute('data-menu');
+            switchMenu(targetMenu);
+        });
+    });
+})();
+
 // FAQ Accordion
 document.addEventListener('DOMContentLoaded', function() {
-    const faqItems = document.querySelectorAll('.faq-item');
-
-    faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        const answer = item.querySelector('.faq-answer');
-        const icon = item.querySelector('.faq-icon');
-
-        question.addEventListener('click', () => {
-            const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
-
-            // Close all
-            faqItems.forEach(other => {
+    var faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(function(item) {
+        var question = item.querySelector('.faq-question');
+        var answer = item.querySelector('.faq-answer');
+        var icon = item.querySelector('.faq-icon');
+        question.addEventListener('click', function() {
+            var isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
+            faqItems.forEach(function(other) {
                 other.querySelector('.faq-answer').style.maxHeight = '0px';
                 other.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
             });
-
-            // Open current if it was closed
             if (!isOpen) {
                 answer.style.maxHeight = answer.scrollHeight + 'px';
                 icon.style.transform = 'rotate(180deg)';
@@ -1026,15 +1479,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// FAQ Grid Responsive Handler
 function handleFaqResize() {
     var grid = document.querySelector('.faq-grid');
     if (!grid) return;
-    if (window.innerWidth <= 860) {
-        grid.style.gridTemplateColumns = '1fr';
-    } else {
-        grid.style.gridTemplateColumns = '1fr 1fr';
-    }
+    grid.style.gridTemplateColumns = window.innerWidth <= 860 ? '1fr' : '1fr 1fr';
 }
 window.addEventListener('load', handleFaqResize);
 window.addEventListener('resize', handleFaqResize);
@@ -1071,8 +1519,6 @@ document.addEventListener('keydown', function(event) {
     }
 });
 </script>
-
 <?php 
-// Include footer
 include 'includes/footer.php'; 
 ?>

@@ -638,12 +638,7 @@ html {
       font-size: 14px !important;
     }
   }
-
-</style>
-
-<style>
-
-.carousel-container {
+  .carousel-container {
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -702,7 +697,7 @@ button[onclick^="nextSlide"] {
 }
 </style>
 <section id="home"
-    class="relative h-[50vh] md:h-[60vh] lg:h-[80vh] flex items-center justify-center hero-section overflow-hidden">
+    class="relative h-[50vh] md:h-[60vh] lg:h-[100vh] flex items-center justify-center hero-section overflow-hidden">
     <div class="absolute inset-0 hero-carousel">
 
         <!-- Slide 1 -->
@@ -1000,7 +995,271 @@ button[onclick^="nextSlide"] {
         </div>
     </div>
 </section>
+<section class="py-12 md:py-20 bg-black safari-options-section overflow-hidden">
+  <div class="container mx-auto max-w-7xl px-4 md:px-6">
+    
+    <!-- Section Header -->
+    <div class="text-center mb-12 md:mb-16">
+      <p class="text-amber-500 text-xs tracking-widest mb-4 font-light" data-aos="fade-down">
+        WILDLIFE ADVENTURES
+      </p>
+      <h2 class="text-3xl md:text-5xl font-serif mb-6" data-aos="zoom-in">
+        Explore Kanha Safari Options
+      </h2>
+      <p class="text-sm md:text-base text-gray-300 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+        Choose from our range of safari experiences to discover the wild beauty of Kanha National Park
+      </p>
+    </div>
 
+    <!-- Safari Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+      
+      <!-- Card 1: Jeep Safari -->
+      <div class="safari-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+        <div class="bg-neutral-900 rounded-2xl overflow-hidden border border-neutral-800 hover:border-amber-500/50 transition-all duration-300 group-hover:transform group-hover:-translate-y-2 group-hover:shadow-2xl group-hover:shadow-amber-500/20 h-full flex flex-col">
+          
+          <!-- Image Container -->
+          <div class="relative h-56 md:h-64 overflow-hidden">
+            <img src="images/home6.webp" alt="Jeep Safari Morning & Evening" 
+                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <!-- Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-neutral-900 via-transparent to-transparent"></div>
+            
+            <!-- Badge -->
+            <div class="absolute top-4 right-4 bg-amber-500 text-black px-3 py-1 rounded-full text-xs font-bold">
+              Popular
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="p-6 flex-grow flex flex-col">
+            <!-- Icon -->
+            <div class="w-14 h-14 bg-amber-500/20 rounded-full flex items-center justify-center mb-4 group-hover:bg-amber-500/30 transition-colors">
+              <i class="fas fa-truck-monster text-2xl text-amber-500"></i>
+            </div>
+
+            <h3 class="text-xl font-serif font-bold text-white mb-3 group-hover:text-amber-500 transition-colors">
+              Jeep Safari
+            </h3>
+            
+            <p class="text-gray-400 text-sm leading-relaxed mb-4 flex-grow">
+              Experience thrilling morning and evening jeep safaris through Kanha's core zones. Perfect for tiger sightings and wildlife photography.
+            </p>
+
+            <!-- Features -->
+            <div class="space-y-2 mb-4">
+              <div class="flex items-center gap-2 text-xs text-gray-400">
+                <i class="fas fa-clock text-amber-500"></i>
+                <span>Morning: 6:00 AM - 11:00 AM</span>
+              </div>
+              <div class="flex items-center gap-2 text-xs text-gray-400">
+                <i class="fas fa-moon text-amber-500"></i>
+                <span>Evening: 3:00 PM - 6:00 PM</span>
+              </div>
+              <div class="flex items-center gap-2 text-xs text-gray-400">
+                <i class="fas fa-users text-amber-500"></i>
+                <span>6 Passengers per Jeep</span>
+              </div>
+            </div>
+
+            <!-- Know More Button -->
+            <a href="contact.php" class="inline-flex items-center gap-2 text-sm font-semibold text-amber-500 hover:text-amber-400 transition-colors group/btn mt-auto">
+              <span>Book Now</span>
+              <i class="fas fa-arrow-right transform group-hover/btn:translate-x-1 transition-transform"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Full-Day Jeep Safari -->
+      <div class="safari-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+        <div class="bg-neutral-900 rounded-2xl overflow-hidden border border-neutral-800 hover:border-amber-500/50 transition-all duration-300 group-hover:transform group-hover:-translate-y-2 group-hover:shadow-2xl group-hover:shadow-amber-500/20 h-full flex flex-col">
+          
+          <!-- Image Container -->
+          <div class="relative h-56 md:h-64 overflow-hidden">
+            <img src="images/kanha5.png" alt="Full-Day Jeep Safari" 
+                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-neutral-900 via-transparent to-transparent"></div>
+            
+            <!-- Badge -->
+            <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold">
+              Best Value
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="p-6 flex-grow flex flex-col">
+            <!-- Icon -->
+            <div class="w-14 h-14 bg-amber-500/20 rounded-full flex items-center justify-center mb-4 group-hover:bg-amber-500/30 transition-colors">
+              <i class="fas fa-sun text-2xl text-amber-500"></i>
+            </div>
+
+            <h3 class="text-xl font-serif font-bold text-white mb-3 group-hover:text-amber-500 transition-colors">
+              Full-Day Jeep Safari
+            </h3>
+            
+            <p class="text-gray-400 text-sm leading-relaxed mb-4 flex-grow">
+              Immerse yourself in a complete wildlife experience with our full-day safari package covering both morning and evening sessions.
+            </p>
+
+            <!-- Features -->
+            <div class="space-y-2 mb-4">
+              <div class="flex items-center gap-2 text-xs text-gray-400">
+                <i class="fas fa-clock text-amber-500"></i>
+                <span>6:00 AM - 6:00 PM</span>
+              </div>
+              <div class="flex items-center gap-2 text-xs text-gray-400">
+                <i class="fas fa-utensils text-amber-500"></i>
+                <span>Packed Lunch Included</span>
+              </div>
+              <div class="flex items-center gap-2 text-xs text-gray-400">
+                <i class="fas fa-camera text-amber-500"></i>
+                <span>Photography Friendly</span>
+              </div>
+            </div>
+
+            <!-- Know More Button -->
+            <a href="contact.php" class="inline-flex items-center gap-2 text-sm font-semibold text-amber-500 hover:text-amber-400 transition-colors group/btn mt-auto">
+              <span>Book Now</span>
+              <i class="fas fa-arrow-right transform group-hover/btn:translate-x-1 transition-transform"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Elephant Safari -->
+      <div class="safari-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+        <div class="bg-neutral-900 rounded-2xl overflow-hidden border border-neutral-800 hover:border-amber-500/50 transition-all duration-300 group-hover:transform group-hover:-translate-y-2 group-hover:shadow-2xl group-hover:shadow-amber-500/20 h-full flex flex-col">
+          
+          <!-- Image Container -->
+          <div class="relative h-56 md:h-64 overflow-hidden">
+            <img src="images/wildmark5.jpg" alt="Elephant Safari" 
+                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-neutral-900 via-transparent to-transparent"></div>
+            
+            <!-- Badge -->
+            <div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-bold">
+              Unique
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="p-6 flex-grow flex flex-col">
+            <!-- Icon -->
+            <div class="w-14 h-14 bg-amber-500/20 rounded-full flex items-center justify-center mb-4 group-hover:bg-amber-500/30 transition-colors">
+              <i class="fas fa-hippo text-2xl text-amber-500"></i>
+            </div>
+
+            <h3 class="text-xl font-serif font-bold text-white mb-3 group-hover:text-amber-500 transition-colors">
+              Elephant Safari
+            </h3>
+            
+            <p class="text-gray-400 text-sm leading-relaxed mb-4 flex-grow">
+              Get up close to wildlife on elephant back. A traditional and unique way to explore the forest, perfect for families and nature lovers.
+            </p>
+
+            <!-- Features -->
+            <div class="space-y-2 mb-4">
+              <div class="flex items-center gap-2 text-xs text-gray-400">
+                <i class="fas fa-clock text-amber-500"></i>
+                <span>Morning: 6:30 AM - 8:30 AM</span>
+              </div>
+              <div class="flex items-center gap-2 text-xs text-gray-400">
+                <i class="fas fa-users text-amber-500"></i>
+                <span>4 Passengers per Elephant</span>
+              </div>
+              <div class="flex items-center gap-2 text-xs text-gray-400">
+                <i class="fas fa-leaf text-amber-500"></i>
+                <span>Eco-Friendly Experience</span>
+              </div>
+            </div>
+
+            <!-- Know More Button -->
+            <a href="contact.php" class="inline-flex items-center gap-2 text-sm font-semibold text-amber-500 hover:text-amber-400 transition-colors group/btn mt-auto">
+              <span>Book Now</span>
+              <i class="fas fa-arrow-right transform group-hover/btn:translate-x-1 transition-transform"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4: Nature Walk -->
+      <div class="safari-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+        <div class="bg-neutral-900 rounded-2xl overflow-hidden border border-neutral-800 hover:border-amber-500/50 transition-all duration-300 group-hover:transform group-hover:-translate-y-2 group-hover:shadow-2xl group-hover:shadow-amber-500/20 h-full flex flex-col">
+          
+          <!-- Image Container -->
+          <div class="relative h-56 md:h-64 overflow-hidden">
+            <img src="images/wildmark8.jpeg" alt="Nature Walk" 
+                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-neutral-900 via-transparent to-transparent"></div>
+            
+            <!-- Badge -->
+            <div class="absolute top-4 right-4 bg-purple-500 text-white px-3 py-1 rounded-full text-xs font-bold">
+              Relaxing
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="p-6 flex-grow flex flex-col">
+            <!-- Icon -->
+            <div class="w-14 h-14 bg-amber-500/20 rounded-full flex items-center justify-center mb-4 group-hover:bg-amber-500/30 transition-colors">
+              <i class="fas fa-walking text-2xl text-amber-500"></i>
+            </div>
+
+            <h3 class="text-xl font-serif font-bold text-white mb-3 group-hover:text-amber-500 transition-colors">
+              Nature Walk
+            </h3>
+            
+            <p class="text-gray-400 text-sm leading-relaxed mb-4 flex-grow">
+              Guided nature walks through buffer zones. Learn about flora, fauna, bird watching, and medicinal plants from expert naturalists.
+            </p>
+
+            <!-- Features -->
+            <div class="space-y-2 mb-4">
+              <div class="flex items-center gap-2 text-xs text-gray-400">
+                <i class="fas fa-clock text-amber-500"></i>
+                <span>Morning: 7:00 AM - 9:00 AM</span>
+              </div>
+              <div class="flex items-center gap-2 text-xs text-gray-400">
+                <i class="fas fa-binoculars text-amber-500"></i>
+                <span>Bird Watching Included</span>
+              </div>
+              <div class="flex items-center gap-2 text-xs text-gray-400">
+                <i class="fas fa-user-friends text-amber-500"></i>
+                <span>Small Group Experience</span>
+              </div>
+            </div>
+
+            <!-- Know More Button -->
+            <a href="contact.php" class="inline-flex items-center gap-2 text-sm font-semibold text-amber-500 hover:text-amber-400 transition-colors group/btn mt-auto">
+              <span>Book Now</span>
+              <i class="fas fa-arrow-right transform group-hover/btn:translate-x-1 transition-transform"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="text-center mt-12 md:mt-16" data-aos="fade-up" data-aos-delay="500">
+      <p class="text-gray-300 text-sm md:text-base mb-6">
+        Need help choosing the right safari? Our team is here to assist you!
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="contact.php" class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 transition font-semibold text-base rounded-lg shadow-lg inline-flex items-center justify-center gap-2">
+          <i class="fas fa-calendar-check"></i>
+          <span>Book Safari Package</span>
+        </a>
+        <a href="tel:+918830996719" class="border-2 border-white hover:bg-white hover:text-black text-white px-8 py-3 transition font-semibold text-base rounded-lg inline-flex items-center justify-center gap-2">
+          <i class="fas fa-phone"></i>
+          <span>Call for Enquiry</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
 <!-- Why Choose Wildmark Resort Section -->
 <section class="py-12 md:py-20 px-4 md:px-6 bg-neutral-900 why-choose-section overflow-hidden">
     <div class="container mx-auto max-w-7xl">
@@ -1848,10 +2107,6 @@ button[onclick^="nextSlide"] {
 
     </div>
 </section>
-
-
-
-
 <section class="py-12 md:py-20 px-4 md:px-6 bg-neutral-900">
     <div class="mx-auto w-full" style="max-width: 1280px; padding: 0 24px;">
 

@@ -174,90 +174,82 @@ include 'includes/header.php';
   }
   </style>
 
-
-
-  <!-- Hero Section -->
-  <section class="relative h-[60vh] md:h-[70vh] flex items-center justify-center overflow-hidden pt-16" data-aos="fade">
-    <div class="absolute inset-0">
-      <img src="image/aDJI_0168.webp" alt="Family Double Bedded Room"
-        class="w-full h-full object-cover" />
-      <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
-    </div>
-
-    <div class="relative z-10 text-center px-4 md:px-6 max-w-4xl mx-auto">
-      <p class="text-amber-500 text-xs md:text-sm tracking-widest mb-4 font-light" data-aos="fade-down"
-        data-aos-delay="200">
-        SPACIOUS FAMILY ACCOMMODATION
-      </p>
-      <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif font-light mb-6 tracking-wide" data-aos="fade-up"
-        data-aos-delay="400">
-        Family Double Bedded Rooms
-      </h1>
-      <h2 class="text-xl md:text-2xl text-amber-400 font-light mb-8" data-aos="fade-up" data-aos-delay="600">
-        Perfect for Families & Small Groups
-      </h2>
-    </div>
-  </section>
+<header class="relative h-[50vh] md:h-[60vh] lg:h-[100vh] flex items-end"
+    style="background: url('images/about3.webp') center/cover no-repeat">
+    <div class="absolute inset-0 to-transparent"></div>
+  </header>
 
   <!-- Room Description Section -->
-  <section class="py-12 md:py-20 bg-neutral-900">
-    <div class="container mx-auto max-w-6xl px-4 md:px-6">
-      <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
-        <!-- Left - Content -->
-        <div data-aos="fade-right" data-aos-duration="1000">
-          <p class="text-amber-500 text-xs tracking-widest mb-4 font-light">
-            FAMILY RETREAT
-          </p>
-          <h2 class="text-3xl md:text-4xl font-serif mb-6 leading-tight">
-            Style, Space & Functionality Combined
-          </h2>
-          <p class="text-sm md:text-base text-gray-300 mb-6 leading-relaxed text-justify">
-            The Super Deluxe Family Room is designed to comfortably accommodate families, offering spacious living areas
-            and extra sleeping options. This room features elegant decor, modern amenities, and air conditioning to
-            ensure a relaxing stay. Enjoy a harmonious blend of style and functionality, perfect for memorable family
-            getaways.
-          </p>
+<!-- Family Double Bedded Room Description Section -->
+<section class="py-12 md:py-20 bg-neutral-900">
+  <div class="container mx-auto max-w-7xl px-4 md:px-6">
+    
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <p class="text-amber-500 text-xs tracking-widest mb-4 font-light" data-aos="fade-down">
+        SPACIOUS & COMFORTABLE
+      </p>
+      <h2 class="text-3xl md:text-5xl font-serif mb-6" data-aos="zoom-in">
+        Family Double Bedded Rooms
+      </h2>
+    </div>
 
-          <div class="bg-neutral-800 p-6 rounded-xl mb-6">
-            <h3 class="text-xl font-serif font-semibold mb-4 text-amber-400">Room Capacity</h3>
-            <div class="flex items-center gap-6">
-              <div class="flex items-center gap-2">
-                <i class="fas fa-users text-amber-500 text-2xl"></i>
-                <div>
-                  <p class="text-2xl font-bold">4</p>
-                  <p class="text-xs text-gray-400">Guests</p>
-                </div>
-              </div>
-              <div class="flex items-center gap-2">
-                <i class="fas fa-bed text-amber-500 text-2xl"></i>
-                <div>
-                  <p class="text-2xl font-bold">2</p>
-                  <p class="text-xs text-gray-400">Beds</p>
-                </div>
-              </div>
-            </div>
-          </div>
+    <!-- Content Grid with Images and Text -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center mb-12">
+      
+      <!-- Left Content -->
+      <div class="space-y-6" data-aos="fade-right">
+        <p class="text-gray-300 text-sm md:text-base leading-relaxed text-justify">
+          Family Double Bedded Room are designed to offer relax able space, comfort and suitable for small families and groups traveling together for a memorable Stay. The well-equipped rooms are thoughtfully planned and well-appointed for a relax able atmosphere for everyone The rooms comes with two double beds, a sofa set to sit and relax and accommodate four to six guests, making it ideal for parents traveling with children, groups of friends, or extended family members on a nature getaway.
+        </p>
+        
+        <p class="text-gray-300 text-sm md:text-base leading-relaxed text-justify">
+          The room is fully air conditioned ensuring a pleasant indoor atmosphere throughout the year. The layout allows for easy movement, with enough space for luggage, personal belongings, and shared living. The interiors are practical and inviting, combining comfort with simple elegance. The rooms are with enough natural light filters in through large windows, offering peaceful views of the surrounding gardens and greenery.
+        </p>
+      </div>
 
-          <div class="flex flex-col sm:flex-row gap-4">
-            <a href="contact.php"
-              class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 transition font-light text-center">
-              Book This Room
-            </a>
-            <a href="#amenities"
-              class="border border-white hover:bg-white hover:text-black text-white px-8 py-3 transition font-light text-center">
-              View Amenities
-            </a>
-          </div>
-        </div>
-
-        <!-- Right - Image -->
-        <div data-aos="fade-left" data-aos-duration="1000">
-          <img src="images/family1.jpeg" alt="Family Room Interior"
-            class="w-full h-[400px] md:h-[500px] object-cover rounded-2xl shadow-2xl" />
+      <!-- Right Image -->
+      <div class="relative" data-aos="fade-left">
+        <div class="rounded-2xl overflow-hidden shadow-2xl border border-amber-500/20">
+          <img src="images/family1.jpeg" alt="Family Double Bedded Room Interior" 
+               class="w-full h-[200px] md:h-[300px] object-cover hover:scale-105 transition-transform duration-500">
         </div>
       </div>
+
     </div>
-  </section>
+
+    <!-- Second Row - Image Left, Content Right -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+      
+      <!-- Left Image -->
+      <div class="relative order-2 lg:order-1" data-aos="fade-right">
+        <div class="rounded-2xl overflow-hidden shadow-2xl border border-amber-500/20">
+          <img src="images/family2.jpeg" alt="Family Room Outdoor Sitout" 
+               class="w-full h-[450px] md:h-[560px] object-cover hover:scale-105 transition-transform duration-500">
+        </div>
+      </div>
+
+      <!-- Right Content -->
+      <div class="space-y-6 order-1 lg:order-2" data-aos="fade-left">
+        <p class="text-gray-300 text-sm md:text-base leading-relaxed text-justify">
+          Family Double Bedded Room includes a outdoor sit-out area that extends your living space outdoors. This is a perfect spot for morning tea, casual conversations, or quiet moments while children play nearby in the play area. The garden and nature views create a calm setting where guests can unwind after a day of sightseeing or safari excursions.
+        </p>
+        
+        <p class="text-gray-300 text-sm md:text-base leading-relaxed text-justify">
+          Modern conveniences are thoughtfully included to make your stay smooth and enjoyable. A tea and coffee maker is provided in the room, along with the necessary essentials, allowing guests to prepare a warm beverage at any time. Complimentary high-speed WiFi ensures you can stay connected, whether for sharing travel photos, catching up on work, or planning the next day's activities. The resort maintains a welcoming and inclusive environment for everyone. The room are pet friendly, allowing families to travel with their furry companions and enjoy the experience together. The property open spaces and garden areas make it comfortable for pets and owners to spend the time conveniently.
+        </p>
+
+        <p class="text-gray-300 text-sm md:text-base leading-relaxed text-justify">
+          The resort is wheelchair accessible in and around the property, ensuring that specially and differently abled guests can move comfortably between rooms, common areas to the restaurant. The entire property provides smooth pathways and to provide ease of access and independence. Overall, the Family Double Bedded Rooms offer a balanced combination of space, comfort, and essential amenities. The rooms provide a peaceful setting where families and groups can relax, connect, and enjoy time together in the midst of nature.
+        </p>
+
+        
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
 <section class="py-12 md:py-20 bg-black">
   <div class="container mx-auto max-w-7xl px-4 md:px-6">
@@ -626,183 +618,6 @@ include 'includes/header.php';
       </div>
     </div>
   </section>
-
-  <!-- Complete Day Experience Section -->
-  <section class="py-12 md:py-20 bg-neutral-900">
-    <div class="container mx-auto max-w-7xl px-4 md:px-6">
-      <div class="text-center mb-12">
-        <p class="text-amber-500 text-xs tracking-widest mb-4 font-light" data-aos="fade-down">
-          YOUR PERFECT DAY
-        </p>
-        <h2 class="text-3xl md:text-5xl font-serif mb-6" data-aos="zoom-in">
-          A Day at Wildmark Resort
-        </h2>
-        <p class="text-gray-300 max-w-3xl mx-auto text-sm md:text-base leading-relaxed" data-aos="fade-up">
-          Experience the perfect blend of adventure, relaxation, and wilderness exploration
-        </p>
-      </div>
-
-      <!-- Timeline -->
-      <div class="relative">
-        <!-- Vertical Line (hidden on mobile) -->
-        <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-amber-500 via-amber-600 to-amber-700"></div>
-
-        <!-- Timeline Items -->
-        <div class="space-y-12">
-          <!-- 5:30 AM - Morning Safari -->
-          <div class="relative" data-aos="fade-right">
-            <div class="md:flex items-center">
-              <div class="md:w-1/2 md:pr-12 mb-4 md:mb-0 md:text-right">
-                <div class="inline-block bg-neutral-800 px-6 py-8 rounded-2xl shadow-xl border border-neutral-700 hover:border-amber-500/50 transition">
-                  <div class="flex items-center gap-4 mb-4 md:flex-row-reverse">
-                    <div class="w-16 h-16 bg-gradient-to-br from-orange-400 to-amber-500 rounded-full flex items-center justify-center shadow-lg">
-                      <i class="fas fa-sunrise text-white text-2xl"></i>
-                    </div>
-                    <div>
-                      <p class="text-2xl font-bold text-amber-400">5:30 AM</p>
-                      <p class="text-sm text-gray-400">Early Start</p>
-                    </div>
-                  </div>
-                  <h4 class="text-xl font-serif font-bold text-white mb-3">Morning Safari Adventure</h4>
-                  <p class="text-gray-300 text-sm leading-relaxed">
-                    Wake up to nature's alarm clock. Enjoy complimentary tea/coffee before heading out for the thrilling morning safari. The best time to spot tigers and other wildlife as they're most active during dawn.
-                  </p>
-                </div>
-              </div>
-              <div class="hidden md:block w-8 h-8 bg-amber-500 rounded-full border-4 border-neutral-900 absolute left-1/2 transform -translate-x-1/2 shadow-lg"></div>
-              <div class="md:w-1/2"></div>
-            </div>
-          </div>
-
-          <!-- 9:00 AM - Breakfast -->
-          <div class="relative" data-aos="fade-left">
-            <div class="md:flex items-center md:flex-row-reverse">
-              <div class="md:w-1/2 md:pl-12 mb-4 md:mb-0">
-                <div class="inline-block bg-neutral-800 px-6 py-8 rounded-2xl shadow-xl border border-neutral-700 hover:border-amber-500/50 transition">
-                  <div class="flex items-center gap-4 mb-4">
-                    <div class="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center shadow-lg">
-                      <i class="fas fa-utensils text-white text-2xl"></i>
-                    </div>
-                    <div>
-                      <p class="text-2xl font-bold text-amber-400">9:00 AM</p>
-                      <p class="text-sm text-gray-400">Breakfast Time</p>
-                    </div>
-                  </div>
-                  <h4 class="text-xl font-serif font-bold text-white mb-3">Multi-Cuisine Breakfast</h4>
-                  <p class="text-gray-300 text-sm leading-relaxed">
-                    Return from safari to a hearty breakfast spread. Choose from Indian, Continental, and local specialties. Share your safari stories with fellow travelers in our dining area.
-                  </p>
-                </div>
-              </div>
-              <div class="hidden md:block w-8 h-8 bg-amber-500 rounded-full border-4 border-neutral-900 absolute left-1/2 transform -translate-x-1/2 shadow-lg"></div>
-              <div class="md:w-1/2"></div>
-            </div>
-          </div>
-
-          <!-- 11:00 AM - Relaxation -->
-          <div class="relative" data-aos="fade-right">
-            <div class="md:flex items-center">
-              <div class="md:w-1/2 md:pr-12 mb-4 md:mb-0 md:text-right">
-                <div class="inline-block bg-neutral-800 px-6 py-8 rounded-2xl shadow-xl border border-neutral-700 hover:border-amber-500/50 transition">
-                  <div class="flex items-center gap-4 mb-4 md:flex-row-reverse">
-                    <div class="w-16 h-16 bg-gradient-to-br from-amber-600 to-orange-700 rounded-full flex items-center justify-center shadow-lg">
-                      <i class="fas fa-swimming-pool text-white text-2xl"></i>
-                    </div>
-                    <div>
-                      <p class="text-2xl font-bold text-amber-400">11:00 AM</p>
-                      <p class="text-sm text-gray-400">Leisure Time</p>
-                    </div>
-                  </div>
-                  <h4 class="text-xl font-serif font-bold text-white mb-3">Pool & Recreation</h4>
-                  <p class="text-gray-300 text-sm leading-relaxed">
-                    Take a refreshing dip in our swimming pool, relax in your air-conditioned room, or explore our beautiful gardens. Perfect time for family bonding or simply unwinding.
-                  </p>
-                </div>
-              </div>
-              <div class="hidden md:block w-8 h-8 bg-amber-500 rounded-full border-4 border-neutral-900 absolute left-1/2 transform -translate-x-1/2 shadow-lg"></div>
-              <div class="md:w-1/2"></div>
-            </div>
-          </div>
-
-          <!-- 1:00 PM - Lunch -->
-          <div class="relative" data-aos="fade-left">
-            <div class="md:flex items-center md:flex-row-reverse">
-              <div class="md:w-1/2 md:pl-12 mb-4 md:mb-0">
-                <div class="inline-block bg-neutral-800 px-6 py-8 rounded-2xl shadow-xl border border-neutral-700 hover:border-amber-500/50 transition">
-                  <div class="flex items-center gap-4 mb-4">
-                    <div class="w-16 h-16 bg-gradient-to-br from-amber-700 to-orange-800 rounded-full flex items-center justify-center shadow-lg">
-                      <i class="fas fa-bowl-food text-white text-2xl"></i>
-                    </div>
-                    <div>
-                      <p class="text-2xl font-bold text-amber-400">1:00 PM</p>
-                      <p class="text-sm text-gray-400">Lunch Service</p>
-                    </div>
-                  </div>
-                  <h4 class="text-xl font-serif font-bold text-white mb-3">Delicious Lunch Spread</h4>
-                  <p class="text-gray-300 text-sm leading-relaxed">
-                    Savor authentic local cuisine along with international favorites. Our chefs prepare fresh, flavorful meals using locally sourced ingredients whenever possible.
-                  </p>
-                </div>
-              </div>
-              <div class="hidden md:block w-8 h-8 bg-amber-500 rounded-full border-4 border-neutral-900 absolute left-1/2 transform -translate-x-1/2 shadow-lg"></div>
-              <div class="md:w-1/2"></div>
-            </div>
-          </div>
-
-          <!-- 3:00 PM - Evening Safari -->
-          <div class="relative" data-aos="fade-right">
-            <div class="md:flex items-center">
-              <div class="md:w-1/2 md:pr-12 mb-4 md:mb-0 md:text-right">
-                <div class="inline-block bg-neutral-800 px-6 py-8 rounded-2xl shadow-xl border border-neutral-700 hover:border-amber-500/50 transition">
-                  <div class="flex items-center gap-4 mb-4 md:flex-row-reverse">
-                    <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-amber-600 rounded-full flex items-center justify-center shadow-lg">
-                      <i class="fas fa-binoculars text-white text-2xl"></i>
-                    </div>
-                    <div>
-                      <p class="text-2xl font-bold text-amber-400">3:00 PM</p>
-                      <p class="text-sm text-gray-400">Safari Time</p>
-                    </div>
-                  </div>
-                  <h4 class="text-xl font-serif font-bold text-white mb-3">Afternoon Wildlife Safari</h4>
-                  <p class="text-gray-300 text-sm leading-relaxed">
-                    Head out for another exciting safari session. Witness different wildlife behavior as animals prepare for the evening. Expert naturalists guide your journey through the forest.
-                  </p>
-                </div>
-              </div>
-              <div class="hidden md:block w-8 h-8 bg-amber-500 rounded-full border-4 border-neutral-900 absolute left-1/2 transform -translate-x-1/2 shadow-lg"></div>
-              <div class="md:w-1/2"></div>
-            </div>
-          </div>
-
-          <!-- 7:30 PM - Dinner & Entertainment -->
-          <div class="relative" data-aos="fade-left">
-            <div class="md:flex items-center md:flex-row-reverse">
-              <div class="md:w-1/2 md:pl-12">
-                <div class="inline-block bg-neutral-800 px-6 py-8 rounded-2xl shadow-xl border border-neutral-700 hover:border-amber-500/50 transition">
-                  <div class="flex items-center gap-4 mb-4">
-                    <div class="w-16 h-16 bg-gradient-to-br from-amber-800 to-orange-900 rounded-full flex items-center justify-center shadow-lg">
-                      <i class="fas fa-fire text-white text-2xl"></i>
-                    </div>
-                    <div>
-                      <p class="text-2xl font-bold text-amber-400">7:30 PM</p>
-                      <p class="text-sm text-gray-400">Evening Activities</p>
-                    </div>
-                  </div>
-                  <h4 class="text-xl font-serif font-bold text-white mb-3">Bonfire & Dinner</h4>
-                  <p class="text-gray-300 text-sm leading-relaxed">
-                    Gather around the bonfire for cultural performances and wildlife documentaries. Enjoy a sumptuous dinner under the starlit sky, ending your day on a perfect note.
-                  </p>
-                </div>
-              </div>
-              <div class="hidden md:block w-8 h-8 bg-amber-500 rounded-full border-4 border-neutral-900 absolute left-1/2 transform -translate-x-1/2 shadow-lg"></div>
-              <div class="md:w-1/2"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Room Gallery Section -->
   <section id="gallery" class="py-12 md:py-20 bg-black">
     <div class="container mx-auto max-w-7xl px-4 md:px-6">
@@ -1285,28 +1100,30 @@ include 'includes/header.php';
     </div><!-- END FAQ GRID -->
   </div>
 </section>
-<button id="specialOfferBtn" 
+<button id="specialOfferBtn"
     class="fixed bottom-20 right-4 md:bottom-24 mb-8 md:right-8 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-2xl z-50 transition transform hover:scale-110 animate-pulse"
-    aria-label="Special Offer"
-    onclick="toggleSpecialOfferPopup()">
+    aria-label="Special Offer" onclick="toggleSpecialOfferPopup()">
     <!-- Price Tag Icon -->
     <svg class="w-8 h-8 md:w-10 md:h-10" fill="currentColor" viewBox="0 0 20 20">
-        <path fill-rule="evenodd" d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
+        <path fill-rule="evenodd"
+            d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z"
+            clip-rule="evenodd"></path>
     </svg>
-    <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold px-1.5 py-0.5 rounded-full animate-bounce">
+    <span
+        class="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold px-1.5 py-0.5 rounded-full animate-bounce">
         New
     </span>
 </button>
 <!-- Special Offer Popup Modal -->
-<div id="specialOfferPopup" 
+<div id="specialOfferPopup"
     class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[100] hidden items-center justify-center p-4"
     onclick="closeIfClickedOutside(event)">
-    
+
     <div class="bg-neutral-900 border-2 border-amber-500/50 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto relative animate-slideIn"
-         onclick="event.stopPropagation()">
-        
+        onclick="event.stopPropagation()">
+
         <!-- Close Button -->
-        <button onclick="toggleSpecialOfferPopup()" 
+        <button onclick="toggleSpecialOfferPopup()"
             class="absolute top-4 right-4 text-white hover:text-amber-500 transition z-10">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -1317,7 +1134,9 @@ include 'includes/header.php';
         <div class="bg-gradient-to-r from-amber-600 to-amber-500 p-6 md:p-8 rounded-t-2xl">
             <div class="flex items-center gap-3 mb-2">
                 <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7">
+                    </path>
                 </svg>
                 <h3 class="text-2xl md:text-3xl font-serif font-bold text-white">Special Offers</h3>
             </div>
@@ -1326,12 +1145,13 @@ include 'includes/header.php';
 
         <!-- Offers Content -->
         <div class="p-6 md:p-8 space-y-6">
-            
+
             <!-- Offer 1 - Resort + Safari Package -->
             <div class="bg-black border border-amber-500/30 rounded-xl p-5 hover:border-amber-500 transition">
                 <div class="flex items-start justify-between mb-3">
                     <div>
-                        <span class="inline-block bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-full mb-2">
+                        <span
+                            class="inline-block bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-full mb-2">
                             BESTSELLER
                         </span>
                         <h4 class="text-xl font-serif font-bold text-white">2N/3D Resort + Safari Package</h4>
@@ -1344,34 +1164,43 @@ include 'includes/header.php';
                 <ul class="text-gray-300 text-sm space-y-2 mb-4">
                     <li class="flex items-center gap-2">
                         <svg class="w-4 h-4 text-amber-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            <path fill-rule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clip-rule="evenodd"></path>
                         </svg>
                         2 Nights Stay at Wildmark Resort (Near Khatia Gate)
                     </li>
                     <li class="flex items-center gap-2">
                         <svg class="w-4 h-4 text-amber-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            <path fill-rule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clip-rule="evenodd"></path>
                         </svg>
                         4 Jungle Safaris (Morning + Evening)
                     </li>
                     <li class="flex items-center gap-2">
                         <svg class="w-4 h-4 text-amber-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            <path fill-rule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clip-rule="evenodd"></path>
                         </svg>
                         All Meals Included (Breakfast, Lunch, Dinner)
                     </li>
                     <li class="flex items-center gap-2">
                         <svg class="w-4 h-4 text-amber-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            <path fill-rule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clip-rule="evenodd"></path>
                         </svg>
                         Complimentary Safari Permit Assistance
                     </li>
                 </ul>
                 <div class="flex gap-3">
-                    <a href="contact.php" class="flex-1 bg-amber-500 hover:bg-amber-600 text-black font-bold py-2 px-4 rounded-lg text-center text-sm transition">
+                    <a href="contact.php"
+                        class="flex-1 bg-amber-500 hover:bg-amber-600 text-black font-bold py-2 px-4 rounded-lg text-center text-sm transition">
                         BOOK NOW
                     </a>
-                    
+
                 </div>
             </div>
 
@@ -1379,7 +1208,8 @@ include 'includes/header.php';
             <div class="bg-black border border-amber-500/30 rounded-xl p-5 hover:border-amber-500 transition">
                 <div class="flex items-start justify-between mb-3">
                     <div>
-                        <span class="inline-block bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-2">
+                        <span
+                            class="inline-block bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-2">
                             EARLY BIRD
                         </span>
                         <h4 class="text-xl font-serif font-bold text-white">Advance Booking Discount</h4>
@@ -1389,15 +1219,15 @@ include 'includes/header.php';
                     </div>
                 </div>
                 <p class="text-gray-300 text-sm mb-4">
-                    Book 30 days in advance and save 20% on all resort packages. Valid for bookings made before March 31, 2025.
+                    Book 30 days in advance and save 20% on all resort packages. Valid for bookings made before March
+                    31, 2025.
                 </p>
                 <div class="flex gap-3">
-                    <a href="contact.php" class="flex-1 bg-amber-500 hover:bg-amber-600 text-black font-bold py-2 px-4 rounded-lg text-center text-sm transition">
+                    <a href="contact.php"
+                        class="flex-1 bg-amber-500 hover:bg-amber-600 text-black font-bold py-2 px-4 rounded-lg text-center text-sm transition">
                         BOOK NOW
                     </a>
-                    <a href="https://wa.me/8830996719" target="_blank" class="flex-1 border-2 border-amber-500 hover:bg-amber-500/10 text-amber-500 font-bold py-2 px-4 rounded-lg text-center text-sm transition">
-                        WhatsApp
-                    </a>
+
                 </div>
             </div>
 
@@ -1416,13 +1246,15 @@ include 'includes/header.php';
                     </div>
                 </div>
                 <p class="text-gray-300 text-sm mb-4">
-                    Special rates for groups of 6+ people. Perfect for families, corporate outings, and wildlife photography tours.
+                    Special rates for groups of 6+ people. Perfect for families, corporate outings, and wildlife
+                    photography tours.
                 </p>
                 <div class="flex gap-3">
-                    <a href="contact.php" class="flex-1 bg-amber-500 hover:bg-amber-600 text-black font-bold py-2 px-4 rounded-lg text-center text-sm transition">
+                    <a href="contact.php"
+                        class="flex-1 bg-amber-500 hover:bg-amber-600 text-black font-bold py-2 px-4 rounded-lg text-center text-sm transition">
                         Book Now
                     </a>
-                    
+
                 </div>
             </div>
 
@@ -1446,18 +1278,8 @@ include 'includes/header.php';
         d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
     </svg>
   </a>
-
-  <!-- AOS Init -->
-  
-
-  <script>
- 
-   
-
-   
-
-    
-
+    <!-- AOS Init -->
+    <script>
     // Tab functionality
     const tabButtons = document.querySelectorAll('.tab-button');
     const tabContents = document.querySelectorAll('.tab-content');

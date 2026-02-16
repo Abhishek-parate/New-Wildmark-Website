@@ -261,6 +261,7 @@ section {
           <a href="Wildmark.php" class="hover:text-amber-500 transition">Wildmark</a>
           <a href="kanha.php" class="hover:text-amber-500 transition">Kanha</a>
           
+          
         </div>
       </div>
 
@@ -325,6 +326,7 @@ section {
         <a href="kanha.php" class="block px-4 py-2 hover:bg-neutral-900 hover:text-amber-500 transition text-sm">
           Kanha
         </a>
+       
         
       </div>
     </div>
