@@ -6,24 +6,6 @@ $pageTitle = "Home - Wildmark Resort Kanha";
 include 'includes/header.php'; 
 ?>
 <style>
-.youtube-shorts-card iframe {
-    max-width: 100%;
-    display: block;
-}
-
-/* Mobile optimization */
-@media (max-width: 768px) {
-    .youtube-shorts-card {
-        max-width: 400px;
-        margin: 0 auto;
-    }
-}
-
-/* Prevent layout shift */
-.youtube-shorts-card>div {
-    position: relative;
-    overflow: hidden;
-}
 
 /* Responsive Container */
 .container {
@@ -430,6 +412,25 @@ include 'includes/header.php';
         min-height: 240px;
     }
 }
+.youtube-shorts-card iframe {
+    max-width: 100%;
+    display: block;
+    border:none;
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+    .youtube-shorts-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+/* Prevent layout shift */
+.youtube-shorts-card>div {
+    position: relative;
+    overflow: hidden;
+}
 
 /* YouTube Shorts Testimonials Styling */
 .youtube-shorts-card {
@@ -443,11 +444,6 @@ include 'includes/header.php';
 /* Aspect ratio for vertical videos (9:16 - YouTube Shorts format) */
 .aspect-\[9\/16\] {
     aspect-ratio: 9 / 16;
-}
-
-/* Ensure iframe takes full space */
-.youtube-shorts-card iframe {
-    border: none;
 }
 
 /* Responsive adjustments */

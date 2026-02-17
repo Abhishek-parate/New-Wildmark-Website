@@ -224,7 +224,7 @@ include 'includes/header.php';
       <!-- Left Image -->
       <div class="relative order-2 lg:order-1" data-aos="fade-right">
         <div class="rounded-2xl overflow-hidden shadow-2xl border border-amber-500/20">
-          <img src="images/family2.jpeg" alt="Family Room Outdoor Sitout" 
+          <img src="images/double-beded.jpeg" alt="Family Room Outdoor Sitout" 
                class="w-full h-[450px] md:h-[560px] object-cover hover:scale-105 transition-transform duration-500">
         </div>
       </div>
