@@ -874,8 +874,8 @@ button[onclick^="nextSlide"] {
 
         <!-- Tabs - Sticky -->
         <div
-            class="sticky top-[60px] md:top-[80px] z-40 bg-neutral-900 border-b border-neutral-800 -mx-4 md:-mx-6 px-4 md:px-6 py-4 mb-8">
-            <div class="flex justify-center gap-4 md:gap-8 overflow-x-auto scrollbar-hide">
+    class="sticky top-[60px] md:top-[80px] z-40 bg-neutral-900 border-b border-neutral-800 py-4 mb-8">
+    <div class="flex justify-center gap-4 md:gap-8 overflow-x-visible">
                 <button class="tab-btn active" data-tab="machaan">
                     Super Deluxe Rooms
                 </button>
