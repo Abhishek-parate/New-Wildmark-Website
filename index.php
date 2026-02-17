@@ -688,8 +688,8 @@ button[onclick^="nextSlide"] {
 </section>
 
 <!-- Intro / Strapline -->
-<section id="intro" class="relative py-8 md:py-20 flex items-center bg-[#121212]">
-    <div class="mx-auto w-full max-w-8xl text-center">
+<section id="intro" class="relative py-8 md:py-20 flex items-center bg-[#121212] overflow-hidden">
+    <div class="mx-auto w-full max-w-7xl text-center">
         <!-- Hero Content Overlay -->
         <div class="text-center z-10 px-4 md:px-6 w-full max-w-7xl relative mx-auto">
             <h1 class="text-4xl md:text-6xl lg:text-6xl font-serif font-light mb-6 md:mb-8 tracking-wide hero-title"
@@ -710,7 +710,7 @@ button[onclick^="nextSlide"] {
             </p>
             <p class="text-lg md:text-xl mb-3 md:mb-4 font-light leading-relaxed hero-text" data-aos="fade-up"
                 data-aos-duration="1000" data-aos-delay="800">
-                Whether you’re here for tiger sightings, a relaxed forest holiday,
+                Whether you're here for tiger sightings, a relaxed forest holiday,
                 or a family getaway, Wildmark Resort combines warm hospitality with
                 a true jungle atmosphere.
             </p>
