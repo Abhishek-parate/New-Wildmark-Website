@@ -17,7 +17,7 @@
 
       <!-- About -->
       <div>
-        <a href="index.php" class="flex items-center mb-3">
+        <a href="/" class="flex items-center mb-3">
           <img src="images/WILD.png" alt="Wildmark Resort Kanha Logo" class="h-14 w-auto object-contain"/>
         </a>
         <p class="text-gray-400 text-sm leading-relaxed mb-4">
@@ -36,7 +36,7 @@
       <div>
         <h4 class="text-base font-serif font-bold text-amber-100 mb-3">Quick Links</h4>
         <ul class="space-y-1.5 text-sm">
-          <li><a href="index.php" class="text-gray-400 hover:text-amber-500 transition">Home</a></li>
+          <li><a href="/" class="text-gray-400 hover:text-amber-500 transition">Home</a></li>
           <li><a href="about.php" class="text-gray-400 hover:text-amber-500 transition">About</a></li>
           <li><a href="How-to-Reach.php" class="text-gray-400 hover:text-amber-500 transition">How to Reach</a></li>
           <li><a href="Wildmark.php" class="text-gray-400 hover:text-amber-500 transition">Wildmark</a></li>

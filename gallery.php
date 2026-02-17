@@ -622,7 +622,7 @@ include 'includes/header.php';
                 class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-lg transition font-semibold text-base shadow-lg">
                 <i class="fas fa-calendar-check mr-2"></i>BOOK YOUR STAY
             </a>
-            <a href="index.php"
+            <a href="/"
                 class="border-2 border-white hover:bg-white hover:text-black text-white px-8 py-3 rounded-lg transition font-semibold text-base">
                 <i class="fas fa-home mr-2"></i>BACK TO HOME
             </a>
