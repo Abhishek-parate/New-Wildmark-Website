@@ -185,10 +185,11 @@ include 'includes/header.php';
   </style>
 
 
-<header class="relative h-[100vh] md:h-[160vh] lg:h-[90vh] flex items-end"
-        style="background: url('images/about3.webp') center/cover no-repeat">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-</header>
+<header class="relative h-[50vh] md:h-[60vh] lg:h-[100vh] flex items-end"
+    style="background: url('images/about3.webp') center/cover no-repeat">
+    <div class="absolute inset-0 to-transparent"></div>
+  </header>
+
 <!-- About Wildmark Kanha Resort -->
 <section class="py-16 md:py-24 bg-[#121212]" style="padding-bottom: 30px;">
   <div class="container mx-auto max-w-6xl px-4 md:px-6">
