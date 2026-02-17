@@ -183,25 +183,10 @@ include 'includes/header.php';
     }
 }
 
-/* Smooth scrolling for all browsers */
-html {
-    scroll-behavior: smooth;
-}
 
 /* Profile Avatar Gradients */
 .profile-avatar {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
-/* Mobile menu */
-.mobile-menu {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-}
-
-.mobile-menu.active {
-    max-height: 500px;
 }
 
 /* Portrait Video Styling */
@@ -247,28 +232,6 @@ html {
     /* rounded-xl */
 }
 
-/* Mobile Packages Dropdown */
-.mobile-packages-dropdown {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
-}
-
-.mobile-packages-dropdown.active {
-    max-height: 500px;
-}
-
-/* Mobile menu animation */
-.mobile-menu {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-}
-
-.mobile-menu.active {
-    max-height: 800px;
-    /* Increased from 500px to accommodate dropdown */
-}
 
 /* Tabs styling */
 .tab-btn {
