@@ -296,52 +296,62 @@ include 'includes/header.php';
             
             <!-- Indoor Games -->
             <div class="bg-neutral-900 border border-amber-500/30 rounded-2xl p-6 md:p-8" data-aos="fade-right" data-aos-duration="1000">
-                <div class="activity-icon mb-6">
-                    <i class="fas fa-chess"></i>
-                </div>
-                <h3 class="text-2xl md:text-3xl font-serif font-bold text-white mb-4 text-center">Indoor Games</h3>
-                <ul class="space-y-3 text-gray-300">
-                    <li class="flex items-center gap-3">
-                        <i class="fas fa-check-circle text-amber-500"></i>
-                        <span>Carrom Board</span>
+                <h3 class="text-2xl md:text-3xl font-serif font-bold text-white mb-6 text-center">Indoor Games</h3>
+                <ul class="space-y-4 text-gray-300">
+                    <li class="flex items-center gap-4">
+                        <span class="w-10 h-10 rounded-full bg-amber-500/15 border border-amber-500/30 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-circle-dot text-amber-500 text-lg"></i>
+                        </span>
+                        <span class="text-base">Carrom Board</span>
                     </li>
-                    <li class="flex items-center gap-3">
-                        <i class="fas fa-check-circle text-amber-500"></i>
-                        <span>Chess & Board Games</span>
+                    <li class="flex items-center gap-4">
+                        <span class="w-10 h-10 rounded-full bg-amber-500/15 border border-amber-500/30 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-chess text-amber-500 text-lg"></i>
+                        </span>
+                        <span class="text-base">Chess & Board Games</span>
                     </li>
-                    <li class="flex items-center gap-3">
-                        <i class="fas fa-check-circle text-amber-500"></i>
-                        <span>Playing Cards</span>
+                    <li class="flex items-center gap-4">
+                        <span class="w-10 h-10 rounded-full bg-amber-500/15 border border-amber-500/30 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-heart text-amber-500 text-lg"></i>
+                        </span>
+                        <span class="text-base">Playing Cards</span>
                     </li>
-                    <li class="flex items-center gap-3">
-                        <i class="fas fa-check-circle text-amber-500"></i>
-                        <span>Table Tennis</span>
+                    <li class="flex items-center gap-4">
+                        <span class="w-10 h-10 rounded-full bg-amber-500/15 border border-amber-500/30 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-table-tennis-paddle-ball text-amber-500 text-lg"></i>
+                        </span>
+                        <span class="text-base">Table Tennis</span>
                     </li>
                 </ul>
             </div>
 
             <!-- Outdoor Games -->
             <div class="bg-neutral-900 border border-amber-500/30 rounded-2xl p-6 md:p-8" data-aos="fade-left" data-aos-duration="1000">
-                <div class="activity-icon mb-6">
-                    <i class="fas fa-volleyball-ball"></i>
-                </div>
-                <h3 class="text-2xl md:text-3xl font-serif font-bold text-white mb-4 text-center">Outdoor Games</h3>
-                <ul class="space-y-3 text-gray-300">
-                    <li class="flex items-center gap-3">
-                        <i class="fas fa-check-circle text-amber-500"></i>
-                        <span>Badminton</span>
+                <h3 class="text-2xl md:text-3xl font-serif font-bold text-white mb-6 text-center">Outdoor Games</h3>
+                <ul class="space-y-4 text-gray-300">
+                    <li class="flex items-center gap-4">
+                        <span class="w-10 h-10 rounded-full bg-amber-500/15 border border-amber-500/30 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-shuttle-space text-amber-500 text-lg"></i>
+                        </span>
+                        <span class="text-base">Badminton</span>
                     </li>
-                    <li class="flex items-center gap-3">
-                        <i class="fas fa-check-circle text-amber-500"></i>
-                        <span>Volleyball</span>
+                    <li class="flex items-center gap-4">
+                        <span class="w-10 h-10 rounded-full bg-amber-500/15 border border-amber-500/30 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-volleyball text-amber-500 text-lg"></i>
+                        </span>
+                        <span class="text-base">Volleyball</span>
                     </li>
-                    <li class="flex items-center gap-3">
-                        <i class="fas fa-check-circle text-amber-500"></i>
-                        <span>Cricket</span>
+                    <li class="flex items-center gap-4">
+                        <span class="w-10 h-10 rounded-full bg-amber-500/15 border border-amber-500/30 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-baseball-bat-ball text-amber-500 text-lg"></i>
+                        </span>
+                        <span class="text-base">Cricket</span>
                     </li>
-                    <li class="flex items-center gap-3">
-                        <i class="fas fa-check-circle text-amber-500"></i>
-                        <span>Outdoor Games Area</span>
+                    <li class="flex items-center gap-4">
+                        <span class="w-10 h-10 rounded-full bg-amber-500/15 border border-amber-500/30 flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-person-running text-amber-500 text-lg"></i>
+                        </span>
+                        <span class="text-base">Outdoor Games Area</span>
                     </li>
                 </ul>
             </div>
