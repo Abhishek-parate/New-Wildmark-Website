@@ -884,7 +884,7 @@ button[onclick^="nextSlide"] {
                 </button>
             </div>
         </div>
-
+         
         <!-- Tab Content -->
         <div class="grid md:grid-cols-2 gap-8 md:gap-12">
             <!-- Machaan -->
@@ -2681,50 +2681,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Mobile menu
-    var mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    var mobileMenu = document.getElementById('mobileMenu');
-    var mobilePackagesBtn = document.getElementById('mobilePackagesBtn');
-    var mobilePackagesDropdown = document.getElementById('mobilePackagesDropdown');
-    var packagesArrow = document.getElementById('packagesArrow');
-    var mobileRoomsBtn = document.getElementById('mobileRoomsBtn');
-    var mobileRoomsDropdown = document.getElementById('mobileRoomsDropdown');
-    var roomsArrow = document.getElementById('roomsArrow');
-
-    if (mobileMenuBtn && mobileMenu) {
-        mobileMenuBtn.addEventListener('click', function(e) {
-            e.stopPropagation();
-            mobileMenu.classList.toggle('active');
-        });
-    }
-
-    if (mobilePackagesBtn && mobilePackagesDropdown) {
-        mobilePackagesBtn.addEventListener('click', function(e) {
-            e.preventDefault(); e.stopPropagation();
-            mobilePackagesDropdown.classList.toggle('active');
-            if (packagesArrow) packagesArrow.style.transform = mobilePackagesDropdown.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
-        });
-    }
-
-    if (mobileRoomsBtn && mobileRoomsDropdown) {
-        mobileRoomsBtn.addEventListener('click', function(e) {
-            e.preventDefault(); e.stopPropagation();
-            mobileRoomsDropdown.classList.toggle('active');
-            if (roomsArrow) roomsArrow.style.transform = mobileRoomsDropdown.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
-        });
-    }
-
-    document.addEventListener('click', function(e) {
-        if (mobileMenu && mobileMenuBtn) {
-            if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-                mobileMenu.classList.remove('active');
-                if (mobilePackagesDropdown) mobilePackagesDropdown.classList.remove('active');
-                if (packagesArrow) packagesArrow.style.transform = 'rotate(0deg)';
-                if (mobileRoomsDropdown) mobileRoomsDropdown.classList.remove('active');
-                if (roomsArrow) roomsArrow.style.transform = 'rotate(0deg)';
-            }
-        }
-    });
+   
 
     // Escape key for popup
     document.addEventListener('keydown', function(e) {
