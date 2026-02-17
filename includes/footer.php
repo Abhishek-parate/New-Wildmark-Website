@@ -1,8 +1,4 @@
-<!-- Footer -->
-<footer class="bg-black py-10 border-t border-neutral-800">
-  <div class="max-w-screen-2xl mx-auto px-3 md:px-5">
-
-    <style>
+   <style>
       @media (min-width: 768px) {
         .footer-grid {
           grid-template-columns: 1.4fr 0.85fr 0.75fr 1fr 1.8fr !important;
@@ -14,8 +10,10 @@
         .map-box { height: 220px !important; width: 100% !important; }
       }
     </style>
-
-    <div style="display: grid; grid-template-columns: 1fr; gap: 28px;" class="mb-8 footer-grid">
+<!-- Footer -->
+<footer class="bg-black py-10 border-t border-neutral-800">
+  <div class="max-w-screen-2xl mx-auto px-3 md:px-5">
+       <div style="display: grid; grid-template-columns: 1fr; gap: 28px;" class="mb-8 footer-grid">
 
       <!-- About -->
       <div>
