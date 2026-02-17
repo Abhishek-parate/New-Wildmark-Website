@@ -1,22 +1,46 @@
 <!-- Footer -->
-<footer class="bg-black py-12 border-t border-neutral-800">
+<footer class="bg-black py-8 border-t border-neutral-800">
   <div class="max-w-7xl mx-auto px-4 md:px-6">
-    <div class="grid md:grid-cols-4 gap-8 mb-8">
+
+    <!-- Desktop: 5 columns tight, Mobile: stack one below other -->
+    <div style="display: grid; grid-template-columns: 1fr; gap: 24px;" class="mb-6 footer-grid">
+      <style>
+        @media (min-width: 768px) {
+          .footer-grid {
+            grid-template-columns: 1.8fr 0.8fr 0.7fr 1.1fr 1.6fr !important;
+            gap: 6px !important;
+          }
+          .map-box {
+            height: 260px !important;
+            width: 100% !important;
+          }
+        }
+        @media (max-width: 767px) {
+          .map-box {
+            height: 220px !important;
+            width: 100% !important;
+          }
+          .footer-map-col {
+            min-width: unset !important;
+          }
+        }
+      </style>
+
       <!-- About -->
       <div>
-        <!-- Logo -->
         <a href="index.php" class="flex items-center">
-          <img 
-            src="images/WILD.png" 
-            alt="Wildmark Resort Kanha Logo" 
-            class="h-12 md:h-16 lg:h-20 w-auto object-contain"
-          />
+          <img src="images/WILD.png"
+               alt="Wildmark Resort Kanha Logo"
+               class="h-14 w-auto object-contain"/>
         </a>
-        <p class="text-gray-400 text-sm mb-4">
-          Unforgettable Wildlife Adventure Await at Kanha Jungle Safari. See tigers, deer, leopards & more on a
-          personalized jungle safari. Visit & book online.
+
+        <p class="text-gray-400 text-sm mt-3 mb-4 leading-relaxed">
+          Unforgettable Wildlife Adventure Await at Kanha Jungle Safari.
+          See tigers, deer, leopards & more on a personalized jungle safari.
+          Visit & book online.
         </p>
-        <div class="flex gap-3">
+
+        <div class="flex gap-3 text-lg">
           <a href="#" class="text-gray-400 hover:text-amber-500 transition">
             <i class="fab fa-facebook-f"></i>
           </a>
@@ -31,101 +55,80 @@
 
       <!-- Quick Links -->
       <div>
-        <h4 class="text-lg font-serif font-bold text-amber-100 mb-4">
-          Quick Links
-        </h4>
-        <ul class="space-y-2 text-sm">
-          <li>
-            <a href="index.php" class="text-gray-400 hover:text-amber-500 transition">Home</a>
-          </li>
-          <li>
-            <a href="Wildmark.php" class="text-gray-400 hover:text-amber-500 transition">Wildmark</a>
-          </li>
-          <li>
-            <a href="How-to-Reach.php" class="text-gray-400 hover:text-amber-500 transition">How to Reach</a>
-          </li>
-          <li>
-            <a href="gallery.php" class="text-gray-400 hover:text-amber-500 transition">Gallery</a>
-          </li>
-          <li>
-            <a href="contact.php" class="text-gray-400 hover:text-amber-500 transition">Contact Us</a>
-          </li>
-          <li>
-            <a href="resort-activities.php" class="text-gray-400 hover:text-amber-500 transition">Resort Activities</a>
-          </li>
-          <li>
-            <a href="restaurant-menu.php" class="text-gray-400 hover:text-amber-500 transition">Restaurant Menu</a>
-          </li>
+        <h4 class="text-lg font-serif font-bold text-amber-100 mb-3">Quick Links</h4>
+        <ul class="space-y-1.5 text-sm">
+          <li><a href="index.php" class="text-gray-400 hover:text-amber-500 transition">Home</a></li>
+          <li><a href="about.php" class="text-gray-400 hover:text-amber-500 transition">About</a></li>
+          <li><a href="How-to-Reach.php" class="text-gray-400 hover:text-amber-500 transition">How to Reach</a></li>
+          <li><a href="Wildmark.php" class="text-gray-400 hover:text-amber-500 transition">Wildmark</a></li>
+          <li><a href="kanha.php" class="text-gray-400 hover:text-amber-500 transition">Kanha</a></li>
+          <li><a href="gallery.php" class="text-gray-400 hover:text-amber-500 transition">Gallery</a></li>
+          <li><a href="resort-activities.php" class="text-gray-400 hover:text-amber-500 transition">Resort Activities</a></li>
+          <li><a href="restaurant-menu.php" class="text-gray-400 hover:text-amber-500 transition">Restaurant Menu</a></li>
         </ul>
       </div>
 
       <!-- Help Center -->
       <div>
-        <h4 class="text-lg font-serif font-bold text-amber-100 mb-4">
-          Help Center
-        </h4>
-        <ul class="space-y-2 text-sm">
-          <li>
-            <a href="Privacy-Policy.php" class="text-gray-400 hover:text-amber-500 transition">Privacy Policy</a>
-          </li>
-          <li>
-            <a href="Terms-and-Conditions.php" class="text-gray-400 hover:text-amber-500 transition">Terms and Conditions</a>
-          </li>
-          <li>
-            <a href="Cancellation-Policy.php" class="text-gray-400 hover:text-amber-500 transition">Cancellation Policy</a>
-          </li>
+        <h4 class="text-lg font-serif font-bold text-amber-100 mb-3">Help Center</h4>
+        <ul class="space-y-1.5 text-sm">
+          <li><a href="contact.php" class="text-gray-400 hover:text-amber-500 transition">Contact Us</a></li>
+          <li><a href="Privacy-Policy.php" class="text-gray-400 hover:text-amber-500 transition">Privacy Policy</a></li>
+          <li><a href="Terms-and-Conditions.php" class="text-gray-400 hover:text-amber-500 transition">Terms and Conditions</a></li>
+          <li><a href="Cancellation-Policy.php" class="text-gray-400 hover:text-amber-500 transition">Cancellation Policy</a></li>
         </ul>
       </div>
 
       <!-- Contact Info -->
       <div>
-        <h4 class="text-lg font-serif font-bold text-amber-100 mb-4">
-          Contact Info
-        </h4>
-        <ul class="space-y-3 text-sm text-gray-400">
+        <h4 class="text-lg font-serif font-bold text-amber-100 mb-3">Contact Info</h4>
+        <ul class="space-y-2 text-sm text-gray-400">
           <li class="flex items-start gap-2">
             <i class="fa-solid fa-location-dot text-amber-500 mt-1"></i>
             <span>B.No. 8, Rajlaxmi Apartment Near Bhende Layout, Pannase Layout, Nagpur – 440022.</span>
           </li>
           <li class="flex items-center gap-2">
             <i class="fa-solid fa-envelope text-amber-500"></i>
-            <a href="mailto:info@wildmarkresort.com" class="text-gray-400 hover:text-amber-500 transition">info@wildmarkresort.com</a>
+            <a href="mailto:info@wildmarkresort.com" class="hover:text-amber-500 transition">
+              info@wildmarkresort.com
+            </a>
           </li>
           <li class="flex items-center gap-2">
             <i class="fa-solid fa-phone text-amber-500"></i>
-            <a href="tel:8830996719" class="text-gray-400 hover:text-amber-500 transition">+91 8830996719</a>
+            <a href="tel:8830996719" class="hover:text-amber-500 transition">
+              +91 8830996719
+            </a>
           </li>
         </ul>
       </div>
-    </div>
 
-    <!-- Google Map Section - NAYA SECTION YAHA HAI BHAI! -->
-    <div class="mb-8">
-      <h4 class="text-lg font-serif font-bold text-amber-100 mb-4 text-center">
-        Our Location
-      </h4>
-      <div class="w-full h-64 md:h-80 lg:h-96 rounded-lg overflow-hidden border-2 border-amber-500/30 shadow-lg">
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.0234567890123!2d80.5118205!3d22.315946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a2a0b67fb9e449f%3A0xb861ff4ba4e91cb5!2sWild%20Mark%20Resort%2C%20Kanha!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
-          width="100%" 
-          height="100%" 
-          style="border:0;" 
-          allowfullscreen="" 
-          loading="lazy" 
-          referrerpolicy="no-referrer-when-downgrade"
-          title="Wild Mark Resort Kanha Location">
-        </iframe>
+      <!-- Map -->
+      <div class="footer-map-col">
+        <h4 class="text-lg font-serif font-bold text-amber-100 mb-3">Our Location</h4>
+        <div class="map-box rounded-xl overflow-hidden border border-amber-500/30 shadow-lg hover:scale-[1.02] transition duration-300" style="height: 260px; width: 100%;">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.0234567890123!2d80.5118205!3d22.315946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a2a0b67fb9e449f%3A0xb861ff4ba4e91cb5!2sWild%20Mark%20Resort%2C%20Kanha!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
       </div>
+
     </div>
 
-    <!-- Bottom Bar -->
-    <div class="border-t border-neutral-800 pt-6 text-center">
+    <!-- Bottom -->
+    <div class="border-t border-neutral-800 pt-5 text-center">
       <p class="text-gray-500 text-xs">
         © 2025 Wildmark Resort Kanha. All Rights Reserved.
       </p>
     </div>
+
   </div>
 </footer>
+
 
 <!-- WhatsApp Floating Button -->
 <a href="https://wa.me/8830996719" target="_blank"
@@ -142,10 +145,8 @@
 <script>
   AOS.init({ duration: 800, once: true });
 
-  // Mobile Menu Toggle
   const mobileMenuBtn = document.getElementById("mobileMenuBtn");
   const mobileMenu = document.getElementById("mobileMenu");
-
   if (mobileMenuBtn && mobileMenu) {
     mobileMenuBtn.addEventListener("click", (e) => {
       e.stopPropagation();
@@ -153,61 +154,38 @@
     });
   }
 
-  // Mobile Packages Dropdown
   const mobilePackagesBtn = document.getElementById("mobilePackagesBtn");
   const mobilePackagesDropdown = document.getElementById("mobilePackagesDropdown");
   const packagesArrow = document.getElementById("packagesArrow");
-
   if (mobilePackagesBtn && mobilePackagesDropdown && packagesArrow) {
     mobilePackagesBtn.addEventListener("click", (e) => {
       e.preventDefault();
       e.stopPropagation();
       mobilePackagesDropdown.classList.toggle("active");
-
-      if (mobilePackagesDropdown.classList.contains("active")) {
-        packagesArrow.style.transform = "rotate(180deg)";
-      } else {
-        packagesArrow.style.transform = "rotate(0deg)";
-      }
+      packagesArrow.style.transform = mobilePackagesDropdown.classList.contains("active") ? "rotate(180deg)" : "rotate(0deg)";
     });
   }
 
-  // Mobile Rooms Dropdown
   const mobileRoomsBtn = document.getElementById("mobileRoomsBtn");
   const mobileRoomsDropdown = document.getElementById("mobileRoomsDropdown");
   const roomsArrow = document.getElementById("roomsArrow");
-
   if (mobileRoomsBtn && mobileRoomsDropdown && roomsArrow) {
     mobileRoomsBtn.addEventListener("click", (e) => {
       e.preventDefault();
       e.stopPropagation();
       mobileRoomsDropdown.classList.toggle("active");
-
-      if (mobileRoomsDropdown.classList.contains("active")) {
-        roomsArrow.style.transform = "rotate(180deg)";
-      } else {
-        roomsArrow.style.transform = "rotate(0deg)";
-      }
+      roomsArrow.style.transform = mobileRoomsDropdown.classList.contains("active") ? "rotate(180deg)" : "rotate(0deg)";
     });
   }
 
-  // Close menu on outside click
   document.addEventListener("click", (e) => {
     if (mobileMenu && mobileMenuBtn) {
       if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
         mobileMenu.classList.remove("active");
-        if (mobilePackagesDropdown) {
-          mobilePackagesDropdown.classList.remove("active");
-        }
-        if (packagesArrow) {
-          packagesArrow.style.transform = "rotate(0deg)";
-        }
-        if (mobileRoomsDropdown) {
-          mobileRoomsDropdown.classList.remove("active");
-        }
-        if (roomsArrow) {
-          roomsArrow.style.transform = "rotate(0deg)";
-        }
+        if (mobilePackagesDropdown) mobilePackagesDropdown.classList.remove("active");
+        if (packagesArrow) packagesArrow.style.transform = "rotate(0deg)";
+        if (mobileRoomsDropdown) mobileRoomsDropdown.classList.remove("active");
+        if (roomsArrow) roomsArrow.style.transform = "rotate(0deg)";
       }
     }
   });

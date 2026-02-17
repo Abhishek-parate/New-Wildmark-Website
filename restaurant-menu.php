@@ -425,6 +425,261 @@ include 'includes/header.php';
 #specialOfferPopup > div::-webkit-scrollbar {
     display: none;
 }
+/* ── Tab Nav ── */
+      .modern-menu-container { display: flex; gap: 24px; align-items: flex-start; }
+      .modern-tab-nav { display: flex; flex-direction: column; gap: 8px; min-width: 180px; }
+      .modern-tab-item {
+        display: flex; align-items: center; gap: 12px;
+        padding: 12px 16px; border-radius: 12px; cursor: pointer;
+        border: 1px solid rgba(255,255,255,0.08);
+        transition: all 0.25s ease;
+      }
+      .modern-tab-item:hover { background: rgba(245,158,11,0.1); border-color: rgba(245,158,11,0.3); }
+      .modern-tab-item.active { background: rgba(245,158,11,0.15); border-color: #f59e0b; }
+      .modern-tab-icon { font-size: 20px; color: #9ca3af; width: 32px; text-align: center; }
+      .modern-tab-item.active .modern-tab-icon { color: #f59e0b; }
+      .modern-tab-label h4 { font-size: 14px; font-weight: 600; color: #e5e7eb; margin: 0; }
+      .modern-tab-label p  { font-size: 11px; color: #6b7280; margin: 0; }
+      .modern-tab-item.active .modern-tab-label h4 { color: #fbbf24; }
+
+      /* ── Content Panel ── */
+      .modern-menu-content { flex: 1; min-width: 0; }
+      .modern-menu-panel { display: none; }
+      .modern-menu-panel.active { display: block; }
+
+      /* ── Category Header ── */
+      .category-header {
+        display: flex; align-items: center; gap: 16px;
+        margin-bottom: 24px; padding-bottom: 16px;
+        border-bottom: 1px solid rgba(245,158,11,0.2);
+      }
+      .category-header-icon {
+        width: 52px; height: 52px; border-radius: 14px;
+        background: rgba(245,158,11,0.15); display: flex;
+        align-items: center; justify-content: center;
+        font-size: 22px; color: #f59e0b;
+        border: 1px solid rgba(245,158,11,0.3);
+      }
+      .category-header-text h3 { font-size: 22px; font-weight: 700; color: #fff; margin: 0 0 4px; }
+      .category-header-text p  { font-size: 13px; color: #9ca3af; margin: 0; }
+
+      /* ── Veg / Non-Veg Filter Tabs ── */
+      .vn-tabs {
+        display: flex; gap: 10px; margin-bottom: 20px;
+      }
+      .vn-tab {
+        display: flex; align-items: center; gap: 7px;
+        padding: 7px 18px; border-radius: 999px; cursor: pointer;
+        font-size: 13px; font-weight: 600; border: 2px solid transparent;
+        transition: all 0.2s ease; user-select: none;
+      }
+      .vn-tab.veg-tab       { color: #4ade80; border-color: rgba(74,222,128,0.35); background: rgba(74,222,128,0.07); }
+      .vn-tab.veg-tab.active{ background: rgba(74,222,128,0.2); border-color: #4ade80; }
+      .vn-tab.nonveg-tab       { color: #f87171; border-color: rgba(248,113,113,0.35); background: rgba(248,113,113,0.07); }
+      .vn-tab.nonveg-tab.active{ background: rgba(248,113,113,0.2); border-color: #f87171; }
+      .vn-dot { width: 10px; height: 10px; border-radius: 2px; }
+      .vn-dot.green { background: #4ade80; }
+      .vn-dot.red   { background: #f87171; }
+
+      /* ── Menu Card ── */
+      .premium-menu-card {
+        display: flex; align-items: center; justify-content: space-between;
+        padding: 14px 16px; border-radius: 12px;
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.07);
+        transition: all 0.2s ease;
+      }
+      .premium-menu-card:hover { background: rgba(245,158,11,0.06); border-color: rgba(245,158,11,0.2); }
+      .dish-name { font-size: 14px; font-weight: 600; color: #f3f4f6; margin-bottom: 3px; }
+      .dish-desc { font-size: 12px; color: #6b7280; }
+      .veg-badge, .nonveg-badge {
+        width: 18px; height: 18px; border-radius: 3px; flex-shrink: 0;
+        display: flex; align-items: center; justify-content: center;
+        margin-left: 12px;
+      }
+      .veg-badge    { border: 2px solid #4ade80; }
+      .nonveg-badge { border: 2px solid #f87171; }
+      .veg-badge::after    { content: ''; width: 8px; height: 8px; border-radius: 50%; background: #4ade80; display: block; }
+      .nonveg-badge::after { content: ''; width: 8px; height: 8px; border-radius: 50%; background: #f87171; display: block; }
+
+      /* ── Buffet Box ── */
+      .buffet-highlight {
+        background: rgba(245,158,11,0.05);
+        border: 1px solid rgba(245,158,11,0.2);
+        border-radius: 14px; padding: 18px 20px; margin-top: 20px;
+      }
+      .buffet-highlight h4 { font-size: 15px; font-weight: 700; color: #fbbf24; margin-bottom: 12px; }
+      .buffet-highlight h4 i { margin-right: 8px; }
+      .buffet-highlight ul { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0; }
+      .buffet-highlight ul li {
+        font-size: 12px; color: #d1d5db;
+        background: rgba(255,255,255,0.06);
+        border-radius: 999px; padding: 4px 12px;
+      }
+
+      /* ── Hidden card ── */
+      .dish-card-hidden { display: none !important; }
+
+      /* ── Responsive ── */
+      @media (max-width: 768px) {
+        .modern-menu-container { flex-direction: column; }
+        .modern-tab-nav { flex-direction: row; flex-wrap: wrap; min-width: unset; }
+        .modern-tab-item { flex: 1; min-width: 130px; }
+      }
+      /* ── MOBILE TAB SCROLL FIX — PASTE THIS AT END OF YOUR <style> BLOCK ── */
+@media (max-width: 768px) {
+  .modern-menu-container {
+    flex-direction: column !important;
+    display: flex !important;
+  }
+  .modern-tab-nav {
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    overflow-y: visible !important;
+    min-width: unset !important;
+    width: 100% !important;
+    gap: 10px !important;
+    padding-bottom: 10px !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    display: flex !important;
+  }
+  .modern-tab-nav::-webkit-scrollbar {
+    display: none !important;
+  }
+  .modern-tab-item {
+    flex: 0 0 auto !important;
+    min-width: 120px !important;
+    max-width: 140px !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 12px 10px !important;
+  }
+  .modern-tab-label h4 { font-size: 12px !important; }
+  .modern-tab-label p  { font-size: 10px !important; }
+}
+ /* ── Tab Nav ── */
+      .modern-menu-container { display: flex; gap: 24px; align-items: flex-start; }
+      .modern-tab-nav { display: flex; flex-direction: column; gap: 8px; min-width: 180px; }
+      .modern-tab-item {
+        display: flex; align-items: center; gap: 12px;
+        padding: 12px 16px; border-radius: 12px; cursor: pointer;
+        border: 1px solid rgba(255,255,255,0.08);
+        transition: all 0.25s ease;
+      }
+      .modern-tab-item:hover { background: rgba(245,158,11,0.1); border-color: rgba(245,158,11,0.3); }
+      .modern-tab-item.active { background: rgba(245,158,11,0.15); border-color: #f59e0b; }
+      .modern-tab-icon { font-size: 20px; color: #9ca3af; width: 32px; text-align: center; }
+      .modern-tab-item.active .modern-tab-icon { color: #f59e0b; }
+      .modern-tab-label h4 { font-size: 14px; font-weight: 600; color: #e5e7eb; margin: 0; }
+      .modern-tab-label p  { font-size: 11px; color: #6b7280; margin: 0; }
+      .modern-tab-item.active .modern-tab-label h4 { color: #fbbf24; }
+
+      /* ── Content Panel ── */
+      .modern-menu-content { flex: 1; min-width: 0; }
+      .modern-menu-panel { display: none; }
+      .modern-menu-panel.active { display: block; }
+
+      /* ── Category Header ── */
+      .category-header {
+        display: flex; align-items: center; gap: 16px;
+        margin-bottom: 24px; padding-bottom: 16px;
+        border-bottom: 1px solid rgba(245,158,11,0.2);
+      }
+      .category-header-icon {
+        width: 52px; height: 52px; border-radius: 14px;
+        background: rgba(245,158,11,0.15); display: flex;
+        align-items: center; justify-content: center;
+        font-size: 22px; color: #f59e0b;
+        border: 1px solid rgba(245,158,11,0.3);
+      }
+      .category-header-text h3 { font-size: 22px; font-weight: 700; color: #fff; margin: 0 0 4px; }
+      .category-header-text p  { font-size: 13px; color: #9ca3af; margin: 0; }
+
+      /* ── Veg / Non-Veg Filter Tabs ── */
+      .vn-tabs {
+        display: flex; gap: 10px; margin-bottom: 20px;
+      }
+      .vn-tab {
+        display: flex; align-items: center; gap: 7px;
+        padding: 7px 18px; border-radius: 999px; cursor: pointer;
+        font-size: 13px; font-weight: 600; border: 2px solid transparent;
+        transition: all 0.2s ease; user-select: none;
+      }
+      .vn-tab.veg-tab       { color: #4ade80; border-color: rgba(74,222,128,0.35); background: rgba(74,222,128,0.07); }
+      .vn-tab.veg-tab.active{ background: rgba(74,222,128,0.2); border-color: #4ade80; }
+      .vn-tab.nonveg-tab       { color: #f87171; border-color: rgba(248,113,113,0.35); background: rgba(248,113,113,0.07); }
+      .vn-tab.nonveg-tab.active{ background: rgba(248,113,113,0.2); border-color: #f87171; }
+      .vn-dot { width: 10px; height: 10px; border-radius: 2px; }
+      .vn-dot.green { background: #4ade80; }
+      .vn-dot.red   { background: #f87171; }
+
+      /* ── Menu Card ── */
+      .premium-menu-card {
+        display: flex; align-items: center; justify-content: space-between;
+        padding: 14px 16px; border-radius: 12px;
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.07);
+        transition: all 0.2s ease;
+      }
+      .premium-menu-card:hover { background: rgba(245,158,11,0.06); border-color: rgba(245,158,11,0.2); }
+      .dish-name { font-size: 14px; font-weight: 600; color: #f3f4f6; margin-bottom: 3px; }
+      .dish-desc { font-size: 12px; color: #6b7280; }
+      .veg-badge, .nonveg-badge {
+        width: 18px; height: 18px; border-radius: 3px; flex-shrink: 0;
+        display: flex; align-items: center; justify-content: center;
+        margin-left: 12px;
+      }
+      .veg-badge    { border: 2px solid #4ade80; }
+      .nonveg-badge { border: 2px solid #f87171; }
+      .veg-badge::after    { content: ''; width: 8px; height: 8px; border-radius: 50%; background: #4ade80; display: block; }
+      .nonveg-badge::after { content: ''; width: 8px; height: 8px; border-radius: 50%; background: #f87171; display: block; }
+
+      /* ── Buffet Box ── */
+      .buffet-highlight {
+        background: rgba(245,158,11,0.05);
+        border: 1px solid rgba(245,158,11,0.2);
+        border-radius: 14px; padding: 18px 20px; margin-top: 20px;
+      }
+      .buffet-highlight h4 { font-size: 15px; font-weight: 700; color: #fbbf24; margin-bottom: 12px; }
+      .buffet-highlight h4 i { margin-right: 8px; }
+      .buffet-highlight ul { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0; }
+      .buffet-highlight ul li {
+        font-size: 12px; color: #d1d5db;
+        background: rgba(255,255,255,0.06);
+        border-radius: 999px; padding: 4px 12px;
+      }
+
+      /* ── Hidden card ── */
+      .dish-card-hidden { display: none !important; }
+
+      /* ── Responsive ── */
+      @media (max-width: 768px) {
+        .modern-menu-container { flex-direction: column; }
+        .modern-tab-nav {
+          flex-direction: row;
+          flex-wrap: nowrap;
+          overflow-x: auto;
+          min-width: unset;
+          gap: 10px;
+          padding-bottom: 8px;
+          -webkit-overflow-scrolling: touch;
+          scrollbar-width: none;
+        }
+        .modern-tab-nav::-webkit-scrollbar { display: none; }
+        .modern-tab-item {
+          flex: 0 0 auto;
+          min-width: 130px;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          padding: 12px 10px;
+        }
+        .modern-tab-label h4 { font-size: 13px; }
+        .modern-tab-label p  { font-size: 10px; }
+      }
 </style>
 
 <!-- HERO -->
@@ -450,366 +705,522 @@ include 'includes/header.php';
 
 <!-- MODERN MENU SECTION -->
 <section id="menu" class="py-12 md:py-20 bg-neutral-900">
-    <div class="container mx-auto max-w-7xl px-4 md:px-6">
-        
-        <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-5xl font-serif font-bold text-white mb-3">Our Menu</h2>
-            <p class="text-gray-400 text-sm">Click on a category to explore</p>
-        </div>
+  <div class="container mx-auto max-w-7xl px-4 md:px-6">
 
-        <!-- Modern Tab Layout -->
-        <div class="modern-menu-container">
-            
-            <!-- Vertical Tab Navigation -->
-            <div class="modern-tab-nav">
-                
-                <!-- Tab 1: South Indian -->
-                <div class="modern-tab-item active" data-menu="southindian">
-                    <div class="modern-tab-icon">
-                        <i class="fas fa-pepper-hot"></i>
-                    </div>
-                    <div class="modern-tab-label">
-                        <h4>South Indian</h4>
-                        <p>Traditional</p>
-                    </div>
-                </div>
-
-                <!-- Tab 2: North Indian -->
-                <div class="modern-tab-item" data-menu="northindian">
-                    <div class="modern-tab-icon">
-                        <i class="fas fa-drumstick-bite"></i>
-                    </div>
-                    <div class="modern-tab-label">
-                        <h4>North Indian</h4>
-                        <p>Punjabi Style</p>
-                    </div>
-                </div>
-
-                <!-- Tab 3: Chinese -->
-                <div class="modern-tab-item" data-menu="chinese">
-                    <div class="modern-tab-icon">
-                        <i class="fas fa-bowl-food"></i>
-                    </div>
-                    <div class="modern-tab-label">
-                        <h4>Chinese</h4>
-                        <p>Indo-Chinese</p>
-                    </div>
-                </div>
-
-                <!-- Tab 4: Fast Food -->
-                <div class="modern-tab-item" data-menu="fastfood">
-                    <div class="modern-tab-icon">
-                        <i class="fas fa-burger"></i>
-                    </div>
-                    <div class="modern-tab-label">
-                        <h4>Quick Bites</h4>
-                        <p>Snacks</p>
-                    </div>
-                </div>
-
-                <!-- Tab 5: Eggs -->
-                <div class="modern-tab-item" data-menu="eggs">
-                    <div class="modern-tab-icon">
-                        <i class="fas fa-egg"></i>
-                    </div>
-                    <div class="modern-tab-label">
-                        <h4>Egg Dishes</h4>
-                        <p>Protein Rich</p>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Menu Content Panels -->
-            <div class="modern-menu-content">
-                
-                <!-- SOUTH INDIAN PANEL -->
-                <div class="modern-menu-panel active" data-menu="southindian">
-                    <div class="category-header" data-aos="fade-right">
-                        <div class="category-header-icon">
-                            <i class="fas fa-pepper-hot"></i>
-                        </div>
-                        <div class="category-header-text">
-                            <h3>South Indian Cuisine</h3>
-                            <p>Authentic Traditional Flavours</p>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
-                        <div class="premium-menu-card" data-aos="fade-up" data-aos-delay="100">
-                            <div class="dish-info">
-                                <div class="dish-name">Idli</div>
-                                <div class="dish-desc">Soft steamed rice cakes served with chutney & sambar</div>
-                            </div>
-                            <div class="veg-badge"></div>
-                        </div>
-
-                        <div class="premium-menu-card" data-aos="fade-up" data-aos-delay="150">
-                            <div class="dish-info">
-                                <div class="dish-name">Dosa</div>
-                                <div class="dish-desc">Crispy fermented crepe served with chutney & sambar</div>
-                            </div>
-                            <div class="veg-badge"></div>
-                        </div>
-
-                        <div class="premium-menu-card" data-aos="fade-up" data-aos-delay="200">
-                            <div class="dish-info">
-                                <div class="dish-name">Medu Vada</div>
-                                <div class="dish-desc">Crunchy lentil doughnuts with chutney & sambar</div>
-                            </div>
-                            <div class="veg-badge"></div>
-                        </div>
-
-                        <div class="premium-menu-card" data-aos="fade-up" data-aos-delay="250">
-                            <div class="dish-info">
-                                <div class="dish-name">South Indian Chicken Dum Biryani</div>
-                                <div class="dish-desc">Famous slow-cooked South Indian style chicken biryani</div>
-                            </div>
-                            <div class="nonveg-badge"></div>
-                        </div>
-
-                        <div class="premium-menu-card" data-aos="fade-up" data-aos-delay="300">
-                            <div class="dish-info">
-                                <div class="dish-name">Fish Curry</div>
-                                <div class="dish-desc">Fresh fish in a spiced South Indian coconut-based curry</div>
-                            </div>
-                            <div class="nonveg-badge"></div>
-                        </div>
-
-                        <div class="premium-menu-card" data-aos="fade-up" data-aos-delay="350">
-                            <div class="dish-info">
-                                <div class="dish-name">Tawa Fish Fry</div>
-                                <div class="dish-desc">Spice-marinated fish, shallow-fried on a hot tawa</div>
-                            </div>
-                            <div class="nonveg-badge"></div>
-                        </div>
-                    </div>
-
-                    <div class="buffet-highlight" data-aos="fade-up">
-                        <h4><i class="fas fa-utensils"></i> Buffet South Indian Meals</h4>
-                        <ul>
-                            <li>Steamed White Rice</li>
-                            <li>Sambar with vegetables</li>
-                            <li>Rasam varieties</li>
-                            <li>Butter Milk</li>
-                            <li>Soft Chapathi</li>
-                            <li>Vegetable Poriyals</li>
-                            <li>Pickle & Appalam</li>
-                            <li>Payasam (dessert)</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- NORTH INDIAN PANEL -->
-                <div class="modern-menu-panel" data-menu="northindian">
-                    <div class="category-header" data-aos="fade-right">
-                        <div class="category-header-icon">
-                            <i class="fas fa-drumstick-bite"></i>
-                        </div>
-                        <div class="category-header-text">
-                            <h3>North Indian Cuisine</h3>
-                            <p>Rich & Flavorful Punjabi Dishes</p>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
-                        <div class="premium-menu-card">
-                            <div class="dish-info">
-                                <div class="dish-name">Paneer Butter Masala</div>
-                                <div class="dish-desc">Cottage cheese in rich, creamy tomato-butter gravy</div>
-                            </div>
-                            <div class="veg-badge"></div>
-                        </div>
-
-                        <div class="premium-menu-card">
-                            <div class="dish-info">
-                                <div class="dish-name">Tandoori Items</div>
-                                <div class="dish-desc">Marinated meats & paneer char-grilled in the tandoor</div>
-                            </div>
-                            <div class="nonveg-badge"></div>
-                        </div>
-
-                        <div class="premium-menu-card">
-                            <div class="dish-info">
-                                <div class="dish-name">Saoji Chicken</div>
-                                <div class="dish-desc">Bold & fiery Nagpur-style chicken curry</div>
-                            </div>
-                            <div class="nonveg-badge"></div>
-                        </div>
-
-                        <div class="premium-menu-card">
-                            <div class="dish-info">
-                                <div class="dish-name">Various Dal Preparations</div>
-                                <div class="dish-desc">Dal Tadka, Dal Makhani & more slow-simmered classics</div>
-                            </div>
-                            <div class="veg-badge"></div>
-                        </div>
-                    </div>
-
-                    <div class="buffet-highlight">
-                        <h4><i class="fas fa-utensils"></i> Buffet North Indian Meals</h4>
-                        <ul>
-                            <li>Fresh Salad</li>
-                            <li>Roti (freshly made)</li>
-                            <li>Steamed Rice</li>
-                            <li>Dal</li>
-                            <li>Paneer Dish</li>
-                            <li>Seasonal Veg Sabji</li>
-                            <li>Egg/Chicken Curry</li>
-                            <li>Starter & Soup</li>
-                            <li>Pickle & Papad</li>
-                            <li>Dessert</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- CHINESE PANEL -->
-                <div class="modern-menu-panel" data-menu="chinese">
-                    <div class="category-header" data-aos="fade-right">
-                        <div class="category-header-icon">
-                            <i class="fas fa-bowl-food"></i>
-                        </div>
-                        <div class="category-header-text">
-                            <h3>Chinese Cuisine</h3>
-                            <p>Popular Indo-Chinese Favorites</p>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                        <div class="premium-menu-card">
-                            <div class="dish-info">
-                                <div class="dish-name">All Soup Varieties</div>
-                                <div class="dish-desc">Hot & sour, sweet corn, manchow soup & more</div>
-                            </div>
-                            <div class="veg-badge"></div>
-                        </div>
-
-                        <div class="premium-menu-card">
-                            <div class="dish-info">
-                                <div class="dish-name">All Chicken Varieties</div>
-                                <div class="dish-desc">Chilli chicken, chicken manchurian, crispy honey chicken</div>
-                            </div>
-                            <div class="nonveg-badge"></div>
-                        </div>
-
-                        <div class="premium-menu-card">
-                            <div class="dish-info">
-                                <div class="dish-name">Noodles</div>
-                                <div class="dish-desc">Veg, chicken & egg noodles — hakka & schezwan style</div>
-                            </div>
-                            <div class="nonveg-badge"></div>
-                        </div>
-
-                        <div class="premium-menu-card">
-                            <div class="dish-info">
-                                <div class="dish-name">Fried Rices</div>
-                                <div class="dish-desc">Veg, egg & chicken fried rice with wok-tossed flavour</div>
-                            </div>
-                            <div class="nonveg-badge"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAST FOOD PANEL -->
-                <div class="modern-menu-panel" data-menu="fastfood">
-                    <div class="category-header" data-aos="fade-right">
-                        <div class="category-header-icon">
-                            <i class="fas fa-burger"></i>
-                        </div>
-                        <div class="category-header-text">
-                            <h3>Quick Bites & Snacks</h3>
-                            <p>Fast & Delicious</p>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                        <div class="premium-menu-card">
-                            <div class="dish-info">
-                                <div class="dish-name">Maggi</div>
-                                <div class="dish-desc">Classic instant noodles — a jungle camp favourite</div>
-                            </div>
-                            <div class="veg-badge"></div>
-                        </div>
-
-                        <div class="premium-menu-card">
-                            <div class="dish-info">
-                                <div class="dish-name">Sandwiches</div>
-                                <div class="dish-desc">Freshly made veg & non-veg sandwiches with sauces</div>
-                            </div>
-                            <div class="nonveg-badge"></div>
-                        </div>
-
-                        <div class="premium-menu-card">
-                            <div class="dish-info">
-                                <div class="dish-name">Chai — Indian Tea</div>
-                                <div class="dish-desc">Freshly brewed spiced masala chai, served piping hot</div>
-                            </div>
-                            <div class="veg-badge"></div>
-                        </div>
-
-                        <div class="premium-menu-card">
-                            <div class="dish-info">
-                                <div class="dish-name">Coffee</div>
-                                <div class="dish-desc">Hot brewed coffee — perfect after a morning safari</div>
-                            </div>
-                            <div class="veg-badge"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- EGG VARIETIES PANEL -->
-                <div class="modern-menu-panel" data-menu="eggs">
-                    <div class="category-header" data-aos="fade-right">
-                        <div class="category-header-icon">
-                            <i class="fas fa-egg"></i>
-                        </div>
-                        <div class="category-header-text">
-                            <h3>All Egg Varieties</h3>
-                            <p>Protein-Packed Goodness</p>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                        <div class="premium-menu-card">
-                            <div class="dish-info">
-                                <div class="dish-name">Omelette</div>
-                                <div class="dish-desc">Plain, masala & cheese omelettes made to order</div>
-                            </div>
-                            <div class="nonveg-badge"></div>
-                        </div>
-
-                        <div class="premium-menu-card">
-                            <div class="dish-info">
-                                <div class="dish-name">Egg Bhurji</div>
-                                <div class="dish-desc">Spiced scrambled eggs with onion, tomato & green chilli</div>
-                            </div>
-                            <div class="nonveg-badge"></div>
-                        </div>
-
-                        <div class="premium-menu-card">
-                            <div class="dish-info">
-                                <div class="dish-name">Egg Curry</div>
-                                <div class="dish-desc">Boiled eggs simmered in a rich onion-tomato gravy</div>
-                            </div>
-                            <div class="nonveg-badge"></div>
-                        </div>
-
-                        <div class="premium-menu-card">
-                            <div class="dish-info">
-                                <div class="dish-name">Boiled Eggs</div>
-                                <div class="dish-desc">Soft or hard boiled, served with seasoning</div>
-                            </div>
-                            <div class="nonveg-badge"></div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-5xl font-serif font-bold text-white mb-3">Our Menu</h2>
+      <p class="text-gray-400 text-sm">Click on a category to explore</p>
     </div>
+
+    <div class="modern-menu-container">
+
+      <!-- ═══ LEFT: Category Tabs ═══ -->
+      <div class="modern-tab-nav">
+
+        <div class="modern-tab-item active" data-menu="southindian">
+          <div class="modern-tab-icon"><i class="fas fa-pepper-hot"></i></div>
+          <div class="modern-tab-label"><h4>South Indian</h4><p>Traditional</p></div>
+        </div>
+
+        <div class="modern-tab-item" data-menu="northindian">
+          <div class="modern-tab-icon"><i class="fas fa-drumstick-bite"></i></div>
+          <div class="modern-tab-label"><h4>North Indian</h4><p>Punjabi Style</p></div>
+        </div>
+
+        <div class="modern-tab-item" data-menu="chinese">
+          <div class="modern-tab-icon"><i class="fas fa-bowl-food"></i></div>
+          <div class="modern-tab-label"><h4>Chinese</h4><p>Indo-Chinese</p></div>
+        </div>
+
+        <div class="modern-tab-item" data-menu="fastfood">
+          <div class="modern-tab-icon"><i class="fas fa-burger"></i></div>
+          <div class="modern-tab-label"><h4>Quick Bites</h4><p>Snacks</p></div>
+        </div>
+
+        <div class="modern-tab-item" data-menu="eggs">
+          <div class="modern-tab-icon"><i class="fas fa-egg"></i></div>
+          <div class="modern-tab-label"><h4>Egg Dishes</h4><p>Protein Rich</p></div>
+        </div>
+
+      </div>
+
+      <!-- ═══ RIGHT: Content ═══ -->
+      <div class="modern-menu-content">
+
+        <!-- ════════ SOUTH INDIAN ════════ -->
+        <div class="modern-menu-panel active" data-menu="southindian">
+          <div class="category-header">
+            <div class="category-header-icon"><i class="fas fa-pepper-hot"></i></div>
+            <div class="category-header-text">
+              <h3>South Indian Cuisine</h3>
+              <p>Authentic Traditional Flavours</p>
+            </div>
+          </div>
+
+          <!-- Veg / NonVeg Tabs -->
+          <div class="vn-tabs">
+            <div class="vn-tab veg-tab active" data-panel="southindian" data-filter="veg">
+              <span class="vn-dot green"></span> Veg
+            </div>
+            <div class="vn-tab nonveg-tab" data-panel="southindian" data-filter="nonveg">
+              <span class="vn-dot red"></span> Non-Veg
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
+            <!-- VEG -->
+            <div class="premium-menu-card" data-type="veg">
+              <div class="dish-info">
+                <div class="dish-name">Idli</div>
+                <div class="dish-desc">Soft steamed rice cakes served with chutney &amp; sambar</div>
+              </div>
+              <div class="veg-badge"></div>
+            </div>
+            <div class="premium-menu-card" data-type="veg">
+              <div class="dish-info">
+                <div class="dish-name">Dosa</div>
+                <div class="dish-desc">Crispy fermented crepe served with chutney &amp; sambar</div>
+              </div>
+              <div class="veg-badge"></div>
+            </div>
+            <div class="premium-menu-card" data-type="veg">
+              <div class="dish-info">
+                <div class="dish-name">Medu Vada</div>
+                <div class="dish-desc">Crunchy lentil doughnuts with chutney &amp; sambar</div>
+              </div>
+              <div class="veg-badge"></div>
+            </div>
+            <div class="premium-menu-card" data-type="veg">
+              <div class="dish-info">
+                <div class="dish-name">Puri &amp; Kizhangu</div>
+                <div class="dish-desc">Fluffy fried bread served with spiced potato curry</div>
+              </div>
+              <div class="veg-badge"></div>
+            </div>
+            <div class="premium-menu-card" data-type="veg">
+              <div class="dish-info">
+                <div class="dish-name">Vegetable Dum Biryani</div>
+                <div class="dish-desc">Slow-cooked South Indian style vegetable biryani</div>
+              </div>
+              <div class="veg-badge"></div>
+            </div>
+            <div class="premium-menu-card" data-type="veg">
+              <div class="dish-info">
+                <div class="dish-name">Tomato Rice</div>
+                <div class="dish-desc">Tangy South Indian style tomato rice</div>
+              </div>
+              <div class="veg-badge"></div>
+            </div>
+            <div class="premium-menu-card" data-type="veg">
+              <div class="dish-info">
+                <div class="dish-name">Lemon Rice</div>
+                <div class="dish-desc">Zesty lemon-flavoured rice with tempering</div>
+              </div>
+              <div class="veg-badge"></div>
+            </div>
+            <div class="premium-menu-card" data-type="veg">
+              <div class="dish-info">
+                <div class="dish-name">Curd Rice</div>
+                <div class="dish-desc">Cooling yogurt rice, a South Indian comfort classic</div>
+              </div>
+              <div class="veg-badge"></div>
+            </div>
+            <div class="premium-menu-card" data-type="veg">
+              <div class="dish-info">
+                <div class="dish-name">Paruppu Sadham</div>
+                <div class="dish-desc">Soft lentil rice cooked with ghee and spices</div>
+              </div>
+              <div class="veg-badge"></div>
+            </div>
+            <!-- NON-VEG -->
+            <div class="premium-menu-card dish-card-hidden" data-type="nonveg">
+              <div class="dish-info">
+                <div class="dish-name">South Indian Chicken Dum Biryani</div>
+                <div class="dish-desc">Famous slow-cooked South Indian style chicken biryani</div>
+              </div>
+              <div class="nonveg-badge"></div>
+            </div>
+            <div class="premium-menu-card dish-card-hidden" data-type="nonveg">
+              <div class="dish-info">
+                <div class="dish-name">Fish Curry</div>
+                <div class="dish-desc">Fresh fish in a spiced South Indian coconut-based curry</div>
+              </div>
+              <div class="nonveg-badge"></div>
+            </div>
+            <div class="premium-menu-card dish-card-hidden" data-type="nonveg">
+              <div class="dish-info">
+                <div class="dish-name">Tawa Fish Fry</div>
+                <div class="dish-desc">Spice-marinated fish, shallow-fried on a hot tawa</div>
+              </div>
+              <div class="nonveg-badge"></div>
+            </div>
+            <div class="premium-menu-card dish-card-hidden" data-type="nonveg">
+              <div class="dish-info">
+                <div class="dish-name">Chicken &amp; Mutton Varieties</div>
+                <div class="dish-desc">Wide variety of chicken, mutton &amp; fish dishes on request</div>
+              </div>
+              <div class="nonveg-badge"></div>
+            </div>
+          </div>
+
+          <div class="buffet-highlight">
+            <h4><i class="fas fa-utensils"></i> Buffet South Indian Meals</h4>
+            <ul>
+              <li>Steamed White Rice</li>
+              <li>Sambar with seasonal vegetables</li>
+              <li>Rasam varieties</li>
+              <li>Butter Milk</li>
+              <li>Soft Chapathi</li>
+              <li>Vegetable Poriyals</li>
+              <li>Pickle &amp; Appalam</li>
+              <li>Payasam (dessert)</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ════════ NORTH INDIAN ════════ -->
+        <div class="modern-menu-panel" data-menu="northindian">
+          <div class="category-header">
+            <div class="category-header-icon"><i class="fas fa-drumstick-bite"></i></div>
+            <div class="category-header-text">
+              <h3>North Indian Cuisine</h3>
+              <p>Rich &amp; Flavorful Punjabi Dishes</p>
+            </div>
+          </div>
+
+          <div class="vn-tabs">
+            <div class="vn-tab veg-tab active" data-panel="northindian" data-filter="veg">
+              <span class="vn-dot green"></span> Veg
+            </div>
+            <div class="vn-tab nonveg-tab" data-panel="northindian" data-filter="nonveg">
+              <span class="vn-dot red"></span> Non-Veg
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
+            <!-- VEG -->
+            <div class="premium-menu-card" data-type="veg">
+              <div class="dish-info">
+                <div class="dish-name">Paneer Butter Masala</div>
+                <div class="dish-desc">Cottage cheese in rich, creamy tomato-butter gravy</div>
+              </div>
+              <div class="veg-badge"></div>
+            </div>
+            <div class="premium-menu-card" data-type="veg">
+              <div class="dish-info">
+                <div class="dish-name">Various Dal Preparations</div>
+                <div class="dish-desc">Dal Tadka, Dal Makhani &amp; more slow-simmered classics</div>
+              </div>
+              <div class="veg-badge"></div>
+            </div>
+            <div class="premium-menu-card" data-type="veg">
+              <div class="dish-info">
+                <div class="dish-name">Tari Poha</div>
+                <div class="dish-desc">Flattened rice in a light, spiced curry gravy</div>
+              </div>
+              <div class="veg-badge"></div>
+            </div>
+            <div class="premium-menu-card" data-type="veg">
+              <div class="dish-info">
+                <div class="dish-name">Poori Aloo Sabji</div>
+                <div class="dish-desc">Fluffy deep-fried bread with spiced potato curry</div>
+              </div>
+              <div class="veg-badge"></div>
+            </div>
+            <div class="premium-menu-card" data-type="veg">
+              <div class="dish-info">
+                <div class="dish-name">Upma</div>
+                <div class="dish-desc">Savoury semolina breakfast dish with vegetables</div>
+              </div>
+              <div class="veg-badge"></div>
+            </div>
+            <div class="premium-menu-card" data-type="veg">
+              <div class="dish-info">
+                <div class="dish-name">Seasonal Veg Sabji</div>
+                <div class="dish-desc">Freshly cooked seasonal vegetable preparations</div>
+              </div>
+              <div class="veg-badge"></div>
+            </div>
+            <div class="premium-menu-card" data-type="veg">
+              <div class="dish-info">
+                <div class="dish-name">Indian Breads</div>
+                <div class="dish-desc">Fresh Rotis, Naan &amp; more from the tandoor</div>
+              </div>
+              <div class="veg-badge"></div>
+            </div>
+            <!-- NON-VEG -->
+            <div class="premium-menu-card dish-card-hidden" data-type="nonveg">
+              <div class="dish-info">
+                <div class="dish-name">Tandoori Items</div>
+                <div class="dish-desc">Marinated meats char-grilled in the tandoor</div>
+              </div>
+              <div class="nonveg-badge"></div>
+            </div>
+            <div class="premium-menu-card dish-card-hidden" data-type="nonveg">
+              <div class="dish-info">
+                <div class="dish-name">Saoji Chicken</div>
+                <div class="dish-desc">Bold &amp; fiery Nagpur-style chicken curry</div>
+              </div>
+              <div class="nonveg-badge"></div>
+            </div>
+            <div class="premium-menu-card dish-card-hidden" data-type="nonveg">
+              <div class="dish-info">
+                <div class="dish-name">Egg Curry</div>
+                <div class="dish-desc">Boiled eggs simmered in a North Indian onion-tomato gravy</div>
+              </div>
+              <div class="nonveg-badge"></div>
+            </div>
+            <div class="premium-menu-card dish-card-hidden" data-type="nonveg">
+              <div class="dish-info">
+                <div class="dish-name">Chicken Curry</div>
+                <div class="dish-desc">Classic North Indian style chicken curry</div>
+              </div>
+              <div class="nonveg-badge"></div>
+            </div>
+          </div>
+
+          <div class="buffet-highlight">
+            <h4><i class="fas fa-utensils"></i> Buffet North Indian Meals</h4>
+            <ul>
+              <li>Fresh Salad</li>
+              <li>Roti (freshly made)</li>
+              <li>Steamed Rice</li>
+              <li>Dal</li>
+              <li>Paneer Dish</li>
+              <li>Seasonal Veg Sabji</li>
+              <li>Egg / Chicken Curry</li>
+              <li>Starter &amp; Soup</li>
+              <li>Pickle &amp; Papad</li>
+              <li>Dessert</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ════════ CHINESE ════════ -->
+        <div class="modern-menu-panel" data-menu="chinese">
+          <div class="category-header">
+            <div class="category-header-icon"><i class="fas fa-bowl-food"></i></div>
+            <div class="category-header-text">
+              <h3>Chinese Cuisine</h3>
+              <p>Popular Indo-Chinese Favorites</p>
+            </div>
+          </div>
+
+          <div class="vn-tabs">
+            <div class="vn-tab veg-tab active" data-panel="chinese" data-filter="veg">
+              <span class="vn-dot green"></span> Veg
+            </div>
+            <div class="vn-tab nonveg-tab" data-panel="chinese" data-filter="nonveg">
+              <span class="vn-dot red"></span> Non-Veg
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <!-- VEG -->
+            <div class="premium-menu-card" data-type="veg">
+              <div class="dish-info">
+                <div class="dish-name">All Soup Varieties</div>
+                <div class="dish-desc">Hot &amp; sour, sweet corn, manchow soup &amp; more</div>
+              </div>
+              <div class="veg-badge"></div>
+            </div>
+            <div class="premium-menu-card" data-type="veg">
+              <div class="dish-info">
+                <div class="dish-name">Paneer Varieties</div>
+                <div class="dish-desc">Chilli paneer, paneer manchurian &amp; more Indo-Chinese</div>
+              </div>
+              <div class="veg-badge"></div>
+            </div>
+            <div class="premium-menu-card" data-type="veg">
+              <div class="dish-info">
+                <div class="dish-name">Veg Noodles</div>
+                <div class="dish-desc">Veg hakka &amp; schezwan noodles wok-tossed to perfection</div>
+              </div>
+              <div class="veg-badge"></div>
+            </div>
+            <div class="premium-menu-card" data-type="veg">
+              <div class="dish-info">
+                <div class="dish-name">Veg Fried Rice</div>
+                <div class="dish-desc">Wok-tossed vegetables with fragrant fried rice</div>
+              </div>
+              <div class="veg-badge"></div>
+            </div>
+            <div class="premium-menu-card" data-type="veg">
+              <div class="dish-info">
+                <div class="dish-name">Veg Manchurian</div>
+                <div class="dish-desc">Crispy veg balls tossed in spiced Manchurian sauce</div>
+              </div>
+              <div class="veg-badge"></div>
+            </div>
+            <!-- NON-VEG -->
+            <div class="premium-menu-card dish-card-hidden" data-type="nonveg">
+              <div class="dish-info">
+                <div class="dish-name">All Chicken Varieties</div>
+                <div class="dish-desc">Chilli chicken, chicken manchurian, crispy honey chicken</div>
+              </div>
+              <div class="nonveg-badge"></div>
+            </div>
+            <div class="premium-menu-card dish-card-hidden" data-type="nonveg">
+              <div class="dish-info">
+                <div class="dish-name">Chicken Noodles</div>
+                <div class="dish-desc">Chicken hakka &amp; schezwan noodles wok-tossed</div>
+              </div>
+              <div class="nonveg-badge"></div>
+            </div>
+            <div class="premium-menu-card dish-card-hidden" data-type="nonveg">
+              <div class="dish-info">
+                <div class="dish-name">Egg Noodles</div>
+                <div class="dish-desc">Egg tossed hakka &amp; schezwan noodles</div>
+              </div>
+              <div class="nonveg-badge"></div>
+            </div>
+            <div class="premium-menu-card dish-card-hidden" data-type="nonveg">
+              <div class="dish-info">
+                <div class="dish-name">Chicken Fried Rice</div>
+                <div class="dish-desc">Wok-tossed chicken fried rice with bold flavours</div>
+              </div>
+              <div class="nonveg-badge"></div>
+            </div>
+            <div class="premium-menu-card dish-card-hidden" data-type="nonveg">
+              <div class="dish-info">
+                <div class="dish-name">Egg Fried Rice</div>
+                <div class="dish-desc">Classic egg fried rice with wok-tossed flavour</div>
+              </div>
+              <div class="nonveg-badge"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ════════ FAST FOOD ════════ -->
+        <div class="modern-menu-panel" data-menu="fastfood">
+          <div class="category-header">
+            <div class="category-header-icon"><i class="fas fa-burger"></i></div>
+            <div class="category-header-text">
+              <h3>Quick Bites &amp; Snacks</h3>
+              <p>Fast &amp; Delicious</p>
+            </div>
+          </div>
+
+          <div class="vn-tabs">
+            <div class="vn-tab veg-tab active" data-panel="fastfood" data-filter="veg">
+              <span class="vn-dot green"></span> Veg
+            </div>
+            <div class="vn-tab nonveg-tab" data-panel="fastfood" data-filter="nonveg">
+              <span class="vn-dot red"></span> Non-Veg
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <!-- VEG -->
+            <div class="premium-menu-card" data-type="veg">
+              <div class="dish-info">
+                <div class="dish-name">Maggi</div>
+                <div class="dish-desc">Classic instant noodles — a jungle camp favourite</div>
+              </div>
+              <div class="veg-badge"></div>
+            </div>
+            <div class="premium-menu-card" data-type="veg">
+              <div class="dish-info">
+                <div class="dish-name">Veg Sandwich</div>
+                <div class="dish-desc">Freshly made veg sandwich with sauces</div>
+              </div>
+              <div class="veg-badge"></div>
+            </div>
+            <div class="premium-menu-card" data-type="veg">
+              <div class="dish-info">
+                <div class="dish-name">Chai — Indian Tea</div>
+                <div class="dish-desc">Freshly brewed spiced masala chai, served piping hot</div>
+              </div>
+              <div class="veg-badge"></div>
+            </div>
+            <div class="premium-menu-card" data-type="veg">
+              <div class="dish-info">
+                <div class="dish-name">Coffee</div>
+                <div class="dish-desc">Hot brewed coffee — perfect after a morning safari</div>
+              </div>
+              <div class="veg-badge"></div>
+            </div>
+            <!-- NON-VEG -->
+            <div class="premium-menu-card dish-card-hidden" data-type="nonveg">
+              <div class="dish-info">
+                <div class="dish-name">Non-Veg Sandwich</div>
+                <div class="dish-desc">Freshly made chicken / egg sandwich with sauces</div>
+              </div>
+              <div class="nonveg-badge"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ════════ EGG DISHES ════════ -->
+        <div class="modern-menu-panel" data-menu="eggs">
+          <div class="category-header">
+            <div class="category-header-icon"><i class="fas fa-egg"></i></div>
+            <div class="category-header-text">
+              <h3>All Egg Varieties</h3>
+              <p>Protein-Packed Goodness</p>
+            </div>
+          </div>
+
+          <!-- Eggs are all non-veg; show both tabs but NonVeg active by default -->
+          <div class="vn-tabs">
+            <div class="vn-tab veg-tab" data-panel="eggs" data-filter="veg">
+              <span class="vn-dot green"></span> Veg
+            </div>
+            <div class="vn-tab nonveg-tab active" data-panel="eggs" data-filter="nonveg">
+              <span class="vn-dot red"></span> Non-Veg
+            </div>
+          </div>
+
+          <!-- No veg items message -->
+          <div class="no-items-msg" data-panel="eggs" style="display:none; color:#9ca3af; font-size:13px; padding:16px 0;">
+            No vegetarian items in this category.
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <div class="premium-menu-card" data-type="nonveg">
+              <div class="dish-info">
+                <div class="dish-name">Omelette</div>
+                <div class="dish-desc">Plain, masala &amp; cheese omelettes made to order</div>
+              </div>
+              <div class="nonveg-badge"></div>
+            </div>
+            <div class="premium-menu-card" data-type="nonveg">
+              <div class="dish-info">
+                <div class="dish-name">Egg Bhurji</div>
+                <div class="dish-desc">Spiced scrambled eggs with onion, tomato &amp; green chilli</div>
+              </div>
+              <div class="nonveg-badge"></div>
+            </div>
+            <div class="premium-menu-card" data-type="nonveg">
+              <div class="dish-info">
+                <div class="dish-name">Egg Curry</div>
+                <div class="dish-desc">Boiled eggs simmered in a rich onion-tomato gravy</div>
+              </div>
+              <div class="nonveg-badge"></div>
+            </div>
+            <div class="premium-menu-card" data-type="nonveg">
+              <div class="dish-info">
+                <div class="dish-name">Boiled Eggs</div>
+                <div class="dish-desc">Soft or hard boiled, served with seasoning</div>
+              </div>
+              <div class="nonveg-badge"></div>
+            </div>
+            <div class="premium-menu-card" data-type="nonveg">
+              <div class="dish-info">
+                <div class="dish-name">Fried Eggs</div>
+                <div class="dish-desc">Sunny side up or double fried to your preference</div>
+              </div>
+              <div class="nonveg-badge"></div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end modern-menu-content -->
+    </div><!-- end modern-menu-container -->
+
+  </div>
 </section>
+
 
 <!-- DINING HIGHLIGHTS -->
 <section class="py-12 md:py-20 px-4 md:px-6 bg-black overflow-hidden">
@@ -1518,6 +1929,48 @@ document.addEventListener('keydown', function(event) {
         }
     }
 });
+</script>
+<script>
+  // ── Category Tab Switch ──
+  document.querySelectorAll('.modern-tab-item').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.modern-tab-item').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.modern-menu-panel').forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      const key = tab.dataset.menu;
+      document.querySelector(`.modern-menu-panel[data-menu="${key}"]`).classList.add('active');
+    });
+  });
+
+  // ── Veg / NonVeg Filter ──
+  document.querySelectorAll('.vn-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      const panel  = tab.dataset.panel;
+      const filter = tab.dataset.filter;
+
+      // Update active tab style inside this panel
+      document.querySelectorAll(`.vn-tab[data-panel="${panel}"]`).forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      // Show/hide cards
+      const menuPanel = document.querySelector(`.modern-menu-panel[data-menu="${panel}"]`);
+      const cards     = menuPanel.querySelectorAll('.premium-menu-card');
+      let hasItems    = false;
+
+      cards.forEach(card => {
+        if (card.dataset.type === filter) {
+          card.classList.remove('dish-card-hidden');
+          hasItems = true;
+        } else {
+          card.classList.add('dish-card-hidden');
+        }
+      });
+
+      // Show "no items" message if empty
+      const noMsg = menuPanel.querySelector('.no-items-msg');
+      if (noMsg) noMsg.style.display = hasItems ? 'none' : 'block';
+    });
+  });
 </script>
 <?php 
 include 'includes/footer.php'; 

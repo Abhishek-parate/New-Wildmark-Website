@@ -537,6 +537,29 @@ include 'includes/header.php';
     background: #d97706;
     border-radius: 3px;
 }
+.main-safari-tab {
+  padding: .75rem 2rem;
+  border-radius: 999px;
+  font-family: "Roboto Slab", serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .3s;
+  border: 2px solid rgba(255,255,255,.2);
+  color: rgba(255,255,255,.6);
+  background: transparent;
+}
+.main-safari-tab.active {
+  background: #d97706;
+  border-color: #d97706;
+  color: #fff;
+  box-shadow: 0 0 24px rgba(217,119,6,.35);
+}
+.main-safari-tab:hover:not(.active) {
+  border-color: rgba(245,158,11,.5);
+  color: #fbbf24;
+}
+
 </style>
 
 <header class="relative h-[50vh] md:h-[60vh] lg:h-[100vh] flex items-end"
@@ -745,145 +768,224 @@ include 'includes/header.php';
 </section>
 
 <!-- ═══════════════════════════════════════════ SAFARI ZONES ═══ -->
-<section id="zones" class="py-16 md:py-24 bg-black overflow-hidden">
-    <div class="container mx-auto max-w-7xl px-4 md:px-6">
-        <div class="text-center mb-12 md:mb-16" data-aos="fade-up">
-            <p class="section-label mb-4">KANHA • KISLI • MUKKI • SARHI</p>
-            <h2 class="text-3xl md:text-5xl font-serif mb-4">The Four Safari Zones</h2>
-            <p class="text-gray-400 text-sm md:text-base max-w-2xl mx-auto">
-                Each zone offers its own unique landscape and wildlife encounters — pick your adventure.
-            </p>
-        </div>
+<section class="py-12 md:py-20 bg-black overflow-hidden">
+  <div class="container mx-auto max-w-7xl px-4 md:px-6">
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-            <!-- Zone 1 -->
-            <div class="zone-card h-[420px]" data-aos="fade-up" data-aos-delay="100">
-                <img src="images/card1.webp" alt="Kanha Core Zone" />
-                <div class="zone-card-overlay"></div>
-                <div class="zone-card-content">
-                    <span class="zone-badge">Core Zone</span>
-                    <h3 class="text-xl font-serif font-bold mb-2">Kanha Zone</h3>
-                    <p class="text-gray-300 text-xs leading-relaxed mb-3">Open meadows and bamboo forests where Tigress
-                        Neelam — the legendary "Mataram of Kanha" — rules the land. Famous for Barasingha sightings.</p>
-                    <div class="flex flex-wrap gap-1">
-                        <span
-                            style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.6rem;padding:.2rem .55rem;border-radius:999px;font-family:'Roboto Mono',monospace;">Tiger</span>
-                        <span
-                            style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.6rem;padding:.2rem .55rem;border-radius:999px;font-family:'Roboto Mono',monospace;">Barasingha</span>
-                        <span
-                            style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.6rem;padding:.2rem .55rem;border-radius:999px;font-family:'Roboto Mono',monospace;">Black
-                            Buck</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Zone 2 -->
-            <div class="zone-card h-[420px]" data-aos="fade-up" data-aos-delay="200">
-                <img src="images/card2.webp" alt="Kisli Zone" />
-                <div class="zone-card-overlay"></div>
-                <div class="zone-card-content">
-                    <span class="zone-badge">Core Zone</span>
-                    <h3 class="text-xl font-serif font-bold mb-2">Kisli Zone</h3>
-                    <p class="text-gray-300 text-xs leading-relaxed mb-3">Graceful Sal forests and scenic grasslands — a
-                        safari hotspot where tiger sightings are practically guaranteed. Entry via Khatia Gate.</p>
-                    <div class="flex flex-wrap gap-1">
-                        <span
-                            style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.6rem;padding:.2rem .55rem;border-radius:999px;font-family:'Roboto Mono',monospace;">Tiger</span>
-                        <span
-                            style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.6rem;padding:.2rem .55rem;border-radius:999px;font-family:'Roboto Mono',monospace;">Gaur</span>
-                        <span
-                            style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.6rem;padding:.2rem .55rem;border-radius:999px;font-family:'Roboto Mono',monospace;">Sloth
-                            Bear</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Zone 3 -->
-            <div class="zone-card h-[420px]" data-aos="fade-up" data-aos-delay="300">
-                <img src="images/home3.webp" alt="Mukki Zone" />
-                <div class="zone-card-overlay"></div>
-                <div class="zone-card-content">
-                    <span class="zone-badge">Core Zone</span>
-                    <h3 class="text-xl font-serif font-bold mb-2">Mukki Zone</h3>
-                    <p class="text-gray-300 text-xs leading-relaxed mb-3">Renowned for incredible tiger sightings amidst
-                        saal, bamboo, and grassland. Heart-pounding encounters in a pristine setting.</p>
-                    <div class="flex flex-wrap gap-1">
-                        <span
-                            style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.6rem;padding:.2rem .55rem;border-radius:999px;font-family:'Roboto Mono',monospace;">Tiger</span>
-                        <span
-                            style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.6rem;padding:.2rem .55rem;border-radius:999px;font-family:'Roboto Mono',monospace;">Leopard</span>
-                        <span
-                            style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.6rem;padding:.2rem .55rem;border-radius:999px;font-family:'Roboto Mono',monospace;">Wild
-                            Dog</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Zone 4 -->
-            <div class="zone-card h-[420px]" data-aos="fade-up" data-aos-delay="400">
-                <img src="images/home4.webp" alt="Sarhi Zone" />
-                <div class="zone-card-overlay"></div>
-                <div class="zone-card-content">
-                    <span class="zone-badge">Core Zone</span>
-                    <h3 class="text-xl font-serif font-bold mb-2">Sarhi Zone</h3>
-                    <p class="text-gray-300 text-xs leading-relaxed mb-3">Dry forests and sprawling meadows — home to
-                        the legendary Barasingha at Saunf meadow. Serene and less-crowded experience.</p>
-                    <div class="flex flex-wrap gap-1">
-                        <span
-                            style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.6rem;padding:.2rem .55rem;border-radius:999px;font-family:'Roboto Mono',monospace;">Barasingha</span>
-                        <span
-                            style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.6rem;padding:.2rem .55rem;border-radius:999px;font-family:'Roboto Mono',monospace;">Tiger</span>
-                        <span
-                            style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.6rem;padding:.2rem .55rem;border-radius:999px;font-family:'Roboto Mono',monospace;">Sambar</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Entry Gates Info -->
-        <div class="mt-12 md:mt-16" data-aos="fade-up">
-            <p class="section-label mb-6 text-center">3 Entry Gates</p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-                <div class="gate-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div
-                            style="width:40px;height:40px;background:linear-gradient(135deg,#fbbf24,#d97706);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-                            <i class="fas fa-archway" style="color:#1c1917;font-size:.9rem;"></i>
-                        </div>
-                        <h4 class="font-serif font-bold text-lg text-amber-300">Khatia Gate</h4>
-                    </div>
-                    <p class="text-gray-400 text-sm leading-relaxed">Main entry point — provides access to both Kanha &
-                        Kisli zones. <strong style="color:#fff;">Wildmark Resort is closest to this gate.</strong> Ideal
-                        starting point for most visitors.</p>
-                </div>
-                <div class="gate-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div
-                            style="width:40px;height:40px;background:linear-gradient(135deg,#fbbf24,#d97706);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-                            <i class="fas fa-archway" style="color:#1c1917;font-size:.9rem;"></i>
-                        </div>
-                        <h4 class="font-serif font-bold text-lg text-amber-300">Mukki Gate</h4>
-                    </div>
-                    <p class="text-gray-400 text-sm leading-relaxed">Entry to the Mukki zone — southern part of the
-                        reserve. Known for dense forest cover and excellent big cat sightings. Best for dedicated
-                        wildlife photographers.</p>
-                </div>
-                <div class="gate-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div
-                            style="width:40px;height:40px;background:linear-gradient(135deg,#fbbf24,#d97706);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-                            <i class="fas fa-archway" style="color:#1c1917;font-size:.9rem;"></i>
-                        </div>
-                        <h4 class="font-serif font-bold text-lg text-amber-300">Sarhi Gate</h4>
-                    </div>
-                    <p class="text-gray-400 text-sm leading-relaxed">Entry to Sarhi buffer zone — a quieter,
-                        less-commercialised experience. Great for birdwatching and the rare Barasingha — the state
-                        animal of Madhya Pradesh.</p>
-                </div>
-            </div>
-        </div>
+    <!-- Section Header -->
+    <div class="text-center mb-12 md:mb-16">
+      <p class="text-amber-500 text-xs tracking-widest mb-4 font-light" data-aos="fade-down">
+        EXPLORE KANHA
+      </p>
+      <h2 class="text-3xl md:text-5xl font-serif mb-6" data-aos="zoom-in">
+        Safari Zones & Options
+      </h2>
+      <p class="text-sm md:text-base text-gray-300 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+        Discover Kanha's four core zones and choose from our range of safari experiences
+      </p>
     </div>
+
+    <!-- ── 2 MAIN TABS ── -->
+    <div class="flex justify-center gap-4 mb-12" data-aos="fade-up" data-aos-delay="100">
+      <button class="main-safari-tab active" onclick="switchMainTab('zones', this)">
+        <i class="fas fa-map-marked-alt mr-2"></i>Safari Zones
+      </button>
+      <button class="main-safari-tab" onclick="switchMainTab('options', this)">
+        <i class="fas fa-binoculars mr-2"></i>Safari Options
+      </button>
+    </div>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!-- PANEL 1: SAFARI ZONES                      -->
+    <!-- ══════════════════════════════════════════ -->
+    <div id="panel-zones">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+
+        <!-- Zone 1 -->
+        <div class="zone-card h-[420px]" data-aos="fade-up" data-aos-delay="100">
+          <img src="images/card1.webp" alt="Kanha Core Zone" />
+          <div class="zone-card-overlay"></div>
+          <div class="zone-card-content">
+            <span class="zone-badge">Core Zone</span>
+            <h3 class="text-xl font-serif font-bold mb-2">Kanha Zone</h3>
+            <p class="text-gray-300 text-xs leading-relaxed mb-3">Open meadows and bamboo forests where Tigress Neelam — the legendary "Mataram of Kanha" — rules the land. Famous for Barasingha sightings.</p>
+            <div class="flex flex-wrap gap-1">
+              <span style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.6rem;padding:.2rem .55rem;border-radius:999px;font-family:'Roboto Mono',monospace;">Tiger</span>
+              <span style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.6rem;padding:.2rem .55rem;border-radius:999px;font-family:'Roboto Mono',monospace;">Barasingha</span>
+              <span style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.6rem;padding:.2rem .55rem;border-radius:999px;font-family:'Roboto Mono',monospace;">Black Buck</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Zone 2 -->
+        <div class="zone-card h-[420px]" data-aos="fade-up" data-aos-delay="200">
+          <img src="images/card2.webp" alt="Kisli Zone" />
+          <div class="zone-card-overlay"></div>
+          <div class="zone-card-content">
+            <span class="zone-badge">Core Zone</span>
+            <h3 class="text-xl font-serif font-bold mb-2">Kisli Zone</h3>
+            <p class="text-gray-300 text-xs leading-relaxed mb-3">Graceful Sal forests and scenic grasslands — a safari hotspot where tiger sightings are practically guaranteed. Entry via Khatia Gate.</p>
+            <div class="flex flex-wrap gap-1">
+              <span style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.6rem;padding:.2rem .55rem;border-radius:999px;font-family:'Roboto Mono',monospace;">Tiger</span>
+              <span style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.6rem;padding:.2rem .55rem;border-radius:999px;font-family:'Roboto Mono',monospace;">Gaur</span>
+              <span style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.6rem;padding:.2rem .55rem;border-radius:999px;font-family:'Roboto Mono',monospace;">Sloth Bear</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Zone 3 -->
+        <div class="zone-card h-[420px]" data-aos="fade-up" data-aos-delay="300">
+          <img src="images/home3.webp" alt="Mukki Zone" />
+          <div class="zone-card-overlay"></div>
+          <div class="zone-card-content">
+            <span class="zone-badge">Core Zone</span>
+            <h3 class="text-xl font-serif font-bold mb-2">Mukki Zone</h3>
+            <p class="text-gray-300 text-xs leading-relaxed mb-3">Renowned for incredible tiger sightings amidst saal, bamboo, and grassland. Heart-pounding encounters in a pristine setting.</p>
+            <div class="flex flex-wrap gap-1">
+              <span style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.6rem;padding:.2rem .55rem;border-radius:999px;font-family:'Roboto Mono',monospace;">Tiger</span>
+              <span style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.6rem;padding:.2rem .55rem;border-radius:999px;font-family:'Roboto Mono',monospace;">Leopard</span>
+              <span style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.6rem;padding:.2rem .55rem;border-radius:999px;font-family:'Roboto Mono',monospace;">Wild Dog</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Zone 4 -->
+        <div class="zone-card h-[420px]" data-aos="fade-up" data-aos-delay="400">
+          <img src="images/home4.webp" alt="Sarhi Zone" />
+          <div class="zone-card-overlay"></div>
+          <div class="zone-card-content">
+            <span class="zone-badge">Core Zone</span>
+            <h3 class="text-xl font-serif font-bold mb-2">Sarhi Zone</h3>
+            <p class="text-gray-300 text-xs leading-relaxed mb-3">Dry forests and sprawling meadows — home to the legendary Barasingha at Saunf meadow. Serene and less-crowded experience.</p>
+            <div class="flex flex-wrap gap-1">
+              <span style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.6rem;padding:.2rem .55rem;border-radius:999px;font-family:'Roboto Mono',monospace;">Barasingha</span>
+              <span style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.6rem;padding:.2rem .55rem;border-radius:999px;font-family:'Roboto Mono',monospace;">Tiger</span>
+              <span style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.6rem;padding:.2rem .55rem;border-radius:999px;font-family:'Roboto Mono',monospace;">Sambar</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Entry Gates -->
+      <div class="mt-12 md:mt-16" data-aos="fade-up">
+        <p class="section-label mb-6 text-center">3 Entry Gates</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div class="gate-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex items-center gap-3 mb-3">
+              <div style="width:40px;height:40px;background:linear-gradient(135deg,#fbbf24,#d97706);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <i class="fas fa-archway" style="color:#1c1917;font-size:.9rem;"></i>
+              </div>
+              <h4 class="font-serif font-bold text-lg text-amber-300">Khatia Gate</h4>
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed">Main entry point — provides access to both Kanha & Kisli zones. <strong style="color:#fff;">Wildmark Resort is closest to this gate.</strong> Ideal starting point for most visitors.</p>
+          </div>
+          <div class="gate-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="flex items-center gap-3 mb-3">
+              <div style="width:40px;height:40px;background:linear-gradient(135deg,#fbbf24,#d97706);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <i class="fas fa-archway" style="color:#1c1917;font-size:.9rem;"></i>
+              </div>
+              <h4 class="font-serif font-bold text-lg text-amber-300">Mukki Gate</h4>
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed">Entry to the Mukki zone — southern part of the reserve. Known for dense forest cover and excellent big cat sightings. Best for dedicated wildlife photographers.</p>
+          </div>
+          <div class="gate-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="flex items-center gap-3 mb-3">
+              <div style="width:40px;height:40px;background:linear-gradient(135deg,#fbbf24,#d97706);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <i class="fas fa-archway" style="color:#1c1917;font-size:.9rem;"></i>
+              </div>
+              <h4 class="font-serif font-bold text-lg text-amber-300">Sarhi Gate</h4>
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed">Entry to Sarhi buffer zone — a quieter, less-commercialised experience. Great for birdwatching and the rare Barasingha — the state animal of Madhya Pradesh.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!-- PANEL 2: SAFARI OPTIONS                    -->
+    <!-- ══════════════════════════════════════════ -->
+    <div id="panel-options" class="hidden">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+
+        <!-- Card 1: Jeep Safari -->
+        <div class="zone-card h-[420px]" data-aos="fade-up" data-aos-delay="100">
+          <img src="images/home6.webp" alt="Jeep Safari" />
+          <div class="zone-card-overlay"></div>
+          <div class="zone-card-content">
+            <span class="zone-badge">Popular</span>
+            <h3 class="text-xl font-serif font-bold mb-2">Jeep Safari</h3>
+            <p class="text-gray-300 text-xs leading-relaxed mb-3">Thrilling morning and evening jeep safaris through Kanha's core zones. 6 passengers per jeep.</p>
+            <div class="flex flex-wrap gap-1">
+              <span style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.6rem;padding:.2rem .55rem;border-radius:999px;font-family:'Roboto Mono',monospace;">6:00 AM – 11:00 AM</span>
+              <span style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.6rem;padding:.2rem .55rem;border-radius:999px;font-family:'Roboto Mono',monospace;">3:00 PM – 6:00 PM</span>
+              <span style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.6rem;padding:.2rem .55rem;border-radius:999px;font-family:'Roboto Mono',monospace;">6 Passengers</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Full-Day Safari -->
+        <div class="zone-card h-[420px]" data-aos="fade-up" data-aos-delay="200">
+          <img src="images/kanha5.png" alt="Full-Day Jeep Safari" />
+          <div class="zone-card-overlay"></div>
+          <div class="zone-card-content">
+            <span class="zone-badge" style="background:#22c55e;">Best Value</span>
+            <h3 class="text-xl font-serif font-bold mb-2">Full-Day Safari</h3>
+            <p class="text-gray-300 text-xs leading-relaxed mb-3">Complete wildlife experience from dawn to dusk. Packed lunch included. Photography friendly.</p>
+            <div class="flex flex-wrap gap-1">
+              <span style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.6rem;padding:.2rem .55rem;border-radius:999px;font-family:'Roboto Mono',monospace;">6:00 AM – 6:00 PM</span>
+              <span style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.6rem;padding:.2rem .55rem;border-radius:999px;font-family:'Roboto Mono',monospace;">Lunch Included</span>
+              <span style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.6rem;padding:.2rem .55rem;border-radius:999px;font-family:'Roboto Mono',monospace;">Photography</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Elephant Safari -->
+        <div class="zone-card h-[420px]" data-aos="fade-up" data-aos-delay="300">
+          <img src="images/wildmark5.jpg" alt="Elephant Safari" />
+          <div class="zone-card-overlay"></div>
+          <div class="zone-card-content">
+            <span class="zone-badge" style="background:#3b82f6;">Unique</span>
+            <h3 class="text-xl font-serif font-bold mb-2">Elephant Safari</h3>
+            <p class="text-gray-300 text-xs leading-relaxed mb-3">Get up close to wildlife on elephant back. A traditional and eco-friendly way to explore the forest.</p>
+            <div class="flex flex-wrap gap-1">
+              <span style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.6rem;padding:.2rem .55rem;border-radius:999px;font-family:'Roboto Mono',monospace;">6:30 AM – 8:30 AM</span>
+              <span style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.6rem;padding:.2rem .55rem;border-radius:999px;font-family:'Roboto Mono',monospace;">4 Passengers</span>
+              <span style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.6rem;padding:.2rem .55rem;border-radius:999px;font-family:'Roboto Mono',monospace;">Eco-Friendly</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Nature Walk -->
+        <div class="zone-card h-[420px]" data-aos="fade-up" data-aos-delay="400">
+          <img src="images/wildmark8.jpeg" alt="Nature Walk" />
+          <div class="zone-card-overlay"></div>
+          <div class="zone-card-content">
+            <span class="zone-badge" style="background:#a855f7;">Relaxing</span>
+            <h3 class="text-xl font-serif font-bold mb-2">Nature Walk</h3>
+            <p class="text-gray-300 text-xs leading-relaxed mb-3">Guided nature walks through buffer zones. Learn about flora, fauna, bird watching and more.</p>
+            <div class="flex flex-wrap gap-1">
+              <span style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.6rem;padding:.2rem .55rem;border-radius:999px;font-family:'Roboto Mono',monospace;">7:00 AM – 9:00 AM</span>
+              <span style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.6rem;padding:.2rem .55rem;border-radius:999px;font-family:'Roboto Mono',monospace;">Bird Watching</span>
+              <span style="background:rgba(255,255,255,.1);color:rgba(255,255,255,.7);font-size:.6rem;padding:.2rem .55rem;border-radius:999px;font-family:'Roboto Mono',monospace;">Small Group</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom CTA -->
+      <div class="text-center mt-12 md:mt-16" data-aos="fade-up" data-aos-delay="500">
+        <p class="text-gray-300 text-sm md:text-base mb-6">Need help choosing the right safari? Our team is here to assist you!</p>
+        <a href="contact.php" class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 transition font-semibold text-base rounded-lg shadow-lg inline-flex items-center justify-center gap-2">
+          <i class="fas fa-calendar-check"></i>
+          <span>Book Safari Package</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
 </section>
+
 <section id="zones" class="py-16 md:py-24 bg-black overflow-hidden">
     <div class="container mx-auto max-w-7xl px-4 md:px-6">
         <div class="text-center mb-12" data-aos="fade-up">
@@ -2695,6 +2797,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+</script>
+<script>
+function switchMainTab(tab, btn) {
+  document.querySelectorAll('.main-safari-tab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('panel-zones').classList.add('hidden');
+  document.getElementById('panel-options').classList.add('hidden');
+  document.getElementById('panel-' + tab).classList.remove('hidden');
+}
 </script>
 
 <?php 
