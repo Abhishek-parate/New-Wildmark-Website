@@ -2454,543 +2454,304 @@ button[onclick^="nextSlide"] {
 <!-- AOS Init -->
 
 <script>
-let currentSlide = 0;
-const totalSlides = 3;
+// ============================================================
+// SINGLE CLEAN SCRIPT — SABHI CONFLICTS REMOVE
+// ============================================================
+
+// ===== SAFARI IMAGE CAROUSEL =====
+var mainSlide = 0;
+var mainTotal = 3;
 
 function updateCarousel() {
-    const carousel = document.getElementById('carousel');
-    const dots = document.querySelectorAll('.carousel-dot');
-    
-    // Calculate transform percentage
-    const translateX = -(currentSlide * 100);
-    carousel.style.transform = `translateX(${translateX}%)`;
-    
-    // Update dots
-    dots.forEach((dot, index) => {
-        if (index === currentSlide) {
-            dot.classList.add('active');
-        } else {
-            dot.classList.remove('active');
-        }
+    var el = document.getElementById('carousel');
+    var dots = document.querySelectorAll('.carousel-dot');
+    if (!el) return;
+    el.style.transform = 'translateX(-' + (mainSlide * 100) + '%)';
+    dots.forEach(function(d, i) {
+        d.classList.toggle('active', i === mainSlide);
     });
 }
 
 function nextSlide() {
-    currentSlide = (currentSlide + 1) % totalSlides;
+    mainSlide = (mainSlide + 1) % mainTotal;
     updateCarousel();
 }
 
 function prevSlide() {
-    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    mainSlide = (mainSlide - 1 + mainTotal) % mainTotal;
     updateCarousel();
 }
 
-function goToSlide(index) {
-    currentSlide = index;
+function goToSlide(i) {
+    mainSlide = i;
     updateCarousel();
 }
 
-// Auto-play carousel (optional)
-let autoplayInterval;
-
-function startAutoplay() {
-    autoplayInterval = setInterval(() => {
-        nextSlide();
-    }, 5000); // Change slide every 5 seconds
-}
-
-function stopAutoplay() {
-    if (autoplayInterval) {
-        clearInterval(autoplayInterval);
-    }
-}
-
-// Start autoplay on page load
-document.addEventListener('DOMContentLoaded', function() {
-    startAutoplay();
-});
-
-// Pause autoplay on hover
-const carouselContainer = document.querySelector('.carousel-container');
-if (carouselContainer) {
-    carouselContainer.addEventListener('mouseenter', stopAutoplay);
-    carouselContainer.addEventListener('mouseleave', startAutoplay);
-}
-
-// Touch/Swipe support for mobile
-let touchStartX = 0;
-let touchEndX = 0;
-
-const carouselElement = document.getElementById('carousel');
-if (carouselElement) {
-    carouselElement.addEventListener('touchstart', (e) => {
-        touchStartX = e.changedTouches[0].screenX;
-    }, false);
-
-    carouselElement.addEventListener('touchend', (e) => {
-        touchEndX = e.changedTouches[0].screenX;
-        handleSwipe();
-    }, false);
-}
-
-function handleSwipe() {
-    const swipeThreshold = 50; // Minimum distance for swipe
-    
-    if (touchEndX < touchStartX - swipeThreshold) {
-        // Swiped left - next slide
-        nextSlide();
-    }
-    
-    if (touchEndX > touchStartX + swipeThreshold) {
-        // Swiped right - previous slide
-        prevSlide();
-    }
-}
-</script>
-<script>
-// ===================================
-// Close menu when clicking on a package link
-// ===================================
-const packageLinks = document.querySelectorAll(
-    "#mobilePackagesDropdown a",
-);
-packageLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-        mobileMenu.classList.remove("active");
-        if (mobilePackagesDropdown) {
-            mobilePackagesDropdown.classList.remove("active");
-        }
-        if (packagesArrow) {
-            packagesArrow.style.transform = "rotate(0deg)";
-        }
-    });
-});
-
-// ===================================
-// Hero Carousel
-// ===================================
-let heroCurrentSlide = 0;
-const heroSlides = document.querySelectorAll(".hero-slide");
-const heroImages = document.querySelectorAll(".hero-image");
-const heroTotalSlides = heroSlides.length;
-
-function showHeroSlide(index) {
-    heroSlides.forEach((slide, i) => {
-        if (i === index) {
-            slide.classList.add("active");
-            gsap.to(slide, {
-                opacity: 1,
-                duration: 2,
-                ease: "power2.inOut"
-            });
-            gsap.fromTo(
-                heroImages[i], {
-                    scale: 1
-                }, {
-                    scale: 1.1,
-                    duration: 8,
-                    ease: "power1.out"
-                },
-            );
-        } else {
-            slide.classList.remove("active");
-            gsap.to(slide, {
-                opacity: 0,
-                duration: 2,
-                ease: "power2.inOut"
-            });
-        }
-    });
-}
-
-function nextHeroSlide() {
-    heroCurrentSlide = (heroCurrentSlide + 1) % heroTotalSlides;
-    showHeroSlide(heroCurrentSlide);
-}
-
-// Auto-advance hero carousel every 5 seconds
-if (heroSlides.length > 0) {
-    setInterval(nextHeroSlide, 5000);
-}
-
-// ===================================
-// Safari Carousel
-// ===================================
-let currentSlide = 0;
-const carousel = document.getElementById("carousel");
-const slides = document.querySelectorAll(".carousel-slide");
-const dots = document.querySelectorAll(".carousel-dot");
-const totalSlides = slides.length;
-
-function goToSlide(index) {
-    currentSlide = index;
-    updateCarousel();
-}
-
-function updateCarousel() {
-    if (!carousel) return;
-    carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
-    dots.forEach((dot, index) => {
-        dot.classList.toggle("active", index === currentSlide);
-    });
-}
-
-function nextSlide() {
-    currentSlide = (currentSlide + 1) % totalSlides;
-    updateCarousel();
-}
-
-function prevSlide() {
-    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-    updateCarousel();
-}
-
-// ===================================
-// Testimonials Carousel
-// ===================================
-let testimonialCurrentSet = 0;
-const testimonialCarousel = document.getElementById(
-    "testimonialCarousel",
-);
-const testimonialCards = document.querySelectorAll(".testimonial-card");
-const testimonialDots = document.querySelectorAll(".testimonial-nav-dot");
+// ===== TESTIMONIAL CAROUSEL =====
+var tSlide = 0;
 
 function getTotalSets() {
-    return window.innerWidth >= 768 ? 2 : 6; // Desktop shows 3 cards at a time, mobile shows 1
-}
-
-function goToTestimonialSet(setIndex) {
-    testimonialCurrentSet = setIndex;
-    updateTestimonialCarousel();
+    return window.innerWidth >= 768 ? 2 : 6;
 }
 
 function updateTestimonialCarousel() {
-    if (!testimonialCarousel || testimonialCards.length === 0) return;
+    var carousel = document.getElementById('testimonialCarousel');
+    var dots = document.querySelectorAll('.testimonial-nav-dot');
+    if (!carousel) return;
 
-    const cardWidth = testimonialCards[0].offsetWidth;
-    const cardsPerView = window.innerWidth >= 768 ? 3 : 1;
-    const offset = testimonialCurrentSet * cardWidth * cardsPerView;
+    var container = carousel.parentElement;
+    var containerWidth = container ? container.offsetWidth : window.innerWidth;
+    var cardsPerView = window.innerWidth >= 768 ? 3 : 1;
+    var cardWidth = containerWidth / cardsPerView;
+    var offset = tSlide * cardWidth * cardsPerView;
 
-    testimonialCarousel.style.transform = `translateX(-${offset}px)`;
+    carousel.style.transform = 'translateX(-' + offset + 'px)';
 
-    testimonialDots.forEach((dot, index) => {
-        dot.classList.toggle("bg-amber-500", index === testimonialCurrentSet);
-        dot.classList.toggle("bg-gray-400", index !== testimonialCurrentSet);
+    dots.forEach(function(dot, i) {
+        dot.classList.toggle('bg-amber-500', i === tSlide);
+        dot.classList.toggle('bg-gray-400', i !== tSlide);
     });
 }
 
 function nextTestimonial() {
-    const totalSets = getTotalSets();
-    testimonialCurrentSet = (testimonialCurrentSet + 1) % totalSets;
+    tSlide = (tSlide + 1) % getTotalSets();
     updateTestimonialCarousel();
 }
 
 function prevTestimonial() {
-    const totalSets = getTotalSets();
-    testimonialCurrentSet =
-        (testimonialCurrentSet - 1 + totalSets) % totalSets;
+    tSlide = (tSlide - 1 + getTotalSets()) % getTotalSets();
     updateTestimonialCarousel();
 }
 
-// Update testimonial carousel on window resize
-window.addEventListener("resize", () => {
+function goToTestimonialSet(i) {
+    tSlide = i;
     updateTestimonialCarousel();
-});
-
-// Initialize testimonial carousel
-if (testimonialCarousel) {
-    updateTestimonialCarousel();
-    // Auto-scroll testimonials every 6 seconds
-    setInterval(nextTestimonial, 6000);
 }
 
-// ===================================
-// Smooth scroll for anchor links
-// ===================================
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", function(e) {
-        const href = this.getAttribute("href");
-        if (href !== "#" && href !== "#book" && href !== "#contact") {
-            e.preventDefault();
-            const target = document.querySelector(href);
-            if (target) {
-                const navHeight =
-                    document.querySelector("nav")?.offsetHeight || 100;
-                const targetPosition = target.offsetTop - navHeight;
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: "smooth",
-                });
-            }
-        }
-    });
-});
-
-// ===================================
-// Prevent horizontal scroll
-// ===================================
-document.body.style.overflowX = "hidden";
-document.documentElement.style.overflowX = "hidden";
-
-// ===================================
-// Video Mute/Unmute Toggle for Conservation Video
-// ===================================
-const conservationVideo = document.getElementById("conservationVideo");
-const muteToggle = document.getElementById("muteToggle");
-const muteIcon = document.getElementById("muteIcon");
-const soundIcon = document.getElementById("soundIcon");
-
-function setMuted(state) {
-    if (!conservationVideo) return;
-
-    conservationVideo.muted = state;
-
-    if (!state) {
-        // Unmuted: make sure attribute is removed and audio is up
-        conservationVideo.removeAttribute("muted");
-        conservationVideo.volume = 1.0;
-        conservationVideo.play().catch(() => {});
-        if (muteToggle) {
-            muteToggle.setAttribute("aria-label", "Mute video");
-            muteToggle.setAttribute("aria-pressed", "true");
-        }
-        if (muteIcon && soundIcon) {
-            muteIcon.classList.add("hidden");
-            soundIcon.classList.remove("hidden");
-        }
-    } else {
-        // Muted
-        if (muteToggle) {
-            muteToggle.setAttribute("aria-label", "Unmute video");
-            muteToggle.setAttribute("aria-pressed", "false");
-        }
-        if (muteIcon && soundIcon) {
-            muteIcon.classList.remove("hidden");
-            soundIcon.classList.add("hidden");
-        }
-    }
-}
-
-if (conservationVideo) {
-    // Start muted for autoplay policy
-    conservationVideo.muted = true;
-    conservationVideo.play().catch(() => {});
-}
-
-if (muteToggle && conservationVideo) {
-    muteToggle.addEventListener("click", () => {
-        setMuted(!conservationVideo.muted);
-    });
-}
-
-// ===================================
-// Room Tabs (Inclusions/Exclusions/Zones)
-// ===================================
-const roomTabs = document.querySelectorAll("#rooms .tab-btn");
-const roomPanels = document.querySelectorAll("#rooms .panel");
-
-roomTabs.forEach((btn) => {
-    btn.addEventListener("click", () => {
-        const tab = btn.dataset.tab;
-        roomTabs.forEach((b) => b.classList.remove("active"));
-        btn.classList.add("active");
-        roomPanels.forEach((p) => {
-            p.classList.toggle("hidden", p.dataset.tab !== tab);
-        });
-    });
-});
-
-// ===================================
-// Experience Tabs (Terms/Refund Policy)
-// ===================================
-const expTabs = document.querySelectorAll("#experiencesA .tab-btn-a");
-const expPanels = document.querySelectorAll(
-    "#experiencesA .experience-panel-a",
-);
-
-expTabs.forEach((btn) => {
-    btn.addEventListener("click", () => {
-        const tab = btn.dataset.tabA;
-        expTabs.forEach((b) => b.classList.remove("active"));
-        btn.classList.add("active");
-        expPanels.forEach((p) => {
-            p.classList.toggle("hidden", p.dataset.tabA !== tab);
-        });
-    });
-});
-</script>
-<script>
+// ===== HERO CAROUSEL =====
 (function() {
     var slides = document.querySelectorAll('.hero-slide');
     var current = 0;
-    var total = slides.length;
+    if (!slides.length) return;
 
-    function showSlide(index) {
-        slides.forEach(function(slide) {
-            slide.classList.remove('active');
-            // Reset zoom on inactive slides
-            var img = slide.querySelector('.hero-image');
+    function show(index) {
+        slides.forEach(function(s) {
+            s.classList.remove('active');
+            var img = s.querySelector('.hero-image');
             if (img) img.style.transform = 'scale(1)';
         });
-
         slides[index].classList.add('active');
     }
 
-    function nextSlide() {
-        current = (current + 1) % total;
-        showSlide(current);
-    }
-
-    // Auto advance every 5 seconds
-    setInterval(nextSlide, 5000);
+    setInterval(function() {
+        current = (current + 1) % slides.length;
+        show(current);
+    }, 5000);
 })();
-</script>
-<script>
-// Toggle Special Offer Popup
+
+// ===== SPECIAL OFFER POPUP =====
 function toggleSpecialOfferPopup() {
-    const popup = document.getElementById('specialOfferPopup');
-    if (popup.classList.contains('hidden')) {
-        popup.classList.remove('hidden');
-        popup.classList.add('flex');
-        document.body.style.overflow = 'hidden'; // Prevent background scroll
-    } else {
-        popup.classList.add('hidden');
-        popup.classList.remove('flex');
-        document.body.style.overflow = ''; // Restore scroll
-    }
+    var popup = document.getElementById('specialOfferPopup');
+    if (!popup) return;
+    var hidden = popup.classList.contains('hidden');
+    popup.classList.toggle('hidden', !hidden);
+    popup.classList.toggle('flex', hidden);
+    document.body.style.overflow = hidden ? 'hidden' : '';
 }
 
-// Close popup when clicking outside
 function closeIfClickedOutside(event) {
     if (event.target.id === 'specialOfferPopup') {
         toggleSpecialOfferPopup();
     }
 }
 
-// Close popup with Escape key
-document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape') {
-        const popup = document.getElementById('specialOfferPopup');
-        if (!popup.classList.contains('hidden')) {
-            toggleSpecialOfferPopup();
-        }
-    }
-});
-</script>
-<script>
+// ===== FAQ RESIZE =====
 function handleFaqResize() {
     var grid = document.querySelector('.faq-grid');
     if (!grid) return;
-    if (window.innerWidth <= 860) {
-        grid.style.gridTemplateColumns = '1fr';
-    } else {
-        grid.style.gridTemplateColumns = '1fr 1fr';
-    }
+    grid.style.gridTemplateColumns = window.innerWidth <= 860 ? '1fr' : '1fr 1fr';
 }
-window.addEventListener('load', handleFaqResize);
-window.addEventListener('resize', handleFaqResize);
-</script>
-<script>
-// FAQ Accordion
+
+// ===== INIT ON DOM READY =====
 document.addEventListener('DOMContentLoaded', function() {
-    const faqItems = document.querySelectorAll('.faq-item');
 
-    faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        const answer = item.querySelector('.faq-answer');
-        const icon = item.querySelector('.faq-icon');
+    // Prevent horizontal scroll
+    document.body.style.overflowX = 'hidden';
+    document.documentElement.style.overflowX = 'hidden';
 
-        question.addEventListener('click', () => {
-            const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
+    // Safari carousel init
+    updateCarousel();
 
-            // Close all
-            faqItems.forEach(other => {
-                other.querySelector('.faq-answer').style.maxHeight = '0px';
-                other.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+    // Autoplay safari carousel
+    var autoplay = setInterval(nextSlide, 5000);
+    var carouselEl = document.getElementById('carousel');
+    if (carouselEl) {
+        carouselEl.addEventListener('mouseenter', function() { clearInterval(autoplay); });
+        carouselEl.addEventListener('mouseleave', function() { autoplay = setInterval(nextSlide, 5000); });
+
+        // Touch swipe
+        var tx = 0;
+        carouselEl.addEventListener('touchstart', function(e) { tx = e.changedTouches[0].screenX; });
+        carouselEl.addEventListener('touchend', function(e) {
+            var diff = tx - e.changedTouches[0].screenX;
+            if (Math.abs(diff) > 50) { diff > 0 ? nextSlide() : prevSlide(); }
+        });
+    }
+
+    // Testimonial carousel init + autoplay
+    setTimeout(function() {
+        updateTestimonialCarousel();
+        setInterval(nextTestimonial, 6000);
+    }, 200);
+
+    window.addEventListener('resize', function() {
+        tSlide = 0;
+        updateTestimonialCarousel();
+        handleFaqResize();
+    });
+
+    // FAQ resize init
+    handleFaqResize();
+
+    // FAQ Accordion
+    var faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(function(item) {
+        var question = item.querySelector('.faq-question');
+        var answer = item.querySelector('.faq-answer');
+        var icon = item.querySelector('.faq-icon');
+        if (!question || !answer) return;
+
+        question.addEventListener('click', function() {
+            var isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
+            faqItems.forEach(function(other) {
+                var a = other.querySelector('.faq-answer');
+                var ic = other.querySelector('.faq-icon');
+                if (a) a.style.maxHeight = '0px';
+                if (ic) ic.style.transform = 'rotate(0deg)';
             });
-
-            // Open current if it was closed
             if (!isOpen) {
                 answer.style.maxHeight = answer.scrollHeight + 'px';
-                icon.style.transform = 'rotate(180deg)';
+                if (icon) icon.style.transform = 'rotate(180deg)';
             }
         });
     });
+
+    // Room Tabs
+    var roomTabBtns = document.querySelectorAll('#rooms .tab-btn');
+    var roomPanels = document.querySelectorAll('#rooms .panel');
+
+    function showRoomTab(tabName) {
+        roomTabBtns.forEach(function(btn) {
+            btn.classList.toggle('active', btn.getAttribute('data-tab') === tabName);
+        });
+        roomPanels.forEach(function(panel) {
+            panel.classList.toggle('hidden', panel.getAttribute('data-tab') !== tabName);
+        });
+    }
+
+    roomTabBtns.forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            showRoomTab(this.getAttribute('data-tab'));
+        });
+    });
+
+    if (roomTabBtns.length > 0) {
+        showRoomTab(roomTabBtns[0].getAttribute('data-tab'));
+    }
+
+    // Video mute toggle
+    var vid = document.getElementById('conservationVideo');
+    var muteBtn = document.getElementById('muteToggle');
+    var muteIc = document.getElementById('muteIcon');
+    var soundIc = document.getElementById('soundIcon');
+
+    if (vid) { vid.muted = true; vid.play().catch(function(){}); }
+
+    if (muteBtn && vid) {
+        muteBtn.addEventListener('click', function() {
+            vid.muted = !vid.muted;
+            if (!vid.muted) {
+                vid.removeAttribute('muted');
+                vid.volume = 1.0;
+                vid.play().catch(function(){});
+            }
+            if (muteIc) muteIc.classList.toggle('hidden', !vid.muted);
+            if (soundIc) soundIc.classList.toggle('hidden', vid.muted);
+        });
+    }
+
+    // Mobile menu
+    var mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    var mobileMenu = document.getElementById('mobileMenu');
+    var mobilePackagesBtn = document.getElementById('mobilePackagesBtn');
+    var mobilePackagesDropdown = document.getElementById('mobilePackagesDropdown');
+    var packagesArrow = document.getElementById('packagesArrow');
+    var mobileRoomsBtn = document.getElementById('mobileRoomsBtn');
+    var mobileRoomsDropdown = document.getElementById('mobileRoomsDropdown');
+    var roomsArrow = document.getElementById('roomsArrow');
+
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            mobileMenu.classList.toggle('active');
+        });
+    }
+
+    if (mobilePackagesBtn && mobilePackagesDropdown) {
+        mobilePackagesBtn.addEventListener('click', function(e) {
+            e.preventDefault(); e.stopPropagation();
+            mobilePackagesDropdown.classList.toggle('active');
+            if (packagesArrow) packagesArrow.style.transform = mobilePackagesDropdown.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
+        });
+    }
+
+    if (mobileRoomsBtn && mobileRoomsDropdown) {
+        mobileRoomsBtn.addEventListener('click', function(e) {
+            e.preventDefault(); e.stopPropagation();
+            mobileRoomsDropdown.classList.toggle('active');
+            if (roomsArrow) roomsArrow.style.transform = mobileRoomsDropdown.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
+        });
+    }
+
+    document.addEventListener('click', function(e) {
+        if (mobileMenu && mobileMenuBtn) {
+            if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                mobileMenu.classList.remove('active');
+                if (mobilePackagesDropdown) mobilePackagesDropdown.classList.remove('active');
+                if (packagesArrow) packagesArrow.style.transform = 'rotate(0deg)';
+                if (mobileRoomsDropdown) mobileRoomsDropdown.classList.remove('active');
+                if (roomsArrow) roomsArrow.style.transform = 'rotate(0deg)';
+            }
+        }
+    });
+
+    // Escape key for popup
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            var popup = document.getElementById('specialOfferPopup');
+            if (popup && !popup.classList.contains('hidden')) toggleSpecialOfferPopup();
+        }
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+            var href = this.getAttribute('href');
+            if (href !== '#' && href !== '#book' && href !== '#contact') {
+                e.preventDefault();
+                var target = document.querySelector(href);
+                if (target) {
+                    var nav = document.querySelector('nav');
+                    var navH = nav ? nav.offsetHeight : 100;
+                    window.scrollTo({ top: target.offsetTop - navH, behavior: 'smooth' });
+                }
+            }
+        });
+    });
+
 });
 </script>
-<script>
-// ===================================
-// ROOMS TABS - COMPLETE FIX
-// ===================================
-(function() {
-    'use strict';
-    
-    function initRoomTabs() {
-        const tabButtons = document.querySelectorAll('#rooms .tab-btn');
-        const panels = document.querySelectorAll('#rooms .panel');
-        
-        console.log('Tab buttons found:', tabButtons.length);
-        console.log('Panels found:', panels.length);
-        
-        if (tabButtons.length === 0 || panels.length === 0) {
-            console.error('Tabs or panels not found!');
-            return;
-        }
-        
-        // Function to show specific tab
-        function showTab(tabName) {
-            console.log('Showing tab:', tabName);
-            
-            // Remove active from all buttons
-            tabButtons.forEach(btn => {
-                btn.classList.remove('active');
-            });
-            
-            // Add active to clicked button
-            tabButtons.forEach(btn => {
-                if (btn.getAttribute('data-tab') === tabName) {
-                    btn.classList.add('active');
-                }
-            });
-            
-            // Show/hide panels
-            panels.forEach(panel => {
-                const panelTab = panel.getAttribute('data-tab');
-                if (panelTab === tabName) {
-                    panel.classList.remove('hidden');
-                    console.log('Showing panel:', panelTab);
-                } else {
-                    panel.classList.add('hidden');
-                    console.log('Hiding panel:', panelTab);
-                }
-            });
-        }
-        
-        // Add click event to each button
-        tabButtons.forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                const tabName = this.getAttribute('data-tab');
-                showTab(tabName);
-            });
-        });
-        
-        // Show first tab by default
-        if (tabButtons.length > 0) {
-            const firstTab = tabButtons[0].getAttribute('data-tab');
-            showTab(firstTab);
-        }
-    }
-    
-    // Initialize when DOM is ready
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initRoomTabs);
-    } else {
-        initRoomTabs();
-    }
-})();
-</script>
-
 <?php 
 // Include footer
 include 'includes/footer.php'; 
