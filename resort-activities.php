@@ -7,159 +7,291 @@ include 'includes/header.php';
 ?>
 
 <style>
+    /* ================================
+       GLOBAL OVERFLOW FIX — MOST IMPORTANT
+       ================================ */
+    html, body {
+        overflow-x: hidden !important;
+        max-width: 100% !important;
+    }
+
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
+    /* Fix any section/container overflow */
+    section, .container, div {
+        max-width: 100%;
+    }
+
     @keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: scale(0.9) translateY(20px);
+        from {
+            opacity: 0;
+            transform: scale(0.9) translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
     }
-    to {
-        opacity: 1;
-        transform: scale(1) translateY(0);
+
+    .animate-slideIn {
+        animation: slideIn 0.3s ease-out;
     }
-}
 
-.animate-slideIn {
-    animation: slideIn 0.3s ease-out;
-}
+    /* Smooth scroll for popup content */
+    #specialOfferPopup > div {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
 
-/* Smooth scroll for popup content */
-#specialOfferPopup > div {
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE/Edge */
-}
+    #specialOfferPopup > div::-webkit-scrollbar {
+        display: none;
+    }
 
-#specialOfferPopup > div::-webkit-scrollbar {
-    display: none; /* Chrome/Safari/Opera */
-}
+    #specialOfferPopup > div::-webkit-scrollbar-track {
+        background: #1c1917;
+    }
 
+    #specialOfferPopup > div::-webkit-scrollbar-thumb {
+        background: #d97706;
+        border-radius: 3px;
+    }
 
-#specialOfferPopup > div::-webkit-scrollbar-track {
-    background: #1c1917;
-}
+    /* ================================
+       ACTIVITY CARDS
+       ================================ */
+    .activity-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background: linear-gradient(135deg, #1a1a1a 0%, #262626 100%);
+        border: 1px solid rgba(217, 119, 6, 0.2);
+        width: 100%;
+        /* Prevent card from causing overflow */
+        overflow: hidden;
+    }
 
-#specialOfferPopup > div::-webkit-scrollbar-thumb {
-    background: #d97706;
-    border-radius: 3px;
-}
-/* Activity Cards Styling */
-.activity-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background: linear-gradient(135deg, #1a1a1a 0%, #262626 100%);
-    border: 1px solid rgba(217, 119, 6, 0.2);
-}
+    .activity-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 40px rgba(217, 119, 6, 0.3);
+        border-color: rgba(217, 119, 6, 0.5);
+    }
 
-.activity-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 40px rgba(217, 119, 6, 0.3);
-    border-color: rgba(217, 119, 6, 0.5);
-}
+    .activity-icon {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+        box-shadow: 0 8px 20px rgba(217, 119, 6, 0.3);
+        transition: transform 0.3s ease;
+        flex-shrink: 0;
+    }
 
-.activity-icon {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1.5rem;
-    box-shadow: 0 8px 20px rgba(217, 119, 6, 0.3);
-    transition: transform 0.3s ease;
-}
+    .activity-card:hover .activity-icon {
+        transform: scale(1.1) rotate(5deg);
+    }
 
-.activity-card:hover .activity-icon {
-    transform: scale(1.1) rotate(5deg);
-}
+    .activity-icon i {
+        font-size: 2rem;
+        color: #000;
+    }
 
-.activity-icon i {
-    font-size: 2rem;
-    color: #000;
-}
-
-/* FAQ Styling */
-.faq-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    align-items: start;
-}
-
-.faq-col {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    width: 100%;
-    min-width: 0;
-}
-
-.faq-question {
-    min-height: 64px;
-    height: 64px;
-}
-
-.faq-question span {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: block;
-    font-size: 15px !important;
-}
-
-@media screen and (max-width: 860px) {
+    /* ================================
+       FAQ STYLING
+       ================================ */
     .faq-grid {
-        grid-template-columns: 1fr !important;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        align-items: start;
+        width: 100%;
+    }
+
+    .faq-col {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        width: 100%;
+        min-width: 0; /* CRITICAL — prevents flex/grid blowout */
     }
 
     .faq-question {
-        height: auto !important;
-        min-height: unset !important;
+        min-height: 64px;
+        height: 64px;
     }
 
     .faq-question span {
-        white-space: normal !important;
-        overflow: visible !important;
-        text-overflow: unset !important;
-        font-size: 14px !important;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+        font-size: 15px !important;
+        /* Prevent text from causing horizontal scroll */
+        max-width: 100%;
     }
-}
 
-/* Awards Card Styling */
-.award-card {
-    transition: transform 0.3s ease;
-}
+    @media screen and (max-width: 860px) {
+        .faq-grid {
+            grid-template-columns: 1fr !important;
+        }
 
-.award-card:hover {
-    transform: translateY(-4px);
-}
+        .faq-question {
+            height: auto !important;
+            min-height: unset !important;
+        }
 
-.award-image {
-    transition: transform 0.3s ease;
-}
+        .faq-question span {
+            white-space: normal !important;
+            overflow: visible !important;
+            text-overflow: unset !important;
+            font-size: 14px !important;
+        }
+    }
 
-.award-card:hover .award-image {
-    transform: scale(1.05);
-}
+    /* ================================
+       AWARDS
+       ================================ */
+    .award-card {
+        transition: transform 0.3s ease;
+    }
 
-@media (max-width: 768px) {
-    .award-card>div {
-        min-height: 280px !important;
+    .award-card:hover {
+        transform: translateY(-4px);
     }
 
     .award-image {
-        max-width: 220px;
+        transition: transform 0.3s ease;
     }
-}
-</style>
-  <header class="relative h-[50vh] md:h-[60vh] lg:h-[100vh] flex items-end"
-        style="background: url('images/home3.webp') center/cover no-repeat">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-    </header>
 
-<!-- Main Activities Section -->
-<section class="py-12 md:py-20 px-4 md:px-6 bg-neutral-900">
+    .award-card:hover .award-image {
+        transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+        .award-card > div {
+            min-height: 280px !important;
+        }
+
+        .award-image {
+            max-width: 220px;
+        }
+    }
+
+    /* ================================
+       INDOOR/OUTDOOR GAMES SECTION FIX
+       ================================ */
+    .games-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        width: 100%;
+    }
+
+    @media (max-width: 768px) {
+        .games-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .games-card {
+        background: #171717;
+        border: 1px solid rgba(245, 158, 11, 0.3);
+        border-radius: 1rem;
+        padding: 1.5rem 2rem;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .game-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.5rem 0;
+        color: #d1d5db;
+        width: 100%;
+    }
+
+    .game-icon-wrap {
+        width: 40px;
+        height: 40px;
+        min-width: 40px; /* Prevents shrinking */
+        border-radius: 50%;
+        background: rgba(245, 158, 11, 0.15);
+        border: 1px solid rgba(245, 158, 11, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* ================================
+       MINI LIBRARY SECTION FIX
+       ================================ */
+    .library-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: center;
+        width: 100%;
+    }
+
+    @media (max-width: 1024px) {
+        .library-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .library-img-wrap {
+        position: relative;
+        height: 350px;
+        border-radius: 1rem;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    @media (min-width: 768px) {
+        .library-img-wrap {
+            height: 450px;
+        }
+    }
+
+    /* ================================
+       ACTIVITIES GRID FIX
+       ================================ */
+    .activities-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        width: 100%;
+    }
+
+    @media (max-width: 1024px) {
+        .activities-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 640px) {
+        .activities-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<!-- HERO -->
+<header class="relative h-[50vh] md:h-[60vh] lg:h-[100vh] flex items-end"
+    style="background: url('images/home3.webp') center/cover no-repeat; max-width: 100%; overflow: hidden;">
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+</header>
+
+<!-- ================================
+     MAIN ACTIVITIES SECTION
+     ================================ -->
+<section class="py-12 md:py-20 px-4 md:px-6 bg-neutral-900" style="overflow: hidden;">
     <div class="container mx-auto max-w-7xl">
-        
-        <!-- Section Header -->
+
         <div class="text-center mb-10 md:mb-16">
             <p class="text-amber-500 text-xs tracking-widest mb-3 md:mb-4 font-light" data-aos="fade-down">
                 ADVENTURE • CULTURE • RELAXATION
@@ -172,10 +304,10 @@ include 'includes/header.php';
             </p>
         </div>
 
-        <!-- Activities Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            
-            <!-- Activity Card 1: Nature Trails -->
+        <!-- Activities Grid — using custom class with proper responsive breakpoints -->
+        <div class="activities-grid">
+
+            <!-- Card 1: Nature Trails -->
             <div class="activity-card rounded-2xl p-6 md:p-8" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                 <div class="activity-icon">
                     <i class="fas fa-hiking"></i>
@@ -186,7 +318,7 @@ include 'includes/header.php';
                 </p>
             </div>
 
-            <!-- Activity Card 2: Bird Watching -->
+            <!-- Card 2: Bird Watching -->
             <div class="activity-card rounded-2xl p-6 md:p-8" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <div class="activity-icon">
                     <i class="fas fa-binoculars"></i>
@@ -197,7 +329,7 @@ include 'includes/header.php';
                 </p>
             </div>
 
-            <!-- Activity Card 3: Photography Classes -->
+            <!-- Card 3: Photography Classes -->
             <div class="activity-card rounded-2xl p-6 md:p-8" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
                 <div class="activity-icon">
                     <i class="fas fa-camera"></i>
@@ -208,7 +340,7 @@ include 'includes/header.php';
                 </p>
             </div>
 
-            <!-- Activity Card 4: Bi-cycling -->
+            <!-- Card 4: Bi-cycling -->
             <div class="activity-card rounded-2xl p-6 md:p-8" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                 <div class="activity-icon">
                     <i class="fas fa-bicycle"></i>
@@ -219,7 +351,7 @@ include 'includes/header.php';
                 </p>
             </div>
 
-            <!-- Activity Card 5: Baiga Tribal Dance -->
+            <!-- Card 5: Baiga Tribal Dance -->
             <div class="activity-card rounded-2xl p-6 md:p-8" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <div class="activity-icon">
                     <i class="fas fa-drum"></i>
@@ -230,7 +362,7 @@ include 'includes/header.php';
                 </p>
             </div>
 
-            <!-- Activity Card 6: Tribal Village Walk -->
+            <!-- Card 6: Tribal Village Walk -->
             <div class="activity-card rounded-2xl p-6 md:p-8" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
                 <div class="activity-icon">
                     <i class="fas fa-home"></i>
@@ -241,7 +373,7 @@ include 'includes/header.php';
                 </p>
             </div>
 
-            <!-- Activity Card 7: Market Walk -->
+            <!-- Card 7: Market Walk -->
             <div class="activity-card rounded-2xl p-6 md:p-8" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                 <div class="activity-icon">
                     <i class="fas fa-shopping-bag"></i>
@@ -252,7 +384,7 @@ include 'includes/header.php';
                 </p>
             </div>
 
-            <!-- Activity Card 8: Python Spot -->
+            <!-- Card 8: Python Spot -->
             <div class="activity-card rounded-2xl p-6 md:p-8" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <div class="activity-icon">
                     <i class="fas fa-search"></i>
@@ -263,7 +395,7 @@ include 'includes/header.php';
                 </p>
             </div>
 
-            <!-- Activity Card 9: Ancient Forts -->
+            <!-- Card 9: Ancient Forts -->
             <div class="activity-card rounded-2xl p-6 md:p-8" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
                 <div class="activity-icon">
                     <i class="fas fa-landmark"></i>
@@ -275,14 +407,15 @@ include 'includes/header.php';
             </div>
 
         </div>
-
     </div>
 </section>
 
-<!-- Indoor & Outdoor Games Section -->
-<section class="py-12 md:py-20 px-4 md:px-6 bg-black">
+<!-- ================================
+     INDOOR & OUTDOOR GAMES
+     ================================ -->
+<section class="py-12 md:py-20 px-4 md:px-6 bg-black" style="overflow: hidden;">
     <div class="container mx-auto max-w-7xl">
-        
+
         <div class="text-center mb-10 md:mb-16">
             <p class="text-amber-500 text-xs tracking-widest mb-3 md:mb-4 font-light" data-aos="fade-down">
                 RECREATION • FUN • LEISURE
@@ -292,32 +425,32 @@ include 'includes/header.php';
             </h2>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
-            
+        <div class="games-grid">
+
             <!-- Indoor Games -->
-            <div class="bg-neutral-900 border border-amber-500/30 rounded-2xl p-6 md:p-8" data-aos="fade-right" data-aos-duration="1000">
+            <div class="games-card" data-aos="fade-right" data-aos-duration="1000">
                 <h3 class="text-2xl md:text-3xl font-serif font-bold text-white mb-6 text-center">Indoor Games</h3>
-                <ul class="space-y-4 text-gray-300">
-                    <li class="flex items-center gap-4">
-                        <span class="w-10 h-10 rounded-full bg-amber-500/15 border border-amber-500/30 flex items-center justify-center flex-shrink-0">
+                <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:1rem;">
+                    <li class="game-item">
+                        <span class="game-icon-wrap">
                             <i class="fas fa-circle-dot text-amber-500 text-lg"></i>
                         </span>
                         <span class="text-base">Carrom Board</span>
                     </li>
-                    <li class="flex items-center gap-4">
-                        <span class="w-10 h-10 rounded-full bg-amber-500/15 border border-amber-500/30 flex items-center justify-center flex-shrink-0">
+                    <li class="game-item">
+                        <span class="game-icon-wrap">
                             <i class="fas fa-chess text-amber-500 text-lg"></i>
                         </span>
                         <span class="text-base">Chess & Board Games</span>
                     </li>
-                    <li class="flex items-center gap-4">
-                        <span class="w-10 h-10 rounded-full bg-amber-500/15 border border-amber-500/30 flex items-center justify-center flex-shrink-0">
+                    <li class="game-item">
+                        <span class="game-icon-wrap">
                             <i class="fas fa-heart text-amber-500 text-lg"></i>
                         </span>
                         <span class="text-base">Playing Cards</span>
                     </li>
-                    <li class="flex items-center gap-4">
-                        <span class="w-10 h-10 rounded-full bg-amber-500/15 border border-amber-500/30 flex items-center justify-center flex-shrink-0">
+                    <li class="game-item">
+                        <span class="game-icon-wrap">
                             <i class="fas fa-table-tennis-paddle-ball text-amber-500 text-lg"></i>
                         </span>
                         <span class="text-base">Table Tennis</span>
@@ -326,29 +459,29 @@ include 'includes/header.php';
             </div>
 
             <!-- Outdoor Games -->
-            <div class="bg-neutral-900 border border-amber-500/30 rounded-2xl p-6 md:p-8" data-aos="fade-left" data-aos-duration="1000">
+            <div class="games-card" data-aos="fade-left" data-aos-duration="1000">
                 <h3 class="text-2xl md:text-3xl font-serif font-bold text-white mb-6 text-center">Outdoor Games</h3>
-                <ul class="space-y-4 text-gray-300">
-                    <li class="flex items-center gap-4">
-                        <span class="w-10 h-10 rounded-full bg-amber-500/15 border border-amber-500/30 flex items-center justify-center flex-shrink-0">
+                <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:1rem;">
+                    <li class="game-item">
+                        <span class="game-icon-wrap">
                             <i class="fas fa-shuttle-space text-amber-500 text-lg"></i>
                         </span>
                         <span class="text-base">Badminton</span>
                     </li>
-                    <li class="flex items-center gap-4">
-                        <span class="w-10 h-10 rounded-full bg-amber-500/15 border border-amber-500/30 flex items-center justify-center flex-shrink-0">
+                    <li class="game-item">
+                        <span class="game-icon-wrap">
                             <i class="fas fa-volleyball text-amber-500 text-lg"></i>
                         </span>
                         <span class="text-base">Volleyball</span>
                     </li>
-                    <li class="flex items-center gap-4">
-                        <span class="w-10 h-10 rounded-full bg-amber-500/15 border border-amber-500/30 flex items-center justify-center flex-shrink-0">
+                    <li class="game-item">
+                        <span class="game-icon-wrap">
                             <i class="fas fa-baseball-bat-ball text-amber-500 text-lg"></i>
                         </span>
                         <span class="text-base">Cricket</span>
                     </li>
-                    <li class="flex items-center gap-4">
-                        <span class="w-10 h-10 rounded-full bg-amber-500/15 border border-amber-500/30 flex items-center justify-center flex-shrink-0">
+                    <li class="game-item">
+                        <span class="game-icon-wrap">
                             <i class="fas fa-person-running text-amber-500 text-lg"></i>
                         </span>
                         <span class="text-base">Outdoor Games Area</span>
@@ -357,18 +490,19 @@ include 'includes/header.php';
             </div>
 
         </div>
-
     </div>
 </section>
 
-<!-- Mini Library Section -->
-<section class="py-12 md:py-20 px-4 md:px-6 bg-neutral-900">
+<!-- ================================
+     MINI LIBRARY
+     ================================ -->
+<section class="py-12 md:py-20 px-4 md:px-6 bg-neutral-900" style="overflow: hidden;">
     <div class="container mx-auto max-w-6xl">
-        
-        <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
-            
+
+        <div class="library-grid">
+
             <!-- Left: Image -->
-            <div class="relative h-[350px] md:h-[450px] rounded-2xl overflow-hidden shadow-2xl" data-aos="fade-right" data-aos-duration="1000">
+            <div class="library-img-wrap" data-aos="fade-right" data-aos-duration="1000">
                 <img src="images/room5.png" alt="Mini Library" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
             </div>
@@ -384,20 +518,20 @@ include 'includes/header.php';
                 <p class="text-sm md:text-base text-gray-300 leading-relaxed mb-6">
                     Unwind with a good book in our cozy mini library. We have a curated collection of books on wildlife, nature, local history, and fiction to enhance your stay experience.
                 </p>
-                <ul class="space-y-3 text-gray-300 mb-6">
-                    <li class="flex items-center gap-3">
+                <ul style="list-style:none; padding:0; margin:0 0 1.5rem 0; display:flex; flex-direction:column; gap:0.75rem;">
+                    <li class="flex items-center gap-3 text-gray-300">
                         <i class="fas fa-book text-amber-500"></i>
                         <span>Wildlife & Nature Books</span>
                     </li>
-                    <li class="flex items-center gap-3">
+                    <li class="flex items-center gap-3 text-gray-300">
                         <i class="fas fa-book text-amber-500"></i>
                         <span>Local History & Culture</span>
                     </li>
-                    <li class="flex items-center gap-3">
+                    <li class="flex items-center gap-3 text-gray-300">
                         <i class="fas fa-book text-amber-500"></i>
                         <span>Fiction & Bestsellers</span>
                     </li>
-                    <li class="flex items-center gap-3">
+                    <li class="flex items-center gap-3 text-gray-300">
                         <i class="fas fa-book text-amber-500"></i>
                         <span>Comfortable Reading Area</span>
                     </li>
@@ -408,489 +542,340 @@ include 'includes/header.php';
             </div>
 
         </div>
-
     </div>
 </section>
 
-<!-- FAQs Section - 20 Questions (From Index Page) -->
-<section class="py-12 md:py-20 px-4 md:px-6 bg-black">
+<!-- ================================
+     FAQs SECTION
+     ================================ -->
+<section class="py-12 md:py-20 px-4 md:px-6 bg-black" style="overflow: hidden;">
     <div class="mx-auto w-full" style="max-width: 1280px; padding: 0 24px;">
 
-        <!-- Section Header -->
         <div class="text-center mb-10 md:mb-14">
-            <p class="text-amber-500 text-xs tracking-widest mb-3 font-light" data-aos="fade-down">
-                GUEST INFORMATION
-            </p>
-            <h2 class="text-3xl md:text-5xl font-serif mb-4" data-aos="zoom-in">
-                Wildmark Resort FAQs
-            </h2>
+            <p class="text-amber-500 text-xs tracking-widest mb-3 font-light" data-aos="fade-down">GUEST INFORMATION</p>
+            <h2 class="text-3xl md:text-5xl font-serif mb-4" data-aos="zoom-in">Wildmark Resort FAQs</h2>
             <p class="text-sm md:text-base text-gray-300 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
                 Everything you need to know about Wildmark Resort — Best Resort in Kanha near Khatiya Gate
             </p>
         </div>
 
-        <!-- FAQ Grid: 10 Left + 10 Right -->
         <div class="faq-grid" data-aos="fade-up" data-aos-duration="1000">
 
-            <!-- LEFT COLUMN: FAQ 1–10 -->
+            <!-- LEFT COLUMN -->
             <div class="faq-col">
-
-                <!-- FAQ 1 -->
                 <div class="faq-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
                     <button class="faq-question w-full text-left px-5 md:px-6 py-4 md:py-5 flex justify-between items-center hover:bg-neutral-800 transition">
                         <span class="font-serif text-white">Where is Wildmark Resort located near Khatiya Gate in Kanha?</span>
-                        <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
+                        <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                         <div class="px-5 md:px-6 py-4 md:py-5 bg-neutral-800/50 border-t border-neutral-700">
-                            <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-                                Wildmark Resort Kanha is located close near the famous Khatiya Gate of Kanha National Park, offering quick and easy access to jungle safaris.
-                            </p>
+                            <p class="text-sm md:text-base text-gray-300 leading-relaxed">Wildmark Resort Kanha is located close near the famous Khatiya Gate of Kanha National Park, offering quick and easy access to jungle safaris.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- FAQ 2 -->
                 <div class="faq-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
                     <button class="faq-question w-full text-left px-5 md:px-6 py-4 md:py-5 flex justify-between items-center hover:bg-neutral-800 transition">
                         <span class="font-serif text-white">Why is Khatiya Gate preferred for Kanha resort booking?</span>
-                        <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
+                        <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                         <div class="px-5 md:px-6 py-4 md:py-5 bg-neutral-800/50 border-t border-neutral-700">
-                            <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-                                Khatiya Gate is preferred because of entry to all the famous Core Zones as it offers rich wildlife sightings and has several good resorts like Wildmark Resort nearby to Khatiya Gate.
-                            </p>
+                            <p class="text-sm md:text-base text-gray-300 leading-relaxed">Khatiya Gate is preferred because of entry to all the famous Core Zones as it offers rich wildlife sightings and has several good resorts like Wildmark Resort nearby.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- FAQ 3 -->
                 <div class="faq-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
                     <button class="faq-question w-full text-left px-5 md:px-6 py-4 md:py-5 flex justify-between items-center hover:bg-neutral-800 transition">
                         <span class="font-serif text-white">How far is Wildmark Resort from Khatiya Safari Gate?</span>
-                        <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
+                        <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                         <div class="px-5 md:px-6 py-4 md:py-5 bg-neutral-800/50 border-t border-neutral-700">
-                            <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-                                Wildmark Resort is located just a few minutes' drive from Khatiya Gate (950 Meters), making it ideal for early morning &amp; evening safaris.
-                            </p>
+                            <p class="text-sm md:text-base text-gray-300 leading-relaxed">Wildmark Resort is located just a few minutes' drive from Khatiya Gate (950 Meters), making it ideal for early morning &amp; evening safaris.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- FAQ 4 -->
                 <div class="faq-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
                     <button class="faq-question w-full text-left px-5 md:px-6 py-4 md:py-5 flex justify-between items-center hover:bg-neutral-800 transition">
                         <span class="font-serif text-white">Is Wildmark Resort suitable for Kanha jungle safari bookings?</span>
-                        <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
+                        <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                         <div class="px-5 md:px-6 py-4 md:py-5 bg-neutral-800/50 border-t border-neutral-700">
-                            <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-                                Yes, Wildmark Resort is well suited for hassle free Kanha jungle safari bookings due to its location and safari assistance services.
-                            </p>
+                            <p class="text-sm md:text-base text-gray-300 leading-relaxed">Yes, Wildmark Resort is well suited for hassle free Kanha jungle safari bookings due to its location and safari assistance services.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- FAQ 5 -->
                 <div class="faq-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
                     <button class="faq-question w-full text-left px-5 md:px-6 py-4 md:py-5 flex justify-between items-center hover:bg-neutral-800 transition">
                         <span class="font-serif text-white">Can I book Kanha safari along with Wildmark Resort stay?</span>
-                        <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
+                        <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                         <div class="px-5 md:px-6 py-4 md:py-5 bg-neutral-800/50 border-t border-neutral-700">
-                            <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-                                Yes, Wildmark Resort can arrange both Jungle resort stay and Khatiya Gate safari bookings together.
-                            </p>
+                            <p class="text-sm md:text-base text-gray-300 leading-relaxed">Yes, Wildmark Resort can arrange both Jungle resort stay and Khatiya Gate safari bookings together.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- FAQ 6 -->
                 <div class="faq-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
                     <button class="faq-question w-full text-left px-5 md:px-6 py-4 md:py-5 flex justify-between items-center hover:bg-neutral-800 transition">
                         <span class="font-serif text-white">What types of rooms are available at Wildmark Resort Kanha?</span>
-                        <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
+                        <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                         <div class="px-5 md:px-6 py-4 md:py-5 bg-neutral-800/50 border-t border-neutral-700">
-                            <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-                                Wildmark Resort offers comfortable cottages and well furnished rooms suitable for couples, families, and groups. The resort is Pet friendly &amp; has provisions for differently &amp; specially abled guests with wheel chair access inside the resort premises.
-                            </p>
+                            <p class="text-sm md:text-base text-gray-300 leading-relaxed">Wildmark Resort offers comfortable cottages and well furnished rooms suitable for couples, families, and groups. The resort is Pet friendly &amp; has provisions for differently &amp; specially abled guests with wheel chair access.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- FAQ 7 -->
                 <div class="faq-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
                     <button class="faq-question w-full text-left px-5 md:px-6 py-4 md:py-5 flex justify-between items-center hover:bg-neutral-800 transition">
                         <span class="font-serif text-white">Are meals included in Kanha resort booking at Wildmark Resort?</span>
-                        <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
+                        <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                         <div class="px-5 md:px-6 py-4 md:py-5 bg-neutral-800/50 border-t border-neutral-700">
-                            <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-                                Most Wildmark Resort packages include breakfast, lunch, and dinner depending on the selected plan.
-                            </p>
+                            <p class="text-sm md:text-base text-gray-300 leading-relaxed">Most Wildmark Resort packages include breakfast, lunch, and dinner depending on the selected plan.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- FAQ 8 -->
                 <div class="faq-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
                     <button class="faq-question w-full text-left px-5 md:px-6 py-4 md:py-5 flex justify-between items-center hover:bg-neutral-800 transition">
                         <span class="font-serif text-white">What is the best time to book a resort near Khatiya Gate Kanha?</span>
-                        <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
+                        <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                         <div class="px-5 md:px-6 py-4 md:py-5 bg-neutral-800/50 border-t border-neutral-700">
-                            <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-                                The best time is from October to June when Kanha National Park is open for safaris. During monsoon season buffer zone safaris are available.
-                            </p>
+                            <p class="text-sm md:text-base text-gray-300 leading-relaxed">The best time is from October to June when Kanha National Park is open for safaris. During monsoon season buffer zone safaris are available.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- FAQ 9 -->
                 <div class="faq-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
                     <button class="faq-question w-full text-left px-5 md:px-6 py-4 md:py-5 flex justify-between items-center hover:bg-neutral-800 transition">
                         <span class="font-serif text-white">Is advance booking required for Kanha resorts near Khatiya Gate?</span>
-                        <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
+                        <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                         <div class="px-5 md:px-6 py-4 md:py-5 bg-neutral-800/50 border-t border-neutral-700">
-                            <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-                                Yes, advance booking is strongly recommended during weekends, holidays, and peak safari season.
-                            </p>
+                            <p class="text-sm md:text-base text-gray-300 leading-relaxed">Yes, advance booking is strongly recommended during weekends, holidays, and peak safari season.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- FAQ 10 -->
                 <div class="faq-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
                     <button class="faq-question w-full text-left px-5 md:px-6 py-4 md:py-5 flex justify-between items-center hover:bg-neutral-800 transition">
                         <span class="font-serif text-white">Is Wildmark Resort open during the monsoon season?</span>
-                        <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
+                        <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                         <div class="px-5 md:px-6 py-4 md:py-5 bg-neutral-800/50 border-t border-neutral-700">
-                            <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-                                The resort remains open, and Buffer safaris are available during monsoon season.
-                            </p>
+                            <p class="text-sm md:text-base text-gray-300 leading-relaxed">The resort remains open, and Buffer safaris are available during monsoon season.</p>
                         </div>
                     </div>
                 </div>
-
             </div><!-- END LEFT COLUMN -->
 
-            <!-- RIGHT COLUMN: FAQ 11–20 -->
+            <!-- RIGHT COLUMN -->
             <div class="faq-col">
-
-                <!-- FAQ 11 -->
                 <div class="faq-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
                     <button class="faq-question w-full text-left px-5 md:px-6 py-4 md:py-5 flex justify-between items-center hover:bg-neutral-800 transition">
                         <span class="font-serif text-white">Is Wildmark Resort family friendly?</span>
-                        <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
+                        <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                         <div class="px-5 md:px-6 py-4 md:py-5 bg-neutral-800/50 border-t border-neutral-700">
-                            <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-                                Yes, Wildmark Resort is family &amp; pet friendly and suitable for children and senior citizens. The resort also has wheelchair access for differently &amp; specially abled guests.
-                            </p>
+                            <p class="text-sm md:text-base text-gray-300 leading-relaxed">Yes, Wildmark Resort is family &amp; pet friendly and suitable for children and senior citizens. The resort also has wheelchair access for differently &amp; specially abled guests.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- FAQ 12 -->
                 <div class="faq-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
                     <button class="faq-question w-full text-left px-5 md:px-6 py-4 md:py-5 flex justify-between items-center hover:bg-neutral-800 transition">
                         <span class="font-serif text-white">Does Wildmark Resort provide pickup and drop services?</span>
-                        <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
+                        <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                         <div class="px-5 md:px-6 py-4 md:py-5 bg-neutral-800/50 border-t border-neutral-700">
-                            <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-                                Pickup and drop services from nearby railway stations or airports can be arranged upon request in advance.
-                            </p>
+                            <p class="text-sm md:text-base text-gray-300 leading-relaxed">Pickup and drop services from nearby railway stations or airports can be arranged upon request in advance.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- FAQ 13 -->
                 <div class="faq-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
                     <button class="faq-question w-full text-left px-5 md:px-6 py-4 md:py-5 flex justify-between items-center hover:bg-neutral-800 transition">
                         <span class="font-serif text-white">Is Wildmark Resort budget friendly compared to other Kanha resorts?</span>
-                        <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
+                        <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                         <div class="px-5 md:px-6 py-4 md:py-5 bg-neutral-800/50 border-t border-neutral-700">
-                            <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-                                Wildmark Resort offers good value for money with comfortable stays and quality services near Khatiya Gate. The resort restaurant offers multi-cuisine dining with all food options.
-                            </p>
+                            <p class="text-sm md:text-base text-gray-300 leading-relaxed">Wildmark Resort offers good value for money with comfortable stays and quality services near Khatiya Gate.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- FAQ 14 -->
                 <div class="faq-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
                     <button class="faq-question w-full text-left px-5 md:px-6 py-4 md:py-5 flex justify-between items-center hover:bg-neutral-800 transition">
                         <span class="font-serif text-white">Are group bookings allowed at Wildmark Resort Kanha?</span>
-                        <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
+                        <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                         <div class="px-5 md:px-6 py-4 md:py-5 bg-neutral-800/50 border-t border-neutral-700">
-                            <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-                                Yes, Wildmark Resort accepts group bookings for corporate tours, school groups, and wildlife enthusiasts.
-                            </p>
+                            <p class="text-sm md:text-base text-gray-300 leading-relaxed">Yes, Wildmark Resort accepts group bookings for corporate tours, school groups, and wildlife enthusiasts.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- FAQ 15 -->
                 <div class="faq-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
                     <button class="faq-question w-full text-left px-5 md:px-6 py-4 md:py-5 flex justify-between items-center hover:bg-neutral-800 transition">
                         <span class="font-serif text-white">Does Wildmark Resort offer forest or jungle view rooms?</span>
-                        <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
+                        <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                         <div class="px-5 md:px-6 py-4 md:py-5 bg-neutral-800/50 border-t border-neutral-700">
-                            <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-                                Some rooms and cottages at Wildmark Resort offer views of the surrounding forest area as it is constructed inside the Khatiya Buffer zone.
-                            </p>
+                            <p class="text-sm md:text-base text-gray-300 leading-relaxed">Some rooms and cottages at Wildmark Resort offer views of the surrounding forest area as it is constructed inside the Khatiya Buffer zone.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- FAQ 16 -->
                 <div class="faq-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
                     <button class="faq-question w-full text-left px-5 md:px-6 py-4 md:py-5 flex justify-between items-center hover:bg-neutral-800 transition">
                         <span class="font-serif text-white">Is Wildmark Resort safe for solo travelers?</span>
-                        <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
+                        <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                         <div class="px-5 md:px-6 py-4 md:py-5 bg-neutral-800/50 border-t border-neutral-700">
-                            <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-                                Yes, Wildmark Resort follows standard safety practices and is safe for solo travelers.
-                            </p>
+                            <p class="text-sm md:text-base text-gray-300 leading-relaxed">Yes, Wildmark Resort follows standard safety practices and is safe for solo travelers.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- FAQ 17 -->
                 <div class="faq-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
                     <button class="faq-question w-full text-left px-5 md:px-6 py-4 md:py-5 flex justify-between items-center hover:bg-neutral-800 transition">
                         <span class="font-serif text-white">What documents are required at check-in for Kanha resorts?</span>
-                        <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
+                        <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                         <div class="px-5 md:px-6 py-4 md:py-5 bg-neutral-800/50 border-t border-neutral-700">
-                            <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-                                Guests must carry a valid government issued photo ID at the time of check in.
-                            </p>
+                            <p class="text-sm md:text-base text-gray-300 leading-relaxed">Guests must carry a valid government issued photo ID at the time of check in.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- FAQ 18 -->
                 <div class="faq-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
                     <button class="faq-question w-full text-left px-5 md:px-6 py-4 md:py-5 flex justify-between items-center hover:bg-neutral-800 transition">
                         <span class="font-serif text-white">Does Wildmark Resort offer activities besides jungle safari?</span>
-                        <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
+                        <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                         <div class="px-5 md:px-6 py-4 md:py-5 bg-neutral-800/50 border-t border-neutral-700">
-                            <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-                                Yes, guests can enjoy nature walks, bird watching, nearby attractions and village visits arranged by the resort.
-                            </p>
+                            <p class="text-sm md:text-base text-gray-300 leading-relaxed">Yes, guests can enjoy nature walks, bird watching, nearby attractions and village visits arranged by the resort.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- FAQ 19 -->
                 <div class="faq-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
                     <button class="faq-question w-full text-left px-5 md:px-6 py-4 md:py-5 flex justify-between items-center hover:bg-neutral-800 transition">
                         <span class="font-serif text-white">How close are other Kanha resorts to Wildmark Resort near Khatiya Gate?</span>
-                        <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
+                        <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                         <div class="px-5 md:px-6 py-4 md:py-5 bg-neutral-800/50 border-t border-neutral-700">
-                            <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-                                Several Kanha resorts are located near Wildmark Resort, creating a well-connected stay zone near Khatiya Gate.
-                            </p>
+                            <p class="text-sm md:text-base text-gray-300 leading-relaxed">Several Kanha resorts are located near Wildmark Resort, creating a well-connected stay zone near Khatiya Gate.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- FAQ 20 -->
                 <div class="faq-item bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
                     <button class="faq-question w-full text-left px-5 md:px-6 py-4 md:py-5 flex justify-between items-center hover:bg-neutral-800 transition">
                         <span class="font-serif text-white">How can I get the best price for Kanha resort booking at Khatiya Gate?</span>
-                        <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
+                        <svg class="faq-icon w-5 h-5 md:w-6 md:h-6 text-amber-500 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                         <div class="px-5 md:px-6 py-4 md:py-5 bg-neutral-800/50 border-t border-neutral-700">
-                            <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-                                Booking early, choosing weekday stays, and opting for stay plus safari packages usually gives the best price.
-                            </p>
+                            <p class="text-sm md:text-base text-gray-300 leading-relaxed">Booking early, choosing weekday stays, and opting for stay plus safari packages usually gives the best price.</p>
                         </div>
                     </div>
                 </div>
-
             </div><!-- END RIGHT COLUMN -->
 
-        </div><!-- END FAQ GRID -->
+        </div>
     </div>
 </section>
 
-<!-- Awards and Recognitions Section (From Index Page) -->
-<section class="py-12 md:py-20 px-4 md:px-6 bg-neutral-900 awards-section overflow-hidden">
+<!-- ================================
+     AWARDS
+     ================================ -->
+<section class="py-12 md:py-20 px-4 md:px-6 bg-neutral-900 awards-section" style="overflow: hidden;">
     <div class="container mx-auto max-w-7xl">
-        <!-- Header -->
         <div class="text-center mb-10 md:mb-16">
-            <p class="text-amber-500 text-xs tracking-widest mb-3 md:mb-4 font-light" data-aos="fade-down">
-                EXCELLENCE • RECOGNITION • TRUST
-            </p>
-            <h2 class="text-3xl md:text-5xl lg:text-6xl font-serif mb-4 md:mb-6" data-aos="zoom-in" data-aos-duration="1000">
-                Awards and Recognitions
-            </h2>
+            <p class="text-amber-500 text-xs tracking-widest mb-3 md:mb-4 font-light" data-aos="fade-down">EXCELLENCE • RECOGNITION • TRUST</p>
+            <h2 class="text-3xl md:text-5xl lg:text-6xl font-serif mb-4 md:mb-6" data-aos="zoom-in" data-aos-duration="1000">Awards and Recognitions</h2>
             <p class="text-sm md:text-base text-gray-300 max-w-4xl mx-auto mb-2 md:mb-3 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
                 Honored to receive Travellers' Choice Awards from TripAdvisor for our exceptional hospitality
             </p>
         </div>
-
-        <!-- Awards Grid -->
         <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
-
-            <!-- Award Card 1 - 2020 -->
             <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                 <div class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/30 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
-                    <img src="images/testimonials1.png" alt="TripAdvisor Travellers' Choice Award 2020" class="w-full h-auto max-w-[280px] object-contain award-image">
+                    <img src="images/testimonials1.png" alt="TripAdvisor Travellers Choice Award 2020" class="w-full h-auto max-w-[280px] object-contain award-image">
                 </div>
             </div>
-
-            <!-- Award Card 2 - 2021 -->
             <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <div class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/30 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
-                    <img src="images/testimonials2.png" alt="TripAdvisor Travellers' Choice Award 2021" class="w-full h-auto max-w-[280px] object-contain award-image">
+                    <img src="images/testimonials2.png" alt="TripAdvisor Travellers Choice Award 2021" class="w-full h-auto max-w-[280px] object-contain award-image">
                 </div>
             </div>
-
-            <!-- Award Card 3 - 2022 -->
             <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
                 <div class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/30 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
-                    <img src="images/testimonials3.png" alt="TripAdvisor Travellers' Choice Award 2022" class="w-full h-auto max-w-[280px] object-contain award-image">
+                    <img src="images/testimonials3.png" alt="TripAdvisor Travellers Choice Award 2022" class="w-full h-auto max-w-[280px] object-contain award-image">
                 </div>
             </div>
-
-            <!-- Award Card 4 - 2025 (Green Background) -->
-            <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" style="background-color: #39DCA1;border-radius: 9px;">
+            <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" style="background-color: #39DCA1; border-radius: 9px;">
                 <div class="bg-transparent rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 group-hover:shadow-emerald-500/40 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
-                    <img src="images/testimonials4.jpeg" alt="TripAdvisor Travelers' Choice Award 2025" class="w-full h-full object-cover rounded-2xl award-image">
+                    <img src="images/testimonials4.jpeg" alt="TripAdvisor Travelers Choice Award 2025" class="w-full h-full object-cover rounded-2xl award-image">
                 </div>
             </div>
-
         </div>
-
     </div>
 </section>
+
+<!-- Special Offer Button -->
 <button id="specialOfferBtn"
     class="fixed bottom-20 right-4 md:bottom-24 mb-8 md:right-8 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-2xl z-50 transition transform hover:scale-110 animate-pulse"
     aria-label="Special Offer" onclick="toggleSpecialOfferPopup()">
-    <!-- Price Tag Icon -->
     <svg class="w-8 h-8 md:w-10 md:h-10" fill="currentColor" viewBox="0 0 20 20">
-        <path fill-rule="evenodd"
-            d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z"
-            clip-rule="evenodd"></path>
+        <path fill-rule="evenodd" d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
     </svg>
-    <span
-        class="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold px-1.5 py-0.5 rounded-full animate-bounce">
-        New
-    </span>
+    <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold px-1.5 py-0.5 rounded-full animate-bounce">New</span>
 </button>
-<!-- Special Offer Popup Modal -->
-<div id="specialOfferPopup"
-    class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[100] hidden items-center justify-center p-4"
-    onclick="closeIfClickedOutside(event)">
 
-    <div class="bg-neutral-900 border-2 border-amber-500/50 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto relative animate-slideIn"
-        onclick="event.stopPropagation()">
-
-        <!-- Close Button -->
-        <button onclick="toggleSpecialOfferPopup()"
-            class="absolute top-4 right-4 text-white hover:text-amber-500 transition z-10">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
+<!-- Special Offer Popup -->
+<div id="specialOfferPopup" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[100] hidden items-center justify-center p-4" onclick="closeIfClickedOutside(event)">
+    <div class="bg-neutral-900 border-2 border-amber-500/50 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto relative animate-slideIn" onclick="event.stopPropagation()">
+        <button onclick="toggleSpecialOfferPopup()" class="absolute top-4 right-4 text-white hover:text-amber-500 transition z-10">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
         </button>
-
-        <!-- Header with Gradient -->
         <div class="bg-gradient-to-r from-amber-600 to-amber-500 p-6 md:p-8 rounded-t-2xl">
             <div class="flex items-center gap-3 mb-2">
-                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7">
-                    </path>
-                </svg>
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"></path></svg>
                 <h3 class="text-2xl md:text-3xl font-serif font-bold text-white">Special Offers</h3>
             </div>
             <p class="text-amber-100 text-sm">Limited time deals on resort packages & safari tours</p>
         </div>
-
-        <!-- Offers Content -->
         <div class="p-6 md:p-8 space-y-6">
-
-            <!-- Offer 1 - Resort + Safari Package -->
             <div class="bg-black border border-amber-500/30 rounded-xl p-5 hover:border-amber-500 transition">
                 <div class="flex items-start justify-between mb-3">
                     <div>
-                        <span
-                            class="inline-block bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-full mb-2">
-                            BESTSELLER
-                        </span>
+                        <span class="inline-block bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-full mb-2">BESTSELLER</span>
                         <h4 class="text-xl font-serif font-bold text-white">2N/3D Resort + Safari Package</h4>
                     </div>
                     <div class="text-right">
@@ -899,82 +884,28 @@ include 'includes/header.php';
                     </div>
                 </div>
                 <ul class="text-gray-300 text-sm space-y-2 mb-4">
-                    <li class="flex items-center gap-2">
-                        <svg class="w-4 h-4 text-amber-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd"
-                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        2 Nights Stay at Wildmark Resort (Near Khatia Gate)
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <svg class="w-4 h-4 text-amber-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd"
-                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        4 Jungle Safaris (Morning + Evening)
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <svg class="w-4 h-4 text-amber-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd"
-                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        All Meals Included (Breakfast, Lunch, Dinner)
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <svg class="w-4 h-4 text-amber-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd"
-                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        Complimentary Safari Permit Assistance
-                    </li>
+                    <li class="flex items-center gap-2"><svg class="w-4 h-4 text-amber-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>2 Nights Stay at Wildmark Resort</li>
+                    <li class="flex items-center gap-2"><svg class="w-4 h-4 text-amber-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>4 Jungle Safaris (Morning + Evening)</li>
+                    <li class="flex items-center gap-2"><svg class="w-4 h-4 text-amber-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>All Meals Included (Breakfast, Lunch, Dinner)</li>
+                    <li class="flex items-center gap-2"><svg class="w-4 h-4 text-amber-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Complimentary Safari Permit Assistance</li>
                 </ul>
-                <div class="flex gap-3">
-                    <a href="contact.php"
-                        class="flex-1 bg-amber-500 hover:bg-amber-600 text-black font-bold py-2 px-4 rounded-lg text-center text-sm transition">
-                        BOOK NOW
-                    </a>
-
-                </div>
+                <a href="contact.php" class="block bg-amber-500 hover:bg-amber-600 text-black font-bold py-2 px-4 rounded-lg text-center text-sm transition">BOOK NOW</a>
             </div>
-
-            <!-- Offer 2 - Early Bird Discount -->
             <div class="bg-black border border-amber-500/30 rounded-xl p-5 hover:border-amber-500 transition">
                 <div class="flex items-start justify-between mb-3">
                     <div>
-                        <span
-                            class="inline-block bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-2">
-                            EARLY BIRD
-                        </span>
+                        <span class="inline-block bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-2">EARLY BIRD</span>
                         <h4 class="text-xl font-serif font-bold text-white">Advance Booking Discount</h4>
                     </div>
-                    <div class="text-right">
-                        <p class="text-2xl font-bold text-green-500">20% OFF</p>
-                    </div>
+                    <div class="text-right"><p class="text-2xl font-bold text-green-500">20% OFF</p></div>
                 </div>
-                <p class="text-gray-300 text-sm mb-4">
-                    Book 30 days in advance and save 20% on all resort packages. Valid for bookings made before March
-                    31, 2025.
-                </p>
-                <div class="flex gap-3">
-                    <a href="contact.php"
-                        class="flex-1 bg-amber-500 hover:bg-amber-600 text-black font-bold py-2 px-4 rounded-lg text-center text-sm transition">
-                        BOOK NOW
-                    </a>
-
-                </div>
+                <p class="text-gray-300 text-sm mb-4">Book 30 days in advance and save 20% on all resort packages. Valid for bookings made before March 31, 2025.</p>
+                <a href="contact.php" class="block bg-amber-500 hover:bg-amber-600 text-black font-bold py-2 px-4 rounded-lg text-center text-sm transition">BOOK NOW</a>
             </div>
-
-            <!-- Offer 3 - Group Discount -->
             <div class="bg-black border border-amber-500/30 rounded-xl p-5 hover:border-amber-500 transition">
                 <div class="flex items-start justify-between mb-3">
                     <div>
-                        <span class="inline-block bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-2">
-                            GROUP OFFER
-                        </span>
+                        <span class="inline-block bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-2">GROUP OFFER</span>
                         <h4 class="text-xl font-serif font-bold text-white">Group Booking Special</h4>
                     </div>
                     <div class="text-right">
@@ -982,52 +913,38 @@ include 'includes/header.php';
                         <p class="text-xs text-gray-400">per person</p>
                     </div>
                 </div>
-                <p class="text-gray-300 text-sm mb-4">
-                    Special rates for groups of 6+ people. Perfect for families, corporate outings, and wildlife
-                    photography tours.
-                </p>
-                <div class="flex gap-3">
-                    <a href="contact.php"
-                        class="flex-1 bg-amber-500 hover:bg-amber-600 text-black font-bold py-2 px-4 rounded-lg text-center text-sm transition">
-                        Book Now
-                    </a>
-
-                </div>
+                <p class="text-gray-300 text-sm mb-4">Special rates for groups of 6+ people. Perfect for families, corporate outings, and wildlife photography tours.</p>
+                <a href="contact.php" class="block bg-amber-500 hover:bg-amber-600 text-black font-bold py-2 px-4 rounded-lg text-center text-sm transition">Book Now</a>
             </div>
-
         </div>
-
-        <!-- Footer -->
         <div class="bg-amber-500/10 border-t border-amber-500/30 p-4 text-center rounded-b-2xl">
-            <p class="text-amber-500 text-sm font-semibold">
-                ⏰ Offers valid till March 31, 2025 | Terms & Conditions Apply
-            </p>
+            <p class="text-amber-500 text-sm font-semibold">⏰ Offers valid till March 31, 2025 | Terms & Conditions Apply</p>
         </div>
-
     </div>
 </div>
 
-<!-- JavaScript -->
+<!-- WhatsApp Button -->
+<a href="https://wa.me/8830996719" target="_blank"
+    class="fixed bottom-4 right-4 md:bottom-8 md:right-8 bg-green-500 hover:bg-green-600 w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-2xl z-50 transition transform hover:scale-110">
+    <svg class="w-6 h-6 md:w-8 md:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+</a>
+
 <script>
 // FAQ Accordion
 document.addEventListener('DOMContentLoaded', function() {
     const faqItems = document.querySelectorAll('.faq-item');
-
     faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
         const answer = item.querySelector('.faq-answer');
         const icon = item.querySelector('.faq-icon');
-
         question.addEventListener('click', () => {
             const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
-
-            // Close all
             faqItems.forEach(other => {
                 other.querySelector('.faq-answer').style.maxHeight = '0px';
                 other.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
             });
-
-            // Open current if it was closed
             if (!isOpen) {
                 answer.style.maxHeight = answer.scrollHeight + 'px';
                 icon.style.transform = 'rotate(180deg)';
@@ -1036,42 +953,34 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// FAQ Grid Responsive Handler
 function handleFaqResize() {
     var grid = document.querySelector('.faq-grid');
     if (!grid) return;
-    if (window.innerWidth <= 860) {
-        grid.style.gridTemplateColumns = '1fr';
-    } else {
-        grid.style.gridTemplateColumns = '1fr 1fr';
-    }
+    grid.style.gridTemplateColumns = window.innerWidth <= 860 ? '1fr' : '1fr 1fr';
 }
 window.addEventListener('load', handleFaqResize);
 window.addEventListener('resize', handleFaqResize);
-</script>
-<script>
-// Toggle Special Offer Popup
+
+// Special Offer Popup
 function toggleSpecialOfferPopup() {
     const popup = document.getElementById('specialOfferPopup');
     if (popup.classList.contains('hidden')) {
         popup.classList.remove('hidden');
         popup.classList.add('flex');
-        document.body.style.overflow = 'hidden'; // Prevent background scroll
+        document.body.style.overflow = 'hidden';
     } else {
         popup.classList.add('hidden');
         popup.classList.remove('flex');
-        document.body.style.overflow = ''; // Restore scroll
+        document.body.style.overflow = '';
     }
 }
 
-// Close popup when clicking outside
 function closeIfClickedOutside(event) {
     if (event.target.id === 'specialOfferPopup') {
         toggleSpecialOfferPopup();
     }
 }
 
-// Close popup with Escape key
 document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
         const popup = document.getElementById('specialOfferPopup');
@@ -1082,7 +991,4 @@ document.addEventListener('keydown', function(event) {
 });
 </script>
 
-<?php 
-// Include footer
-include 'includes/footer.php'; 
-?>
+<?php include 'includes/footer.php'; ?>
