@@ -2752,6 +2752,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 </script>
+
+
 <?php 
 // Include footer
 include 'includes/footer.php'; 
