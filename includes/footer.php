@@ -1,8 +1,8 @@
-   <style>
+<style>
       @media (min-width: 768px) {
         .footer-grid {
           grid-template-columns: 1.4fr 0.85fr 0.75fr 1fr 1.8fr !important;
-          gap: 20px !important;
+          gap: 12px !important;
         }
         .map-box { height: 260px !important; width: 100% !important; }
       }
@@ -11,16 +11,16 @@
       }
     </style>
 <!-- Footer -->
-<footer class="bg-black py-10 border-t border-neutral-800">
-  <div class="max-w-screen-2xl mx-auto px-3 md:px-5">
-       <div style="display: grid; grid-template-columns: 1fr; gap: 28px;" class="mb-8 footer-grid">
+<footer class="bg-black py-6 border-t border-neutral-800">
+  <div class="max-w-screen-2xl mx-auto px-3 md:px-4">
+       <div style="display: grid; grid-template-columns: 1fr; gap: 16px;" class="mb-6 footer-grid">
 
       <!-- About -->
       <div>
-        <a href="index.php" class="flex items-center mb-4">
+        <a href="index.php" class="flex items-center mb-3">
           <img src="images/WILD.png" alt="Wildmark Resort Kanha Logo" class="h-14 w-auto object-contain"/>
         </a>
-        <p class="text-gray-400 text-sm leading-relaxed mb-5">
+        <p class="text-gray-400 text-sm leading-relaxed mb-4">
           Unforgettable Wildlife Adventure Await at Kanha Jungle Safari.
           See tigers, deer, leopards &amp; more on a personalized jungle safari.
           Visit &amp; book online.
@@ -34,8 +34,8 @@
 
       <!-- Quick Links -->
       <div>
-        <h4 class="text-base font-serif font-bold text-amber-100 mb-4">Quick Links</h4>
-        <ul class="space-y-2 text-sm">
+        <h4 class="text-base font-serif font-bold text-amber-100 mb-3">Quick Links</h4>
+        <ul class="space-y-1.5 text-sm">
           <li><a href="index.php" class="text-gray-400 hover:text-amber-500 transition">Home</a></li>
           <li><a href="about.php" class="text-gray-400 hover:text-amber-500 transition">About</a></li>
           <li><a href="How-to-Reach.php" class="text-gray-400 hover:text-amber-500 transition">How to Reach</a></li>
@@ -49,8 +49,8 @@
 
       <!-- Help Center -->
       <div>
-        <h4 class="text-base font-serif font-bold text-amber-100 mb-4">Help Center</h4>
-        <ul class="space-y-2 text-sm">
+        <h4 class="text-base font-serif font-bold text-amber-100 mb-3">Help Center</h4>
+        <ul class="space-y-1.5 text-sm">
           <li><a href="contact.php" class="text-gray-400 hover:text-amber-500 transition">Contact Us</a></li>
           <li><a href="Privacy-Policy.php" class="text-gray-400 hover:text-amber-500 transition">Privacy Policy</a></li>
           <li><a href="Terms-and-Conditions.php" class="text-gray-400 hover:text-amber-500 transition">Terms and Conditions</a></li>
@@ -60,8 +60,8 @@
 
       <!-- Contact Info -->
       <div>
-        <h4 class="text-base font-serif font-bold text-amber-100 mb-4">Contact Info</h4>
-        <ul class="space-y-3 text-sm text-gray-400">
+        <h4 class="text-base font-serif font-bold text-amber-100 mb-3">Contact Info</h4>
+        <ul class="space-y-2 text-sm text-gray-400">
           <li class="flex items-start gap-2">
             <i class="fa-solid fa-location-dot text-amber-500 mt-1 flex-shrink-0"></i>
             <span>B.No. 8, Rajlaxmi Apartment Near Bhende Layout, Pannase Layout, Nagpur – 440022.</span>
@@ -79,7 +79,7 @@
 
       <!-- Map -->
       <div>
-        <h4 class="text-base font-serif font-bold text-amber-100 mb-4">Our Location</h4>
+        <h4 class="text-base font-serif font-bold text-amber-100 mb-3">Our Location</h4>
         <div class="map-box rounded-xl overflow-hidden border border-amber-500/30 shadow-lg hover:scale-[1.02] transition duration-300" style="height: 260px; width: 100%;">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.0234567890123!2d80.5118205!3d22.315946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a2a0b67fb9e449f%3A0xb861ff4ba4e91cb5!2sWild%20Mark%20Resort%2C%20Kanha!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
@@ -91,7 +91,7 @@
     </div>
 
     <!-- Bottom -->
-    <div class="border-t border-neutral-800 pt-5 text-center">
+    <div class="border-t border-neutral-800 pt-4 text-center">
       <p class="text-gray-500 text-xs">© 2025 Wildmark Resort Kanha. All Rights Reserved.</p>
     </div>
 
