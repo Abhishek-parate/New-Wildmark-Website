@@ -188,7 +188,7 @@ footer i:hover{
           </li>
           <li>
             <i class="fa-solid fa-envelope" style="color: var(--text2);"></i>
-            <a href="mailto:info@wildmarkresort.com/">info@wildmarkresort.com</a>
+            <a href="mailto:wildmarkresort@gmail.com/">wildmarkresort@gmail.com</a>
           </li>
           <li>
             <i class="fa-solid fa-phone" style="color: var(--text2);"></i>

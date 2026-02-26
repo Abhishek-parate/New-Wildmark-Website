@@ -1,5 +1,5 @@
 <!-- contact-form.php -->
-<form class="space-y-4" method="POST" action="https://wildmarkresort.com/send-mail.php" id="contactForm">
+<form method="POST" action="send-mail.php" id="contactForm">
 
     <div>
         <input type="text" name="name" placeholder="Your Name" required
@@ -26,10 +26,8 @@
         <button type="submit" id="submitBtn"
             class="w-full font-semibold py-3 rounded-lg text-white bg-green-600 flex items-center justify-center gap-2 transition-all duration-200">
 
-            <!-- Default state -->
             <span id="btnText">SEND MESSAGE</span>
 
-            <!-- Loading spinner (hidden by default) -->
             <svg id="btnSpinner" class="hidden animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                 <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                 <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
@@ -45,8 +43,6 @@ document.getElementById('contactForm').addEventListener('submit', function () {
     const btn     = document.getElementById('submitBtn');
     const text    = document.getElementById('btnText');
     const spinner = document.getElementById('btnSpinner');
-
-    // Show loading state
     text.textContent = 'Sending...';
     spinner.classList.remove('hidden');
     btn.disabled = true;

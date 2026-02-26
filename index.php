@@ -998,8 +998,8 @@ section.py-12.md\:py-20.px-4.md\:px-6.bg-neutral-900 { background-color: var(--b
                         </div>
                         <div>
                             <h3 class="font-bold text-base md:text-lg mb-2">Email Address</h3>
-                            <p class="text-sm md:text-base font-semibold mb-1" style="color: var(--text2);">kanhawildmark@gmail.com</p>
-                            <a href="mailto:kanhawildmark@gmail.com" class="inline-block text-xs md:text-sm transition mt-2" style="color: var(--text2);">Send Email →</a>
+                            <p class="text-sm md:text-base font-semibold mb-1" style="color: var(--text2);">wildmarkresort@gmail.com</p>
+                            <a href="mailto:wildmarkresort@gmail.com" class="inline-block text-xs md:text-sm transition mt-2" style="color: var(--text2);">Send Email →</a>
                         </div>
                     </div>
                 </div>

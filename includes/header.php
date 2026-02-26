@@ -480,26 +480,6 @@
 
 
 
-                                        <!-- Packages Dropdown -->
-                    <div class="dropdown">
-                        <button class="dropdown-btn">
-                            Packages
-                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </button>
-                        <div class="mega-menu">
-                            <div class="mega-menu-inner">
-                                <a href="https://wildmarkresort.com/kanha-tour-package/">Kanha Tour Package</a>
-                                <a href="https://wildmarkresort.com/kanha-tiger-safari-tour-package/">Kanha Tiger Safari Tour Package</a>
-                                <a href="https://wildmarkresort.com/kanha-safari-tour-package/">Kanha Safari Tour Package</a>
-                                <a href="https://wildmarkresort.com/mukki-zone-tour-package/">Mukki Zone Tour Package</a>
-                                <a href="https://wildmarkresort.com/kanha-kisli-tour-package/">Kanha Kisli Tour Package</a>
-                            </div>
-                        </div>
-                    </div>
-
                     <a href="https://wildmarkresort.com/kanha-accommodation/" class="nav-link">Accommodation</a>
                     <a href="https://wildmarkresort.com/know-about-kanha-national-park-in-detail/"    class="nav-link">Kanha</a>
 
