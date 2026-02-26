@@ -1,0 +1,25 @@
+RewriteEngine On
+
+# -----------------------------------------
+# 1️⃣ Force specific 301 redirect (OLD → NEW)
+# -----------------------------------------
+RewriteRule ^kanha-holiday-tour-package/?$ https://wildmarkresort.com/kanha-tour-package/ [R=301,L]
+
+# -----------------------------------------
+# 2️⃣ Remove index.php from URL
+# -----------------------------------------
+RewriteCond %{THE_REQUEST} \s/index\.php[\s?]
+RewriteRule ^index\.php$ / [R=301,L]
+
+# -----------------------------------------
+# 3️⃣ Redirect .php URLs to clean URLs
+# -----------------------------------------
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?]
+RewriteRule ^ %1 [R=301,L]
+
+# -----------------------------------------
+# 4️⃣ Internally rewrite clean URLs to .php
+# -----------------------------------------
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^/]+)/?$ $1.php [L]
