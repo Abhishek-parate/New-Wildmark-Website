@@ -254,7 +254,7 @@ section.py-12.md\:py-20.px-4.md\:px-6.bg-neutral-900 { background-color: var(--b
                         </div>
                         <div>
                             <h4 class="text-sm font-light mb-2 tracking-wider opacity-80">EMAIL</h4>
-                            <a href="mailto:kanhawildmark@gmail.com/" class="text-lg md:text-xl font-semibold hover:underline block break-all">
+                            <a href="mailto:kanhawildmark@gmail.com" class="text-lg md:text-xl font-semibold hover:underline block break-all">
                                 kanhawildmark@gmail.com
                             </a>
                         </div>
@@ -268,8 +268,8 @@ section.py-12.md\:py-20.px-4.md\:px-6.bg-neutral-900 { background-color: var(--b
                         <div>
                             <h4 class="text-sm font-light mb-2 tracking-wider opacity-80">ADDRESS</h4>
                             <span class="text-lg md:text-xl font-semibold block break-all">
-                                B.No. 8, Rajlaxmi Apartment Near Bhende Layout, Pannase
-                                Layout, Nagpur 440022.
+                               
+Kanha Tiger Reserve, Near Maratha Restaurant, Mocha, Madhya Pradesh 481768
                             </span>
                         </div>
                     </div>
@@ -704,7 +704,7 @@ section.py-12.md\:py-20.px-4.md\:px-6.bg-neutral-900 { background-color: var(--b
                         <p class="text-2xl font-bold" style="color: var(--text2);">20% OFF</p>
                     </div>
                 </div>
-                <p class="text-sm mb-4" style="color: var(--text1);">Book 30 days in advance and save 20% on all resort packages. Valid for bookings made before March 31, 2025.</p>
+                <p class="text-sm mb-4" style="color: var(--text1);">Book 30 days in advance and save 20% on all resort packages. Valid for bookings made before March 31, 2026.</p>
                 <a href="https://wildmarkresort.com/contact/" class="block text-white font-bold py-2 px-4 rounded-lg text-center text-sm transition" style="background-color: var(--text2);">BOOK NOW</a>
             </div>
 
@@ -726,7 +726,7 @@ section.py-12.md\:py-20.px-4.md\:px-6.bg-neutral-900 { background-color: var(--b
         </div>
 
         <div class="border-t p-4 text-center rounded-b-2xl" style="background-color: rgba(232,201,153,0.3); border-top-color: rgba(142,22,22,0.3);">
-            <p class="text-sm font-semibold" style="color: var(--text2);">⏰ Offers valid till March 31, 2025 | Terms & Conditions Apply</p>
+            <p class="text-sm font-semibold" style="color: var(--text2);">⏰ Offers valid till March 31, 2026 | Terms & Conditions Apply</p>
         </div>
     </div>
 </div>

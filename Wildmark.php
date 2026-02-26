@@ -1,55 +1,12 @@
 <?php 
 // Set page-specific title
-$pageTitle = "How to Reach - Wildmark Resort Kanha";
+$pageTitle = "Wildmark - Wildmark Resort Kanha";
 
 // Include header
 include 'includes/header.php'; 
 ?>
 <style>
-        /* ===== ROOT COLOR VARIABLES ===== */
-        :root {
-            --bg1: #E8C999;
-            --bg2: #F8EEDF;
-            --text1: #000000;
-            --text2: #8E1616;
-        }
-
-        /* Custom styling */
-        .hero-section {
-            position: relative;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(102, 86, 86, 0.7)),
-                url("https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?w=1600");
-            background-size: cover;
-            background-position: center;
-        }
-
-        .info-card {
-            background: rgba(232, 201, 153, 0.15);
-            border: 1px solid rgba(232, 201, 153, 0.4);
-        }
-
-        @media (max-width: 768px) {
-            body {
-                font-size: 14px;
-            }
-
-            h2 {
-                font-size: 1.5rem;
-            }
-
-            h3 {
-                font-size: 1.25rem;
-            }
-
-            p,
-            span,
-            a,
-            li {
-                word-wrap: break-word;
-                overflow-wrap: break-word;
-            }
-        }
-        @keyframes slideIn {
+@keyframes slideIn {
     from {
         opacity: 0;
         transform: scale(0.9) translateY(20px);
@@ -66,24 +23,173 @@ include 'includes/header.php';
 
 /* Smooth scroll for popup content */
 #specialOfferPopup > div {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
 }
 
 #specialOfferPopup > div::-webkit-scrollbar {
-    display: none;
+    display: none; /* Chrome/Safari/Opera */
 }
 
+
 #specialOfferPopup > div::-webkit-scrollbar-track {
-    background: var(--bg2);
+    background: #1c1917;
 }
 
 #specialOfferPopup > div::-webkit-scrollbar-thumb {
-    background: var(--text2);
+    background: #d97706;
     border-radius: 3px;
 }
+    /* Amenities Icon Colors */
+    .amenity-icon {
+        color: #d4a574;
+    }
 
- .faq-grid {
+    /* Gallery Hover Effect */
+    .gallery-item {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .gallery-item img {
+        transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover img {
+        transform: scale(1.1);
+    }
+
+    .gallery-item::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5));
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .gallery-item:hover::after {
+        opacity: 1;
+    }
+
+    /* Map responsive */
+    .map-container {
+        position: relative;
+        width: 100%;
+        height: 400px;
+    }
+
+    .map-container iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+
+    /* Fix container overflow */
+    section {
+        overflow-x: hidden;
+    }
+
+    /* Responsive text */
+    @media (max-width: 768px) {
+        body {
+            font-size: 14px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+        }
+
+        /* Ensure all text wraps properly */
+        p,
+        span,
+        a,
+        li {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+    }
+     /* Tabs styling */
+    .tab-btn {
+      position: relative;
+      transition: color 0.3s ease;
+      font-family: "Roboto Slab", serif;
+      font-weight: 700;
+      font-size: 0.875rem;
+      color: #d4a574;
+      padding-bottom: 0.75rem;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    @media (min-width: 768px) {
+      .tab-btn {
+        font-size: 1rem;
+        padding-bottom: 1rem;
+      }
+    }
+
+    .tab-btn:hover {
+      color: #ca9f66;
+    }
+
+    .tab-btn.active {
+      color: #ffffff;
+    }
+
+    .tab-btn.active::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 3px;
+      background-color: #ca9f66;
+    }
+
+    .tab-btn-a {
+      position: relative;
+      transition: color 0.3s ease;
+      font-family: "Roboto Slab", serif;
+      font-weight: 700;
+      font-size: 0.875rem;
+      color: #d4a574;
+      padding-bottom: 0.75rem;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    @media (min-width: 768px) {
+      .tab-btn-a {
+        font-size: 1rem;
+        padding-bottom: 1rem;
+      }
+    }
+
+    .tab-btn-a:hover {
+      color: #ca9f66;
+    }
+
+    .tab-btn-a.active {
+      color: #ffffff;
+    }
+
+    .tab-btn-a.active::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 3px;
+      background-color: #ca9f66;
+    }
+  .faq-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
@@ -122,484 +228,385 @@ include 'includes/header.php';
       font-size: 14px !important;
     }
   }
-
-  /* ===== GLOBAL THEME OVERRIDES ===== */
-
-  /* Main section backgrounds */
-  section.bg-neutral-900 {
-      background-color: var(--bg2) !important;
-  }
-  section.bg-black {
-      background-color: var(--bg1) !important;
-  }
-
-  /* Headings - h1, h2, h3, h4 */
-  h1, h2, h3, h4 {
-      color: var(--text2) !important;
-  }
-
-  /* Amber headings */
-  .text-amber-100 {
-      color: var(--text2) !important;
-  }
-
-  /* Body text */
-  .text-gray-300 {
-      color: var(--text1) !important;
-  }
-  p {
-      color: var(--text1);
-  }
-
-  /* Amber accents → text2 */
-  .text-amber-500, .text-amber-400 {
-      color: var(--text2) !important;
-  }
-
-  /* Borders */
-  .border-neutral-800 {
-      border-color: rgba(142, 22, 22, 0.25) !important;
-  }
-  .border-neutral-700 {
-      border-color: rgba(142, 22, 22, 0.2) !important;
-  }
-
-  /* FAQ Cards */
-  .faq-item.bg-black {
-      background-color: var(--bg2) !important;
-      border-color: rgba(142, 22, 22, 0.25) !important;
-      box-shadow: 0 2px 8px rgba(142, 22, 22, 0.07);
-  }
-  .faq-item.bg-black:hover {
-      border-color: var(--text2) !important;
-  }
-  .faq-question:hover {
-      background-color: rgba(232, 201, 153, 0.5) !important;
-  }
-  .faq-answer > div {
-      background-color: rgba(232, 201, 153, 0.3) !important;
-      border-top-color: rgba(142, 22, 22, 0.2) !important;
-  }
-  .faq-icon {
-      color: var(--text2) !important;
-  }
-  .faq-question span {
-      color: var(--text1) !important;
-  }
-
-  /* Travel method cards */
-  .bg-black.rounded-xl.border.border-neutral-800 {
-      background-color: var(--bg2) !important;
-  }
-
-  /* Info card */
-  .info-card.rounded-xl {
-      background-color: rgba(232, 201, 153, 0.2) !important;
-      border-color: rgba(142, 22, 22, 0.3) !important;
-  }
-
-  /* Route distances list icons */
-  .fa-location-dot {
-      color: var(--text2) !important;
-  }
-  .fa-circle {
-      color: var(--text2) !important;
-  }
-
-  /* Dot list icons */
-  li strong.text-white {
-      color: var(--text1) !important;
-  }
-
-  /* Awards section */
-  .awards-section {
-      background-color: var(--bg1) !important;
-  }
-
-  /* Special Offer Popup */
-  #specialOfferPopup .bg-neutral-900 {
-      background-color: var(--bg2) !important;
-      border-color: var(--text2) !important;
-  }
-  #specialOfferPopup .bg-gradient-to-r {
-      background: linear-gradient(to right, var(--text2), #b01e1e) !important;
-  }
-  #specialOfferPopup .bg-black {
-      background-color: var(--bg1) !important;
-  }
-  #specialOfferPopup .border-amber-500\/30 {
-      border-color: rgba(142, 22, 22, 0.3) !important;
-  }
-  #specialOfferPopup .hover\:border-amber-500:hover {
-      border-color: var(--text2) !important;
-  }
-  #specialOfferPopup h4.text-white {
-      color: var(--text1) !important;
-  }
-  #specialOfferPopup .text-amber-500 {
-      color: var(--text2) !important;
-  }
-  #specialOfferPopup .bg-amber-500\/10 {
-      background-color: rgba(232, 201, 153, 0.3) !important;
-  }
-  #specialOfferPopup .border-amber-500\/30 {
-      border-color: rgba(142, 22, 22, 0.3) !important;
-  }
-  #specialOfferPopup .text-amber-100 {
-      color: var(--bg2) !important;
-  }
-  /* Offer price strikethrough */
-  #specialOfferPopup .text-gray-400.line-through {
-      color: rgba(0,0,0,0.4) !important;
-  }
-  #specialOfferPopup .text-2xl.text-amber-500 {
-      color: var(--text2) !important;
-  }
-  #specialOfferPopup .text-gray-400 {
-      color: rgba(0,0,0,0.5) !important;
-  }
-  /* Popup Book Now button */
-  .bg-amber-500.hover\:bg-amber-600 {
-      background-color: var(--text2) !important;
-      color: var(--bg2) !important;
-  }
-  .bg-amber-500.hover\:bg-amber-600:hover {
-      background-color: #6e1010 !important;
-  }
-
-  /* Special offer button (floating) */
-  #specialOfferBtn {
-      background: linear-gradient(to right, var(--text2), #b01e1e) !important;
-  }
-  #specialOfferBtn:hover {
-      background: linear-gradient(to right, #6e1010, var(--text2)) !important;
-  }
-  #specialOfferBtn .bg-red-500 {
-      background-color: var(--bg1) !important;
-      color: var(--text2) !important;
-  }
-
-  /* EXCELLENCE tracking text */
-  .text-amber-500.text-xs.tracking-widest {
-      color: var(--text2) !important;
-  }
-
-  /* Section intro text center */
-  .text-center p.text-gray-300 {
-      color: var(--text1) !important;
-  }
-
-  /* Close button on popup */
-  #specialOfferPopup button.text-white {
-      color: var(--text1) !important;
-  }
-  #specialOfferPopup button.hover\:text-amber-500:hover {
-      color: var(--text2) !important;
-  }
-
-  /* FAQ Section background */
-  section.py-12.md\:py-20.px-4.bg-neutral-900 {
-      background-color: var(--bg2) !important;
-  }
-
-  /* Offer badges keep their identity but refine */
-  .bg-green-500 { background-color: #2a6e3f !important; }
-  .bg-blue-500 { background-color: #1a4a7a !important; }
-
-  /* WhatsApp button stays green */
-  .bg-green-500.hover\:bg-green-600 {
-      background-color: #25D366 !important;
-  }
     </style>
+
+
     <!-- Spacer -->
     <div class="h-[60px] md:h-[80px]"></div>
 
     <!-- Hero Banner -->
-    <header class="relative h-[50vh] md:h-[60vh] lg:h-[100vh] flex items-end"
-        style="background: url('https://wildmarkresort.com/images/Tiger5.webp') center/cover no-repeat">
+    <header class="relative h-[50vh] md:h-[60vh] lg:h-[70vh] flex items-end"
+        style="background: url('images/wildmark1.JPG') center/cover no-repeat">
         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
     </header>
 
-    <!-- Main Content -->
+    <!-- Main Content Section -->
     <section class="py-12 md:py-16 bg-neutral-900">
-        <div class="max-w-7xl mx-auto px-4 md:px-6">
-            <!-- Introduction -->
-            <div class="mb-12" data-aos="fade-up">
-                <h1 class="text-2xl md:text-5xl font-serif font-bold mb-6 text-amber-100 text-center">
-                    How To Reach Kanha Kisli Tiger Reserve
-                </h1>
-                <p class="text-gray-300 text-sm md:text-base leading-relaxed text-center mb-4">
-                    Kanha National Park is located in the Mandla and Balaghat districts
-                    of Madhya Pradesh. Kanha Tiger Reserve is easily accessible by air,
-                    road, and rail from most parts of the country. Many wildlife lovers,
-                    wildlife photographers, and flora lovers come here to see many wild
-                    animals and a variety of birds and flora. In such a situation, they
-                    should have complete information about the gates of Kanha and
-                    transportation by air, road, and rail.
-                </p>
-            </div>
-
-            <!-- Entrance Gates Section -->
-            <div class="grid lg:grid-cols-2 gap-8 md:gap-12 mb-12">
+        <div class="max-w-6xl mx-auto px-4 md:px-6">
+            <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
+                <!-- Left Column - Text Content -->
                 <div data-aos="fade-right">
-                    <h2 class="text-2xl md:text-3xl font-serif font-bold mb-2 text-amber-100">
-                        Entrance Gates: Khatia and Mukki
+                    <h2 class="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-amber-100 mb-4">
+                        Wild Mark Resort – Kanha Accommodation
                     </h2>
-                    <p class="text-gray-300 text-sm md:text-base leading-relaxed text-justify mb-4">
-                        Kanha National Park has two main entrance gates, Khatia and Mukki
-                        entrance gates. It is connected to Jabalpur, Raipur, and Nagpur
-                        and is the first choice of tourists.
+
+                    <p class="text-gray-300 mb-3 leading-relaxed text-sm md:text-base text-justify">
+                        Less than a kilometer from the main Khatia Gate, Wildmark Resort
+                        is the best resort in Kanha.
                     </p>
 
-                    <h3 class="text-xl md:text-xl font-serif font-bold mb-2 text-amber-100">
-                        Khatia Gate Kanha:
-                    </h3>
-                    <p class="text-gray-300 text-sm md:text-base leading-relaxed text-justify mb-4">
-                        This gate is located in the Mandla district. This gate enters
-                        Kisli, Kanha, and Sarhi areas. It is the preferred entrance for
-                        those staying in lodges and resorts near this gate. This includes
-                        Nature Sprout Wildmark Resort, which is one of the best resorts
-                        near Khatia Gate. Khatia Gate is connected to major cities like
-                        Jabalpur and Nagpur.
+                    <p class="text-gray-300 mb-3 leading-relaxed text-sm md:text-base text-justify">
+                        Once you arrive at Wildmark Kanha, you are greeted by a spacious
+                        lawn and colonial-style bungalows. The rooms have all the modern
+                        amenities like air conditioning, changing area, hot and cold water
+                        facilities.
                     </p>
 
-                    <h3 class="text-xl md:text-xl font-serif font-bold mb-2 text-amber-100">
-                        Mukki Gate Kanha:
-                    </h3>
-                    <p class="text-gray-300 text-sm md:text-base leading-relaxed text-justify">
-                        Mukki is in the Balaghat district of Madhya Pradesh state where
-                        the Mukki entrance gate covers the Mukki range of the national
-                        park. This gate is well connected to Jabalpur, Raipur, and Nagpur,
-                        thereby providing easy access for visitors coming from the city.
+                    <p class="text-gray-300 mb-3 leading-relaxed text-sm md:text-base text-justify">
+                        A sprawling luxurious bungalow with 7 luxurious and spacious rooms
+                        and private sit out areas and swimming pool. A common area to sit
+                        down and relax with kids and maybe play a game of carrom. It is
+                        the true budget friendly option at Kanha Tiger Reserve.
+                    </p>
+
+                    <p class="text-gray-300 mb-3 leading-relaxed text-sm md:text-base text-justify">
+                        With rates as inviting as Rs. 7999 for a super deluxe stay and Rs.
+                        11999 for a family room, you'll be glad you took the plunge.
                     </p>
                 </div>
 
-                <div data-aos="fade-left" class="flex items-center justify-center">
-                    <img src="https://wildmarkresort.com/images/dear2.webp"
-                        class="w-full h-auto rounded-xl shadow-2xl" alt="Kanha National Park Map" />
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How to Reach Section -->
-    <section class="py-12 md:py-16 bg-black">
-        <div class="max-w-7xl mx-auto px-4 md:px-6">
-            <h2 class="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-center mb-12 text-amber-100"
-                data-aos="fade-up">
-                How to Reach Kanha National Park by Air, Train and Road
-            </h2>
-
-            <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-center mb-12">
-                <!-- Tiger Image -->
-                <div data-aos="fade-right" class="order-2 lg:order-1">
+                <!-- Right Column - Images -->
+                <div class="space-y-4" data-aos="fade-left">
                     <div class="rounded-xl overflow-hidden">
-                        <img src="https://wildmarkresort.com/images/card1.webp"
-                            class="w-full h-80 md:h-96 object-cover" alt="Bengal Tiger" />
+                        <img src="images/delux3.JPG" class="w-full h-64 object-cover" alt="Resort Interior" />
                     </div>
-                </div>
-
-                <!-- Route Distances -->
-                <div data-aos="fade-left" class="order-1 lg:order-2">
-                    <div class="info-card rounded-xl p-6 md:p-8">
-                        <h3 class="text-xl md:text-2xl font-serif font-bold mb-6 text-amber-100">
-                            Route distance to Kanha Kisli National Park:
-                        </h3>
-                        <p class="text-gray-300 text-sm md:text-base mb-6">
-                            Understanding the distances from major cities can help you plan
-                            your journey better. Here are the approximate distances to Kanha
-                            National Park from several key locations:
-                        </p>
-                        <ul class="space-y-3">
-                            <li class="flex items-start gap-3 text-gray-300 text-sm md:text-base">
-                                <i class="fa-solid fa-location-dot text-amber-500 mt-1 flex-shrink-0"></i>
-                                <span><strong class="text-white">Nagpur to kanha distance is 250 km</strong></span>
-                            </li>
-                            <li class="flex items-start gap-3 text-gray-300 text-sm md:text-base">
-                                <i class="fa-solid fa-location-dot text-amber-500 mt-1 flex-shrink-0"></i>
-                                <span><strong class="text-white">Gondia to Kanha distance is 250 km</strong></span>
-                            </li>
-                            <li class="flex items-start gap-3 text-gray-300 text-sm md:text-base">
-                                <i class="fa-solid fa-location-dot text-amber-500 mt-1 flex-shrink-0"></i>
-                                <span><strong class="text-white">Jabalpur to kanha distance is 190 km</strong></span>
-                            </li>
-                            <li class="flex items-start gap-3 text-gray-300 text-sm md:text-base">
-                                <i class="fa-solid fa-location-dot text-amber-500 mt-1 flex-shrink-0"></i>
-                                <span><strong class="text-white">Raipur to Kanha distance is 220 km</strong></span>
-                            </li>
-                        </ul>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="rounded-xl overflow-hidden">
+                            <img src="images/delux5.JPG" class="w-full h-40 object-cover" alt="Room" />
+                        </div>
+                        <div class="rounded-xl overflow-hidden">
+                            <img src="images/delux7.JPG" class="w-full h-40 object-cover" alt="Dining" />
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Travel Methods Section -->
-    <section class="py-12 md:py-16 bg-neutral-900">
-        <div class="max-w-7xl mx-auto px-4 md:px-6">
-            <div class="space-y-8">
-                <!-- By Air -->
-                <div class="bg-black rounded-xl p-6 md:p-8 border border-neutral-800" data-aos="fade-up">
-                    <h3 class="text-xl md:text-2xl font-serif font-bold mb-4 flex items-center gap-3 text-amber-100">
-                        <i class="fa-solid fa-plane text-amber-500"></i>
-                        Traveling by Air
-                    </h3>
-                    <p class="text-gray-300 text-sm md:text-base leading-relaxed text-justify">
-                        The nearest airport is Jabalpur Airport the new airport in
-                        <strong class="text-amber-400">(DUMNA)</strong> which is 130 kms
-                        from Kanha National Park and from Nagpur it is 265 kms which takes
-                        around 5-6 hours and the airport at Gondia (GDB) is also connected
-                        to Raipur Airport.
-                    </p>
+    <!-- Room Showcase Section -->
+    <section class="py-12 md:py-16 bg-black">
+        <div class="max-w-6xl mx-auto px-4 md:px-6">
+            <div class="grid lg:grid-cols-2 gap-8 items-center">
+                <!-- Room Image -->
+                <div data-aos="fade-right">
+                    <img src="images/family1.jpeg" class="w-full h-80 md:h-96 object-cover rounded-xl"
+                        alt="Deluxe Room" />
                 </div>
 
-                <!-- By Train -->
-                <div class="bg-black rounded-xl p-6 md:p-8 border border-neutral-800" data-aos="fade-up"
-                    data-aos-delay="100">
-                    <h3 class="text-xl md:text-2xl font-serif font-bold mb-4 flex items-center gap-3 text-amber-100">
-                        <i class="fa-solid fa-train text-amber-500"></i>
-                        Traveling by Train
-                    </h3>
-                    <p class="text-gray-300 text-sm md:text-base leading-relaxed text-justify">
-                        If you prefer to travel by train, Jabalpur Railway Station is the
-                        nearest and major station to Kanha. Jabalpur is connected by train
-                        routes to various parts of India including Delhi, Mumbai and
-                        Kolkata. Once you reach Jabalpur Railway Station, you can take a
-                        taxi or bus to reach the park. The journey from Jabalpur Railway
-                        Station to Kanha National Park takes about 4 to 5 hours.
+                <!-- Room Description -->
+                <div data-aos="fade-left">
+                    <p class="text-gray-300 mb-3 leading-relaxed text-sm md:text-base text-justify">
+                        It's a home away from home where you can give a lot of time with
+                        the family. There will be no phone calls or internet to drag you
+                        to work on a holiday. You will not be cut off from the world but
+                        will be tied up to your near and dear ones.
                     </p>
-                </div>
-
-                <!-- By Road -->
-                <div class="bg-black rounded-xl p-6 md:p-8 border border-neutral-800" data-aos="fade-up"
-                    data-aos-delay="200">
-                    <h3 class="text-xl md:text-2xl font-serif font-bold mb-4 flex items-center gap-3 text-amber-100">
-                        <i class="fa-solid fa-car text-amber-500"></i>
-                        Traveling by Road
-                    </h3>
-                    <p class="text-gray-300 text-sm md:text-base leading-relaxed mb-4">
-                        Kanha Tiger Reserve is easily accessible by road. If you live in a
-                        big city, you can go there by car or hire a taxi. Here are some
-                        tips for road trips:
+                    <p class="text-gray-300 mb-3 leading-relaxed text-sm md:text-base text-justify">
+                        In the evening you can go for a small drive to the sunset point
+                        and also go to the waterfalls. These are just a few options if you
+                        are not opting for too many tiger safaris at Kanha Tiger Reserve.
                     </p>
-                    <ul class="space-y-3 mb-6">
-                        <li class="flex items-start gap-3 text-gray-300 text-sm md:text-base">
-                            <i class="fa-solid fa-circle text-amber-500 text-xs mt-2 flex-shrink-0"></i>
-                            <span><strong class="text-white">From Nagpur:</strong> It takes
-                                about 5 to 6 hours. From NH 44, take local roads leading to
-                                the park.</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-gray-300 text-sm md:text-base">
-                            <i class="fa-solid fa-circle text-amber-500 text-xs mt-2 flex-shrink-0"></i>
-                            <span><strong class="text-white">From Jabalpur:</strong> It takes
-                                about 4 to 5 hours. From NH 30. This route passes through
-                                beautiful landscapes.</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-gray-300 text-sm md:text-base">
-                            <i class="fa-solid fa-circle text-amber-500 text-xs mt-2 flex-shrink-0"></i>
-                            <span><strong class="text-white">From Raipur:</strong> It takes
-                                about 5 to 6 hours to travel by road from Raipur to Kanha,
-                                where you can travel via NH 30 and enjoy the panoramic views
-                                on the way.</span>
-                        </li>
-                    </ul>
 
-                    <div class="border-t border-neutral-700 pt-6 mt-6">
-                        <h4 class="text-lg md:text-xl font-serif font-bold mb-3 text-amber-100">
-                            How to Reach Kanha National Park from Delhi
-                        </h4>
-                        <p class="text-gray-300 text-sm md:text-base leading-relaxed">
-                            There is no direct connection between Delhi and Kanha National
-                            Park. In any case, you can take the subway to IGI Airport, walk
-                            to Delhi (DEL) airport, fly to Raipur (RPR), and then take a
-                            taxi to Kanha National Park. Alternatively, you can take the
-                            subway to IGI Airport, walk to Delhi (DEL) airport, fly to
-                            Gondia (GDB), and then take a taxi to Kanha National Park.
-                        </p>
-                    </div>
-                </div>
+                    <p class="text-gray-300 mb-3 leading-relaxed text-sm md:text-base text-justify">
+                        There are many who like to keep it to a few safaris and more of
+                        rest and recreation. And if you are a keen photographer then the
+                        open Jeep safaris and the Kanha landscape is all yours.
+                    </p>
 
-                <!-- Transport Services -->
-                <div class="info-card rounded-xl p-6 md:p-8 border-2 border-amber-600/30" data-aos="fade-up"
-                    data-aos-delay="300">
-                    <h3 class="text-xl md:text-2xl font-serif font-bold mb-4 flex items-center gap-3 text-amber-100">
-                        <i class="fa-solid fa-car-side text-amber-500"></i>
-                        Accommodation and Transport Services
-                    </h3>
-                    <p class="text-gray-300 text-sm md:text-base leading-relaxed text-justify">
-                        If you are looking for a comfortable place to stay near Khatia
-                        Gate, we take care of transporting you and your luggage from the
-                        above-mentioned places to Nature Sprout
-                        <strong class="text-amber-400">Wildmark Resort Kanha</strong>. We
-                        arrange Innova / Sedan cars as per your needs and number of
-                        persons.
+                    <p class="text-gray-300 mb-3 leading-relaxed text-sm md:text-base text-justify">
+                        At Wild Mark Kanha, we arrange wildlife safaris in Kanha Zone,
+                        Kisli Zone, Sarhi Zone & Mukki Zone and Buffer areas.
+                    </p>
+                    <p class="text-gray-300 text-sm md:text-base text-justify">
+                        If you want to beat the heat, then you have the option of night
+                        safaris. The thrill of the night safaris is higher, and you must
+                        come to Wild Mark Kanha to experience it.
                     </p>
                 </div>
             </div>
         </div>
     </section>
-
-    <section class="py-12 md:py-20 px-4 md:px-6 bg-black awards-section overflow-hidden">
-    <div class="container mx-auto max-w-7xl">
-      <!-- Header -->
-      <div class="text-center mb-10 md:mb-16">
-        <p class="text-amber-500 text-xs tracking-widest mb-3 md:mb-4 font-light" data-aos="fade-down">
-          EXCELLENCE • RECOGNITION • TRUST
-        </p>
-        <h2 class="text-3xl md:text-5xl lg:text-6xl font-serif mb-4 md:mb-6" data-aos="zoom-in"
-          data-aos-duration="1000">
-          Awards and Recognitions
+    <!-- Rooms Section -->
+  <section id="rooms" class="py-12 md:py-16 bg-neutral-900">
+    <div class="max-w-6xl mx-auto px-4 md:px-6">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-amber-100">
+          Explore Our Accommodation Options
         </h2>
-        <p class="text-sm md:text-base text-gray-300 max-w-4xl mx-auto mb-2 md:mb-3 leading-relaxed" data-aos="fade-up"
-          data-aos-delay="200">
-          Honored to receive Travellers' Choice Awards from TripAdvisor for our exceptional hospitality
-        </p>
       </div>
 
-      <!-- Awards Grid -->
-      <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
+      <!-- Tabs - Sticky -->
+       <div
+    class="sticky top-[60px] md:top-[80px] z-40 bg-neutral-900 border-b border-neutral-800 py-4 mb-8">
+    <div class="flex justify-center gap-4 md:gap-8 overflow-x-visible">
+          <button class="tab-btn active" data-tab="machaan">
+            Super Deluxe Rooms
+          </button>
+          <button class="tab-btn" data-tab="superdeluxe">
+            Family Double Bedded Rooms
+          </button>
+        </div>
+      </div>
 
-        <!-- Award Card 1 - 2020 -->
-        <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-          <div
-            class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/30 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
-            <img src="https://wildmarkresort.com/images/testimonials1.png" alt="TripAdvisor Travellers' Choice Award 2020"
-              class="w-full h-auto max-w-[280px] object-contain award-image">
+      <!-- Tab Content -->
+      <div class="grid md:grid-cols-2 gap-8 md:gap-12">
+        <!-- Machaan -->
+        <div class="panel" data-tab="machaan">
+          <img src="images/beded3.jpeg" class="rounded-xl w-full h-64 object-cover"
+            alt="Machaan" />
+        </div>
+        <div class="panel" data-tab="machaan">
+          <h5 class="text-xl md:text-xl lg:text-xl text-amber-500 font-serif font-light tracking-wide hero-title mt-4"
+            data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
+            Super Deluxe Rooms with Open Shower
+          </h5>
+          <p class="text-sm md:text-base text-gray-300 mb-2 md:mb-4 leading-relaxed text-justify mt-4">
+            The Super Deluxe Room with Private Sit-Outs offers a refined
+            retreat blending comfort with natural elegance. This
+            well-appointed room features a private outdoor seating area, plush
+            bedding, modern furnishings, and air conditioning for a relaxing
+            stay. Enjoy contemporary decor, thoughtful amenities, and a serene
+            view for an unforgettable escape.
+          </p>
+        </div>
+
+        
+        
+        
+        <!-- Know More Button for Super Deluxe Rooms -->
+        <div class="panel md:col-span-2 text-center mt-8" data-tab="machaan">
+          <div class="flex justify-center">
+            <a href="Super-Deluxe-Rooms.php" 
+               class="bg-amber-600 hover:bg-amber-700 text-white px-10 py-3 transition font-semibold text-base rounded-lg shadow-lg">
+              KNOW MORE
+            </a>
           </div>
         </div>
 
-        <!-- Award Card 2 - 2021 -->
-        <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-          <div
-            class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/30 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
-            <img src="https://wildmarkresort.com/images/testimonials2.png" alt="TripAdvisor Travellers' Choice Award 2021"
-              class="w-full h-auto max-w-[280px] object-contain award-image">
-          </div>
+        <!-- Super Deluxe - Family Double Bedded Rooms Tab -->
+        <div class="panel hidden" data-tab="superdeluxe">
+          <img src="images/beded1.webp" class="rounded-xl w-full h-64 object-cover"
+            alt="Super Deluxe" />
         </div>
 
-        <!-- Award Card 3 - 2022 -->
-        <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-          <div
-            class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/30 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
-            <img src="https://wildmarkresort.com/images/testimonials3.png" alt="TripAdvisor Travellers' Choice Award 2022"
-              class="w-full h-auto max-w-[280px] object-contain award-image">
-          </div>
+        <div class="panel hidden" data-tab="superdeluxe">
+          <h5 class="text-xl md:text-xl lg:text-xl text-amber-500 font-serif font-light tracking-wide hero-title mt-4"
+            data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
+            Family Double Bedded Rooms
+          </h5>
+          <p class="text-sm md:text-base text-gray-300 mb-2 md:mb-4 leading-relaxed text-justify mt-4">
+            The Super Deluxe Family Room is designed to comfortably
+            accommodate families, offering spacious living areas and extra
+            sleeping options. This room features elegant decor, modern
+            amenities, and air conditioning to ensure a relaxing stay. Enjoy a
+            harmonious blend of style and functionality, perfect for memorable
+            family getaways.
+          </p>
         </div>
 
-        <!-- Award Card 4 - 2025 (Green Background) -->
-        <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" style="background-color: #39DCA1;border-radius: 9px;">
-          <div
-            class="bg-transparent rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 group-hover:shadow-emerald-500/40 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
-            <img src="https://wildmarkresort.com/images/testimonials4.jpeg" alt="TripAdvisor Travelers' Choice Award 2025"
-              class="w-full h-full object-cover rounded-2xl award-image">
+        <!-- Updated Room Highlights Section with 3 Columns -->
+       
+        
+        <!-- Know More Button for Family Double Bedded Rooms -->
+        <div class="panel hidden md:col-span-2 text-center mt-8" data-tab="superdeluxe">
+          <div class="flex justify-center">
+            <a href="Family-Double-Bedded-Rooms.php" 
+               class="bg-amber-600 hover:bg-amber-700 text-white px-10 py-3 transition font-semibold text-base rounded-lg shadow-lg">
+              KNOW MORE
+            </a>
           </div>
         </div>
-
       </div>
     </div>
   </section>
+    <!-- Amenities & Activities Section -->
+    <section class="py-12 md:py-16 bg-neutral-900">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <h2 class="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-amber-100 mb-8 text-center"
+                data-aos="fade-up">
+                Amenities & Activities
+            </h2>
 
-<section class="py-12 md:py-20 px-4 md:px-6 bg-neutral-900">
+            <div class="grid md:grid-cols-3 gap-6 md:gap-8">
+                <!-- Room Amenities - Column 1 -->
+                <div data-aos="fade-up">
+                    <h3
+                        class="text-lg md:text-xl lg:text-2xl font-serif font-bold text-amber-100 mb-6 border-b border-amber-600 pb-3">
+                        Room Amenities
+                    </h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-2 text-gray-300 text-xs md:text-sm">
+                            <i class="fa-solid fa-check amenity-icon mt-1 flex-shrink-0 text-sm"></i>
+                            <span>6 SUPER DELUXE ROOM</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-300 text-xs md:text-sm">
+                            <i class="fa-solid fa-check amenity-icon mt-1 flex-shrink-0 text-sm"></i>
+                            <span>1 FAMILY ROOM</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-300 text-xs md:text-sm">
+                            <i class="fa-solid fa-check amenity-icon mt-1 flex-shrink-0 text-sm"></i>
+                            <span>COMFORTABLE DOUBLE BEDS</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-300 text-xs md:text-sm">
+                            <i class="fa-solid fa-check amenity-icon mt-1 flex-shrink-0 text-sm"></i>
+                            <span>AC ROOMS</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-300 text-xs md:text-sm">
+                            <i class="fa-solid fa-check amenity-icon mt-1 flex-shrink-0 text-sm"></i>
+                            <span>TELEVISION WITH MULTICHANNELS</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-300 text-xs md:text-sm">
+                            <i class="fa-solid fa-check amenity-icon mt-1 flex-shrink-0 text-sm"></i>
+                            <span>24 HRS POWER BACK UP</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Room Amenities - Column 2 -->
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <h3
+                        class="text-lg md:text-xl lg:text-2xl font-serif font-bold text-amber-100 mb-6 border-b border-amber-600 pb-3">
+                        &nbsp;
+                    </h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-2 text-gray-300 text-xs md:text-sm">
+                            <i class="fa-solid fa-check amenity-icon mt-1 flex-shrink-0 text-sm"></i>
+                            <span>RUNNING HOT AND COLD WATER</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-300 text-xs md:text-sm">
+                            <i class="fa-solid fa-check amenity-icon mt-1 flex-shrink-0 text-sm"></i>
+                            <span>MULTI CUISINE RESTAURANT</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-300 text-xs md:text-sm">
+                            <i class="fa-solid fa-check amenity-icon mt-1 flex-shrink-0 text-sm"></i>
+                            <span>TEA / COFFEE MAKER</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-300 text-xs md:text-sm">
+                            <i class="fa-solid fa-check amenity-icon mt-1 flex-shrink-0 text-sm"></i>
+                            <span>CAR PARKING</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-300 text-xs md:text-sm">
+                            <i class="fa-solid fa-check amenity-icon mt-1 flex-shrink-0 text-sm"></i>
+                            <span>DOCTOR ON CALL</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Activities - Column 3 -->
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h3
+                        class="text-lg md:text-xl lg:text-2xl font-serif font-bold text-amber-100 mb-6 border-b border-amber-600 pb-3">
+                        Activities
+                    </h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-2 text-gray-300 text-xs md:text-sm">
+                            <i class="fa-solid fa-binoculars amenity-icon mt-1 flex-shrink-0 text-sm"></i>
+                            <span>MORNING AND AFTERNOON JUNGLE SAFARI</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-300 text-xs md:text-sm">
+                            <i class="fa-solid fa-moon amenity-icon mt-1 flex-shrink-0 text-sm"></i>
+                            <span>NIGHT SAFARI BUFFER AREA</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-300 text-xs md:text-sm">
+                            <i class="fa-solid fa-star amenity-icon mt-1 flex-shrink-0 text-sm"></i>
+                            <span>STAR GAZING</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-300 text-xs md:text-sm">
+                            <i class="fa-solid fa-fire amenity-icon mt-1 flex-shrink-0 text-sm"></i>
+                            <span>CANDLELIGHT DINNERS</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Map Section -->
+    <section class="py-12 md:py-16 bg-black">
+        <div class="max-w-6xl mx-auto px-4 md:px-6">
+            <h2 class="text-2xl md:text-3xl font-serif font-bold text-amber-100 mb-8 text-center" data-aos="fade-up">
+                Find Us
+            </h2>
+            <div class="map-container rounded-xl overflow-hidden" data-aos="zoom-in">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.0234567890123!2d80.5118205!3d22.315946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a2a0b67fb9e449f%3A0xb861ff4ba4e91cb5!2sWild%20Mark%20Resort%2C%20Kanha!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                    width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+    <section class="py-12 md:py-20 px-4 md:px-6 bg-black awards-section overflow-hidden">
+        <div class="container mx-auto max-w-7xl">
+            <!-- Header -->
+            <div class="text-center mb-10 md:mb-16">
+                <p class="text-amber-500 text-xs tracking-widest mb-3 md:mb-4 font-light" data-aos="fade-down">
+                    EXCELLENCE • RECOGNITION • TRUST
+                </p>
+                <h2 class="text-3xl md:text-5xl lg:text-6xl font-serif mb-4 md:mb-6" data-aos="zoom-in"
+                    data-aos-duration="1000">
+                    Awards and Recognitions
+                </h2>
+                <p class="text-sm md:text-base text-gray-300 max-w-4xl mx-auto mb-2 md:mb-3 leading-relaxed"
+                    data-aos="fade-up" data-aos-delay="200">
+                    Honored to receive Travellers' Choice Awards from TripAdvisor for our exceptional hospitality
+                </p>
+            </div>
+
+            <!-- Awards Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
+
+                <!-- Award Card 1 - 2020 -->
+                <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <div
+                        class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/30 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
+                        <img src="images/testimonials1.png  " alt="TripAdvisor Travellers' Choice Award 2020"
+                            class="w-full h-auto max-w-[280px] object-contain award-image">
+                    </div>
+                </div>
+
+                <!-- Award Card 2 - 2021 -->
+                <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div
+                        class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/30 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
+                        <img src="images/testimonials2.png" alt="TripAdvisor Travellers' Choice Award 2021"
+                            class="w-full h-auto max-w-[280px] object-contain award-image">
+                    </div>
+                </div>
+
+                <!-- Award Card 3 - 2022 -->
+                <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <div
+                        class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/30 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
+                        <img src="images/testimonials3.png" alt="TripAdvisor Travellers' Choice Award 2022"
+                            class="w-full h-auto max-w-[280px] object-contain award-image">
+                    </div>
+                </div>
+
+                <!-- Award Card 4 - 2025 (Green Background) -->
+                <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"
+                    style="background-color: #39DCA1;border-radius: 9px;">
+                    <div
+                        class="bg-transparent rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 group-hover:shadow-emerald-500/40 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
+                        <img src="images/testimonials4.jpeg" alt="TripAdvisor Travelers' Choice Award 2025"
+                            class="w-full h-full object-cover rounded-2xl award-image">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <section class="py-12 md:py-20 px-4 md:px-6 bg-neutral-900">
   <div class="mx-auto w-full" style="max-width: 1280px; padding: 0 24px;">
 
     <!-- Section Header -->
@@ -974,55 +981,99 @@ include 'includes/header.php';
 
 
 
+    <!-- ═══════════════════════════════════════════ FAQ JAVASCRIPT ═══ -->
+    <script>
+    // FAQ Toggle Functionality - Fixed Version
+    document.addEventListener('DOMContentLoaded', function() {
+        const faqQuestions = document.querySelectorAll('.faq-question');
 
-  
+        faqQuestions.forEach(button => {
+            button.addEventListener('click', function() {
+                const faqItem = this.closest('.faq-item');
+                const answer = faqItem.querySelector('.faq-answer');
+                const icon = this.querySelector('.faq-icon');
+                const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const faqItems = document.querySelectorAll('.faq-item');
-    faqItems.forEach(item => {
-      const question = item.querySelector('.faq-question');
-      const answer = item.querySelector('.faq-answer');
-      const icon = item.querySelector('.faq-icon');
-      question.addEventListener('click', () => {
-        const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
-        faqItems.forEach(otherItem => {
-          if (otherItem !== item) {
-            const otherAnswer = otherItem.querySelector('.faq-answer');
-            const otherIcon = otherItem.querySelector('.faq-icon');
-            otherAnswer.style.maxHeight = '0';
-            otherIcon.style.transform = 'rotate(0deg)';
-          }
+                // Close all other FAQs
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    if (item !== faqItem) {
+                        const otherAnswer = item.querySelector('.faq-answer');
+                        const otherIcon = item.querySelector('.faq-icon');
+                        otherAnswer.style.maxHeight = '0';
+                        otherIcon.style.transform = 'rotate(0deg)';
+                    }
+                });
+
+                // Toggle current FAQ
+                if (isOpen) {
+                    answer.style.maxHeight = '0';
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
         });
-        if (isOpen) {
-          answer.style.maxHeight = '0';
-          icon.style.transform = 'rotate(0deg)';
-        } else {
-          answer.style.maxHeight = answer.scrollHeight + 'px';
-          icon.style.transform = 'rotate(180deg)';
-        }
+    });
+    // ===================================
+    // Room Tabs (Inclusions/Exclusions/Zones)
+    // ===================================
+    const roomTabs = document.querySelectorAll("#rooms .tab-btn");
+    const roomPanels = document.querySelectorAll("#rooms .panel");
+
+    roomTabs.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const tab = btn.dataset.tab;
+        roomTabs.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        roomPanels.forEach((p) => {
+          p.classList.toggle("hidden", p.dataset.tab !== tab);
+        });
       });
     });
-  });
-</script>
-<script>
+
+    // ===================================
+    // Experience Tabs (Terms/Refund Policy)
+    // ===================================
+    const expTabs = document.querySelectorAll("#experiencesA .tab-btn-a");
+    const expPanels = document.querySelectorAll(
+      "#experiencesA .experience-panel-a",
+    );
+
+    expTabs.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const tab = btn.dataset.tabA;
+        expTabs.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        expPanels.forEach((p) => {
+          p.classList.toggle("hidden", p.dataset.tabA !== tab);
+        });
+      });
+    });
+    </script>
+    <script>
+// Toggle Special Offer Popup
 function toggleSpecialOfferPopup() {
     const popup = document.getElementById('specialOfferPopup');
     if (popup.classList.contains('hidden')) {
         popup.classList.remove('hidden');
         popup.classList.add('flex');
-        document.body.style.overflow = 'hidden';
+        document.body.style.overflow = 'hidden'; // Prevent background scroll
     } else {
         popup.classList.add('hidden');
         popup.classList.remove('flex');
-        document.body.style.overflow = '';
+        document.body.style.overflow = ''; // Restore scroll
     }
 }
+
+// Close popup when clicking outside
 function closeIfClickedOutside(event) {
     if (event.target.id === 'specialOfferPopup') {
         toggleSpecialOfferPopup();
     }
 }
+
+// Close popup with Escape key
 document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
         const popup = document.getElementById('specialOfferPopup');
@@ -1045,6 +1096,22 @@ document.addEventListener('keydown', function(event) {
   window.addEventListener('load', handleFaqResize);
   window.addEventListener('resize', handleFaqResize);
 </script>
+
+
+<script>
+  function handleFaqResize() {
+    var grid = document.querySelector('.faq-grid');
+    if (!grid) return;
+    if (window.innerWidth <= 860) {
+      grid.style.gridTemplateColumns = '1fr';
+    } else {
+      grid.style.gridTemplateColumns = '1fr 1fr';
+    }
+  }
+  window.addEventListener('load', handleFaqResize);
+  window.addEventListener('resize', handleFaqResize);
+</script>
 <?php 
+
 include 'includes/footer.php'; 
 ?>

@@ -6,26 +6,19 @@ $pageTitle = "How to Reach - Wildmark Resort Kanha";
 include 'includes/header.php'; 
 ?>
 <style>
-        /* ===== ROOT COLOR VARIABLES ===== */
-        :root {
-            --bg1: #E8C999;
-            --bg2: #F8EEDF;
-            --text1: #000000;
-            --text2: #8E1616;
-        }
 
         /* Custom styling */
         .hero-section {
             position: relative;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(102, 86, 86, 0.7)),
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
                 url("https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?w=1600");
             background-size: cover;
             background-position: center;
         }
 
         .info-card {
-            background: rgba(232, 201, 153, 0.15);
-            border: 1px solid rgba(232, 201, 153, 0.4);
+            background: rgba(212, 165, 116, 0.1);
+            border: 1px solid rgba(212, 165, 116, 0.3);
         }
 
         @media (max-width: 768px) {
@@ -66,23 +59,23 @@ include 'includes/header.php';
 
 /* Smooth scroll for popup content */
 #specialOfferPopup > div {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
 }
 
 #specialOfferPopup > div::-webkit-scrollbar {
-    display: none;
+    display: none; /* Chrome/Safari/Opera */
 }
 
+
 #specialOfferPopup > div::-webkit-scrollbar-track {
-    background: var(--bg2);
+    background: #1c1917;
 }
 
 #specialOfferPopup > div::-webkit-scrollbar-thumb {
-    background: var(--text2);
+    background: #d97706;
     border-radius: 3px;
 }
-
  .faq-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -122,204 +115,15 @@ include 'includes/header.php';
       font-size: 14px !important;
     }
   }
-
-  /* ===== GLOBAL THEME OVERRIDES ===== */
-
-  /* Main section backgrounds */
-  section.bg-neutral-900 {
-      background-color: var(--bg2) !important;
-  }
-  section.bg-black {
-      background-color: var(--bg1) !important;
-  }
-
-  /* Headings - h1, h2, h3, h4 */
-  h1, h2, h3, h4 {
-      color: var(--text2) !important;
-  }
-
-  /* Amber headings */
-  .text-amber-100 {
-      color: var(--text2) !important;
-  }
-
-  /* Body text */
-  .text-gray-300 {
-      color: var(--text1) !important;
-  }
-  p {
-      color: var(--text1);
-  }
-
-  /* Amber accents → text2 */
-  .text-amber-500, .text-amber-400 {
-      color: var(--text2) !important;
-  }
-
-  /* Borders */
-  .border-neutral-800 {
-      border-color: rgba(142, 22, 22, 0.25) !important;
-  }
-  .border-neutral-700 {
-      border-color: rgba(142, 22, 22, 0.2) !important;
-  }
-
-  /* FAQ Cards */
-  .faq-item.bg-black {
-      background-color: var(--bg2) !important;
-      border-color: rgba(142, 22, 22, 0.25) !important;
-      box-shadow: 0 2px 8px rgba(142, 22, 22, 0.07);
-  }
-  .faq-item.bg-black:hover {
-      border-color: var(--text2) !important;
-  }
-  .faq-question:hover {
-      background-color: rgba(232, 201, 153, 0.5) !important;
-  }
-  .faq-answer > div {
-      background-color: rgba(232, 201, 153, 0.3) !important;
-      border-top-color: rgba(142, 22, 22, 0.2) !important;
-  }
-  .faq-icon {
-      color: var(--text2) !important;
-  }
-  .faq-question span {
-      color: var(--text1) !important;
-  }
-
-  /* Travel method cards */
-  .bg-black.rounded-xl.border.border-neutral-800 {
-      background-color: var(--bg2) !important;
-  }
-
-  /* Info card */
-  .info-card.rounded-xl {
-      background-color: rgba(232, 201, 153, 0.2) !important;
-      border-color: rgba(142, 22, 22, 0.3) !important;
-  }
-
-  /* Route distances list icons */
-  .fa-location-dot {
-      color: var(--text2) !important;
-  }
-  .fa-circle {
-      color: var(--text2) !important;
-  }
-
-  /* Dot list icons */
-  li strong.text-white {
-      color: var(--text1) !important;
-  }
-
-  /* Awards section */
-  .awards-section {
-      background-color: var(--bg1) !important;
-  }
-
-  /* Special Offer Popup */
-  #specialOfferPopup .bg-neutral-900 {
-      background-color: var(--bg2) !important;
-      border-color: var(--text2) !important;
-  }
-  #specialOfferPopup .bg-gradient-to-r {
-      background: linear-gradient(to right, var(--text2), #b01e1e) !important;
-  }
-  #specialOfferPopup .bg-black {
-      background-color: var(--bg1) !important;
-  }
-  #specialOfferPopup .border-amber-500\/30 {
-      border-color: rgba(142, 22, 22, 0.3) !important;
-  }
-  #specialOfferPopup .hover\:border-amber-500:hover {
-      border-color: var(--text2) !important;
-  }
-  #specialOfferPopup h4.text-white {
-      color: var(--text1) !important;
-  }
-  #specialOfferPopup .text-amber-500 {
-      color: var(--text2) !important;
-  }
-  #specialOfferPopup .bg-amber-500\/10 {
-      background-color: rgba(232, 201, 153, 0.3) !important;
-  }
-  #specialOfferPopup .border-amber-500\/30 {
-      border-color: rgba(142, 22, 22, 0.3) !important;
-  }
-  #specialOfferPopup .text-amber-100 {
-      color: var(--bg2) !important;
-  }
-  /* Offer price strikethrough */
-  #specialOfferPopup .text-gray-400.line-through {
-      color: rgba(0,0,0,0.4) !important;
-  }
-  #specialOfferPopup .text-2xl.text-amber-500 {
-      color: var(--text2) !important;
-  }
-  #specialOfferPopup .text-gray-400 {
-      color: rgba(0,0,0,0.5) !important;
-  }
-  /* Popup Book Now button */
-  .bg-amber-500.hover\:bg-amber-600 {
-      background-color: var(--text2) !important;
-      color: var(--bg2) !important;
-  }
-  .bg-amber-500.hover\:bg-amber-600:hover {
-      background-color: #6e1010 !important;
-  }
-
-  /* Special offer button (floating) */
-  #specialOfferBtn {
-      background: linear-gradient(to right, var(--text2), #b01e1e) !important;
-  }
-  #specialOfferBtn:hover {
-      background: linear-gradient(to right, #6e1010, var(--text2)) !important;
-  }
-  #specialOfferBtn .bg-red-500 {
-      background-color: var(--bg1) !important;
-      color: var(--text2) !important;
-  }
-
-  /* EXCELLENCE tracking text */
-  .text-amber-500.text-xs.tracking-widest {
-      color: var(--text2) !important;
-  }
-
-  /* Section intro text center */
-  .text-center p.text-gray-300 {
-      color: var(--text1) !important;
-  }
-
-  /* Close button on popup */
-  #specialOfferPopup button.text-white {
-      color: var(--text1) !important;
-  }
-  #specialOfferPopup button.hover\:text-amber-500:hover {
-      color: var(--text2) !important;
-  }
-
-  /* FAQ Section background */
-  section.py-12.md\:py-20.px-4.bg-neutral-900 {
-      background-color: var(--bg2) !important;
-  }
-
-  /* Offer badges keep their identity but refine */
-  .bg-green-500 { background-color: #2a6e3f !important; }
-  .bg-blue-500 { background-color: #1a4a7a !important; }
-
-  /* WhatsApp button stays green */
-  .bg-green-500.hover\:bg-green-600 {
-      background-color: #25D366 !important;
-  }
     </style>
     <!-- Spacer -->
     <div class="h-[60px] md:h-[80px]"></div>
 
     <!-- Hero Banner -->
-    <header class="relative h-[50vh] md:h-[60vh] lg:h-[100vh] flex items-end"
-        style="background: url('https://wildmarkresort.com/images/Tiger5.webp') center/cover no-repeat">
+    <header class="relative h-[50vh] md:h-[60vh] lg:h-[70vh] flex items-end"
+        style="background: url('images/hiran.webp') center/cover no-repeat">
         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
     </header>
-
     <!-- Main Content -->
     <section class="py-12 md:py-16 bg-neutral-900">
         <div class="max-w-7xl mx-auto px-4 md:px-6">
@@ -375,7 +179,7 @@ include 'includes/header.php';
                 </div>
 
                 <div data-aos="fade-left" class="flex items-center justify-center">
-                    <img src="https://wildmarkresort.com/images/dear2.webp"
+                    <img src="images/card2.webp"
                         class="w-full h-auto rounded-xl shadow-2xl" alt="Kanha National Park Map" />
                 </div>
             </div>
@@ -394,7 +198,7 @@ include 'includes/header.php';
                 <!-- Tiger Image -->
                 <div data-aos="fade-right" class="order-2 lg:order-1">
                     <div class="rounded-xl overflow-hidden">
-                        <img src="https://wildmarkresort.com/images/card1.webp"
+                        <img src="images/card1.webp"
                             class="w-full h-80 md:h-96 object-cover" alt="Bengal Tiger" />
                     </div>
                 </div>
@@ -538,7 +342,6 @@ include 'includes/header.php';
             </div>
         </div>
     </section>
-
     <section class="py-12 md:py-20 px-4 md:px-6 bg-black awards-section overflow-hidden">
     <div class="container mx-auto max-w-7xl">
       <!-- Header -->
@@ -563,7 +366,7 @@ include 'includes/header.php';
         <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
           <div
             class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/30 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
-            <img src="https://wildmarkresort.com/images/testimonials1.png" alt="TripAdvisor Travellers' Choice Award 2020"
+            <img src="images/testimonials1.png  " alt="TripAdvisor Travellers' Choice Award 2020"
               class="w-full h-auto max-w-[280px] object-contain award-image">
           </div>
         </div>
@@ -572,7 +375,7 @@ include 'includes/header.php';
         <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
           <div
             class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/30 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
-            <img src="https://wildmarkresort.com/images/testimonials2.png" alt="TripAdvisor Travellers' Choice Award 2021"
+            <img src="images/testimonials2.png" alt="TripAdvisor Travellers' Choice Award 2021"
               class="w-full h-auto max-w-[280px] object-contain award-image">
           </div>
         </div>
@@ -581,23 +384,28 @@ include 'includes/header.php';
         <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
           <div
             class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/30 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
-            <img src="https://wildmarkresort.com/images/testimonials3.png" alt="TripAdvisor Travellers' Choice Award 2022"
+            <img src="images/testimonials3.png" alt="TripAdvisor Travellers' Choice Award 2022"
               class="w-full h-auto max-w-[280px] object-contain award-image">
           </div>
         </div>
 
         <!-- Award Card 4 - 2025 (Green Background) -->
-        <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" style="background-color: #39DCA1;border-radius: 9px;">
+        <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"  style="background-color: #39DCA1;border-radius: 9px;">
           <div
             class="bg-transparent rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 group-hover:shadow-emerald-500/40 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
-            <img src="https://wildmarkresort.com/images/testimonials4.jpeg" alt="TripAdvisor Travelers' Choice Award 2025"
+            <img src="images/testimonials4.jpeg" alt="TripAdvisor Travelers' Choice Award 2025"
               class="w-full h-full object-cover rounded-2xl award-image">
           </div>
         </div>
 
       </div>
+
     </div>
   </section>
+
+
+
+
 
 <section class="py-12 md:py-20 px-4 md:px-6 bg-neutral-900">
   <div class="mx-auto w-full" style="max-width: 1280px; padding: 0 24px;">
@@ -973,19 +781,22 @@ include 'includes/header.php';
 </section>
 
 
-
-
-  
+    
 
 <script>
+  // FAQ Accordion Functionality (add only if not already present)
   document.addEventListener('DOMContentLoaded', function() {
     const faqItems = document.querySelectorAll('.faq-item');
+    
     faqItems.forEach(item => {
       const question = item.querySelector('.faq-question');
       const answer = item.querySelector('.faq-answer');
       const icon = item.querySelector('.faq-icon');
+      
       question.addEventListener('click', () => {
         const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
+        
+        // Close all other FAQs
         faqItems.forEach(otherItem => {
           if (otherItem !== item) {
             const otherAnswer = otherItem.querySelector('.faq-answer');
@@ -994,6 +805,8 @@ include 'includes/header.php';
             otherIcon.style.transform = 'rotate(0deg)';
           }
         });
+        
+        // Toggle current FAQ
         if (isOpen) {
           answer.style.maxHeight = '0';
           icon.style.transform = 'rotate(0deg)';
@@ -1006,23 +819,28 @@ include 'includes/header.php';
   });
 </script>
 <script>
+// Toggle Special Offer Popup
 function toggleSpecialOfferPopup() {
     const popup = document.getElementById('specialOfferPopup');
     if (popup.classList.contains('hidden')) {
         popup.classList.remove('hidden');
         popup.classList.add('flex');
-        document.body.style.overflow = 'hidden';
+        document.body.style.overflow = 'hidden'; // Prevent background scroll
     } else {
         popup.classList.add('hidden');
         popup.classList.remove('flex');
-        document.body.style.overflow = '';
+        document.body.style.overflow = ''; // Restore scroll
     }
 }
+
+// Close popup when clicking outside
 function closeIfClickedOutside(event) {
     if (event.target.id === 'specialOfferPopup') {
         toggleSpecialOfferPopup();
     }
 }
+
+// Close popup with Escape key
 document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
         const popup = document.getElementById('specialOfferPopup');
@@ -1046,5 +864,7 @@ document.addEventListener('keydown', function(event) {
   window.addEventListener('resize', handleFaqResize);
 </script>
 <?php 
+
+// Include header
 include 'includes/footer.php'; 
 ?>

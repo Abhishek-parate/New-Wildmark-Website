@@ -31,24 +31,28 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     try {
 
-        // SMTP SETTINGS (Your Server)
-        $mail->isSMTP();
-        $mail->Host       = 'mail.techinbox.in';
-        $mail->SMTPAuth   = true;
-        $mail->Username   = 'enquiry@techinbox.in';
-        $mail->Password   = 'Abhi@9860@!';   // your password
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // SSL
-        $mail->Port       = 465;
+        // SMTP SETTINGS
+$mail->isSMTP();
+$mail->Host       = 'smtp.hostinger.com';
+$mail->SMTPAuth   = true;
+$mail->Username   = 'enquiry@wildmarkresort.com'; // your Hostinger email
+$mail->Password   = 'Abhi@9860303985#';           // password set in hPanel
+$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+$mail->Port       = 465;
 
-        $mail->setFrom('enquiry@techinbox.in', 'Website Enquiry');
-        $mail->addAddress('wildmarkresort@gmail.com');
+$mail->setFrom('enquiry@wildmarkresort.com', 'Wildmark Resort');
+$mail->addAddress('wildmarkresort@gmail.com');
+
+
+        // Optional: send a copy/reply to the visitor
+        // $mail->addReplyTo($email, $name);
 
         $mail->isHTML(true);
-        $mail->Subject = "New Website Lead - Tech In Box";
+        $mail->Subject = "New Website Lead - Wildmark Resort";
 
         $mail->Body = "
-        <h2>New Website Enquiry</h2>
-        <table border='1' cellpadding='8'>
+        <h2 style='color:#2d6a4f;'>New Website Enquiry</h2>
+        <table border='1' cellpadding='8' cellspacing='0' style='border-collapse:collapse;'>
             <tr><td><strong>Name</strong></td><td>$name</td></tr>
             <tr><td><strong>Email</strong></td><td>$email</td></tr>
             <tr><td><strong>Phone</strong></td><td>$phone</td></tr>
@@ -56,11 +60,22 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         </table>
         ";
 
+        $mail->AltBody = "Name: $name\nEmail: $email\nPhone: $phone\nMessage: " . ($message ?: 'No message');
+
         $mail->send();
 
-        echo "<script>alert('Enquiry Sent Successfully!'); window.history.back();</script>";
+        // ✅ Redirect to Thank You page on success
+        header("Location: https://wildmarkresort.com/thank-you.php");
+        exit();
 
     } catch (Exception $e) {
-        echo "Mailer Error: {$mail->ErrorInfo}";
+        // ❌ Redirect to error page or back with error message
+        header("Location: /contact.php?status=error&msg=" . urlencode($mail->ErrorInfo));
+        exit();
     }
+
+} else {
+    // Direct access — redirect home
+    header("Location: /");
+    exit();
 }
