@@ -325,7 +325,7 @@ include 'includes/header.php';
 
                 <!-- Transport Services -->
                 <div class="info-card rounded-xl p-6 md:p-8 border-2 border-amber-600/30" data-aos="fade-up"
-                    data-aos-delay="300">
+                    >
                     <h3 class="text-xl md:text-2xl font-serif font-bold mb-4 flex items-center gap-3 text-amber-100">
                         <i class="fa-solid fa-car-side text-amber-500"></i>
                         Accommodation and Transport Services
@@ -350,7 +350,7 @@ include 'includes/header.php';
           EXCELLENCE • RECOGNITION • TRUST
         </p>
         <h2 class="text-3xl md:text-5xl lg:text-6xl font-serif mb-4 md:mb-6" data-aos="zoom-in"
-          data-aos-duration="1000">
+          >
           Awards and Recognitions
         </h2>
         <p class="text-sm md:text-base text-gray-300 max-w-4xl mx-auto mb-2 md:mb-3 leading-relaxed" data-aos="fade-up"
@@ -363,7 +363,7 @@ include 'includes/header.php';
       <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
 
         <!-- Award Card 1 - 2020 -->
-        <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+        <div class="award-card group" data-aos="fade-up"  data-aos-delay="100">
           <div
             class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/30 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
             <img src="images/testimonials1.png  " alt="TripAdvisor Travellers' Choice Award 2020"
@@ -372,7 +372,7 @@ include 'includes/header.php';
         </div>
 
         <!-- Award Card 2 - 2021 -->
-        <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+        <div class="award-card group" data-aos="fade-up"  data-aos-delay="200">
           <div
             class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/30 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
             <img src="images/testimonials2.png" alt="TripAdvisor Travellers' Choice Award 2021"
@@ -381,7 +381,7 @@ include 'includes/header.php';
         </div>
 
         <!-- Award Card 3 - 2022 -->
-        <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+        <div class="award-card group" data-aos="fade-up"  >
           <div
             class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/30 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
             <img src="images/testimonials3.png" alt="TripAdvisor Travellers' Choice Award 2022"
@@ -390,7 +390,7 @@ include 'includes/header.php';
         </div>
 
         <!-- Award Card 4 - 2025 (Green Background) -->
-        <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"  style="background-color: #39DCA1;border-radius: 9px;">
+        <div class="award-card group" data-aos="fade-up"    style="background-color: #39DCA1;border-radius: 9px;">
           <div
             class="bg-transparent rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 group-hover:shadow-emerald-500/40 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
             <img src="images/testimonials4.jpeg" alt="TripAdvisor Travelers' Choice Award 2025"
@@ -424,7 +424,7 @@ include 'includes/header.php';
     </div>
 
     <!-- FAQ Grid: 10 Left + 10 Right -->
-    <div class="faq-grid" data-aos="fade-up" data-aos-duration="1000">
+    <div class="faq-grid" data-aos="fade-up" >
 
       <!-- LEFT COLUMN: FAQ 1–10 -->
       <div class="faq-col">

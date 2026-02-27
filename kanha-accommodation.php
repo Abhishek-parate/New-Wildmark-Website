@@ -491,7 +491,7 @@ a.bg-green-500.hover\:bg-green-600:hover {
             <!-- Right Column - Images -->
             <div class="space-y-4" data-aos="fade-left">
                 <div class="rounded-xl overflow-hidden">
-                    <img src="https://wildmarkresort.com/images/delux3.JPG" class="w-full h-64 object-cover"
+                    <img src="https://wildmarkresort.com/images/beded3.jpeg" class="w-full h-64 object-cover"
                         alt="Resort Interior" />
                 </div>
                 <div class="grid grid-cols-2 gap-4">
@@ -580,7 +580,7 @@ a.bg-green-500.hover\:bg-green-600:hover {
             </div>
             <div class="panel" data-tab="machaan">
                 <h5 class="text-xl md:text-xl lg:text-xl text-amber-500 font-serif font-light tracking-wide hero-title mt-4"
-                    data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
+                    data-aos="fade-up"  >
                     Super Deluxe Rooms with Open Shower
                 </h5>
                 <p class="text-sm md:text-base text-gray-300 mb-2 md:mb-4 leading-relaxed text-justify mt-4">
@@ -610,7 +610,7 @@ a.bg-green-500.hover\:bg-green-600:hover {
             </div>
             <div class="panel hidden" data-tab="superdeluxe">
                 <h5 class="text-xl md:text-xl lg:text-xl text-amber-500 font-serif font-light tracking-wide hero-title mt-4"
-                    data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
+                    data-aos="fade-up"  >
                     Family Double Bedded Rooms
                 </h5>
                 <p class="text-sm md:text-base text-gray-300 mb-2 md:mb-4 leading-relaxed text-justify mt-4">
@@ -637,103 +637,109 @@ a.bg-green-500.hover\:bg-green-600:hover {
 </section>
 
 <!-- Amenities & Activities Section -->
-<section class="py-12 md:py-16 bg-neutral-900">
+<section class="py-6 bg-neutral-900">
     <div class="max-w-7xl mx-auto px-4 md:px-6">
-        <h2 class="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-amber-100 mb-8 text-center"
+        
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-amber-100 mb-6 text-center"
             data-aos="fade-up">
             Amenities & Activities
         </h2>
 
-        <div class="grid md:grid-cols-3 gap-6 md:gap-8">
-            <!-- Room Amenities - Column 1 -->
-            <div data-aos="fade-up">
-                <h3
-                    class="text-lg md:text-xl lg:text-2xl font-serif font-bold text-amber-100 mb-6 border-b border-amber-600 pb-3">
+        <div class="grid md:grid-cols-3 gap-8">
+
+            <!-- Room Amenities -->
+            <div data-aos="fade-up" class="md:col-span-2">
+
+                <h3 class="text-lg md:text-xl lg:text-2xl font-serif font-bold text-amber-100 
+                           mb-4 border-b border-amber-600 pb-2">
                     Room Amenities
                 </h3>
-                <ul class="space-y-3">
-                    <li class="flex items-start gap-2 text-gray-300 text-xs md:text-sm">
-                        <i class="fa-solid fa-check amenity-icon mt-1 flex-shrink-0 text-sm"></i>
-                        <span>6 SUPER DELUXE ROOM</span>
-                    </li>
-                    <li class="flex items-start gap-2 text-gray-300 text-xs md:text-sm">
-                        <i class="fa-solid fa-check amenity-icon mt-1 flex-shrink-0 text-sm"></i>
-                        <span>1 FAMILY ROOM</span>
-                    </li>
-                    <li class="flex items-start gap-2 text-gray-300 text-xs md:text-sm">
-                        <i class="fa-solid fa-check amenity-icon mt-1 flex-shrink-0 text-sm"></i>
-                        <span>COMFORTABLE DOUBLE BEDS</span>
-                    </li>
-                    <li class="flex items-start gap-2 text-gray-300 text-xs md:text-sm">
-                        <i class="fa-solid fa-check amenity-icon mt-1 flex-shrink-0 text-sm"></i>
-                        <span>AC ROOMS</span>
-                    </li>
-                    <li class="flex items-start gap-2 text-gray-300 text-xs md:text-sm">
-                        <i class="fa-solid fa-check amenity-icon mt-1 flex-shrink-0 text-sm"></i>
-                        <span>TELEVISION WITH MULTICHANNELS</span>
-                    </li>
-                    <li class="flex items-start gap-2 text-gray-300 text-xs md:text-sm">
-                        <i class="fa-solid fa-check amenity-icon mt-1 flex-shrink-0 text-sm"></i>
-                        <span>24 HRS POWER BACK UP</span>
-                    </li>
-                </ul>
+
+                <!-- Single column on mobile / 2 columns on desktop -->
+                <div class="grid md:grid-cols-2 gap-4">
+
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-2 text-gray-300 text-sm">
+                            <i class="fa-solid fa-check mt-1 text-xs"></i>
+                            <span>6 SUPER DELUXE ROOM</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-300 text-sm">
+                            <i class="fa-solid fa-check mt-1 text-xs"></i>
+                            <span>1 FAMILY ROOM</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-300 text-sm">
+                            <i class="fa-solid fa-check mt-1 text-xs"></i>
+                            <span>COMFORTABLE DOUBLE BEDS</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-300 text-sm">
+                            <i class="fa-solid fa-check mt-1 text-xs"></i>
+                            <span>AC ROOMS</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-300 text-sm">
+                            <i class="fa-solid fa-check mt-1 text-xs"></i>
+                            <span>TELEVISION WITH MULTICHANNELS</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-300 text-sm">
+                            <i class="fa-solid fa-check mt-1 text-xs"></i>
+                            <span>24 HRS POWER BACK UP</span>
+                        </li>
+                    </ul>
+
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-2 text-gray-300 text-sm">
+                            <i class="fa-solid fa-check mt-1 text-xs"></i>
+                            <span>RUNNING HOT AND COLD WATER</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-300 text-sm">
+                            <i class="fa-solid fa-check mt-1 text-xs"></i>
+                            <span>MULTI CUISINE RESTAURANT</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-300 text-sm">
+                            <i class="fa-solid fa-check mt-1 text-xs"></i>
+                            <span>TEA / COFFEE MAKER</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-300 text-sm">
+                            <i class="fa-solid fa-check mt-1 text-xs"></i>
+                            <span>CAR PARKING</span>
+                        </li>
+                        <li class="flex items-start gap-2 text-gray-300 text-sm">
+                            <i class="fa-solid fa-check mt-1 text-xs"></i>
+                            <span>DOCTOR ON CALL</span>
+                        </li>
+                    </ul>
+
+                </div>
             </div>
 
-            <!-- Room Amenities - Column 2 -->
-            <div data-aos="fade-up" data-aos-delay="100">
-                <h3
-                    class="text-lg md:text-xl lg:text-2xl font-serif font-bold text-amber-100 mb-6 border-b border-amber-600 pb-3">
-                    &nbsp;
-                </h3>
-                <ul class="space-y-3">
-                    <li class="flex items-start gap-2 text-gray-300 text-xs md:text-sm">
-                        <i class="fa-solid fa-check amenity-icon mt-1 flex-shrink-0 text-sm"></i>
-                        <span>RUNNING HOT AND COLD WATER</span>
-                    </li>
-                    <li class="flex items-start gap-2 text-gray-300 text-xs md:text-sm">
-                        <i class="fa-solid fa-check amenity-icon mt-1 flex-shrink-0 text-sm"></i>
-                        <span>MULTI CUISINE RESTAURANT</span>
-                    </li>
-                    <li class="flex items-start gap-2 text-gray-300 text-xs md:text-sm">
-                        <i class="fa-solid fa-check amenity-icon mt-1 flex-shrink-0 text-sm"></i>
-                        <span>TEA / COFFEE MAKER</span>
-                    </li>
-                    <li class="flex items-start gap-2 text-gray-300 text-xs md:text-sm">
-                        <i class="fa-solid fa-check amenity-icon mt-1 flex-shrink-0 text-sm"></i>
-                        <span>CAR PARKING</span>
-                    </li>
-                    <li class="flex items-start gap-2 text-gray-300 text-xs md:text-sm">
-                        <i class="fa-solid fa-check amenity-icon mt-1 flex-shrink-0 text-sm"></i>
-                        <span>DOCTOR ON CALL</span>
-                    </li>
-                </ul>
-            </div>
+            <!-- Activities -->
+            <div data-aos="fade-up" data-aos-delay="150">
 
-            <!-- Activities - Column 3 -->
-            <div data-aos="fade-up" data-aos-delay="200">
-                <h3
-                    class="text-lg md:text-xl lg:text-2xl font-serif font-bold text-amber-100 mb-6 border-b border-amber-600 pb-3">
+                <h3 class="text-lg md:text-xl lg:text-2xl font-serif font-bold text-amber-100 
+                           mb-4 border-b border-amber-600 pb-2">
                     Activities
                 </h3>
+
                 <ul class="space-y-3">
-                    <li class="flex items-start gap-2 text-gray-300 text-xs md:text-sm">
-                        <i class="fa-solid fa-binoculars amenity-icon mt-1 flex-shrink-0 text-sm"></i>
+                    <li class="flex items-start gap-2 text-gray-300 text-sm">
+                        <i class="fa-solid fa-binoculars mt-1 text-xs"></i>
                         <span>MORNING AND AFTERNOON JUNGLE SAFARI</span>
                     </li>
-                    <li class="flex items-start gap-2 text-gray-300 text-xs md:text-sm">
-                        <i class="fa-solid fa-moon amenity-icon mt-1 flex-shrink-0 text-sm"></i>
+                    <li class="flex items-start gap-2 text-gray-300 text-sm">
+                        <i class="fa-solid fa-moon mt-1 text-xs"></i>
                         <span>NIGHT SAFARI BUFFER AREA</span>
                     </li>
-                    <li class="flex items-start gap-2 text-gray-300 text-xs md:text-sm">
-                        <i class="fa-solid fa-star amenity-icon mt-1 flex-shrink-0 text-sm"></i>
+                    <li class="flex items-start gap-2 text-gray-300 text-sm">
+                        <i class="fa-solid fa-star mt-1 text-xs"></i>
                         <span>STAR GAZING</span>
                     </li>
-                    <li class="flex items-start gap-2 text-gray-300 text-xs md:text-sm">
-                        <i class="fa-solid fa-fire amenity-icon mt-1 flex-shrink-0 text-sm"></i>
+                    <li class="flex items-start gap-2 text-gray-300 text-sm">
+                        <i class="fa-solid fa-fire mt-1 text-xs"></i>
                         <span>CANDLELIGHT DINNERS</span>
                     </li>
                 </ul>
+
             </div>
+
         </div>
     </div>
 </section>
@@ -781,7 +787,7 @@ a.bg-green-500.hover\:bg-green-600:hover {
                 EXCELLENCE • RECOGNITION • TRUST
             </p>
             <h2 class="text-3xl md:text-5xl lg:text-6xl font-serif mb-4 md:mb-6" data-aos="zoom-in"
-                data-aos-duration="1000">
+                >
                 Awards and Recognitions
             </h2>
             <p class="text-sm md:text-base text-gray-300 max-w-4xl mx-auto mb-2 md:mb-3 leading-relaxed"
@@ -792,7 +798,7 @@ a.bg-green-500.hover\:bg-green-600:hover {
 
         <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
             <!-- Award Card 1 - 2020 -->
-            <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+            <div class="award-card group" data-aos="fade-up"  data-aos-delay="100">
                 <div
                     class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/30 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
                     <img src="https://wildmarkresort.com/images/testimonials1.png  "
@@ -801,7 +807,7 @@ a.bg-green-500.hover\:bg-green-600:hover {
                 </div>
             </div>
             <!-- Award Card 2 - 2021 -->
-            <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <div class="award-card group" data-aos="fade-up"  data-aos-delay="200">
                 <div
                     class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/30 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
                     <img src="https://wildmarkresort.com/images/testimonials2.png"
@@ -810,7 +816,7 @@ a.bg-green-500.hover\:bg-green-600:hover {
                 </div>
             </div>
             <!-- Award Card 3 - 2022 -->
-            <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+            <div class="award-card group" data-aos="fade-up"  >
                 <div
                     class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/30 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
                     <img src="https://wildmarkresort.com/images/testimonials3.png"
@@ -819,7 +825,7 @@ a.bg-green-500.hover\:bg-green-600:hover {
                 </div>
             </div>
             <!-- Award Card 4 - 2025 -->
-            <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"
+            <div class="award-card group" data-aos="fade-up"  
                 style="background-color: #39DCA1;border-radius: 9px;">
                 <div
                     class="bg-transparent rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 group-hover:shadow-emerald-500/40 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
@@ -848,7 +854,7 @@ a.bg-green-500.hover\:bg-green-600:hover {
             </p>
         </div>
 
-        <div class="faq-grid" data-aos="fade-up" data-aos-duration="1000">
+        <div class="faq-grid" data-aos="fade-up" >
 
             <!-- LEFT COLUMN -->
             <div class="faq-col">

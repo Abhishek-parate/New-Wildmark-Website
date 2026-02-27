@@ -151,7 +151,7 @@ include 'includes/header.php';
       <!-- Highlight 3 -->
       <div class="rounded-2xl p-8 hover:-translate-y-1 transition-all duration-300 border"
            style="background-color:#E8C999;border-color:rgba(142,22,22,0.15)"
-           data-aos="fade-up" data-aos-delay="300">
+           data-aos="fade-up" >
         <div class="w-16 h-16 rounded-full flex items-center justify-center mb-6"
              style="background-color:#8E1616">
           <i class="fas fa-leaf text-2xl text-white"></i>
@@ -193,7 +193,7 @@ include 'includes/header.php';
       <!-- Highlight 6 -->
       <div class="rounded-2xl p-8 hover:-translate-y-1 transition-all duration-300 border"
            style="background-color:#E8C999;border-color:rgba(142,22,22,0.15)"
-           data-aos="fade-up" data-aos-delay="300">
+           data-aos="fade-up" >
         <div class="w-16 h-16 rounded-full flex items-center justify-center mb-6"
              style="background-color:#8E1616">
           <i class="fas fa-tree text-2xl text-white"></i>
@@ -321,7 +321,7 @@ include 'includes/header.php';
       <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
         <img src="https://wildmarkresort.com/images/family1.jpeg" alt="Resort Exterior"     class="w-full h-80 object-cover"/>
       </div>
-      <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
+      <div class="gallery-item" data-aos="fade-up" >
         <img src="https://wildmarkresort.com/images/family4.jpg"  alt="Resort Gardens"      class="w-full h-80 object-cover"/>
       </div>
     </div>
@@ -382,7 +382,7 @@ include 'includes/header.php';
         EXCELLENCE • RECOGNITION • TRUST
       </p>
       <h2 class="text-3xl md:text-5xl lg:text-6xl font-serif mb-4 md:mb-6 text-black"
-          data-aos="zoom-in" data-aos-duration="1000">
+          data-aos="zoom-in" >
         Awards and Recognitions
       </h2>
       <p class="text-sm md:text-base text-black/70 max-w-4xl mx-auto mb-2 md:mb-3 leading-relaxed"
@@ -392,22 +392,22 @@ include 'includes/header.php';
     </div>
 
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
-      <div class="group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+      <div class="group" data-aos="fade-up"  data-aos-delay="100">
         <div class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:-translate-y-3 group-hover:shadow-[0_12px_30px_rgba(142,22,22,0.2)] flex items-center justify-center min-h-[320px] md:min-h-[380px]">
           <img src="https://wildmarkresort.com/images/testimonials1.png" alt="TripAdvisor Award 2020" class="w-full h-auto max-w-[280px] object-contain transition-transform duration-300 group-hover:scale-105">
         </div>
       </div>
-      <div class="group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+      <div class="group" data-aos="fade-up"  data-aos-delay="200">
         <div class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:-translate-y-3 group-hover:shadow-[0_12px_30px_rgba(142,22,22,0.2)] flex items-center justify-center min-h-[320px] md:min-h-[380px]">
           <img src="https://wildmarkresort.com/images/testimonials2.png" alt="TripAdvisor Award 2021" class="w-full h-auto max-w-[280px] object-contain transition-transform duration-300 group-hover:scale-105">
         </div>
       </div>
-      <div class="group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+      <div class="group" data-aos="fade-up"  >
         <div class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:-translate-y-3 group-hover:shadow-[0_12px_30px_rgba(142,22,22,0.2)] flex items-center justify-center min-h-[320px] md:min-h-[380px]">
           <img src="https://wildmarkresort.com/images/testimonials3.png" alt="TripAdvisor Award 2022" class="w-full h-auto max-w-[280px] object-contain transition-transform duration-300 group-hover:scale-105">
         </div>
       </div>
-      <div class="group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"
+      <div class="group" data-aos="fade-up"  
            style="background-color:#39DCA1;border-radius:9px">
         <div class="rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
           <img src="https://wildmarkresort.com/images/testimonials4.jpeg" alt="TripAdvisor Award 2025" class="w-full h-full object-cover rounded-2xl">
@@ -431,7 +431,7 @@ include 'includes/header.php';
       </p>
     </div>
 
-    <div class="faq-grid" data-aos="fade-up" data-aos-duration="1000">
+    <div class="faq-grid" data-aos="fade-up" >
 
       <!-- LEFT COLUMN -->
       <div class="faq-col">

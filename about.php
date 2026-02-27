@@ -217,16 +217,16 @@ p, li  { color: var(--text1); }
     <div class="container mx-auto max-w-6xl px-4 md:px-6">
         <div class="text-center mb-12 md:mb-16">
             <p class="text-xs tracking-widest mb-4 font-light" style="color: var(--text2);" data-aos="fade-down">OUR ESSENCE</p>
-            <h2 class="text-3xl md:text-5xl font-serif mb-6" data-aos="zoom-in" data-aos-duration="1000">
+            <h2 class="text-3xl md:text-5xl font-serif mb-6" data-aos="zoom-in" >
                 Attachment to a Place is Something We All Feel!
             </h2>
         </div>
 
         <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
-            <div data-aos="fade-right" data-aos-duration="1000">
+            <div data-aos="fade-right" >
                 <img src="https://wildmarkresort.com/images/Tiger.webp" alt="Wildmark Resort" class="rounded-2xl shadow-2xl w-full h-[400px] md:h-[500px] object-cover" />
             </div>
-            <div data-aos="fade-left" data-aos-duration="1000">
+            <div data-aos="fade-left" >
                 <h3 class="text-2xl md:text-3xl font-serif mb-6">A Unique Resort Experience</h3>
                 <p class="text-sm md:text-base mb-4 leading-relaxed text-justify" style="color: var(--text1);">Wild Mark Resort is a unique resort that can make you enjoy the wilderness of nature. This is a one-of-a-kind experience to cherish every time in Kanha. The Kanha-Kisli national park is nestled in the Maikal range of Satpuras in Madhya Pradesh.</p>
                 <p class="text-sm md:text-base mb-4 leading-relaxed text-justify" style="color: var(--text1);">Spread across the area of 940 square kms, you can see the most beautiful source of nature's inspiration. The Kanha National Park has large varieties of fauna and this is best known for the Barasingha - a deer known as 'the jewel of Kanha'.</p>
@@ -236,13 +236,13 @@ p, li  { color: var(--text1); }
 
         <!-- Second Content Block -->
         <div class="grid lg:grid-cols-2 gap-12 items-center">
-            <div class="order-2 lg:order-1" data-aos="fade-right" data-aos-duration="1000">
+            <div class="order-2 lg:order-1" data-aos="fade-right" >
                 <h3 class="text-2xl md:text-3xl font-serif mb-6">Drive to This Dream Place to Discover and Delight</h3>
                 <p class="text-sm md:text-base mb-4 leading-relaxed text-justify" style="color: var(--text1);">Wild Mark Resort Accommodation - Wake up to this symphony of nature and wilderness, that can solely cherish an enthusiastic person. This is a place where you can feel relaxed, and can look for more intimate experiences in nature.</p>
                 <p class="text-sm md:text-base mb-4 leading-relaxed text-justify" style="color: var(--text1);">A full-on-luxury is what you can expect in our resort booking for Kanha. We provide you a room with fully accommodated space with all the amenities and a blend of premium architecture. With the touch of modern design and space, we give you all the staying facilities with an exciting recreation.</p>
                 <p class="text-sm md:text-base leading-relaxed text-justify" style="color: var(--text1);">Wild Mark Kanha resort is one of the magnificent locations for all the nature lovers. Our commitment to excellence ensures that every guest experiences the perfect balance of adventure and comfort during their stay.</p>
             </div>
-            <div class="order-1 lg:order-2" data-aos="fade-left" data-aos-duration="1000">
+            <div class="order-1 lg:order-2" data-aos="fade-left" >
                 <img src="https://wildmarkresort.com/images/bear.webp" alt="Kanha Wildlife" class="rounded-2xl shadow-2xl w-full h-[400px] md:h-[500px] object-cover" />
             </div>
         </div>
@@ -256,7 +256,7 @@ p, li  { color: var(--text1); }
             <p class="text-xs tracking-widest mb-4 font-light" style="color: var(--text2);" data-aos="fade-down">NATURAL SURROUNDINGS</p>
             <h2 class="text-3xl md:text-5xl font-serif mb-6" data-aos="zoom-in">In a Natural Setting</h2>
         </div>
-        <div class="rounded-2xl p-8 md:p-12 shadow-2xl" style="background-color: #c9a96e;" data-aos="fade-up" data-aos-duration="1000">
+        <div class="rounded-2xl p-8 md:p-12 shadow-2xl" style="background-color: #c9a96e;" data-aos="fade-up" >
             <p class="text-sm md:text-base mb-6 leading-relaxed text-justify" style="color: var(--text1);">The resort is placed amidst green and lush surroundings, that will cherish upon. Make your stay here in the most refreshing and rejuvenating atmosphere, as this will be an essential gear in your life. The Wild Mark Kanha resort gives a right blend of staying facilities and the most relaxing environment for your friends and family.</p>
             <p class="text-sm md:text-base mb-6 leading-relaxed text-justify" style="color: var(--text1);">Adopt the pace of nature as it will please you and your loved ones with simplicity. A beautiful spectacle of nature can be seen from our Wild Mark Kanha resort, and this is the right way to look into. Our location offers unparalleled views of the surrounding forest, where you can witness the changing colors of the sky during sunrise and sunset.</p>
             <p class="text-sm md:text-base leading-relaxed text-justify" style="color: var(--text1);">Trust our Wild Mark Resort accommodations, where you can't get enough of nature and the stay! Every corner of our resort is designed to bring you closer to the wilderness while ensuring you enjoy all modern comforts and amenities.</p>
@@ -284,12 +284,12 @@ p, li  { color: var(--text1); }
                 <h4 class="text-xl font-serif font-bold mb-4">Luxury Accommodation</h4>
                 <p class="text-sm leading-relaxed" style="color: var(--text1);">Premium rooms with modern amenities, comfortable bedding, and private sit-outs with stunning garden views.</p>
             </div>
-            <div class="feature-card rounded-2xl p-6 text-center" data-aos="fade-up" data-aos-delay="300">
+            <div class="feature-card rounded-2xl p-6 text-center" data-aos="fade-up" >
                 <div class="icon-wrapper"><i class="fas fa-utensils"></i></div>
                 <h4 class="text-xl font-serif font-bold mb-4">Multi-Cuisine Dining</h4>
                 <p class="text-sm leading-relaxed" style="color: var(--text1);">Enjoy delicious multi-cuisine meals prepared by expert chefs using fresh, local ingredients in our restaurant.</p>
             </div>
-            <div class="feature-card rounded-2xl p-6 text-center" data-aos="fade-up" data-aos-delay="400">
+            <div class="feature-card rounded-2xl p-6 text-center" data-aos="fade-up" >
                 <div class="icon-wrapper"><i class="fas fa-binoculars"></i></div>
                 <h4 class="text-xl font-serif font-bold mb-4">Expert Safari Guidance</h4>
                 <p class="text-sm leading-relaxed" style="color: var(--text1);">Professional naturalists and safari booking assistance to maximize your wildlife sighting opportunities.</p>
@@ -319,13 +319,13 @@ p, li  { color: var(--text1); }
                     <p class="text-sm md:text-base leading-relaxed" style="color: var(--text1);">Over the years, we've been honored with multiple TripAdvisor Travellers' Choice Awards (2020, 2021, 2022, 2025), recognizing our commitment to exceptional guest experiences.</p>
                 </div>
             </div>
-            <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
+            <div class="timeline-item" data-aos="fade-right" >
                 <div class="rounded-xl p-6 md:p-8" style="background-color: #c9a96e;">
                     <h4 class="text-xl md:text-2xl font-serif mb-3">Conservation Commitment</h4>
                     <p class="text-sm md:text-base leading-relaxed" style="color: var(--text1);">We actively participate in wildlife conservation efforts and sustainable tourism practices, ensuring that future generations can experience Kanha's natural beauty.</p>
                 </div>
             </div>
-            <div class="timeline-item" data-aos="fade-right" data-aos-delay="400">
+            <div class="timeline-item" data-aos="fade-right" >
                 <div class="rounded-xl p-6 md:p-8" style="background-color: #c9a96e;">
                     <h4 class="text-xl md:text-2xl font-serif mb-3">Continuous Innovation</h4>
                     <p class="text-sm md:text-base leading-relaxed" style="color: var(--text1);">We continuously upgrade our facilities and services, incorporating guest feedback and modern amenities while maintaining our connection to nature and traditional hospitality.</p>
@@ -347,11 +347,11 @@ p, li  { color: var(--text1); }
                 <div class="stat-number mb-2">940</div>
                 <p class="text-sm md:text-base font-light tracking-wider" style="color: rgba(0,0,0,0.6);">Square Kms of Reserve</p>
             </div>
-            <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+            <div class="text-center" data-aos="fade-up" >
                 <div class="stat-number mb-2">4.8</div>
                 <p class="text-sm md:text-base font-light tracking-wider" style="color: rgba(0,0,0,0.6);">Guest Rating</p>
             </div>
-            <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+            <div class="text-center" data-aos="fade-up" >
                 <div class="stat-number mb-2">4</div>
                 <p class="text-sm md:text-base font-light tracking-wider" style="color: rgba(0,0,0,0.6);">Awards Won</p>
             </div>
@@ -382,7 +382,7 @@ p, li  { color: var(--text1); }
                 <h4 class="text-xl font-serif font-bold mb-4">Hospitality</h4>
                 <p class="text-sm leading-relaxed" style="color: var(--text1);">Our guests are family. We provide warm, personalized service that makes every visitor feel welcomed, valued, and cared for throughout their stay.</p>
             </div>
-            <div class="rounded-2xl p-8 text-center border" style="background-color: #c9a96e; border-color: rgba(142,22,22,0.3);" data-aos="fade-up" data-aos-delay="300">
+            <div class="rounded-2xl p-8 text-center border" style="background-color: #c9a96e; border-color: rgba(142,22,22,0.3);" data-aos="fade-up" >
                 <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6" style="background-color: rgba(142,22,22,0.15);">
                     <i class="fas fa-shield-alt text-3xl" style="color: var(--text2);"></i>
                 </div>
@@ -402,7 +402,7 @@ p, li  { color: var(--text1); }
         <p class="text-base md:text-lg mb-8 leading-relaxed max-w-2xl mx-auto" style="color: var(--text1);" data-aos="fade-up" data-aos-delay="200">
             Join us for an unforgettable journey into the heart of Kanha's wilderness. Book your stay today and create memories that will last a lifetime.
         </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="400">
+        <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" >
             <a href="https://wildmarkresort.com/contact/" class="px-8 py-3 rounded-lg transition font-semibold text-base shadow-lg text-white" style="background-color: var(--text2);">
                 BOOK YOUR STAY
             </a>
@@ -420,29 +420,29 @@ p, li  { color: var(--text1); }
     <div class="container mx-auto max-w-7xl">
         <div class="text-center mb-10 md:mb-16">
             <p class="text-xs tracking-widest mb-3 md:mb-4 font-light" style="color: var(--text2);" data-aos="fade-down">EXCELLENCE • RECOGNITION • TRUST</p>
-            <h2 class="text-3xl md:text-5xl lg:text-6xl font-serif mb-4 md:mb-6" data-aos="zoom-in" data-aos-duration="1000">Awards and Recognitions</h2>
+            <h2 class="text-3xl md:text-5xl lg:text-6xl font-serif mb-4 md:mb-6" data-aos="zoom-in" >Awards and Recognitions</h2>
             <p class="text-sm md:text-base max-w-4xl mx-auto mb-2 md:mb-3 leading-relaxed" style="color: var(--text1);" data-aos="fade-up" data-aos-delay="200">
                 Honored to receive Travellers' Choice Awards from TripAdvisor for our exceptional hospitality
             </p>
         </div>
 
         <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
-            <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+            <div class="award-card group" data-aos="fade-up"  data-aos-delay="100">
                 <div class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
                     <img src="https://wildmarkresort.com/images/testimonials1.png" alt="TripAdvisor Travellers' Choice Award 2020" class="w-full h-auto max-w-[280px] object-contain award-image">
                 </div>
             </div>
-            <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <div class="award-card group" data-aos="fade-up"  data-aos-delay="200">
                 <div class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
                     <img src="https://wildmarkresort.com/images/testimonials2.png" alt="TripAdvisor Travellers' Choice Award 2021" class="w-full h-auto max-w-[280px] object-contain award-image">
                 </div>
             </div>
-            <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+            <div class="award-card group" data-aos="fade-up"  >
                 <div class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
                     <img src="https://wildmarkresort.com/images/testimonials3.png" alt="TripAdvisor Travellers' Choice Award 2022" class="w-full h-auto max-w-[280px] object-contain award-image">
                 </div>
             </div>
-            <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" style="background-color: #39DCA1; border-radius: 9px;">
+            <div class="award-card group" data-aos="fade-up"   style="background-color: #39DCA1; border-radius: 9px;">
                 <div class="bg-transparent rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
                     <img src="https://wildmarkresort.com/images/testimonials4.jpeg" alt="TripAdvisor Travelers' Choice Award 2025" class="w-full h-full object-cover rounded-2xl award-image">
                 </div>
@@ -463,7 +463,7 @@ p, li  { color: var(--text1); }
             </p>
         </div>
 
-        <div class="faq-grid" data-aos="fade-up" data-aos-duration="1000">
+        <div class="faq-grid" data-aos="fade-up" >
 
             <!-- LEFT COLUMN: FAQ 1–10 -->
             <div class="faq-col">

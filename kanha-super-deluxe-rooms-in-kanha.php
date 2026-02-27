@@ -763,7 +763,7 @@ header.hero-header {
                 <img src="https://wildmarkresort.com/images/delux5.JPG" alt="Room Interior"
                     class="w-full h-80 object-cover" />
             </div>
-            <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="gallery-item" data-aos="fade-up" >
                 <img src="https://wildmarkresort.com/images/delux7.JPG" alt="Resort View"
                     class="w-full h-80 object-cover" />
             </div>
@@ -825,7 +825,7 @@ header.hero-header {
                 EXCELLENCE • RECOGNITION • TRUST
             </p>
             <h2 class="text-3xl md:text-5xl lg:text-6xl font-serif mb-4 md:mb-6" data-aos="zoom-in"
-                data-aos-duration="1000">
+                >
                 Awards and Recognitions
             </h2>
             <p class="text-sm md:text-base max-w-4xl mx-auto mb-2 md:mb-3 leading-relaxed"
@@ -835,28 +835,28 @@ header.hero-header {
         </div>
 
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
-            <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+            <div class="award-card group" data-aos="fade-up"  data-aos-delay="100">
                 <div
                     class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl flex items-center justify-center min-h-[320px] md:min-h-[380px]">
                     <img src="https://wildmarkresort.com/images/testimonials1.png" alt="TripAdvisor Award 2020"
                         class="w-full h-auto max-w-[280px] object-contain award-image">
                 </div>
             </div>
-            <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <div class="award-card group" data-aos="fade-up"  data-aos-delay="200">
                 <div
                     class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl flex items-center justify-center min-h-[320px] md:min-h-[380px]">
                     <img src="https://wildmarkresort.com/images/testimonials2.png" alt="TripAdvisor Award 2021"
                         class="w-full h-auto max-w-[280px] object-contain award-image">
                 </div>
             </div>
-            <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+            <div class="award-card group" data-aos="fade-up"  >
                 <div
                     class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl flex items-center justify-center min-h-[320px] md:min-h-[380px]">
                     <img src="https://wildmarkresort.com/images/testimonials3.png" alt="TripAdvisor Award 2022"
                         class="w-full h-auto max-w-[280px] object-contain award-image">
                 </div>
             </div>
-            <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"
+            <div class="award-card group" data-aos="fade-up"  
                 style="background-color:#39DCA1;border-radius:9px">
                 <div
                     class="rounded-2xl overflow-hidden shadow-2xl flex items-center justify-center min-h-[320px] md:min-h-[380px]">
@@ -885,7 +885,7 @@ header.hero-header {
             </p>
         </div>
 
-        <div class="faq-grid" data-aos="fade-up" data-aos-duration="1000">
+        <div class="faq-grid" data-aos="fade-up" >
 
             <!-- LEFT COLUMN -->
             <div class="faq-col">

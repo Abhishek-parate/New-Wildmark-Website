@@ -471,7 +471,7 @@ a[aria-label="WhatsApp"] svg {
         
         <!-- Main Content Grid -->
         <div class="grid lg:grid-cols-2 gap-12 md:gap-20 items-center mb-16">
-            <div data-aos="fade-right" data-aos-duration="1000">
+            <div data-aos="fade-right" >
                 <p class="section-label mb-4">The Gond Dynasty</p>
                 <h3 class="text-2xl md:text-3xl font-serif mb-6 leading-tight">
                     Land of <span style="color:var(--text2);">Gonds</span>
@@ -503,7 +503,7 @@ a[aria-label="WhatsApp"] svg {
                 </p>
             </div>
 
-            <div class="h-[420px] md:h-[500px]" data-aos="fade-left" data-aos-duration="1000">
+            <div class="h-[420px] md:h-[500px]" data-aos="fade-left" >
                 <div class="rounded-xl overflow-hidden h-full shadow-xl" style="border:2px solid rgba(142,22,22,0.2);">
                     <img src="https://wildmarkresort.com/images/Tiger.webp" alt="Kanha History" class="w-full h-full object-cover" />
                 </div>
@@ -533,7 +533,7 @@ a[aria-label="WhatsApp"] svg {
                     <p class="text-gray-400 text-xs leading-relaxed">Kanha declared a Reserve Forest</p>
                 </div>
 
-                <div class="gate-card text-center" data-aos="fade-up" data-aos-delay="300">
+                <div class="gate-card text-center" data-aos="fade-up" >
                     <div style="width:52px;height:52px;background:linear-gradient(135deg,var(--bg1),var(--text2));border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;">
                         <i class="fas fa-leaf" style="color:#fff;font-size:1.1rem;"></i>
                     </div>
@@ -542,7 +542,7 @@ a[aria-label="WhatsApp"] svg {
                     <p class="text-gray-400 text-xs leading-relaxed">Elevated to Wildlife Sanctuary status</p>
                 </div>
 
-                <div class="gate-card text-center" data-aos="fade-up" data-aos-delay="400">
+                <div class="gate-card text-center" data-aos="fade-up" >
                     <div style="width:52px;height:52px;background:linear-gradient(135deg,var(--bg1),var(--text2));border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;">
                         <i class="fas fa-landmark" style="color:#fff;font-size:1.1rem;"></i>
                     </div>
@@ -551,7 +551,7 @@ a[aria-label="WhatsApp"] svg {
                     <p class="text-gray-400 text-xs leading-relaxed">Formed by merging Halon & Banjar Sanctuaries</p>
                 </div>
 
-                <div class="gate-card text-center" data-aos="fade-up" data-aos-delay="500">
+                <div class="gate-card text-center" data-aos="fade-up" >
                     <div style="width:52px;height:52px;background:linear-gradient(135deg,var(--bg1),var(--text2));border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;">
                         <i class="fas fa-paw" style="color:#fff;font-size:1.1rem;"></i>
                     </div>
@@ -594,7 +594,7 @@ a[aria-label="WhatsApp"] svg {
 <section class="py-16 md:py-24 bg-neutral-900 overflow-hidden">
     <div class="container mx-auto max-w-7xl px-4 md:px-6">
         <div class="grid lg:grid-cols-2 gap-12 md:gap-20 items-center">
-            <div data-aos="fade-right" data-aos-duration="1000">
+            <div data-aos="fade-right" >
                 <p class="section-label mb-4">Est. 1955 • Tiger Reserve Since 1973</p>
                 <h2 class="text-3xl md:text-5xl font-serif mb-6 leading-tight">
                     The Jewel of<br /><span style="color:var(--text2);">Indian Wildlife</span>
@@ -618,14 +618,14 @@ a[aria-label="WhatsApp"] svg {
                         <p class="font-serif font-semibold text-sm" style="color:var(--text2);">1973 — Project Tiger Status</p>
                         <p class="text-gray-400 text-xs mt-1">One of the first reserves under India's landmark Project Tiger initiative</p>
                     </div>
-                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="timeline-item" data-aos="fade-up" >
                         <p class="font-serif font-semibold text-sm" style="color:var(--text2);">Today — 60+ Tigers Thriving</p>
                         <p class="text-gray-400 text-xs mt-1">Celebrating over 50 years of conservation excellence with a growing tiger population</p>
                     </div>
                 </div>
             </div>
 
-            <div class="h-[500px] md:h-[600px]" data-aos="fade-left" data-aos-duration="1000">
+            <div class="h-[500px] md:h-[600px]" data-aos="fade-left" >
                 <div class="rounded-xl overflow-hidden h-full shadow-xl" style="border:2px solid rgba(142,22,22,0.2);">
                     <img src="https://wildmarkresort.com/images/small_tiger.webp" alt="Bengal Tiger" class="w-full h-full object-cover" />
                 </div>
@@ -686,7 +686,7 @@ a[aria-label="WhatsApp"] svg {
             </div>
           </div>
         </div>
-        <div class="zone-card h-[420px]" data-aos="fade-up" data-aos-delay="300">
+        <div class="zone-card h-[420px]" data-aos="fade-up" >
           <img src="https://wildmarkresort.com/images/Tiger5.webp" alt="Mukki Zone" />
           <div class="zone-card-overlay"></div>
           <div class="zone-card-content">
@@ -700,7 +700,7 @@ a[aria-label="WhatsApp"] svg {
             </div>
           </div>
         </div>
-        <div class="zone-card h-[420px]" data-aos="fade-up" data-aos-delay="400">
+        <div class="zone-card h-[420px]" data-aos="fade-up" >
           <img src="https://wildmarkresort.com/images/home4.webp" alt="Sarhi Zone" />
           <div class="zone-card-overlay"></div>
           <div class="zone-card-content">
@@ -738,7 +738,7 @@ a[aria-label="WhatsApp"] svg {
             </div>
             <p class="text-sm leading-relaxed">Entry to the Mukki zone — southern part of the reserve. Known for dense forest cover and excellent big cat sightings. Best for dedicated wildlife photographers.</p>
           </div>
-          <div class="gate-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="gate-card" data-aos="fade-up" >
             <div class="flex items-center gap-3 mb-3">
               <div style="width:40px;height:40px;background:linear-gradient(135deg,var(--bg1),var(--text2));border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
                 <i class="fas fa-archway" style="color:#fff;font-size:.9rem;"></i>
@@ -780,7 +780,7 @@ a[aria-label="WhatsApp"] svg {
             </div>
           </div>
         </div>
-        <div class="zone-card h-[420px]" data-aos="fade-up" data-aos-delay="300">
+        <div class="zone-card h-[420px]" data-aos="fade-up" >
           <img src="https://wildmarkresort.com/images/wildmark5.jpg" alt="Elephant Safari" />
           <div class="zone-card-overlay"></div>
           <div class="zone-card-content">
@@ -793,7 +793,7 @@ a[aria-label="WhatsApp"] svg {
             </div>
           </div>
         </div>
-        <div class="zone-card h-[420px]" data-aos="fade-up" data-aos-delay="400">
+        <div class="zone-card h-[420px]" data-aos="fade-up" >
           <img src="https://wildmarkresort.com/images/wildmark8.jpeg" alt="Nature Walk" />
           <div class="zone-card-overlay"></div>
           <div class="zone-card-content">
@@ -807,7 +807,7 @@ a[aria-label="WhatsApp"] svg {
           </div>
         </div>
       </div>
-      <div class="text-center mt-12 md:mt-16" data-aos="fade-up" data-aos-delay="500">
+      <div class="text-center mt-12 md:mt-16" data-aos="fade-up" >
         <p class="text-gray-300 text-sm md:text-base mb-6">Need help choosing the right safari? Our team is here to assist you!</p>
         <a href="https://wildmarkresort.com/contact/" style="background:var(--text2);color:#fff;" class="px-8 py-3 transition font-semibold text-base rounded-lg shadow-lg inline-flex items-center justify-center gap-2 hover:opacity-90">
           <i class="fas fa-calendar-check"></i>
@@ -1126,7 +1126,7 @@ a[aria-label="WhatsApp"] svg {
 <section class="py-16 md:py-24 bg-black overflow-hidden">
     <div class="container mx-auto max-w-7xl px-4 md:px-6">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
-            <div data-aos="fade-right" data-aos-duration="1000">
+            <div data-aos="fade-right" >
                 <p class="section-label mb-4">Meet the Residents</p>
                 <h2 class="text-3xl md:text-5xl font-serif mb-6 leading-tight">Tigers of <span style="color:var(--text2);">Kanha</span></h2>
                 <p class="text-gray-300 text-sm md:text-base leading-relaxed mb-8 text-justify">
@@ -1161,7 +1161,7 @@ a[aria-label="WhatsApp"] svg {
                         </div>
                         <p class="text-gray-400 text-xs leading-relaxed">Dominant male tigers that command vast territories across the reserve's core zones.</p>
                     </div>
-                    <div class="tiger-card sm:col-span-2" data-aos="fade-up" data-aos-delay="300">
+                    <div class="tiger-card sm:col-span-2" data-aos="fade-up" >
                         <div class="flex items-center gap-2 mb-2">
                             <i class="fas fa-paw text-sm" style="color:var(--text2);"></i>
                             <h5 class="font-serif font-bold">Sunaina, Mohini & Neelima</h5>
@@ -1170,7 +1170,7 @@ a[aria-label="WhatsApp"] svg {
                     </div>
                 </div>
             </div>
-            <div class="relative h-[500px] md:h-[600px]" data-aos="fade-left" data-aos-duration="1000">
+            <div class="relative h-[500px] md:h-[600px]" data-aos="fade-left" >
                 <img src="https://wildmarkresort.com/images/small_tiger.webp" alt="Tiger at Kanha" class="w-full h-full object-cover rounded-2xl shadow-2xl" style="border:2px solid rgba(142,22,22,0.2);" />
                 <div style="position:absolute;bottom:1.5rem;left:1.5rem;right:1.5rem;background:rgba(248,238,223,0.93);backdrop-filter:blur(10px);border:1px solid rgba(142,22,22,0.2);border-radius:.75rem;padding:1rem 1.25rem;">
                     <div class="flex items-center justify-between">
@@ -1322,7 +1322,7 @@ a[aria-label="WhatsApp"] svg {
                     <p class="text-gray-400 text-xs">Guided nature walks in the buffer zone to spot 200+ species of resident and migratory birds.</p>
                 </div>
             </div>
-            <div class="activity-pill" data-aos="fade-up" data-aos-delay="300">
+            <div class="activity-pill" data-aos="fade-up" >
                 <div class="activity-icon"><i class="fas fa-house-chimney-window"></i></div>
                 <div>
                     <h5 class="font-serif font-semibold text-sm mb-1">Eco-Friendly Village Visits</h5>
@@ -1336,7 +1336,7 @@ a[aria-label="WhatsApp"] svg {
                     <p class="text-gray-400 text-xs">Kanha's light and landscape are legendary among photographers — golden hour is unmissable.</p>
                 </div>
             </div>
-            <div class="activity-pill" data-aos="fade-up" data-aos-delay="400">
+            <div class="activity-pill" data-aos="fade-up" >
                 <div class="activity-icon"><i class="fas fa-fire"></i></div>
                 <div>
                     <h5 class="font-serif font-semibold text-sm mb-1">Bonfire Evenings</h5>
@@ -1396,28 +1396,28 @@ a[aria-label="WhatsApp"] svg {
     <div class="container mx-auto max-w-7xl">
         <div class="text-center mb-10 md:mb-16">
             <p class="section-label mb-3 md:mb-4" data-aos="fade-down">EXCELLENCE • RECOGNITION • TRUST</p>
-            <h2 class="text-3xl md:text-5xl lg:text-6xl font-serif mb-4 md:mb-6" data-aos="zoom-in" data-aos-duration="1000">Awards and Recognitions</h2>
+            <h2 class="text-3xl md:text-5xl lg:text-6xl font-serif mb-4 md:mb-6" data-aos="zoom-in" >Awards and Recognitions</h2>
             <p class="text-sm md:text-base text-gray-300 max-w-4xl mx-auto mb-2 md:mb-3 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
                 Honored to receive Travellers' Choice Awards from TripAdvisor for our exceptional hospitality
             </p>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
-            <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+            <div class="award-card group" data-aos="fade-up"  data-aos-delay="100">
                 <div class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
                     <img src="https://wildmarkresort.com/images/testimonials1.png" alt="TripAdvisor Travellers' Choice Award 2020" class="w-full h-auto max-w-[280px] object-contain award-image">
                 </div>
             </div>
-            <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <div class="award-card group" data-aos="fade-up"  data-aos-delay="200">
                 <div class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
                     <img src="https://wildmarkresort.com/images/testimonials2.png" alt="TripAdvisor Travellers' Choice Award 2021" class="w-full h-auto max-w-[280px] object-contain award-image">
                 </div>
             </div>
-            <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+            <div class="award-card group" data-aos="fade-up"  >
                 <div class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
                     <img src="https://wildmarkresort.com/images/testimonials3.png" alt="TripAdvisor Travellers' Choice Award 2022" class="w-full h-auto max-w-[280px] object-contain award-image">
                 </div>
             </div>
-            <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" style="background-color: #39DCA1;border-radius: 9px;">
+            <div class="award-card group" data-aos="fade-up"   style="background-color: #39DCA1;border-radius: 9px;">
                 <div class="bg-transparent rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
                     <img src="https://wildmarkresort.com/images/testimonials4.jpeg" alt="TripAdvisor Travelers' Choice Award 2025" class="w-full h-full object-cover rounded-2xl award-image">
                 </div>
@@ -1437,7 +1437,7 @@ a[aria-label="WhatsApp"] svg {
             </p>
         </div>
 
-        <div class="faq-grid" data-aos="fade-up" data-aos-duration="1000">
+        <div class="faq-grid" data-aos="fade-up" >
             <!-- LEFT COLUMN -->
             <div class="faq-col">
                 <div class="faq-item bg-black border border-neutral-800 rounded-xl overflow-hidden">

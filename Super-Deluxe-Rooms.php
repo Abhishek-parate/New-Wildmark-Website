@@ -297,7 +297,7 @@ include 'includes/header.php';
         </div>
 
         <!-- Highlight 3 -->
-        <div class="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 hover:border-amber-600 transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+        <div class="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 hover:border-amber-600 transition-all duration-300" data-aos="fade-up" >
           <div class="w-16 h-16 rounded-full bg-amber-100 flex items-center justify-center mb-6">
             <i class="fas fa-couch text-2xl text-neutral-800"></i>
           </div>
@@ -330,7 +330,7 @@ include 'includes/header.php';
         </div>
 
         <!-- Highlight 6 -->
-        <div class="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 hover:border-amber-600 transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+        <div class="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 hover:border-amber-600 transition-all duration-300" data-aos="fade-up" >
           <div class="w-16 h-16 rounded-full bg-amber-100 flex items-center justify-center mb-6">
             <i class="fas fa-door-open text-2xl text-neutral-800"></i>
           </div>
@@ -363,7 +363,7 @@ include 'includes/header.php';
         </div>
 
         <!-- Highlight 9 -->
-        <div class="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 hover:border-amber-600 transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+        <div class="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 hover:border-amber-600 transition-all duration-300" data-aos="fade-up" >
           <div class="w-16 h-16 rounded-full bg-amber-100 flex items-center justify-center mb-6">
             <i class="fas fa-moon text-2xl text-neutral-800"></i>
           </div>
@@ -443,7 +443,7 @@ include 'includes/header.php';
               </div>
             </div>
 
-            <div class="amenity-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="amenity-item" data-aos="fade-up" >
               <i class="fa-solid fa-person-swimming"></i>
               <div>
                 <h4 class="font-semibold text-white mb-1">Swimming Pool</h4>
@@ -504,7 +504,7 @@ include 'includes/header.php';
               </div>
             </div>
 
-            <div class="amenity-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="amenity-item" data-aos="fade-up" >
               <i class="fa-solid fa-wheelchair"></i>
               <div>
                 <h4 class="font-semibold text-white mb-1">Accessible & Pet-Friendly</h4>
@@ -520,7 +520,7 @@ include 'includes/header.php';
               </div>
             </div>
 
-            <div class="amenity-item" data-aos="fade-up" data-aos-delay="400">
+            <div class="amenity-item" data-aos="fade-up" >
               <i class="fa-solid fa-route"></i>
               <div>
                 <h4 class="font-semibold text-white mb-1">Safari Assistance</h4>
@@ -557,7 +557,7 @@ include 'includes/header.php';
           <img src="images/delux5.JPG" alt="Room Interior"
             class="w-full h-80 object-cover" />
         </div>
-        <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
+        <div class="gallery-item" data-aos="fade-up" >
           <img src="images/delux7.JPG" alt="Resort View"
             class="w-full h-80 object-cover" />
         </div>
@@ -574,7 +574,7 @@ include 'includes/header.php';
       <p class="text-lg md:text-xl mb-8 text-amber-100" data-aos="fade-up" data-aos-delay="200">
         Book your Super Deluxe Room today and experience luxury in the heart of Kanha
       </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="400">
+      <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" >
         <a href="contact.php"
           class="bg-white text-amber-900 hover:bg-amber-100 px-10 py-4 transition font-semibold text-lg">
           BOOK NOW
@@ -595,7 +595,7 @@ include 'includes/header.php';
           EXCELLENCE • RECOGNITION • TRUST
         </p>
         <h2 class="text-3xl md:text-5xl lg:text-6xl font-serif mb-4 md:mb-6" data-aos="zoom-in"
-          data-aos-duration="1000">
+          >
           Awards and Recognitions
         </h2>
         <p class="text-sm md:text-base text-gray-300 max-w-4xl mx-auto mb-2 md:mb-3 leading-relaxed" data-aos="fade-up"
@@ -608,7 +608,7 @@ include 'includes/header.php';
       <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
 
         <!-- Award Card 1 - 2020 -->
-        <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+        <div class="award-card group" data-aos="fade-up"  data-aos-delay="100">
           <div
             class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/30 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
             <img src="images/testimonials1.png  " alt="TripAdvisor Travellers' Choice Award 2020"
@@ -617,7 +617,7 @@ include 'includes/header.php';
         </div>
 
         <!-- Award Card 2 - 2021 -->
-        <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+        <div class="award-card group" data-aos="fade-up"  data-aos-delay="200">
           <div
             class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/30 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
             <img src="images/testimonials2.png" alt="TripAdvisor Travellers' Choice Award 2021"
@@ -626,7 +626,7 @@ include 'includes/header.php';
         </div>
 
         <!-- Award Card 3 - 2022 -->
-        <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+        <div class="award-card group" data-aos="fade-up"  >
           <div
             class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/30 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
             <img src="images/testimonials3.png" alt="TripAdvisor Travellers' Choice Award 2022"
@@ -635,7 +635,7 @@ include 'includes/header.php';
         </div>
 
         <!-- Award Card 4 - 2025 (Green Background) -->
-        <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"  style="background-color: #39DCA1;border-radius: 9px;">
+        <div class="award-card group" data-aos="fade-up"    style="background-color: #39DCA1;border-radius: 9px;">
           <div
             class="bg-transparent rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 group-hover:shadow-emerald-500/40 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
             <img src="images/testimonials4.jpeg" alt="TripAdvisor Travelers' Choice Award 2025"
@@ -671,7 +671,7 @@ include 'includes/header.php';
     </div>
 
     <!-- FAQ Grid: 10 Left + 10 Right -->
-    <div class="faq-grid" data-aos="fade-up" data-aos-duration="1000">
+    <div class="faq-grid" data-aos="fade-up" >
 
       <!-- LEFT COLUMN: FAQ 1–10 -->
       <div class="faq-col">

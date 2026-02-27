@@ -575,7 +575,7 @@ section.py-12.md\:py-20.px-4.md\:px-6.bg-neutral-900 { background-color: var(--b
             Every photograph tells a story. Come experience the magic of Kanha and create your own unforgettable moments
             at Wildmark Resort.
         </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="400">
+        <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" >
             <a href="https://wildmarkresort.com/contact/"
                 class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-lg transition font-semibold text-base shadow-lg">
                 <i class="fas fa-calendar-check mr-2"></i>BOOK YOUR STAY
@@ -595,7 +595,7 @@ section.py-12.md\:py-20.px-4.md\:px-6.bg-neutral-900 { background-color: var(--b
             <p class="text-xs tracking-widest mb-3 md:mb-4 font-light" style="color: var(--text2);" data-aos="fade-down">
                 EXCELLENCE • RECOGNITION • TRUST
             </p>
-            <h2 class="text-3xl md:text-5xl lg:text-6xl font-serif mb-4 md:mb-6" data-aos="zoom-in" data-aos-duration="1000">
+            <h2 class="text-3xl md:text-5xl lg:text-6xl font-serif mb-4 md:mb-6" data-aos="zoom-in" >
                 Awards and Recognitions
             </h2>
             <p class="text-sm md:text-base max-w-4xl mx-auto mb-2 md:mb-3 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
@@ -604,22 +604,22 @@ section.py-12.md\:py-20.px-4.md\:px-6.bg-neutral-900 { background-color: var(--b
         </div>
 
         <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
-            <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+            <div class="award-card group" data-aos="fade-up"  data-aos-delay="100">
                 <div class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
                     <img src="https://wildmarkresort.com/images/testimonials1.png" alt="TripAdvisor Travellers' Choice Award 2020" class="w-full h-auto max-w-[280px] object-contain">
                 </div>
             </div>
-            <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <div class="award-card group" data-aos="fade-up"  data-aos-delay="200">
                 <div class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
                     <img src="https://wildmarkresort.com/images/testimonials2.png" alt="TripAdvisor Travellers' Choice Award 2021" class="w-full h-auto max-w-[280px] object-contain">
                 </div>
             </div>
-            <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+            <div class="award-card group" data-aos="fade-up"  >
                 <div class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
                     <img src="https://wildmarkresort.com/images/testimonials3.png" alt="TripAdvisor Travellers' Choice Award 2022" class="w-full h-auto max-w-[280px] object-contain">
                 </div>
             </div>
-            <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" style="background-color: #39DCA1; border-radius: 9px;">
+            <div class="award-card group" data-aos="fade-up"   style="background-color: #39DCA1; border-radius: 9px;">
                 <div class="bg-transparent rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
                     <img src="https://wildmarkresort.com/images/testimonials4.jpeg" alt="TripAdvisor Travelers' Choice Award 2025" class="w-full h-full object-cover rounded-2xl">
                 </div>
@@ -640,7 +640,7 @@ section.py-12.md\:py-20.px-4.md\:px-6.bg-neutral-900 { background-color: var(--b
             </p>
         </div>
 
-        <div class="faq-grid" data-aos="fade-up" data-aos-duration="1000">
+        <div class="faq-grid" data-aos="fade-up" >
 
             <!-- LEFT COLUMN -->
             <div class="faq-col">

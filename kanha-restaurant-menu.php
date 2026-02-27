@@ -379,7 +379,7 @@ include 'includes/header.php';
                                 <div class="dish-info"><div class="dish-name">Puri &amp; Kizhangu</div><div class="dish-desc">Deep-fried puri served with spiced potato curry</div></div>
                                 <div class="veg-badge"></div>
                             </div>
-                            <div class="premium-menu-card veg-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="premium-menu-card veg-card" data-aos="fade-up" >
                                 <div class="dish-info"><div class="dish-name">Vegetable Dum Biryani</div><div class="dish-desc">Aromatic slow-cooked South Indian style vegetable biryani</div></div>
                                 <div class="veg-badge"></div>
                             </div>
@@ -387,7 +387,7 @@ include 'includes/header.php';
                                 <div class="dish-info"><div class="dish-name">Tomato Rice</div><div class="dish-desc">Tangy South Indian style tomato rice with tempering</div></div>
                                 <div class="veg-badge"></div>
                             </div>
-                            <div class="premium-menu-card veg-card" data-aos="fade-up" data-aos-delay="400">
+                            <div class="premium-menu-card veg-card" data-aos="fade-up" >
                                 <div class="dish-info"><div class="dish-name">Lemon Rice</div><div class="dish-desc">Zesty lemon-tempered rice with peanuts and curry leaves</div></div>
                                 <div class="veg-badge"></div>
                             </div>
@@ -395,7 +395,7 @@ include 'includes/header.php';
                                 <div class="dish-info"><div class="dish-name">Curd Rice</div><div class="dish-desc">Creamy curd rice with tempered mustard and ginger — a cooling classic</div></div>
                                 <div class="veg-badge"></div>
                             </div>
-                            <div class="premium-menu-card veg-card" data-aos="fade-up" data-aos-delay="500">
+                            <div class="premium-menu-card veg-card" data-aos="fade-up" >
                                 <div class="dish-info"><div class="dish-name">Paruppu Sadham (Dal Rice)</div><div class="dish-desc">Comforting South Indian lentil rice with ghee and pickle</div></div>
                                 <div class="veg-badge"></div>
                             </div>
@@ -429,7 +429,7 @@ include 'includes/header.php';
                                 <div class="dish-info"><div class="dish-name">Wide Variety of Chicken Dishes</div><div class="dish-desc">Various South Indian chicken preparations — as per availability</div></div>
                                 <div class="nonveg-badge"></div>
                             </div>
-                            <div class="premium-menu-card nonveg-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="premium-menu-card nonveg-card" data-aos="fade-up" >
                                 <div class="dish-info"><div class="dish-name">Mutton Dishes</div><div class="dish-desc">Rich &amp; flavorful mutton preparations based on availability</div></div>
                                 <div class="nonveg-badge"></div>
                             </div>
@@ -698,28 +698,28 @@ include 'includes/header.php';
     <div class="container mx-auto max-w-7xl">
         <div class="text-center mb-10 md:mb-16">
             <p class="text-xs tracking-widest mb-3 md:mb-4 font-light" style="color:var(--text2);" data-aos="fade-down">FRESHNESS • VARIETY • HOSPITALITY</p>
-            <h2 class="text-3xl md:text-5xl font-serif mb-4" style="color:var(--text2);" data-aos="zoom-in" data-aos-duration="1000">Why Dine at Wildmark</h2>
+            <h2 class="text-3xl md:text-5xl font-serif mb-4" style="color:var(--text2);" data-aos="zoom-in" >Why Dine at Wildmark</h2>
             <p class="text-sm md:text-base max-w-3xl mx-auto leading-relaxed" style="color:var(--text1);" data-aos="fade-up" data-aos-delay="200">
                 Our kitchen is committed to fresh, wholesome cooking — every dish crafted with care and served with warmth in the heart of the jungle.
             </p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            <div class="why-choose-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+            <div class="why-choose-card" data-aos="fade-up"  data-aos-delay="100">
                 <div class="icon-wrapper"><i class="fas fa-leaf"></i></div>
                 <h4>Fresh Ingredients</h4>
                 <p>We use fresh, locally sourced ingredients daily to ensure every meal is flavorful, healthy, and satisfying.</p>
             </div>
-            <div class="why-choose-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <div class="why-choose-card" data-aos="fade-up"  data-aos-delay="200">
                 <div class="icon-wrapper"><i class="fas fa-globe-asia"></i></div>
                 <h4>Multi-Cuisine Variety</h4>
                 <p>From South Indian idlis to Punjabi dals and Chinese noodles — our menu has something for every palate.</p>
             </div>
-            <div class="why-choose-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+            <div class="why-choose-card" data-aos="fade-up"  >
                 <div class="icon-wrapper"><i class="fas fa-fire"></i></div>
                 <h4>Made-to-Order</h4>
                 <p>Wide variety of Chicken, Mutton &amp; Fish dishes prepared fresh based on guest request &amp; ingredient availability.</p>
             </div>
-            <div class="why-choose-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+            <div class="why-choose-card" data-aos="fade-up"  >
                 <div class="icon-wrapper"><i class="fas fa-coffee"></i></div>
                 <h4>All-Day Dining</h4>
                 <p>From early morning chai before your safari to late night snacks — our kitchen stays ready for you all day.</p>
@@ -733,28 +733,28 @@ include 'includes/header.php';
     <div class="container mx-auto max-w-7xl">
         <div class="text-center mb-10 md:mb-16">
             <p class="text-xs tracking-widest mb-3 md:mb-4 font-light" style="color:var(--text2);" data-aos="fade-down">EXCELLENCE • RECOGNITION • TRUST</p>
-            <h2 class="text-3xl md:text-5xl lg:text-6xl font-serif mb-4 md:mb-6" style="color:var(--text2);" data-aos="zoom-in" data-aos-duration="1000">Awards and Recognitions</h2>
+            <h2 class="text-3xl md:text-5xl lg:text-6xl font-serif mb-4 md:mb-6" style="color:var(--text2);" data-aos="zoom-in" >Awards and Recognitions</h2>
             <p class="text-sm md:text-base max-w-4xl mx-auto mb-2 md:mb-3 leading-relaxed" style="color:var(--text1);" data-aos="fade-up" data-aos-delay="200">
                 Honored to receive Travellers' Choice Awards from TripAdvisor for our exceptional hospitality
             </p>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
-            <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+            <div class="award-card group" data-aos="fade-up"  data-aos-delay="100">
                 <div class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
                     <img src="https://wildmarkresort.com/images/testimonials1.png" alt="TripAdvisor Travellers Choice Award 2020" class="w-full h-auto max-w-[280px] object-contain award-image">
                 </div>
             </div>
-            <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <div class="award-card group" data-aos="fade-up"  data-aos-delay="200">
                 <div class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
                     <img src="https://wildmarkresort.com/images/testimonials2.png" alt="TripAdvisor Travellers Choice Award 2021" class="w-full h-auto max-w-[280px] object-contain award-image">
                 </div>
             </div>
-            <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+            <div class="award-card group" data-aos="fade-up"  >
                 <div class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
                     <img src="https://wildmarkresort.com/images/testimonials3.png" alt="TripAdvisor Travellers Choice Award 2022" class="w-full h-auto max-w-[280px] object-contain award-image">
                 </div>
             </div>
-            <div class="award-card group" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" style="background-color: #39DCA1; border-radius: 9px;">
+            <div class="award-card group" data-aos="fade-up"   style="background-color: #39DCA1; border-radius: 9px;">
                 <div class="bg-transparent rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
                     <img src="https://wildmarkresort.com/images/testimonials4.jpeg" alt="TripAdvisor Travelers Choice Award 2025" class="w-full h-full object-cover rounded-2xl award-image">
                 </div>
@@ -774,7 +774,7 @@ include 'includes/header.php';
             </p>
         </div>
 
-        <div class="faq-grid" data-aos="fade-up" data-aos-duration="1000">
+        <div class="faq-grid" data-aos="fade-up" >
             <!-- LEFT COLUMN -->
             <div class="faq-col">
                 <?php
