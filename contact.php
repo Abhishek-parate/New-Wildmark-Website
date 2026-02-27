@@ -465,9 +465,9 @@ section.py-12.md\:py-20.px-4.md\:px-6.bg-neutral-900 {
                         </div>
                         <div>
                             <h4 class="text-sm font-light mb-2 tracking-wider opacity-80">EMAIL</h4>
-                            <a href="mailto:kanhawildmark@gmail.com"
+                            <a href="mailto:wildmarkresort@gmail.com"
                                 class="text-lg md:text-xl font-semibold hover:underline block break-all">
-                                kanhawildmark@gmail.com
+                                wildmarkresort@gmail.com
                             </a>
                         </div>
                     </div>

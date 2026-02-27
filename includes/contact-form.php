@@ -1,5 +1,5 @@
 <!-- contact-form.php -->
-<form method="POST" action="send-mail.php" id="contactForm">
+<form method="POST" action="https://wildmarkresort.com/send-mail" id="contactForm">
 
     <div>
         <input type="text" name="name" placeholder="Your Name" required

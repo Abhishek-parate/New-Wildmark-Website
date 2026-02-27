@@ -1,5 +1,4 @@
 <?php
-ob_start(); // Prevent header issues
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -17,18 +16,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Validation
     if (empty($name) || empty($email) || empty($phone)) {
-        header("Location: contact.php?status=error");
-        exit();
+        die("Required fields missing.");
     }
 
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        header("Location: contact.php?status=invalid_email");
-        exit();
+        die("Invalid email format.");
     }
 
     if (!preg_match('/^[0-9]{10}$/', $phone)) {
-        header("Location: contact.php?status=invalid_phone");
-        exit();
+        die("Invalid phone number.");
     }
 
     $mail = new PHPMailer(true);
@@ -36,26 +32,30 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     try {
 
         // SMTP SETTINGS
-        $mail->isSMTP();
-        $mail->Host       = 'smtp.hostinger.com';
-        $mail->SMTPAuth   = true;
-        $mail->Username   = 'enquiry@wildmarkresort.com';
-        $mail->Password   = 'Abhi@9860303985#';
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-        $mail->Port       = 465;
+$mail->isSMTP();
+$mail->Host       = 'smtp.hostinger.com';
+$mail->SMTPAuth   = true;
+$mail->Username   = 'enquiry@wildmarkresort.com'; // your Hostinger email
+$mail->Password   = 'Abhi@9860303985#';           // password set in hPanel
+$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+$mail->Port       = 465;
 
-        $mail->setFrom('enquiry@wildmarkresort.com', 'Wildmark Resort');
-        $mail->addAddress('yashchikhale711@gmail.com');
+$mail->setFrom('enquiry@wildmarkresort.com', 'Wildmark Resort');
+$mail->addAddress('wildmarkresort@gmail.com');
+
+
+        // Optional: send a copy/reply to the visitor
+        // $mail->addReplyTo($email, $name);
 
         $mail->isHTML(true);
         $mail->Subject = "New Website Lead - Wildmark Resort";
 
         $mail->Body = "
-        <h2 style='color:#8E1616;'>New Website Enquiry</h2>
-        <table border='1' cellpadding='10' cellspacing='0' style='border-collapse:collapse;width:100%;'>
-            <tr><td><strong>Name</strong></td><td>{$name}</td></tr>
-            <tr><td><strong>Email</strong></td><td>{$email}</td></tr>
-            <tr><td><strong>Phone</strong></td><td>{$phone}</td></tr>
+        <h2 style='color:#2d6a4f;'>New Website Enquiry</h2>
+        <table border='1' cellpadding='8' cellspacing='0' style='border-collapse:collapse;'>
+            <tr><td><strong>Name</strong></td><td>$name</td></tr>
+            <tr><td><strong>Email</strong></td><td>$email</td></tr>
+            <tr><td><strong>Phone</strong></td><td>$phone</td></tr>
             <tr><td><strong>Message</strong></td><td>" . ($message ?: 'No message') . "</td></tr>
         </table>
         ";
@@ -64,22 +64,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $mail->send();
 
-        // ✅ SUCCESS REDIRECT
-        header("Location: https://wildmarkresort.com/thank-you/");
+        // ✅ Redirect to Thank You page on success
+        header("Location: https://wildmarkresort.com/thank-you.php");
         exit();
 
     } catch (Exception $e) {
-
-        // Optional: Log error instead of showing to user
-        error_log("Mailer Error: " . $mail->ErrorInfo);
-
-        header("Location: /contact.php?status=mail_error");
+        // ❌ Redirect to error page or back with error message
+        header("Location: /contact.php?status=error&msg=" . urlencode($mail->ErrorInfo));
         exit();
     }
 
 } else {
-    header("Location: /contact.php");
+    // Direct access — redirect home
+    header("Location: /");
     exit();
 }
-
-ob_end_flush();
