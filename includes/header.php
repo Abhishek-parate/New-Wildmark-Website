@@ -7,8 +7,9 @@
     <title><?php echo isset($pageTitle) ? $pageTitle : 'Wildmark Resort Kanha'; ?></title>
 
     <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/wildmarkresort/includes/style.css" />
-    <link rel="stylesheet" href="/wildmarkresort/includes/main.css" />
+    <link rel="stylesheet" href="/wildmarkresort/includes/style.css" />
 
     <!-- AOS -->
     <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
