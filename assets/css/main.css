@@ -1169,7 +1169,7 @@ button[onclick^="nextSlide"]:hover {
     background-color: var(--bg1) !important;
 }
 
-.roots-content .location-contact-section .bg-neutral-800 .section-bg-dark{
+.roots-content {
     background-color: #c9a96e !important;
 }
 
@@ -1288,6 +1288,10 @@ button[onclick^="nextSlide"]:hover {
     color: var(--bg2) !important;
 }
 
+/* Location Contact Section */
+.location-contact-section .bg-neutral-800 {
+    background-color: #c9a96e !important;
+}
 
 .location-contact-section h2 {
     color: var(--text2) !important;
@@ -1597,4 +1601,8 @@ li {
 
 .section-bg2 {
     background-color: var(--bg2) !important;
+}
+
+.section-bg-dark {
+    background-color: #c9a96e !important;
 }
