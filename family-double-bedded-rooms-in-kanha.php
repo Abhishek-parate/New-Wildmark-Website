@@ -3,42 +3,7 @@ $pageTitle = "Family Double Bedded Rooms - Wildmark Resort Kanha";
 include 'includes/header.php'; 
 ?>
 
-<style>
-/* Only minimal CSS that Tailwind can't do — animations & FAQ accordion logic */
-@keyframes slideIn {
-  from { opacity: 0; transform: scale(0.9) translateY(20px); }
-  to   { opacity: 1; transform: scale(1)   translateY(0);    }
-}
-.animate-slideIn { animation: slideIn 0.3s ease-out; }
 
-#specialOfferPopup > div { scrollbar-width: none; -ms-overflow-style: none; }
-#specialOfferPopup > div::-webkit-scrollbar { display: none; }
-
-.tab-content         { display: none; }
-.tab-content.active  { display: block; }
-
-.faq-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  align-items: start;
-}
-.faq-col { display: flex; flex-direction: column; gap: 14px; width: 100%; min-width: 0; }
-.faq-question { min-height: 64px; height: 64px; }
-.faq-question span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; font-size: 15px !important; }
-
-@media screen and (max-width: 860px) {
-  .faq-grid { grid-template-columns: 1fr !important; }
-  .faq-question { height: auto !important; min-height: unset !important; }
-  .faq-question span { white-space: normal !important; overflow: visible !important; text-overflow: unset !important; font-size: 14px !important; }
-}
-
-/* Gallery hover */
-.gallery-item { position: relative; overflow: hidden; border-radius: 1rem; cursor: pointer; transition: transform 0.3s ease; }
-.gallery-item:hover { transform: scale(1.02); }
-.gallery-item img { transition: transform 0.5s ease; }
-.gallery-item:hover img { transform: scale(1.1); }
-</style>
 
 <!-- ═══════════════════════════════════════════
      HERO

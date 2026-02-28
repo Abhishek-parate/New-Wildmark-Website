@@ -1,0 +1,3880 @@
+/* ===== ROOT COLOR VARIABLES (same as index) ===== */
+ .about :root {
+    --bg1: #E8C999;
+    --bg2: #F8EEDF;
+    --text1: #000000;
+    --text2: #8E1616;
+}
+
+/* Responsive Container */
+ .about .container {
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (min-width: 640px)  { .container { max-width: 640px; } }
+@media (min-width: 768px)  { .container { max-width: 768px; } }
+@media (min-width: 1024px) { .container { max-width: 1024px; } }
+@media (min-width: 1280px) { .container { max-width: 1200px; } }
+
+/* ===== GLOBAL THEME ===== */
+ .about body { background-color: var(--bg2); }
+
+ .about h1, h2, h3, h4, h5 { color: var(--text2) !important; }
+ .about p, li  { color: var(--text1); }
+ .about .text-amber-500, .text-amber-400, .text-amber-100 { color: var(--text2) !important; }
+ .about .text-gray-300, .text-gray-400 { color: var(--text1) !important; }
+ .about .text-white { color: var(--text1) !important; }
+
+/* bg overrides */
+ .about .bg-neutral-900, section.bg-neutral-900 { background-color: var(--bg2) !important; }
+ .about .bg-black,       section.bg-black       { background-color: var(--bg1) !important; }
+ .about .bg-neutral-800  { background-color: #d4ae7a !important; }
+
+/* borders */
+ .about .border-neutral-800 { border-color: rgba(142,22,22,0.25) !important; }
+ .about .border-neutral-700 { border-color: rgba(142,22,22,0.2)  !important; }
+
+/* Buttons */
+ .about .bg-amber-600, .hover\:bg-amber-700 { background-color: var(--text2) !important; color: var(--bg2) !important; }
+ .about .bg-amber-600:hover { background-color: #6e1010 !important; }
+ .about .border-2.border-white { border-color: var(--text2) !important; color: var(--text2) !important; }
+ .about .border-2.border-white:hover { background-color: var(--text2) !important; color: var(--bg2) !important; }
+
+/* ===== HERO SECTION ===== */
+ .about .hero-banner {
+    background: linear-gradient(rgba(142,22,22,0.35), rgba(0,0,0,0.45)), url('image/8-5.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 500px;
+    margin-bottom: 30px;
+}
+
+/* ===== STAT COUNTER ===== */
+ .about .stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text2);
+}
+
+/* ===== TIMELINE ===== */
+ .about .timeline-item {
+    position: relative;
+    padding-left: 2rem;
+    border-left: 2px solid var(--text2);
+}
+ .about .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 0;
+    width: 14px;
+    height: 14px;
+    background: var(--text2);
+    border-radius: 50%;
+}
+
+/* ===== FEATURE CARDS ===== */
+ .about .feature-card {
+    transition: all 0.3s ease;
+    background: rgba(232,201,153,0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(142,22,22,0.2);
+}
+ .about .feature-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(142,22,22,0.5);
+    box-shadow: 0 20px 40px rgba(142,22,22,0.15);
+}
+
+ .about .icon-wrapper {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--text2) 0%, #b01e1e 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 8px 20px rgba(142,22,22,0.3);
+}
+ .about .icon-wrapper i { font-size: 1.75rem; color: var(--bg2); }
+
+/* ===== CORE VALUES CARDS ===== */
+ .about .bg-neutral-800.rounded-2xl {
+    background-color: #d4ae7a !important;
+    border-color: rgba(142,22,22,0.3) !important;
+}
+ .about .bg-amber-500\/20 { background-color: rgba(142,22,22,0.15) !important; }
+ .about .text-amber-500.text-3xl { color: var(--text2) !important; }
+
+/* ===== AWARDS ===== */
+ .about .award-card { transition: transform 0.3s ease; }
+ .about .award-card:hover { transform: translateY(-4px); }
+ .about .award-image { transition: transform 0.3s ease; }
+ .about .award-card:hover .award-image { transform: scale(1.05); }
+
+/* ===== FAQ ===== */
+ .about .faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-items: start;
+}
+ .about .faq-col { display: flex; flex-direction: column; gap: 14px; width: 100%; min-width: 0; }
+ .about .faq-question { min-height: 64px; height: 64px; }
+ .about .faq-question span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; font-size: 15px !important; }
+
+@media screen and (max-width: 860px) {
+ .about .faq-grid { grid-template-columns: 1fr !important; }
+ .about .faq-question { height: auto !important; min-height: unset !important; }
+ .about .faq-question span { white-space: normal !important; overflow: visible !important; text-overflow: unset !important; font-size: 14px !important; }
+}
+
+ .about .faq-item { background-color: var(--bg2) !important; border-color: rgba(142,22,22,0.25) !important; }
+ .about .faq-question:hover { background-color: rgba(232,201,153,0.5) !important; }
+ .about .faq-answer > div { background-color: rgba(232,201,153,0.3) !important; border-top-color: rgba(142,22,22,0.2) !important; }
+ .about .faq-icon { color: var(--text2) !important; }
+ .about .faq-question span { color: var(--text1) !important; }
+
+/* ===== SPECIAL OFFER POPUP ===== */
+@keyframes slideIn {
+ .about from { opacity: 0; transform: scale(0.9) translateY(20px); }
+ .about to   { opacity: 1; transform: scale(1)   translateY(0);    }
+}
+ .about .animate-slideIn { animation: slideIn 0.3s ease-out; }
+
+ .about #specialOfferPopup > div { scrollbar-width: none; -ms-overflow-style: none; }
+ .about #specialOfferPopup > div::-webkit-scrollbar { display: none; }
+
+ .about #specialOfferBtn { background: linear-gradient(to right, var(--text2), #b01e1e) !important; }
+ .about #specialOfferBtn:hover { background: linear-gradient(to right, #6e1010, var(--text2)) !important; }
+
+/* rating stars keep amber */
+ .about .text-amber-400.text-2xl, .text-amber-400.text-3xl, .text-amber-400.text-lg { color: #d97706 !important; }
+
+/* Section backgrounds explicitly */
+ .about .section-bg1 { background-color: var(--bg1) !important; }
+ .about .section-bg2 { background-color: var(--bg2) !important; }
+ .about .section-bg-dark { background-color: #c9a96e !important; }
+
+
+
+
+
+ .home 
+/* ===== ROOT COLOR VARIABLES ===== */
+:root{
+    --bg1: #E8C999;
+    --bg2: #F8EEDF;
+    --text1: #000000;
+    --text2: #8E1616;
+}
+.home 
+/* Responsive Container */
+.container{
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.home 
+@media (min-width: 640px){
+.home     .container{
+        max-width: 640px;
+    }
+}
+.home 
+@media (min-width: 768px){
+.home     .container{
+        max-width: 768px;
+    }
+}
+.home 
+@media (min-width: 1024px){
+.home     .container{
+        max-width: 1024px;
+    }
+}
+.home 
+@media (min-width: 1280px){
+.home     .container{
+        max-width: 1200px;
+    }
+}
+.home 
+.carousel-dot{
+    width: 8px;
+    height: 8px;
+    background: rgba(142, 22, 22, 0.3);
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+.home 
+.carousel-dot.active{
+    background: var(--text2);
+    width: 10px;
+    height: 10px;
+}
+.home 
+.testimonial-dot{
+    width: 10px;
+    height: 10px;
+    background: rgba(142, 22, 22, 0.3);
+    border-radius: 50%;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.home 
+.testimonial-dot.active{
+    background: var(--text2);
+}
+.home 
+.destination-card{
+    position: relative;
+    overflow: hidden;
+}
+.home 
+.destination-card img{
+    transition: transform 0.7s ease;
+}
+.home 
+.destination-card:hover img{
+    transform: scale(1.05);
+}
+.home 
+/* Hero Carousel */
+.hero-slide{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    z-index: 0;
+}
+.home 
+.hero-slide.active{
+    opacity: 1;
+    z-index: 1;
+}
+.home 
+.hero-image{
+    position: absolute;
+    inset: 0;
+    background-size: cover !important;
+    background-position: center !important;
+    transform: scale(1);
+    transition: transform 8s ease-out;
+}
+.home 
+.hero-slide.active .hero-image{
+    transform: scale(1.08);
+}
+.home 
+.hero-indicator{
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.home 
+.hero-indicator.active{
+    opacity: 1 !important;
+    background: var(--text2);
+    transform: scale(1.3);
+}
+.home 
+.hero-carousel{
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+.home 
+/* Testimonial Cards */
+.testimonial-card{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.home 
+.testimonial-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(142, 22, 22, 0.15);
+}
+.home 
+.testimonial-nav-dot{
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.home 
+.testimonial-nav-dot:hover{
+    transform: scale(1.3);
+}
+.home 
+.testimonial-carousel{
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.home 
+@media (max-width: 768px){
+.home     .testimonial-card{
+        min-width: 100% !important;
+    }
+}
+.home 
+@media (min-width: 769px){
+.home     .testimonial-card{
+        min-width: 33.333% !important;
+    }
+}
+.home 
+/* Conservation Video */
+.conservation-video{
+    position: relative;
+    overflow: hidden;
+}
+.home 
+.conservation-video video{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.home 
+@media (max-width: 1024px){
+.home     .conservation-video{
+        aspect-ratio: 9/16;
+        max-height: 600px;
+    }
+}
+.home 
+.conservation-video button:hover svg{
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}
+.home 
+@media (max-width: 1024px){
+.home     .conservation-video{
+        aspect-ratio: auto !important;
+    }
+}
+.home 
+.conservation-video,
+.conservation-content-card{
+    border-radius: 0.75rem;
+}
+.home 
+/* Tabs */
+.tab-btn{
+    position: relative;
+    transition: color 0.3s ease;
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: var(--text2);
+    padding-bottom: 0.75rem;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.home 
+@media (min-width: 768px){
+.home     .tab-btn{
+        font-size: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+.home 
+.tab-btn:hover{
+    color: #6e1010;
+}
+.home 
+.tab-btn.active{
+    color: var(--text2);
+}
+.home 
+.tab-btn.active::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: var(--text2);
+}
+.home 
+/* Why Choose Cards */
+.why-choose-card{
+    background: rgba(232, 201, 153, 0.4);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(142, 22, 22, 0.2);
+    border-radius: 1rem;
+    padding: 1.5rem 1.5rem;
+    text-align: left;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.home 
+.why-choose-card .icon-wrapper{
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--text2) 0%, #b01e1e 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 1rem 0;
+    box-shadow: 0 8px 20px rgba(142, 22, 22, 0.2);
+}
+.home 
+.why-choose-card .icon-wrapper i{
+    font-size: 1.5rem;
+    color: var(--bg2);
+}
+.home 
+.why-choose-card h4{
+    color: var(--text2);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-family: "Roboto Slab", serif;
+    line-height: 1.4;
+    text-align: left;
+}
+.home 
+.why-choose-card p{
+    color: var(--text1);
+    font-size: 0.875rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+    font-family: "Roboto Mono", monospace;
+    text-align: left;
+}
+.home 
+@media (max-width: 1023px){
+.home     .why-choose-card{
+        padding: 2rem 1.25rem;
+    }
+}
+.home 
+@media (max-width: 767px){
+.home     .why-choose-section{
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+.home 
+    .why-choose-card{
+        padding: 2rem 1.5rem;
+    }
+.home 
+    .why-choose-card h4{
+        font-size: 1.125rem;
+    }
+}
+.home 
+/* Tour Cards */
+.tour-card{
+    background: transparent;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 20px rgba(142, 22, 22, 0.2);
+}
+.home 
+.tour-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(142, 22, 22, 0.35);
+}
+.home 
+.tour-card{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.home 
+@media (max-width: 1024px){
+.home     .tour-card{
+        height: auto;
+    }
+}
+.home 
+@media (max-width: 768px){
+.home     .tour-card{
+        height: auto;
+    }
+.home 
+    .tour-card .h-\[240px\]{
+        height: 200px;
+    }
+.home 
+    .tour-card .h-\[280px\]{
+        height: auto;
+        min-height: 240px;
+    }
+}
+.home 
+.youtube-shorts-card iframe{
+    max-width: 100%;
+    display: block;
+    border: none;
+}
+.home 
+@media (max-width: 768px){
+.home     .youtube-shorts-card{
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+.home 
+.youtube-shorts-card>div{
+    position: relative;
+    overflow: hidden;
+}
+.home 
+.youtube-shorts-card{
+    transition: transform 0.3s ease;
+}
+.home 
+.youtube-shorts-card:hover{
+    transform: translateY(-4px);
+}
+.home 
+.aspect-\[9\/16\]{
+    aspect-ratio: 9 / 16;
+}
+.home 
+/* Award Cards */
+.award-card{
+    transition: transform 0.3s ease;
+}
+.home 
+.award-card:hover{
+    transform: translateY(-4px);
+}
+.home 
+.award-card>div{
+    height: 100%;
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.home 
+@media (max-width: 768px){
+.home     .award-card>div{
+        min-height: 340px;
+    }
+}
+.home 
+.award-card:hover .award-logo{
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+.home 
+.award-image{
+    transition: transform 0.3s ease;
+}
+.home 
+.award-card:hover .award-image{
+    transform: scale(1.05);
+}
+.home 
+@media (max-width: 768px){
+.home     .award-card>div{
+        min-height: 280px !important;
+    }
+.home 
+    .award-image{
+        max-width: 220px;
+    }
+}
+.home 
+.award-card>div{
+    transition: all 0.3s ease;
+}
+.home 
+@keyframes slideIn{
+.home     from{
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+    }
+.home 
+    to{
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+.home 
+.animate-slideIn{
+    animation: slideIn 0.3s ease-out;
+}
+.home 
+#specialOfferPopup>div{
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.home 
+#specialOfferPopup>div::-webkit-scrollbar{
+    display: none;
+}
+.home 
+#specialOfferPopup>div::-webkit-scrollbar-track{
+    background: var(--bg2);
+}
+.home 
+#specialOfferPopup>div::-webkit-scrollbar-thumb{
+    background: var(--text2);
+    border-radius: 3px;
+}
+.home 
+.faq-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-items: start;
+}
+.home 
+.faq-col{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    min-width: 0;
+}
+.home 
+.faq-question{
+    min-height: 64px;
+    height: 64px;
+}
+.home 
+.faq-question span{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    font-size: 15px !important;
+}
+.home 
+@media screen and (max-width: 860px){
+.home     .faq-grid{
+        grid-template-columns: 1fr !important;
+    }
+.home 
+    .faq-question{
+        height: auto !important;
+        min-height: unset !important;
+    }
+.home 
+    .faq-question span{
+        white-space: normal !important;
+        overflow: visible !important;
+        text-overflow: unset !important;
+        font-size: 14px !important;
+    }
+}
+.home 
+.carousel-container{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+.home 
+.carousel-slides{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+.home 
+.carousel-slide{
+    min-width: 100%;
+    width: 100%;
+    flex-shrink: 0;
+    display: block;
+}
+.home 
+.carousel-slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.home 
+.carousel-dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(142, 22, 22, 0.3);
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+.home 
+.carousel-dot.active{
+    background-color: var(--text2);
+    width: 30px;
+    border-radius: 5px;
+}
+.home 
+.carousel-dot:hover{
+    background-color: rgba(142, 22, 22, 0.6);
+}
+.home 
+button[onclick^="prevSlide"],
+button[onclick^="nextSlide"]{
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.home 
+/* ===== GLOBAL THEME OVERRIDES ===== */
+section.bg-neutral-900{
+    background-color: var(--bg2) !important;
+}
+.home 
+section.bg-black{
+    background-color: var(--bg1) !important;
+}
+.home 
+h1,
+h2,
+h3,
+h4{
+    color: var(--text2) !important;
+}
+.home 
+.text-amber-100{
+    color: var(--text2) !important;
+}
+.home 
+.text-gray-300{
+    color: var(--text1) !important;
+}
+.home 
+p{
+    color: var(--text1);
+}
+.home 
+.text-amber-500,
+.text-amber-400{
+    color: var(--text2) !important;
+}
+.home 
+.border-neutral-800{
+    border-color: rgba(142, 22, 22, 0.25) !important;
+}
+.home 
+.border-neutral-700{
+    border-color: rgba(142, 22, 22, 0.2) !important;
+}
+.home 
+/* Intro Section */
+#intro{
+    background-color: var(--bg2) !important;
+}
+.home 
+#intro h1,
+#intro h5{
+    color: var(--text2) !important;
+}
+.home 
+#intro h5.text-amber-500{
+    color: var(--text2) !important;
+}
+.home 
+#intro p{
+    color: var(--text1) !important;
+}
+.home 
+/* About Resort Section */
+.conservation-section{
+    background-color: var(--bg1) !important;
+}
+.home 
+.conservation-content-card{
+    background-color: var(--bg2) !important;
+}
+.home 
+.conservation-content-card p{
+    color: var(--text1) !important;
+}
+.home 
+.conservation-content-card h2{
+    color: var(--text2) !important;
+}
+.home 
+.conservation-content-card .text-amber-500{
+    color: var(--text2) !important;
+}
+.home 
+.conservation-content-card a.bg-amber-600{
+    background-color: var(--text2) !important;
+    color: var(--bg2) !important;
+}
+.home 
+.conservation-content-card a.bg-amber-600:hover{
+    background-color: #6e1010 !important;
+}
+.home 
+.conservation-content-card a.border-white{
+    border-color: var(--text2) !important;
+    color: var(--text2) !important;
+}
+.home 
+.conservation-content-card a.border-white:hover{
+    background-color: var(--text2) !important;
+    color: var(--bg2) !important;
+}
+.home 
+/* Extraordinary Section */
+.extraordinary-section{
+    background-color: var(--bg1) !important;
+}
+.home 
+.extraordinary-section .text-amber-500{
+    color: var(--text2) !important;
+}
+.home 
+.extraordinary-section h2{
+    color: var(--text2) !important;
+}
+.home 
+.extraordinary-section p{
+    color: var(--text1) !important;
+}
+.home 
+.extraordinary-section .text-gray-300{
+    color: var(--text1) !important;
+}
+.home 
+/* Carousel Arrows */
+button[onclick^="prevSlide"],
+button[onclick^="nextSlide"]{
+    background: rgba(248, 238, 223, 0.9) !important;
+    color: var(--text2) !important;
+}
+.home 
+button[onclick^="prevSlide"]:hover,
+button[onclick^="nextSlide"]:hover{
+    background: var(--bg2) !important;
+}
+.home 
+/* Rooms Section */
+#rooms{
+    background-color: var(--bg2) !important;
+}
+.home 
+#rooms h2{
+    color: var(--text2) !important;
+}
+.home 
+#rooms .sticky{
+    background-color: var(--bg2) !important;
+    border-bottom-color: rgba(142, 22, 22, 0.2) !important;
+}
+.home 
+#rooms .tab-btn{
+    color: var(--text2) !important;
+}
+.home 
+#rooms .tab-btn.active{
+    color: var(--text2) !important;
+}
+.home 
+#rooms .text-amber-500{
+    color: var(--text2) !important;
+}
+.home 
+#rooms .text-gray-300{
+    color: var(--text1) !important;
+}
+.home 
+#rooms a.bg-amber-600{
+    background-color: var(--text2) !important;
+    color: var(--bg2) !important;
+}
+.home 
+#rooms a.bg-amber-600:hover{
+    background-color: #6e1010 !important;
+}
+.home 
+/* Why Choose Section */
+.why-choose-section{
+    background-color: var(--bg2) !important;
+}
+.home 
+.why-choose-section .text-amber-500{
+    color: var(--text2) !important;
+}
+.home 
+.why-choose-section .text-gray-300{
+    color: var(--text1) !important;
+}
+.home 
+/* Roots / About Kanha Section */
+.roots-section{
+    background-color: var(--bg1) !important;
+}
+.home 
+.roots-content{
+    background-color: #c9a96e !important;
+}
+.home 
+.roots-content h2{
+    color: var(--text2) !important;
+}
+.home 
+.roots-content p{
+    color: var(--text1) !important;
+}
+.home 
+.roots-content .text-gray-200{
+    color: var(--text1) !important;
+}
+.home 
+.roots-content a.border-white{
+    border-color: var(--text2) !important;
+    color: var(--text2) !important;
+}
+.home 
+.roots-content a.border-white:hover{
+    background-color: var(--text2) !important;
+    color: var(--bg2) !important;
+}
+.home 
+.roots-content a.bg-amber-600{
+    background-color: var(--text2) !important;
+    color: var(--bg2) !important;
+}
+.home 
+.roots-content a.bg-amber-600:hover{
+    background-color: #6e1010 !important;
+}
+.home 
+/* Testimonials Section */
+.testimonial-section{
+    background-color: var(--bg2) !important;
+}
+.home 
+.testimonial-section h2{
+    color: var(--text2) !important;
+}
+.home 
+.testimonial-section .text-white{
+    color: var(--text1) !important;
+}
+.home 
+.testimonial-section .text-gray-400{
+    color: rgba(0, 0, 0, 0.5) !important;
+}
+.home 
+/* Testimonial nav arrows */
+.testimonial-section button[onclick^="prevTestimonial"],
+.testimonial-section button[onclick^="nextTestimonial"]{
+    background: var(--bg2) !important;
+    color: var(--text2) !important;
+    box-shadow: 0 4px 15px rgba(142, 22, 22, 0.2) !important;
+}
+.home 
+.testimonial-section button[onclick^="prevTestimonial"]:hover,
+.testimonial-section button[onclick^="nextTestimonial"]:hover{
+    background: var(--bg1) !important;
+}
+.home 
+/* Testimonial dots */
+.testimonial-nav-dot{}
+.home 
+/* View all reviews button */
+.testimonial-section a[href*="google"]{
+    border-color: var(--text2) !important;
+    color: var(--text2) !important;
+}
+.home 
+.testimonial-section a[href*="google"]:hover{
+    background-color: var(--text2) !important;
+    color: var(--bg2) !important;
+}
+.home 
+/* Destinations / Tour Package Section */
+.destinations-section{
+    background-color: var(--bg1) !important;
+}
+.home 
+.destinations-section .text-amber-500{
+    color: var(--text2) !important;
+}
+.home 
+.destinations-section h2{
+    color: var(--text2) !important;
+}
+.home 
+.destinations-section .text-gray-300{
+    color: var(--text1) !important;
+}
+.home 
+.destinations-section .tour-card .bg-neutral-900{
+    background-color: var(--bg2) !important;
+}
+.home 
+.destinations-section .tour-card h3{
+    color: var(--text2) !important;
+}
+.home 
+.destinations-section .tour-card .text-gray-400{
+    color: rgba(0, 0, 0, 0.5) !important;
+}
+.home 
+.destinations-section .tour-card a{
+    color: var(--text1) !important;
+}
+.home 
+.destinations-section .tour-card a:hover{
+    color: var(--text2) !important;
+}
+.home 
+.destinations-section .bg-amber-500{
+    background-color: var(--text2) !important;
+    color: var(--bg2) !important;
+}
+.home 
+/* Location Contact Section */
+.location-contact-section .bg-neutral-800{
+    background-color: #c9a96e !important;
+}
+.home 
+.location-contact-section h2{
+    color: var(--text2) !important;
+}
+.home 
+.location-contact-section .text-amber-500{
+    color: var(--text2) !important;
+}
+.home 
+.location-contact-section .text-amber-400{
+    color: var(--text2) !important;
+}
+.home 
+.location-contact-section .text-gray-300{
+    color: var(--text1) !important;
+}
+.home 
+.location-contact-section .text-white{
+    color: var(--text1) !important;
+}
+.home 
+.location-contact-section .bg-amber-500\/20{
+    background-color: rgba(142, 22, 22, 0.15) !important;
+}
+.home 
+.location-contact-section a[href*="contact"]{
+    background: linear-gradient(to right, var(--text2), #b01e1e) !important;
+}
+.home 
+.location-contact-section a[href*="contact"]:hover{
+    background: linear-gradient(to right, #6e1010, var(--text2)) !important;
+}
+.home 
+/* Awards Section */
+.awards-section{
+    background-color: var(--bg1) !important;
+}
+.home 
+.awards-section .text-amber-500{
+    color: var(--text2) !important;
+}
+.home 
+.awards-section h2{
+    color: var(--text2) !important;
+}
+.home 
+.awards-section .text-gray-300{
+    color: var(--text1) !important;
+}
+.home 
+/* FAQ Section */
+section.py-12.md\:py-20.px-4.md\:px-6.bg-neutral-900{
+    background-color: var(--bg2) !important;
+}
+.home 
+.faq-item.bg-black{
+    background-color: var(--bg2) !important;
+    border-color: rgba(142, 22, 22, 0.25) !important;
+    box-shadow: 0 2px 8px rgba(142, 22, 22, 0.07);
+}
+.home 
+.faq-item.bg-black:hover{
+    border-color: var(--text2) !important;
+}
+.home 
+.faq-question:hover{
+    background-color: rgba(232, 201, 153, 0.5) !important;
+}
+.home 
+.faq-answer>div{
+    background-color: rgba(232, 201, 153, 0.3) !important;
+    border-top-color: rgba(142, 22, 22, 0.2) !important;
+}
+.home 
+.faq-icon{
+    color: var(--text2) !important;
+}
+.home 
+.faq-question span{
+    color: var(--text1) !important;
+}
+.home 
+/* Special Offer Popup */
+#specialOfferPopup .bg-neutral-900{
+    background-color: var(--bg2) !important;
+    border-color: var(--text2) !important;
+}
+.home 
+#specialOfferPopup .bg-gradient-to-r{
+    background: linear-gradient(to right, var(--text2), #b01e1e) !important;
+}
+.home 
+#specialOfferPopup .bg-black{
+    background-color: var(--bg1) !important;
+}
+.home 
+#specialOfferPopup .border-amber-500\/30{
+    border-color: rgba(142, 22, 22, 0.3) !important;
+}
+.home 
+#specialOfferPopup h4.text-white{
+    color: var(--text1) !important;
+}
+.home 
+#specialOfferPopup .text-amber-500{
+    color: var(--text2) !important;
+}
+.home 
+#specialOfferPopup .bg-amber-500\/10{
+    background-color: rgba(232, 201, 153, 0.3) !important;
+}
+.home 
+#specialOfferPopup .text-amber-100{
+    color: var(--bg2) !important;
+}
+.home 
+#specialOfferPopup .text-gray-400.line-through{
+    color: rgba(0, 0, 0, 0.4) !important;
+}
+.home 
+#specialOfferPopup .text-2xl.text-amber-500{
+    color: var(--text2) !important;
+}
+.home 
+#specialOfferPopup .text-gray-400{
+    color: rgba(0, 0, 0, 0.5) !important;
+}
+.home 
+#specialOfferPopup .text-gray-300{
+    color: var(--text1) !important;
+}
+.home 
+/* Special Offer Button */
+#specialOfferBtn{
+    background: linear-gradient(to right, var(--text2), #b01e1e) !important;
+}
+.home 
+#specialOfferBtn:hover{
+    background: linear-gradient(to right, #6e1010, var(--text2)) !important;
+}
+.home 
+#specialOfferBtn .bg-red-500{
+    background-color: var(--bg1) !important;
+    color: var(--text2) !important;
+}
+.home 
+/* Book Now & CTA Buttons */
+.bg-amber-600,
+.hover\:bg-amber-700{
+    background-color: var(--text2) !important;
+}
+.home 
+.bg-amber-600:hover{
+    background-color: #6e1010 !important;
+}
+.home 
+.bg-amber-500.hover\:bg-amber-600{
+    background-color: var(--text2) !important;
+    color: var(--bg2) !important;
+}
+.home 
+.bg-amber-500.hover\:bg-amber-600:hover{
+    background-color: #6e1010 !important;
+}
+.home 
+.bg-green-500.hover\:bg-green-600{
+    background-color: #25D366 !important;
+}
+.home 
+.bg-green-500{
+    background-color: #2a6e3f !important;
+}
+.home 
+.bg-blue-500{
+    background-color: #1a4a7a !important;
+}
+.home 
+/* Rating stars keep amber */
+.text-amber-400.text-2xl,
+.text-amber-400.text-3xl,
+.text-amber-400.text-lg{
+    color: #d97706 !important;
+}
+
+
+
+
+
+.how-to-reach-kanha-national-park
+/* ===== ROOT COLOR VARIABLES ===== */
+:root{
+    --bg1: #E8C999;
+    --bg2: #F8EEDF;
+    --text1: #000000;
+    --text2: #8E1616;
+}
+.how-to-reach-kanha-national-park
+/* Custom styling */
+.hero-section{
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(102, 86, 86, 0.7)),
+        url("https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?w=1600");
+    background-size: cover;
+    background-position: center;
+}
+.how-to-reach-kanha-national-park
+.info-card{
+    background: rgba(232, 201, 153, 0.15);
+    border: 1px solid rgba(232, 201, 153, 0.4);
+}
+.how-to-reach-kanha-national-park
+@media (max-width: 768px){
+.how-to-reach-kanha-national-park    body{
+        font-size: 14px;
+    }
+.how-to-reach-kanha-national-park
+    h2{
+        font-size: 1.5rem;
+    }
+.how-to-reach-kanha-national-park
+    h3{
+        font-size: 1.25rem;
+    }
+.how-to-reach-kanha-national-park
+    p,
+    span,
+    a,
+    li{
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+}
+.how-to-reach-kanha-national-park
+@keyframes slideIn{
+.how-to-reach-kanha-national-park    from{
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+    }
+.how-to-reach-kanha-national-park
+    to{
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+.how-to-reach-kanha-national-park
+.animate-slideIn{
+    animation: slideIn 0.3s ease-out;
+}
+.how-to-reach-kanha-national-park
+/* Smooth scroll for popup content */
+#specialOfferPopup>div{
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.how-to-reach-kanha-national-park
+#specialOfferPopup>div::-webkit-scrollbar{
+    display: none;
+}
+.how-to-reach-kanha-national-park
+#specialOfferPopup>div::-webkit-scrollbar-track{
+    background: var(--bg2);
+}
+.how-to-reach-kanha-national-park
+#specialOfferPopup>div::-webkit-scrollbar-thumb{
+    background: var(--text2);
+    border-radius: 3px;
+}
+.how-to-reach-kanha-national-park
+.faq-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-items: start;
+}
+.how-to-reach-kanha-national-park
+.faq-col{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    min-width: 0;
+}
+.how-to-reach-kanha-national-park
+.faq-question{
+    min-height: 64px;
+    height: 64px;
+}
+.how-to-reach-kanha-national-park
+.faq-question span{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    font-size: 15px !important;
+}
+.how-to-reach-kanha-national-park
+@media screen and (max-width: 860px){
+.how-to-reach-kanha-national-park    .faq-grid{
+        grid-template-columns: 1fr !important;
+    }
+.how-to-reach-kanha-national-park
+    .faq-question{
+        height: auto !important;
+        min-height: unset !important;
+    }
+.how-to-reach-kanha-national-park
+    .faq-question span{
+        white-space: normal !important;
+        overflow: visible !important;
+        text-overflow: unset !important;
+        font-size: 14px !important;
+    }
+}
+.how-to-reach-kanha-national-park
+/* ===== GLOBAL THEME OVERRIDES ===== */
+
+/* Main section backgrounds */
+section.bg-neutral-900{
+    background-color: var(--bg2) !important;
+}
+.how-to-reach-kanha-national-park
+section.bg-black{
+    background-color: var(--bg1) !important;
+}
+.how-to-reach-kanha-national-park
+/* Headings - h1, h2, h3, h4 */
+h1,
+h2,
+h3,
+h4{
+    color: var(--text2) !important;
+}
+.how-to-reach-kanha-national-park
+/* Amber headings */
+.text-amber-100{
+    color: var(--text2) !important;
+}
+.how-to-reach-kanha-national-park
+/* Body text */
+.text-gray-300{
+    color: var(--text1) !important;
+}
+.how-to-reach-kanha-national-park
+p{
+    color: var(--text1);
+}
+.how-to-reach-kanha-national-park
+/* Amber accents → text2 */
+.text-amber-500,
+.text-amber-400{
+    color: var(--text2) !important;
+}
+.how-to-reach-kanha-national-park
+/* Borders */
+.border-neutral-800{
+    border-color: rgba(142, 22, 22, 0.25) !important;
+}
+.how-to-reach-kanha-national-park
+.border-neutral-700{
+    border-color: rgba(142, 22, 22, 0.2) !important;
+}
+.how-to-reach-kanha-national-park
+/* FAQ Cards */
+.faq-item.bg-black{
+    background-color: var(--bg2) !important;
+    border-color: rgba(142, 22, 22, 0.25) !important;
+    box-shadow: 0 2px 8px rgba(142, 22, 22, 0.07);
+}
+.how-to-reach-kanha-national-park
+.faq-item.bg-black:hover{
+    border-color: var(--text2) !important;
+}
+.how-to-reach-kanha-national-park
+.faq-question:hover{
+    background-color: rgba(232, 201, 153, 0.5) !important;
+}
+.how-to-reach-kanha-national-park
+.faq-answer>div{
+    background-color: rgba(232, 201, 153, 0.3) !important;
+    border-top-color: rgba(142, 22, 22, 0.2) !important;
+}
+.how-to-reach-kanha-national-park
+.faq-icon{
+    color: var(--text2) !important;
+}
+.how-to-reach-kanha-national-park
+.faq-question span{
+    color: var(--text1) !important;
+}
+.how-to-reach-kanha-national-park
+/* Travel method cards */
+.bg-black.rounded-xl.border.border-neutral-800{
+    background-color: var(--bg2) !important;
+}
+.how-to-reach-kanha-national-park
+/* Info card */
+.info-card.rounded-xl{
+    background-color: rgba(232, 201, 153, 0.2) !important;
+    border-color: rgba(142, 22, 22, 0.3) !important;
+}
+.how-to-reach-kanha-national-park
+/* Route distances list icons */
+.fa-location-dot{
+    color: var(--text2) !important;
+}
+.how-to-reach-kanha-national-park
+.fa-circle{
+    color: var(--text2) !important;
+}
+.how-to-reach-kanha-national-park
+/* Dot list icons */
+li strong.text-white{
+    color: var(--text1) !important;
+}
+.how-to-reach-kanha-national-park
+/* Awards section */
+.awards-section{
+    background-color: var(--bg1) !important;
+}
+.how-to-reach-kanha-national-park
+/* Special Offer Popup */
+#specialOfferPopup .bg-neutral-900{
+    background-color: var(--bg2) !important;
+    border-color: var(--text2) !important;
+}
+.how-to-reach-kanha-national-park
+#specialOfferPopup .bg-gradient-to-r{
+    background: linear-gradient(to right, var(--text2), #b01e1e) !important;
+}
+.how-to-reach-kanha-national-park
+#specialOfferPopup .bg-black{
+    background-color: var(--bg1) !important;
+}
+.how-to-reach-kanha-national-park
+#specialOfferPopup .border-amber-500\/30{
+    border-color: rgba(142, 22, 22, 0.3) !important;
+}
+.how-to-reach-kanha-national-park
+#specialOfferPopup .hover\:border-amber-500:hover{
+    border-color: var(--text2) !important;
+}
+.how-to-reach-kanha-national-park
+#specialOfferPopup h4.text-white{
+    color: var(--text1) !important;
+}
+.how-to-reach-kanha-national-park
+#specialOfferPopup .text-amber-500{
+    color: var(--text2) !important;
+}
+.how-to-reach-kanha-national-park
+#specialOfferPopup .bg-amber-500\/10{
+    background-color: rgba(232, 201, 153, 0.3) !important;
+}
+.how-to-reach-kanha-national-park
+#specialOfferPopup .border-amber-500\/30{
+    border-color: rgba(142, 22, 22, 0.3) !important;
+}
+.how-to-reach-kanha-national-park
+#specialOfferPopup .text-amber-100{
+    color: var(--bg2) !important;
+}
+.how-to-reach-kanha-national-park
+/* Offer price strikethrough */
+#specialOfferPopup .text-gray-400.line-through{
+    color: rgba(0, 0, 0, 0.4) !important;
+}
+.how-to-reach-kanha-national-park
+#specialOfferPopup .text-2xl.text-amber-500{
+    color: var(--text2) !important;
+}
+.how-to-reach-kanha-national-park
+#specialOfferPopup .text-gray-400{
+    color: rgba(0, 0, 0, 0.5) !important;
+}
+.how-to-reach-kanha-national-park
+/* Popup Book Now button */
+.bg-amber-500.hover\:bg-amber-600{
+    background-color: var(--text2) !important;
+    color: var(--bg2) !important;
+}
+.how-to-reach-kanha-national-park
+.bg-amber-500.hover\:bg-amber-600:hover{
+    background-color: #6e1010 !important;
+}
+.how-to-reach-kanha-national-park
+/* Special offer button (floating) */
+#specialOfferBtn{
+    background: linear-gradient(to right, var(--text2), #b01e1e) !important;
+}
+.how-to-reach-kanha-national-park
+#specialOfferBtn:hover{
+    background: linear-gradient(to right, #6e1010, var(--text2)) !important;
+}
+.how-to-reach-kanha-national-park
+#specialOfferBtn .bg-red-500{
+    background-color: var(--bg1) !important;
+    color: var(--text2) !important;
+}
+.how-to-reach-kanha-national-park
+/* EXCELLENCE tracking text */
+.text-amber-500.text-xs.tracking-widest{
+    color: var(--text2) !important;
+}
+.how-to-reach-kanha-national-park
+/* Section intro text center */
+.text-center p.text-gray-300{
+    color: var(--text1) !important;
+}
+.how-to-reach-kanha-national-park
+/* Close button on popup */
+#specialOfferPopup button.text-white{
+    color: var(--text1) !important;
+}
+.how-to-reach-kanha-national-park
+#specialOfferPopup button.hover\:text-amber-500:hover{
+    color: var(--text2) !important;
+}
+.how-to-reach-kanha-national-park
+/* FAQ Section background */
+section.py-12.md\:py-20.px-4.bg-neutral-900{
+    background-color: var(--bg2) !important;
+}
+.how-to-reach-kanha-national-park
+/* Offer badges keep their identity but refine */
+.bg-green-500{
+    background-color: #2a6e3f !important;
+}
+.how-to-reach-kanha-national-park
+.bg-blue-500{
+    background-color: #1a4a7a !important;
+}
+.how-to-reach-kanha-national-park
+/* WhatsApp button stays green */
+.bg-green-500.hover\:bg-green-600{
+    background-color: #25D366 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===================================================
+   ROOT COLOR VARIABLES (global — cannot be scoped)
+   =================================================== */
+:root {
+    --bg1:   #E8C999;
+    --bg2:   #F8EEDF;
+    --text1: #000000;
+    --text2: #8E1616;
+}
+
+/* ===================================================
+   FAQ
+   =================================================== */
+.kanha-tour-package .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+.kanha-tour-package .faq-col { display: flex; flex-direction: column; gap: 14px; width: 100%; min-width: 0; }
+.kanha-tour-package .faq-question { min-height: 64px; height: 64px; }
+.kanha-tour-package .faq-question span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; font-size: 15px !important; }
+
+@media screen and (max-width: 860px) {
+    .kanha-tour-package .faq-grid { grid-template-columns: 1fr !important; }
+    .kanha-tour-package .faq-question { height: auto !important; min-height: unset !important; }
+    .kanha-tour-package .faq-question span { white-space: normal !important; overflow: visible !important; text-overflow: unset !important; font-size: 14px !important; }
+}
+
+/* ===================================================
+   ANIMATIONS (keyframes are always global)
+   =================================================== */
+@keyframes slideIn {
+    from { opacity: 0; transform: scale(0.9) translateY(20px); }
+    to   { opacity: 1; transform: scale(1)   translateY(0); }
+}
+.kanha-tour-package .animate-slideIn { animation: slideIn 0.3s ease-out; }
+
+/* Special Offer Popup scrollbar */
+.kanha-tour-package #specialOfferPopup > div { scrollbar-width: none; -ms-overflow-style: none; }
+.kanha-tour-package #specialOfferPopup > div::-webkit-scrollbar { display: none; }
+
+/* ===================================================
+   TABS
+   =================================================== */
+.kanha-tour-package .tab-btn {
+    position: relative;
+    transition: color 0.3s ease;
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: var(--text2);
+    padding-bottom: 0.75rem;
+    white-space: nowrap;
+    cursor: pointer;
+}
+@media (min-width: 768px) {
+    .kanha-tour-package .tab-btn { font-size: 1rem; padding-bottom: 1rem; }
+}
+.kanha-tour-package .tab-btn:hover { color: #6b1010; }
+.kanha-tour-package .tab-btn.active { color: var(--text1); }
+.kanha-tour-package .tab-btn.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 50px; height: 3px;
+    background-color: var(--text2);
+}
+
+.kanha-tour-package .tab-btn-a {
+    position: relative;
+    transition: color 0.3s ease;
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: var(--text2);
+    padding-bottom: 0.75rem;
+    white-space: nowrap;
+    cursor: pointer;
+}
+@media (min-width: 768px) {
+    .kanha-tour-package .tab-btn-a { font-size: 1rem; padding-bottom: 1rem; }
+}
+.kanha-tour-package .tab-btn-a:hover { color: #6b1010; }
+.kanha-tour-package .tab-btn-a.active { color: var(--text1); }
+.kanha-tour-package .tab-btn-a.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 50px; height: 3px;
+    background-color: var(--text2);
+}
+
+/* ===================================================
+   UTILITIES
+   =================================================== */
+.kanha-tour-package .icon-check { color: #22c55e; }
+
+.kanha-tour-package .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* ===================================================
+   SWIPER
+   =================================================== */
+.kanha-tour-package .packageSwiper { padding-bottom: 60px; padding-left: 10px; padding-right: 10px; }
+.kanha-tour-package .swiper-slide { height: auto; }
+.kanha-tour-package .swiper-button-next,
+.kanha-tour-package .swiper-button-prev {
+    background: rgba(142, 22, 22, 0.15);
+    backdrop-filter: blur(10px);
+    width: 50px; height: 50px;
+    border-radius: 50%;
+    border: 2px solid rgba(142, 22, 22, 0.3);
+}
+.kanha-tour-package .swiper-button-next::after,
+.kanha-tour-package .swiper-button-prev::after { font-size: 20px; color: var(--text2); font-weight: bold; }
+.kanha-tour-package .swiper-button-next:hover,
+.kanha-tour-package .swiper-button-prev:hover { background: rgba(142, 22, 22, 0.35); border-color: var(--text2); }
+.kanha-tour-package .swiper-pagination { bottom: 20px !important; }
+.kanha-tour-package .swiper-pagination-bullet { background: var(--text2); opacity: 0.4; width: 12px; height: 12px; transition: all 0.3s ease; }
+.kanha-tour-package .swiper-pagination-bullet-active { opacity: 1; background: var(--text2); transform: scale(1.2); }
+
+@media (max-width: 768px) {
+    .kanha-tour-package .swiper-button-next,
+    .kanha-tour-package .swiper-button-prev { width: 40px; height: 40px; }
+    .kanha-tour-package .swiper-button-next::after,
+    .kanha-tour-package .swiper-button-prev::after { font-size: 16px; }
+}
+
+/* ===================================================
+   GLOBAL THEME OVERRIDES
+   =================================================== */
+.kanha-tour-package section.bg-neutral-900 { background-color: var(--bg2) !important; }
+.kanha-tour-package section.bg-black { background-color: var(--bg1) !important; }
+.kanha-tour-package h1, .kanha-tour-package h2,
+.kanha-tour-package h3, .kanha-tour-package h4 { color: var(--text2) !important; }
+.kanha-tour-package .text-amber-100 { color: var(--text2) !important; }
+.kanha-tour-package .text-gray-300 { color: var(--text1) !important; }
+.kanha-tour-package p { color: var(--text1); }
+.kanha-tour-package .text-amber-500,
+.kanha-tour-package .text-amber-400 { color: var(--text2) !important; }
+.kanha-tour-package .text-gray-400 { color: rgba(0,0,0,0.55) !important; }
+.kanha-tour-package .border-neutral-800 { border-color: rgba(142,22,22,0.25) !important; }
+.kanha-tour-package .border-neutral-700 { border-color: rgba(142,22,22,0.2) !important; }
+.kanha-tour-package .bg-amber-600\/20 { background-color: rgba(142,22,22,0.1) !important; }
+.kanha-tour-package #rooms .sticky,
+.kanha-tour-package #experiencesA .sticky { background-color: var(--bg2) !important; }
+.kanha-tour-package #recommended { background-color: var(--bg1) !important; }
+.kanha-tour-package #recommended .bg-neutral-900.rounded-xl {
+    background-color: var(--bg2) !important;
+    border: 1px solid rgba(142,22,22,0.15) !important;
+}
+.kanha-tour-package .bg-amber-600 { background-color: var(--text2) !important; color: #fff !important; }
+.kanha-tour-package .hover\:bg-amber-700:hover { background-color: #6b1010 !important; }
+.kanha-tour-package #enquire { background-color: var(--bg1) !important; }
+.kanha-tour-package #enquire input,
+.kanha-tour-package #enquire textarea {
+    background-color: #fff !important;
+    border-color: rgba(142,22,22,0.25) !important;
+    color: var(--text1) !important;
+}
+.kanha-tour-package #enquire input:focus,
+.kanha-tour-package #enquire textarea:focus { border-color: var(--text2) !important; outline: none; }
+.kanha-tour-package #enquire label { color: var(--text1) !important; opacity: 0.7; }
+.kanha-tour-package #enquire button[type="submit"] { background-color: var(--text2) !important; color: #fff !important; }
+.kanha-tour-package #enquire button[type="submit"]:hover { background-color: #6b1010 !important; }
+
+/* ===================================================
+   SPECIAL OFFER BUTTON & POPUP
+   =================================================== */
+.kanha-tour-package #specialOfferBtn { background: linear-gradient(to right, var(--text2), #b01e1e) !important; }
+.kanha-tour-package #specialOfferPopup .bg-neutral-900 { background-color: var(--bg2) !important; border-color: var(--text2) !important; }
+.kanha-tour-package #specialOfferPopup .bg-gradient-to-r { background: linear-gradient(to right, var(--text2), #b01e1e) !important; }
+.kanha-tour-package #specialOfferPopup .bg-black { background-color: var(--bg1) !important; }
+.kanha-tour-package #specialOfferPopup h4.text-white { color: var(--text1) !important; }
+.kanha-tour-package #specialOfferPopup .text-amber-500 { color: var(--text2) !important; }
+.kanha-tour-package #specialOfferPopup .text-gray-300 { color: var(--text1) !important; opacity: 0.85; }
+.kanha-tour-package #specialOfferPopup .text-gray-400.line-through { color: rgba(0,0,0,0.4) !important; }
+.kanha-tour-package #specialOfferPopup .text-gray-400 { color: rgba(0,0,0,0.5) !important; }
+.kanha-tour-package #specialOfferPopup .bg-amber-500\/10 { background-color: rgba(232,201,153,0.3) !important; }
+
+/* ===================================================
+   AWARDS
+   =================================================== */
+.kanha-tour-package .awards-section { background-color: var(--bg1) !important; }
+.kanha-tour-package .award-card > div { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.kanha-tour-package .award-card:hover > div {
+    transform: translateY(-6px) !important;
+    box-shadow: 0 12px 30px rgba(142,22,22,0.2) !important;
+}
+
+/* WhatsApp — keep green */
+.kanha-tour-package a.bg-green-500 { background-color: #25D366 !important; }
+
+
+
+
+.kanha-tiger-safari-tour-package 
+/* ===================================================
+   ROOT COLOR VARIABLES
+   =================================================== */
+:root{
+    --bg1:  #E8C999;
+    --bg2:  #F8EEDF;
+    --text1: #000000;
+    --text2: #8E1616;
+}
+.kanha-tiger-safari-tour-package 
+/* ===================================================
+   ANIMATIONS
+   =================================================== */
+@keyframes slideIn{
+.kanha-tiger-safari-tour-package     from{ opacity: 0; transform: scale(0.9) translateY(20px); }
+.kanha-tiger-safari-tour-package     to{ opacity: 1; transform: scale(1)   translateY(0);    }
+}
+.kanha-tiger-safari-tour-package .animate-slideIn{ animation: slideIn 0.3s ease-out; }
+.kanha-tiger-safari-tour-package 
+#specialOfferPopup > div{ scrollbar-width: none; -ms-overflow-style: none; }
+.kanha-tiger-safari-tour-package #specialOfferPopup > div::-webkit-scrollbar{ display: none; }
+.kanha-tiger-safari-tour-package #specialOfferPopup > div::-webkit-scrollbar-track{ background: var(--bg2); }
+.kanha-tiger-safari-tour-package #specialOfferPopup > div::-webkit-scrollbar-thumb{ background: var(--text2); border-radius: 3px; }
+.kanha-tiger-safari-tour-package 
+/* ===================================================
+   TABS STYLING
+   =================================================== */
+.tab-btn{
+    position: relative;
+    transition: color 0.3s ease;
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: var(--text2);
+    padding-bottom: 0.75rem;
+    white-space: nowrap;
+    cursor: pointer;
+}
+@media (min-width: 768px) { .tab-btn { font-size: 1rem; padding-bottom: 1rem; } }
+.kanha-tiger-safari-tour-package .tab-btn:hover{ color: #6b1010; }
+.kanha-tiger-safari-tour-package .tab-btn.active{ color: var(--text1); }
+.kanha-tiger-safari-tour-package .tab-btn.active::after{
+    content: "";
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 50px; height: 3px;
+    background-color: var(--text2);
+}
+.kanha-tiger-safari-tour-package 
+.tab-btn-a{
+    position: relative;
+    transition: color 0.3s ease;
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: var(--text2);
+    padding-bottom: 0.75rem;
+    white-space: nowrap;
+    cursor: pointer;
+}
+@media (min-width: 768px) { .tab-btn-a { font-size: 1rem; padding-bottom: 1rem; } }
+.kanha-tiger-safari-tour-package .tab-btn-a:hover{ color: #6b1010; }
+.kanha-tiger-safari-tour-package .tab-btn-a.active{ color: var(--text1); }
+.kanha-tiger-safari-tour-package .tab-btn-a.active::after{
+    content: "";
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 50px; height: 3px;
+    background-color: var(--text2);
+}
+.kanha-tiger-safari-tour-package 
+/* Icon colors */
+.icon-check{ color: #22c55e; }
+.kanha-tiger-safari-tour-package 
+/* Line clamp utility */
+.line-clamp-2{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.kanha-tiger-safari-tour-package 
+/* Swiper setup */
+#recommended{ overflow: visible; position: relative; }
+.kanha-tiger-safari-tour-package .swiper-clip-wrap{ overflow: hidden; width: 100%; position: relative; }
+.kanha-tiger-safari-tour-package .packageSwiper{ width: 100%; padding-bottom: 60px !important; overflow: visible; }
+.kanha-tiger-safari-tour-package .swiper-slide{ height: auto; display: flex; }
+.kanha-tiger-safari-tour-package .swiper-slide > div{ width: 100%; display: flex; flex-direction: column; }
+.kanha-tiger-safari-tour-package .swiper-slide > div > div:last-child{ flex: 1; }
+.kanha-tiger-safari-tour-package 
+/* Swiper nav buttons */
+.swiper-button-next,
+.swiper-button-prev{
+    background: rgba(142, 22, 22, 0.15);
+    backdrop-filter: blur(10px);
+    width: 50px !important; height: 50px !important;
+    border-radius: 50%;
+    border: 2px solid rgba(142, 22, 22, 0.3);
+}
+.kanha-tiger-safari-tour-package .swiper-button-next::after,
+.swiper-button-prev::after{ font-size: 18px !important; color: var(--text2); font-weight: bold; }
+.kanha-tiger-safari-tour-package .swiper-button-next:hover,
+.swiper-button-prev:hover{ background: rgba(142, 22, 22, 0.35); border-color: var(--text2); }
+.kanha-tiger-safari-tour-package .swiper-pagination{ bottom: 20px !important; }
+.kanha-tiger-safari-tour-package .swiper-pagination-bullet{ background: var(--text2); opacity: 0.4; width: 12px; height: 12px; transition: all 0.3s ease; }
+.kanha-tiger-safari-tour-package .swiper-pagination-bullet-active{ opacity: 1; background: var(--text2); transform: scale(1.2); }
+@media (max-width: 768px) {
+.kanha-tiger-safari-tour-package     .swiper-button-next, .swiper-button-prev{ width: 40px !important; height: 40px !important; }
+.kanha-tiger-safari-tour-package     .swiper-button-next::after, .swiper-button-prev::after{ font-size: 15px !important; }
+}
+.kanha-tiger-safari-tour-package 
+/* FAQ Grid */
+.faq-grid{ display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+.kanha-tiger-safari-tour-package .faq-col{ display: flex; flex-direction: column; gap: 14px; width: 100%; min-width: 0; }
+.kanha-tiger-safari-tour-package .faq-question{ min-height: 64px; height: 64px; }
+.kanha-tiger-safari-tour-package .faq-question span{ white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; font-size: 15px !important; }
+@media screen and (max-width: 860px) {
+.kanha-tiger-safari-tour-package     .faq-grid{ grid-template-columns: 1fr !important; }
+.kanha-tiger-safari-tour-package     .faq-question{ height: auto !important; min-height: unset !important; }
+.kanha-tiger-safari-tour-package     .faq-question span{ white-space: normal !important; overflow: visible !important; text-overflow: unset !important; font-size: 14px !important; }
+}
+.kanha-tiger-safari-tour-package 
+/* ===================================================
+   GLOBAL THEME OVERRIDES
+   =================================================== */
+section.bg-neutral-900{ background-color: var(--bg2) !important; }
+.kanha-tiger-safari-tour-package section.bg-black{ background-color: var(--bg1) !important; }
+.kanha-tiger-safari-tour-package 
+h1, h2, h3, h4{ color: var(--text2) !important; }
+.kanha-tiger-safari-tour-package .text-amber-100{ color: var(--text2) !important; }
+.kanha-tiger-safari-tour-package .text-gray-300{ color: var(--text1) !important; }
+.kanha-tiger-safari-tour-package p{ color: var(--text1); }
+.kanha-tiger-safari-tour-package .text-amber-500, .text-amber-400{ color: var(--text2) !important; }
+.kanha-tiger-safari-tour-package .text-gray-400{ color: rgba(0, 0, 0, 0.55) !important; }
+.kanha-tiger-safari-tour-package 
+.border-neutral-800{ border-color: rgba(142, 22, 22, 0.25) !important; }
+.kanha-tiger-safari-tour-package .border-neutral-700{ border-color: rgba(142, 22, 22, 0.2)  !important; }
+.kanha-tiger-safari-tour-package 
+.bg-amber-600\/20{ background-color: rgba(142, 22, 22, 0.1) !important; }
+.kanha-tiger-safari-tour-package 
+#rooms .sticky{ background-color: var(--bg2) !important; }
+.kanha-tiger-safari-tour-package #experiencesA .sticky{ background-color: var(--bg2) !important; }
+.kanha-tiger-safari-tour-package 
+#recommended{ background-color: var(--bg1) !important; }
+.kanha-tiger-safari-tour-package #recommended .bg-neutral-900.rounded-xl{
+    background-color: var(--bg2) !important;
+    border: 1px solid rgba(142, 22, 22, 0.15) !important;
+}
+.kanha-tiger-safari-tour-package #recommended .bg-neutral-900.rounded-xl:hover{
+    box-shadow: 0 20px 40px rgba(142, 22, 22, 0.1) !important;
+}
+.kanha-tiger-safari-tour-package 
+.bg-amber-600{ background-color: var(--text2) !important; color: #fff !important; }
+.kanha-tiger-safari-tour-package .hover\:bg-amber-700:hover{ background-color: #6b1010 !important; }
+.kanha-tiger-safari-tour-package 
+#enquire{ background-color: var(--bg1) !important; }
+.kanha-tiger-safari-tour-package #enquire input,
+#enquire textarea{
+    background-color: #fff !important;
+    border-color: rgba(142, 22, 22, 0.25) !important;
+    color: var(--text1) !important;
+}
+.kanha-tiger-safari-tour-package #enquire input:focus,
+#enquire textarea:focus{ border-color: var(--text2) !important; outline: none; }
+.kanha-tiger-safari-tour-package #enquire label{ color: var(--text1) !important; opacity: 0.7; }
+.kanha-tiger-safari-tour-package #enquire button[type="submit"]{ background-color: var(--text2) !important; color: #fff !important; }
+.kanha-tiger-safari-tour-package #enquire button[type="submit"]:hover{ background-color: #6b1010 !important; }
+.kanha-tiger-safari-tour-package 
+.awards-section{ background-color: var(--bg1) !important; }
+.kanha-tiger-safari-tour-package .award-card > div{ transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.kanha-tiger-safari-tour-package .award-card:hover > div{
+    transform: translateY(-6px) !important;
+    box-shadow: 0 12px 30px rgba(142, 22, 22, 0.2) !important;
+}
+.kanha-tiger-safari-tour-package 
+.faq-item.bg-black{
+    background-color: var(--bg2) !important;
+    border-color: rgba(142, 22, 22, 0.25) !important;
+    box-shadow: 0 2px 8px rgba(142, 22, 22, 0.06);
+}
+.kanha-tiger-safari-tour-package .faq-item.bg-black:hover{ border-color: var(--text2) !important; }
+.kanha-tiger-safari-tour-package .faq-question:hover{ background-color: rgba(232, 201, 153, 0.5) !important; }
+.kanha-tiger-safari-tour-package .faq-answer > div{
+    background-color: rgba(232, 201, 153, 0.3) !important;
+    border-top-color: rgba(142, 22, 22, 0.2) !important;
+}
+.kanha-tiger-safari-tour-package .faq-icon{ color: var(--text2) !important; }
+.kanha-tiger-safari-tour-package .faq-question span{ color: var(--text1) !important; }
+.kanha-tiger-safari-tour-package 
+section.py-12.md\:py-20.px-4.md\:px-6.bg-neutral-900{ background-color: var(--bg2) !important; }
+.kanha-tiger-safari-tour-package 
+#specialOfferBtn{
+    background: linear-gradient(to right, var(--text2), #b01e1e) !important;
+}
+.kanha-tiger-safari-tour-package #specialOfferBtn:hover{ background: linear-gradient(to right, #6b1010, var(--text2)) !important; }
+.kanha-tiger-safari-tour-package #specialOfferBtn .bg-red-500{ background-color: var(--bg1) !important; color: var(--text2) !important; }
+.kanha-tiger-safari-tour-package 
+#specialOfferPopup .bg-neutral-900{ background-color: var(--bg2) !important; border-color: var(--text2) !important; }
+.kanha-tiger-safari-tour-package #specialOfferPopup .bg-gradient-to-r{ background: linear-gradient(to right, var(--text2), #b01e1e) !important; }
+.kanha-tiger-safari-tour-package #specialOfferPopup .bg-black{ background-color: var(--bg1) !important; }
+.kanha-tiger-safari-tour-package #specialOfferPopup .border-amber-500\/30{ border-color: rgba(142, 22, 22, 0.3) !important; }
+.kanha-tiger-safari-tour-package #specialOfferPopup .hover\:border-amber-500:hover{ border-color: var(--text2) !important; }
+.kanha-tiger-safari-tour-package #specialOfferPopup h4.text-white{ color: var(--text1) !important; }
+.kanha-tiger-safari-tour-package #specialOfferPopup .text-amber-500{ color: var(--text2) !important; }
+.kanha-tiger-safari-tour-package #specialOfferPopup .text-gray-300{ color: var(--text1) !important; opacity: 0.85; }
+.kanha-tiger-safari-tour-package #specialOfferPopup .text-gray-400.line-through{ color: rgba(0,0,0,0.4) !important; }
+.kanha-tiger-safari-tour-package #specialOfferPopup .text-gray-400{ color: rgba(0,0,0,0.5) !important; }
+.kanha-tiger-safari-tour-package #specialOfferPopup .text-amber-100{ color: var(--bg1) !important; }
+.kanha-tiger-safari-tour-package #specialOfferPopup .bg-amber-500\/10{ background-color: rgba(232, 201, 153, 0.3) !important; }
+.kanha-tiger-safari-tour-package #specialOfferPopup .border-t.border-amber-500\/30{ border-color: rgba(142, 22, 22, 0.3) !important; }
+.kanha-tiger-safari-tour-package #specialOfferPopup .text-2xl.font-bold.text-amber-500{ color: var(--text2) !important; }
+.kanha-tiger-safari-tour-package #specialOfferPopup button.text-white{ color: var(--text1) !important; }
+.kanha-tiger-safari-tour-package #specialOfferPopup button.hover\:text-amber-500:hover{ color: var(--text2) !important; }
+.kanha-tiger-safari-tour-package 
+.bg-amber-500.hover\:bg-amber-600{ background-color: var(--text2) !important; color: var(--bg2) !important; }
+.kanha-tiger-safari-tour-package .bg-amber-500.hover\:bg-amber-600:hover{ background-color: #6b1010 !important; }
+.kanha-tiger-safari-tour-package 
+.bg-green-500{ background-color: #2a6e3f !important; }
+.kanha-tiger-safari-tour-package .bg-blue-500{ background-color: #1a4a7a !important; }
+.kanha-tiger-safari-tour-package .text-green-500{ color: #2a6e3f !important; }
+.kanha-tiger-safari-tour-package .text-blue-500{ color: #1a4a7a !important; }
+.kanha-tiger-safari-tour-package 
+a.bg-green-500.hover\:bg-green-600{ background-color: #25D366 !important; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.kanha-safari-tour-package /* ===================================================
+   ROOT COLOR VARIABLES
+   =================================================== */
+:root{
+    --bg1:  #E8C999;   /* warm golden — cards / itinerary / recommended bg */
+    --bg2:  #F8EEDF;   /* cream white — main section backgrounds */
+    --text1: #000000;  /* pure black  — body text */
+    --text2: #8E1616;  /* deep red    — headings / accents / CTAs */
+}
+.kanha-safari-tour-package 
+/* ===================================================
+   ANIMATIONS
+   =================================================== */
+@keyframes slideIn{
+.kanha-safari-tour-package     from{ opacity: 0; transform: scale(0.9) translateY(20px); }
+.kanha-safari-tour-package     to{ opacity: 1; transform: scale(1)   translateY(0);    }
+}
+.kanha-safari-tour-package .animate-slideIn{ animation: slideIn 0.3s ease-out; }
+.kanha-safari-tour-package 
+#specialOfferPopup > div{ scrollbar-width: none; -ms-overflow-style: none; }
+.kanha-safari-tour-package #specialOfferPopup > div::-webkit-scrollbar{ display: none; }
+.kanha-safari-tour-package #specialOfferPopup > div::-webkit-scrollbar-track{ background: var(--bg2); }
+.kanha-safari-tour-package #specialOfferPopup > div::-webkit-scrollbar-thumb{ background: var(--text2); border-radius: 3px; }
+.kanha-safari-tour-package 
+/* ===================================================
+   TABS STYLING
+   =================================================== */
+.tab-btn{
+    position: relative;
+    transition: color 0.3s ease;
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: var(--text2);
+    padding-bottom: 0.75rem;
+    white-space: nowrap;
+    cursor: pointer;
+}
+@media (min-width: 768px) { .tab-btn { font-size: 1rem; padding-bottom: 1rem; } }
+.kanha-safari-tour-package .tab-btn:hover{ color: #6b1010; }
+.kanha-safari-tour-package .tab-btn.active{ color: var(--text1); }
+.kanha-safari-tour-package .tab-btn.active::after{
+    content: "";
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 50px; height: 3px;
+    background-color: var(--text2);
+}
+.kanha-safari-tour-package 
+.tab-btn-a{
+    position: relative;
+    transition: color 0.3s ease;
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: var(--text2);
+    padding-bottom: 0.75rem;
+    white-space: nowrap;
+    cursor: pointer;
+}
+@media (min-width: 768px) { .tab-btn-a { font-size: 1rem; padding-bottom: 1rem; } }
+.kanha-safari-tour-package .tab-btn-a:hover{ color: #6b1010; }
+.kanha-safari-tour-package .tab-btn-a.active{ color: var(--text1); }
+.kanha-safari-tour-package .tab-btn-a.active::after{
+    content: "";
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 50px; height: 3px;
+    background-color: var(--text2);
+}
+.kanha-safari-tour-package 
+/* Icon colors */
+.icon-check{ color: #22c55e; }
+.kanha-safari-tour-package 
+/* Line clamp utility */
+.line-clamp-2{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.kanha-safari-tour-package 
+/* Swiper setup */
+#recommended{ overflow: visible; position: relative; }
+.kanha-safari-tour-package .swiper-clip-wrap{ overflow: hidden; width: 100%; position: relative; }
+.kanha-safari-tour-package .packageSwiper{ width: 100%; padding-bottom: 60px !important; overflow: visible; }
+.kanha-safari-tour-package .swiper-slide{ height: auto; display: flex; }
+.kanha-safari-tour-package .swiper-slide > div{ width: 100%; display: flex; flex-direction: column; }
+.kanha-safari-tour-package .swiper-slide > div > div:last-child{ flex: 1; }
+.kanha-safari-tour-package 
+/* Swiper nav buttons */
+.swiper-button-next,
+.swiper-button-prev{
+    background: rgba(142, 22, 22, 0.15);
+    backdrop-filter: blur(10px);
+    width: 50px !important; height: 50px !important;
+    border-radius: 50%;
+    border: 2px solid rgba(142, 22, 22, 0.3);
+}
+.kanha-safari-tour-package .swiper-button-next::after,
+.swiper-button-prev::after{ font-size: 18px !important; color: var(--text2); font-weight: bold; }
+.kanha-safari-tour-package .swiper-button-next:hover,
+.swiper-button-prev:hover{ background: rgba(142, 22, 22, 0.35); border-color: var(--text2); }
+.kanha-safari-tour-package .swiper-pagination{ bottom: 20px !important; }
+.kanha-safari-tour-package .swiper-pagination-bullet{ background: var(--text2); opacity: 0.4; width: 12px; height: 12px; transition: all 0.3s ease; }
+.kanha-safari-tour-package .swiper-pagination-bullet-active{ opacity: 1; background: var(--text2); transform: scale(1.2); }
+@media (max-width: 768px) {
+.kanha-safari-tour-package     .swiper-button-next, .swiper-button-prev{ width: 40px !important; height: 40px !important; }
+.kanha-safari-tour-package     .swiper-button-next::after, .swiper-button-prev::after{ font-size: 15px !important; }
+}
+.kanha-safari-tour-package 
+/* FAQ Grid */
+.faq-grid{ display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+.kanha-safari-tour-package .faq-col{ display: flex; flex-direction: column; gap: 14px; width: 100%; min-width: 0; }
+.kanha-safari-tour-package .faq-question{ min-height: 64px; height: 64px; }
+.kanha-safari-tour-package .faq-question span{ white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; font-size: 15px !important; }
+@media screen and (max-width: 860px) {
+.kanha-safari-tour-package     .faq-grid{ grid-template-columns: 1fr !important; }
+.kanha-safari-tour-package     .faq-question{ height: auto !important; min-height: unset !important; }
+.kanha-safari-tour-package     .faq-question span{ white-space: normal !important; overflow: visible !important; text-overflow: unset !important; font-size: 14px !important; }
+}
+.kanha-safari-tour-package 
+/* ===================================================
+   GLOBAL THEME OVERRIDES
+   =================================================== */
+
+/* Section backgrounds */
+section.bg-neutral-900{ background-color: var(--bg2) !important; }
+.kanha-safari-tour-package section.bg-black{ background-color: var(--bg1) !important; }
+.kanha-safari-tour-package 
+/* Headings */
+h1, h2, h3, h4{ color: var(--text2) !important; }
+.kanha-safari-tour-package .text-amber-100{ color: var(--text2) !important; }
+.kanha-safari-tour-package 
+/* Body text */
+.text-gray-300{ color: var(--text1) !important; }
+.kanha-safari-tour-package p{ color: var(--text1); }
+.kanha-safari-tour-package 
+/* Amber accents */
+.text-amber-500, .text-amber-400{ color: var(--text2) !important; }
+.kanha-safari-tour-package .text-gray-400{ color: rgba(0, 0, 0, 0.55) !important; }
+.kanha-safari-tour-package 
+/* Borders */
+.border-neutral-800{ border-color: rgba(142, 22, 22, 0.25) !important; }
+.kanha-safari-tour-package .border-neutral-700{ border-color: rgba(142, 22, 22, 0.2)  !important; }
+.kanha-safari-tour-package 
+/* Hero badges */
+.bg-amber-600\/20{ background-color: rgba(142, 22, 22, 0.1) !important; }
+.kanha-safari-tour-package 
+/* Rooms / Tabs sticky bg */
+#rooms .sticky{ background-color: var(--bg2) !important; }
+.kanha-safari-tour-package #experiencesA .sticky{ background-color: var(--bg2) !important; }
+.kanha-safari-tour-package 
+/* Recommended package cards */
+#recommended{ background-color: var(--bg1) !important; }
+.kanha-safari-tour-package #recommended .bg-neutral-900.rounded-xl{
+    background-color: var(--bg2) !important;
+    border: 1px solid rgba(142, 22, 22, 0.15) !important;
+}
+.kanha-safari-tour-package #recommended .bg-neutral-900.rounded-xl:hover{
+    box-shadow: 0 20px 40px rgba(142, 22, 22, 0.1) !important;
+}
+.kanha-safari-tour-package #recommended .hover\:shadow-amber-500\/10:hover{ --tw-shadow-color: rgba(142, 22, 22, 0.1) !important; }
+.kanha-safari-tour-package 
+/* View Details button */
+.bg-amber-600{ background-color: var(--text2) !important; color: #fff !important; }
+.kanha-safari-tour-package .hover\:bg-amber-700:hover{ background-color: #6b1010 !important; }
+.kanha-safari-tour-package 
+/* Enquiry form */
+#enquire{ background-color: var(--bg1) !important; }
+.kanha-safari-tour-package #enquire input,
+#enquire textarea{
+    background-color: #fff !important;
+    border-color: rgba(142, 22, 22, 0.25) !important;
+    color: var(--text1) !important;
+}
+.kanha-safari-tour-package #enquire input:focus,
+#enquire textarea:focus{ border-color: var(--text2) !important; outline: none; }
+.kanha-safari-tour-package #enquire label{ color: var(--text1) !important; opacity: 0.7; }
+.kanha-safari-tour-package #enquire button[type="submit"]{ background-color: var(--text2) !important; color: #fff !important; }
+.kanha-safari-tour-package #enquire button[type="submit"]:hover{ background-color: #6b1010 !important; }
+.kanha-safari-tour-package 
+/* Awards */
+.awards-section{ background-color: var(--bg1) !important; }
+.kanha-safari-tour-package .award-card .group-hover\:shadow-amber-500\/30{ --tw-shadow-color: rgba(142, 22, 22, 0.2) !important; }
+.kanha-safari-tour-package .award-card > div{ transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.kanha-safari-tour-package .award-card:hover > div{
+    transform: translateY(-6px) !important;
+    box-shadow: 0 12px 30px rgba(142, 22, 22, 0.2) !important;
+}
+.kanha-safari-tour-package 
+/* FAQ Cards */
+.faq-item.bg-black{
+    background-color: var(--bg2) !important;
+    border-color: rgba(142, 22, 22, 0.25) !important;
+    box-shadow: 0 2px 8px rgba(142, 22, 22, 0.06);
+}
+.kanha-safari-tour-package .faq-item.bg-black:hover{ border-color: var(--text2) !important; }
+.kanha-safari-tour-package .faq-question:hover{ background-color: rgba(232, 201, 153, 0.5) !important; }
+.kanha-safari-tour-package .faq-answer > div{
+    background-color: rgba(232, 201, 153, 0.3) !important;
+    border-top-color: rgba(142, 22, 22, 0.2) !important;
+}
+.kanha-safari-tour-package .faq-icon{ color: var(--text2) !important; }
+.kanha-safari-tour-package .faq-question span{ color: var(--text1) !important; }
+.kanha-safari-tour-package 
+/* FAQ section bg */
+section.py-12.md\:py-20.px-4.md\:px-6.bg-neutral-900{ background-color: var(--bg2) !important; }
+.kanha-safari-tour-package 
+/* Special Offer floating button */
+#specialOfferBtn{
+    background: linear-gradient(to right, var(--text2), #b01e1e) !important;
+}
+.kanha-safari-tour-package #specialOfferBtn:hover{ background: linear-gradient(to right, #6b1010, var(--text2)) !important; }
+.kanha-safari-tour-package #specialOfferBtn .bg-red-500{ background-color: var(--bg1) !important; color: var(--text2) !important; }
+.kanha-safari-tour-package 
+/* Special Offer Popup */
+#specialOfferPopup .bg-neutral-900{
+    background-color: var(--bg2) !important;
+    border-color: var(--text2) !important;
+}
+.kanha-safari-tour-package #specialOfferPopup .bg-gradient-to-r{
+    background: linear-gradient(to right, var(--text2), #b01e1e) !important;
+}
+.kanha-safari-tour-package #specialOfferPopup .bg-black{
+    background-color: var(--bg1) !important;
+}
+.kanha-safari-tour-package #specialOfferPopup .border-amber-500\/30{ border-color: rgba(142, 22, 22, 0.3) !important; }
+.kanha-safari-tour-package #specialOfferPopup .hover\:border-amber-500:hover{ border-color: var(--text2) !important; }
+.kanha-safari-tour-package #specialOfferPopup h4.text-white{ color: var(--text1) !important; }
+.kanha-safari-tour-package #specialOfferPopup .text-amber-500{ color: var(--text2) !important; }
+.kanha-safari-tour-package #specialOfferPopup .text-gray-300{ color: var(--text1) !important; opacity: 0.85; }
+.kanha-safari-tour-package #specialOfferPopup .text-gray-400.line-through{ color: rgba(0,0,0,0.4) !important; }
+.kanha-safari-tour-package #specialOfferPopup .text-gray-400{ color: rgba(0,0,0,0.5) !important; }
+.kanha-safari-tour-package #specialOfferPopup .text-amber-100{ color: var(--bg1) !important; }
+.kanha-safari-tour-package #specialOfferPopup .bg-amber-500\/10{ background-color: rgba(232, 201, 153, 0.3) !important; }
+.kanha-safari-tour-package #specialOfferPopup .border-t.border-amber-500\/30{ border-color: rgba(142, 22, 22, 0.3) !important; }
+.kanha-safari-tour-package #specialOfferPopup .text-2xl.text-amber-500{ color: var(--text2) !important; }
+.kanha-safari-tour-package #specialOfferPopup .text-2xl.font-bold.text-amber-500{ color: var(--text2) !important; }
+.kanha-safari-tour-package #specialOfferPopup button.text-white{ color: var(--text1) !important; }
+.kanha-safari-tour-package #specialOfferPopup button.hover\:text-amber-500:hover{ color: var(--text2) !important; }
+.kanha-safari-tour-package 
+/* Popup Book Now button */
+.bg-amber-500.hover\:bg-amber-600{ background-color: var(--text2) !important; color: var(--bg2) !important; }
+.kanha-safari-tour-package .bg-amber-500.hover\:bg-amber-600:hover{ background-color: #6b1010 !important; }
+.kanha-safari-tour-package 
+/* Offer badges */
+.bg-green-500{ background-color: #2a6e3f !important; }
+.kanha-safari-tour-package .bg-blue-500{ background-color: #1a4a7a !important; }
+.kanha-safari-tour-package .text-green-500{ color: #2a6e3f !important; }
+.kanha-safari-tour-package .text-blue-500{ color: #1a4a7a !important; }
+.kanha-safari-tour-package 
+/* WhatsApp stays green */
+a.bg-green-500.hover\:bg-green-600{ background-color: #25D366 !important; }
+
+
+
+
+
+
+
+
+
+
+
+
+.mukki-zone-tour-package 
+/* ===================================================
+   ROOT COLOR VARIABLES (Same as Kanha Safari Package)
+   =================================================== */
+:root{
+    --bg1:  #E8C999;   /* warm golden — cards / itinerary / recommended bg */
+    --bg2:  #F8EEDF;   /* cream white — main section backgrounds */
+    --text1: #000000;  /* pure black  — body text */
+    --text2: #8E1616;  /* deep red    — headings / accents / CTAs */
+}
+.mukki-zone-tour-package 
+/* ===================================================
+   ANIMATIONS
+   =================================================== */
+@keyframes slideIn{
+.mukki-zone-tour-package     from{ opacity: 0; transform: scale(0.9) translateY(20px); }
+.mukki-zone-tour-package     to{ opacity: 1; transform: scale(1)   translateY(0);    }
+}
+.mukki-zone-tour-package .animate-slideIn{ animation: slideIn 0.3s ease-out; }
+.mukki-zone-tour-package 
+#specialOfferPopup > div{ scrollbar-width: none; -ms-overflow-style: none; }
+.mukki-zone-tour-package #specialOfferPopup > div::-webkit-scrollbar{ display: none; }
+.mukki-zone-tour-package #specialOfferPopup > div::-webkit-scrollbar-track{ background: var(--bg2); }
+.mukki-zone-tour-package #specialOfferPopup > div::-webkit-scrollbar-thumb{ background: var(--text2); border-radius: 3px; }
+.mukki-zone-tour-package 
+/* ===================================================
+   TABS STYLING
+   =================================================== */
+.tab-btn{
+    position: relative;
+    transition: color 0.3s ease;
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: var(--text2);
+    padding-bottom: 0.75rem;
+    white-space: nowrap;
+    cursor: pointer;
+}
+@media (min-width: 768px) { .tab-btn { font-size: 1rem; padding-bottom: 1rem; } }
+.mukki-zone-tour-package .tab-btn:hover{ color: #6b1010; }
+.mukki-zone-tour-package .tab-btn.active{ color: var(--text1); }
+.mukki-zone-tour-package .tab-btn.active::after{
+    content: "";
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 50px; height: 3px;
+    background-color: var(--text2);
+}
+.mukki-zone-tour-package 
+.tab-btn-a{
+    position: relative;
+    transition: color 0.3s ease;
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: var(--text2);
+    padding-bottom: 0.75rem;
+    white-space: nowrap;
+    cursor: pointer;
+}
+@media (min-width: 768px) { .tab-btn-a { font-size: 1rem; padding-bottom: 1rem; } }
+.mukki-zone-tour-package .tab-btn-a:hover{ color: #6b1010; }
+.mukki-zone-tour-package .tab-btn-a.active{ color: var(--text1); }
+.mukki-zone-tour-package .tab-btn-a.active::after{
+    content: "";
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 50px; height: 3px;
+    background-color: var(--text2);
+}
+.mukki-zone-tour-package 
+/* Icon colors */
+.icon-check{ color: #22c55e; }
+.mukki-zone-tour-package 
+/* Line clamp utility */
+.line-clamp-2{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.mukki-zone-tour-package 
+/* Swiper setup */
+#recommended{ overflow: visible; position: relative; }
+.mukki-zone-tour-package .swiper-clip-wrap{ overflow: hidden; width: 100%; position: relative; }
+.mukki-zone-tour-package .packageSwiper{ width: 100%; padding-bottom: 60px !important; overflow: visible; }
+.mukki-zone-tour-package .swiper-slide{ height: auto; display: flex; }
+.mukki-zone-tour-package .swiper-slide > div{ width: 100%; display: flex; flex-direction: column; }
+.mukki-zone-tour-package .swiper-slide > div > div:last-child{ flex: 1; }
+.mukki-zone-tour-package 
+/* Swiper nav buttons */
+.swiper-button-next,
+.swiper-button-prev{
+    background: rgba(142, 22, 22, 0.15);
+    backdrop-filter: blur(10px);
+    width: 50px !important; height: 50px !important;
+    border-radius: 50%;
+    border: 2px solid rgba(142, 22, 22, 0.3);
+}
+.mukki-zone-tour-package .swiper-button-next::after,
+.swiper-button-prev::after{ font-size: 18px !important; color: var(--text2); font-weight: bold; }
+.mukki-zone-tour-package .swiper-button-next:hover,
+.swiper-button-prev:hover{ background: rgba(142, 22, 22, 0.35); border-color: var(--text2); }
+.mukki-zone-tour-package .swiper-pagination{ bottom: 20px !important; }
+.mukki-zone-tour-package .swiper-pagination-bullet{ background: var(--text2); opacity: 0.4; width: 12px; height: 12px; transition: all 0.3s ease; }
+.mukki-zone-tour-package .swiper-pagination-bullet-active{ opacity: 1; background: var(--text2); transform: scale(1.2); }
+@media (max-width: 768px) {
+.mukki-zone-tour-package     .swiper-button-next, .swiper-button-prev{ width: 40px !important; height: 40px !important; }
+.mukki-zone-tour-package     .swiper-button-next::after, .swiper-button-prev::after{ font-size: 15px !important; }
+}
+.mukki-zone-tour-package 
+/* FAQ Grid */
+.faq-grid{ display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+.mukki-zone-tour-package .faq-col{ display: flex; flex-direction: column; gap: 14px; width: 100%; min-width: 0; }
+.mukki-zone-tour-package .faq-question{ min-height: 64px; height: 64px; }
+.mukki-zone-tour-package .faq-question span{ white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; font-size: 15px !important; }
+@media screen and (max-width: 860px) {
+.mukki-zone-tour-package     .faq-grid{ grid-template-columns: 1fr !important; }
+.mukki-zone-tour-package     .faq-question{ height: auto !important; min-height: unset !important; }
+.mukki-zone-tour-package     .faq-question span{ white-space: normal !important; overflow: visible !important; text-overflow: unset !important; font-size: 14px !important; }
+}
+.mukki-zone-tour-package 
+/* ===================================================
+   GLOBAL THEME OVERRIDES
+   =================================================== */
+
+/* Section backgrounds */
+section.bg-neutral-900{ background-color: var(--bg2) !important; }
+.mukki-zone-tour-package section.bg-black{ background-color: var(--bg1) !important; }
+.mukki-zone-tour-package 
+/* Headings */
+h1, h2, h3, h4{ color: var(--text2) !important; }
+.mukki-zone-tour-package .text-amber-100{ color: var(--text2) !important; }
+.mukki-zone-tour-package 
+/* Body text */
+.text-gray-300{ color: var(--text1) !important; }
+.mukki-zone-tour-package p{ color: var(--text1); }
+.mukki-zone-tour-package 
+/* Amber accents */
+.text-amber-500, .text-amber-400{ color: var(--text2) !important; }
+.mukki-zone-tour-package .text-gray-400{ color: rgba(0, 0, 0, 0.55) !important; }
+.mukki-zone-tour-package 
+/* Borders */
+.border-neutral-800{ border-color: rgba(142, 22, 22, 0.25) !important; }
+.mukki-zone-tour-package .border-neutral-700{ border-color: rgba(142, 22, 22, 0.2)  !important; }
+.mukki-zone-tour-package 
+/* Hero badges */
+.bg-amber-600\/20{ background-color: rgba(142, 22, 22, 0.1) !important; }
+.mukki-zone-tour-package 
+/* Rooms / Tabs sticky bg */
+#rooms .sticky{ background-color: var(--bg2) !important; }
+.mukki-zone-tour-package #experiencesA .sticky{ background-color: var(--bg2) !important; }
+.mukki-zone-tour-package 
+/* Recommended package cards */
+#recommended{ background-color: var(--bg1) !important; }
+.mukki-zone-tour-package #recommended .bg-neutral-900.rounded-xl{
+    background-color: var(--bg2) !important;
+    border: 1px solid rgba(142, 22, 22, 0.15) !important;
+}
+.mukki-zone-tour-package #recommended .bg-neutral-900.rounded-xl:hover{
+    box-shadow: 0 20px 40px rgba(142, 22, 22, 0.1) !important;
+}
+.mukki-zone-tour-package #recommended .hover\:shadow-amber-500\/10:hover{ --tw-shadow-color: rgba(142, 22, 22, 0.1) !important; }
+.mukki-zone-tour-package 
+/* View Details button */
+.bg-amber-600{ background-color: var(--text2) !important; color: #fff !important; }
+.mukki-zone-tour-package .hover\:bg-amber-700:hover{ background-color: #6b1010 !important; }
+.mukki-zone-tour-package 
+/* Enquiry form */
+#enquire{ background-color: var(--bg1) !important; }
+.mukki-zone-tour-package #enquire input,
+#enquire textarea{
+    background-color: #fff !important;
+    border-color: rgba(142, 22, 22, 0.25) !important;
+    color: var(--text1) !important;
+}
+.mukki-zone-tour-package #enquire input:focus,
+#enquire textarea:focus{ border-color: var(--text2) !important; outline: none; }
+.mukki-zone-tour-package #enquire label{ color: var(--text1) !important; opacity: 0.7; }
+.mukki-zone-tour-package #enquire button[type="submit"]{ background-color: var(--text2) !important; color: #fff !important; }
+.mukki-zone-tour-package #enquire button[type="submit"]:hover{ background-color: #6b1010 !important; }
+.mukki-zone-tour-package 
+/* Awards */
+.awards-section{ background-color: var(--bg1) !important; }
+.mukki-zone-tour-package .award-card .group-hover\:shadow-amber-500\/30{ --tw-shadow-color: rgba(142, 22, 22, 0.2) !important; }
+.mukki-zone-tour-package .award-card > div{ transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.mukki-zone-tour-package .award-card:hover > div{
+    transform: translateY(-6px) !important;
+    box-shadow: 0 12px 30px rgba(142, 22, 22, 0.2) !important;
+}
+.mukki-zone-tour-package 
+/* FAQ Cards */
+.faq-item.bg-black{
+    background-color: var(--bg2) !important;
+    border-color: rgba(142, 22, 22, 0.25) !important;
+    box-shadow: 0 2px 8px rgba(142, 22, 22, 0.06);
+}
+.mukki-zone-tour-package .faq-item.bg-black:hover{ border-color: var(--text2) !important; }
+.mukki-zone-tour-package .faq-question:hover{ background-color: rgba(232, 201, 153, 0.5) !important; }
+.mukki-zone-tour-package .faq-answer > div{
+    background-color: rgba(232, 201, 153, 0.3) !important;
+    border-top-color: rgba(142, 22, 22, 0.2) !important;
+}
+.mukki-zone-tour-package .faq-icon{ color: var(--text2) !important; }
+.mukki-zone-tour-package .faq-question span{ color: var(--text1) !important; }
+.mukki-zone-tour-package 
+/* FAQ section bg */
+section.py-12.md\:py-20.px-4.md\:px-6.bg-neutral-900{ background-color: var(--bg2) !important; }
+.mukki-zone-tour-package 
+/* Special Offer floating button */
+#specialOfferBtn{
+    background: linear-gradient(to right, var(--text2), #b01e1e) !important;
+}
+.mukki-zone-tour-package #specialOfferBtn:hover{ background: linear-gradient(to right, #6b1010, var(--text2)) !important; }
+.mukki-zone-tour-package #specialOfferBtn .bg-red-500{ background-color: var(--bg1) !important; color: var(--text2) !important; }
+.mukki-zone-tour-package 
+/* Special Offer Popup */
+#specialOfferPopup .bg-neutral-900{
+    background-color: var(--bg2) !important;
+    border-color: var(--text2) !important;
+}
+.mukki-zone-tour-package #specialOfferPopup .bg-gradient-to-r{
+    background: linear-gradient(to right, var(--text2), #b01e1e) !important;
+}
+.mukki-zone-tour-package #specialOfferPopup .bg-black{
+    background-color: var(--bg1) !important;
+}
+.mukki-zone-tour-package #specialOfferPopup .border-amber-500\/30{ border-color: rgba(142, 22, 22, 0.3) !important; }
+.mukki-zone-tour-package #specialOfferPopup .hover\:border-amber-500:hover{ border-color: var(--text2) !important; }
+.mukki-zone-tour-package #specialOfferPopup h4.text-white{ color: var(--text1) !important; }
+.mukki-zone-tour-package #specialOfferPopup .text-amber-500{ color: var(--text2) !important; }
+.mukki-zone-tour-package #specialOfferPopup .text-gray-300{ color: var(--text1) !important; opacity: 0.85; }
+.mukki-zone-tour-package #specialOfferPopup .text-gray-400.line-through{ color: rgba(0,0,0,0.4) !important; }
+.mukki-zone-tour-package #specialOfferPopup .text-gray-400{ color: rgba(0,0,0,0.5) !important; }
+.mukki-zone-tour-package #specialOfferPopup .text-amber-100{ color: var(--bg1) !important; }
+.mukki-zone-tour-package #specialOfferPopup .bg-amber-500\/10{ background-color: rgba(232, 201, 153, 0.3) !important; }
+.mukki-zone-tour-package #specialOfferPopup .border-t.border-amber-500\/30{ border-color: rgba(142, 22, 22, 0.3) !important; }
+.mukki-zone-tour-package #specialOfferPopup .text-2xl.text-amber-500{ color: var(--text2) !important; }
+.mukki-zone-tour-package #specialOfferPopup .text-2xl.font-bold.text-amber-500{ color: var(--text2) !important; }
+.mukki-zone-tour-package #specialOfferPopup button.text-white{ color: var(--text1) !important; }
+.mukki-zone-tour-package #specialOfferPopup button.hover\:text-amber-500:hover{ color: var(--text2) !important; }
+.mukki-zone-tour-package 
+/* Popup Book Now button */
+.bg-amber-500.hover\:bg-amber-600{ background-color: var(--text2) !important; color: var(--bg2) !important; }
+.mukki-zone-tour-package .bg-amber-500.hover\:bg-amber-600:hover{ background-color: #6b1010 !important; }
+.mukki-zone-tour-package 
+/* Offer badges */
+.bg-green-500{ background-color: #2a6e3f !important; }
+.mukki-zone-tour-package .bg-blue-500{ background-color: #1a4a7a !important; }
+.mukki-zone-tour-package .text-green-500{ color: #2a6e3f !important; }
+.mukki-zone-tour-package .text-blue-500{ color: #1a4a7a !important; }
+.mukki-zone-tour-package 
+/* WhatsApp stays green */
+a.bg-green-500.hover\:bg-green-600{ background-color: #25D366 !important; }
+.mukki-zone-tour-package 
+/* Itinerary section */
+#itinerary{ background-color: var(--bg1) !important; }
+.mukki-zone-tour-package #itinerary h2, #itinerary h3{ color: var(--text2) !important; }
+.mukki-zone-tour-package #itinerary .text-gray-300{ color: var(--text1) !important; }
+.mukki-zone-tour-package 
+/* Payment Terms section */
+#experiencesA{ background-color: var(--bg2) !important; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.kanha-kisli-tour-package 
+/* ===================================================
+   ROOT COLOR VARIABLES — same as how-to-reach.php
+   =================================================== */
+:root{
+    --bg1:  #E8C999;   /* warm golden — cards / itinerary / recommended bg */
+    --bg2:  #F8EEDF;   /* cream white — main section backgrounds */
+    --text1: #000000;  /* pure black  — body text */
+    --text2: #8E1616;  /* deep red    — headings / accents / CTAs */
+}
+.kanha-kisli-tour-package 
+/* ===================================================
+   ANIMATIONS
+   =================================================== */
+@keyframes slideIn{
+.kanha-kisli-tour-package     from{ opacity: 0; transform: scale(0.9) translateY(20px); }
+.kanha-kisli-tour-package     to{ opacity: 1; transform: scale(1)   translateY(0);    }
+}
+.kanha-kisli-tour-package .animate-slideIn{ animation: slideIn 0.3s ease-out; }
+.kanha-kisli-tour-package 
+#specialOfferPopup > div{ scrollbar-width: none; -ms-overflow-style: none; }
+.kanha-kisli-tour-package #specialOfferPopup > div::-webkit-scrollbar{ display: none; }
+.kanha-kisli-tour-package #specialOfferPopup > div::-webkit-scrollbar-track{ background: var(--bg2); }
+.kanha-kisli-tour-package #specialOfferPopup > div::-webkit-scrollbar-thumb{ background: var(--text2); border-radius: 3px; }
+.kanha-kisli-tour-package 
+/* ===================================================
+   TABS STYLING
+   =================================================== */
+.tab-btn{
+    position: relative;
+    transition: color 0.3s ease;
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: var(--text2);
+    padding-bottom: 0.75rem;
+    white-space: nowrap;
+    cursor: pointer;
+}
+@media (min-width: 768px) { .tab-btn { font-size: 1rem; padding-bottom: 1rem; } }
+.kanha-kisli-tour-package .tab-btn:hover{ color: #6b1010; }
+.kanha-kisli-tour-package .tab-btn.active{ color: var(--text1); }
+.kanha-kisli-tour-package .tab-btn.active::after{
+    content: "";
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 50px; height: 3px;
+    background-color: var(--text2);
+}
+.kanha-kisli-tour-package 
+.tab-btn-a{
+    position: relative;
+    transition: color 0.3s ease;
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: var(--text2);
+    padding-bottom: 0.75rem;
+    white-space: nowrap;
+    cursor: pointer;
+}
+@media (min-width: 768px) { .tab-btn-a { font-size: 1rem; padding-bottom: 1rem; } }
+.kanha-kisli-tour-package .tab-btn-a:hover{ color: #6b1010; }
+.kanha-kisli-tour-package .tab-btn-a.active{ color: var(--text1); }
+.kanha-kisli-tour-package .tab-btn-a.active::after{
+    content: "";
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 50px; height: 3px;
+    background-color: var(--text2);
+}
+.kanha-kisli-tour-package 
+/* Icon colors */
+.icon-check{ color: #22c55e; }
+.kanha-kisli-tour-package 
+/* Line clamp utility */
+.line-clamp-2{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.kanha-kisli-tour-package 
+/* Swiper setup */
+#recommended{ overflow: visible; position: relative; }
+.kanha-kisli-tour-package .swiper-clip-wrap{ overflow: hidden; width: 100%; position: relative; }
+.kanha-kisli-tour-package .packageSwiper{ width: 100%; padding-bottom: 60px !important; overflow: visible; }
+.kanha-kisli-tour-package .swiper-slide{ height: auto; display: flex; }
+.kanha-kisli-tour-package .swiper-slide > div{ width: 100%; display: flex; flex-direction: column; }
+.kanha-kisli-tour-package .swiper-slide > div > div:last-child{ flex: 1; }
+.kanha-kisli-tour-package 
+/* Swiper nav buttons */
+.swiper-button-next,
+.swiper-button-prev{
+    background: rgba(142, 22, 22, 0.15);
+    backdrop-filter: blur(10px);
+    width: 50px !important; height: 50px !important;
+    border-radius: 50%;
+    border: 2px solid rgba(142, 22, 22, 0.3);
+}
+.kanha-kisli-tour-package .swiper-button-next::after,
+.swiper-button-prev::after{ font-size: 18px !important; color: var(--text2); font-weight: bold; }
+.kanha-kisli-tour-package .swiper-button-next:hover,
+.swiper-button-prev:hover{ background: rgba(142, 22, 22, 0.35); border-color: var(--text2); }
+.kanha-kisli-tour-package .swiper-pagination{ bottom: 20px !important; }
+.kanha-kisli-tour-package .swiper-pagination-bullet{ background: var(--text2); opacity: 0.4; width: 12px; height: 12px; transition: all 0.3s ease; }
+.kanha-kisli-tour-package .swiper-pagination-bullet-active{ opacity: 1; background: var(--text2); transform: scale(1.2); }
+@media (max-width: 768px) {
+.kanha-kisli-tour-package     .swiper-button-next, .swiper-button-prev{ width: 40px !important; height: 40px !important; }
+.kanha-kisli-tour-package     .swiper-button-next::after, .swiper-button-prev::after{ font-size: 15px !important; }
+}
+.kanha-kisli-tour-package 
+/* FAQ Grid */
+.faq-grid{ display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+.kanha-kisli-tour-package .faq-col{ display: flex; flex-direction: column; gap: 14px; width: 100%; min-width: 0; }
+.kanha-kisli-tour-package .faq-question{ min-height: 64px; height: 64px; }
+.kanha-kisli-tour-package .faq-question span{ white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; font-size: 15px !important; }
+@media screen and (max-width: 860px) {
+.kanha-kisli-tour-package     .faq-grid{ grid-template-columns: 1fr !important; }
+.kanha-kisli-tour-package     .faq-question{ height: auto !important; min-height: unset !important; }
+.kanha-kisli-tour-package     .faq-question span{ white-space: normal !important; overflow: visible !important; text-overflow: unset !important; font-size: 14px !important; }
+}
+.kanha-kisli-tour-package 
+/* ===================================================
+   GLOBAL THEME OVERRIDES  (same pattern as How-to-Reach)
+   =================================================== */
+
+/* Section backgrounds */
+section.bg-neutral-900{ background-color: var(--bg2) !important; }
+.kanha-kisli-tour-package section.bg-black{ background-color: var(--bg1) !important; }
+.kanha-kisli-tour-package 
+/* Headings */
+h1, h2, h3, h4{ color: var(--text2) !important; }
+.kanha-kisli-tour-package .text-amber-100{ color: var(--text2) !important; }
+.kanha-kisli-tour-package 
+/* Body text */
+.text-gray-300{ color: var(--text1) !important; }
+.kanha-kisli-tour-package p{ color: var(--text1); }
+.kanha-kisli-tour-package 
+/* Amber accents */
+.text-amber-500, .text-amber-400{ color: var(--text2) !important; }
+.kanha-kisli-tour-package .text-gray-400{ color: rgba(0, 0, 0, 0.55) !important; }
+.kanha-kisli-tour-package 
+/* Borders */
+.border-neutral-800{ border-color: rgba(142, 22, 22, 0.25) !important; }
+.kanha-kisli-tour-package .border-neutral-700{ border-color: rgba(142, 22, 22, 0.2)  !important; }
+.kanha-kisli-tour-package 
+/* ── Hero badges ── */
+.bg-amber-600\/20{ background-color: rgba(142, 22, 22, 0.1) !important; }
+.kanha-kisli-tour-package 
+/* ── Rooms / Tabs sticky bg ── */
+#rooms .sticky{ background-color: var(--bg2) !important; }
+.kanha-kisli-tour-package #experiencesA .sticky{ background-color: var(--bg2) !important; }
+.kanha-kisli-tour-package 
+/* ── Itinerary section (bg-black → bg1) already handled above ── */
+
+/* ── Recommended package cards (bg-neutral-900 inside #recommended) ── */
+#recommended{ background-color: var(--bg1) !important; }
+.kanha-kisli-tour-package #recommended .bg-neutral-900.rounded-xl{
+    background-color: var(--bg2) !important;
+    border: 1px solid rgba(142, 22, 22, 0.15) !important;
+}
+.kanha-kisli-tour-package #recommended .bg-neutral-900.rounded-xl:hover{
+    box-shadow: 0 20px 40px rgba(142, 22, 22, 0.1) !important;
+}
+.kanha-kisli-tour-package #recommended .hover\:shadow-amber-500\/10:hover{ --tw-shadow-color: rgba(142, 22, 22, 0.1) !important; }
+.kanha-kisli-tour-package 
+/* View Details button */
+.bg-amber-600{ background-color: var(--text2) !important; color: #fff !important; }
+.kanha-kisli-tour-package .hover\:bg-amber-700:hover{ background-color: #6b1010 !important; }
+.kanha-kisli-tour-package 
+/* ── Enquiry form ── */
+#enquire{ background-color: var(--bg1) !important; }
+.kanha-kisli-tour-package #enquire input,
+#enquire textarea{
+    background-color: #fff !important;
+    border-color: rgba(142, 22, 22, 0.25) !important;
+    color: var(--text1) !important;
+}
+.kanha-kisli-tour-package #enquire input:focus,
+#enquire textarea:focus{ border-color: var(--text2) !important; outline: none; }
+.kanha-kisli-tour-package #enquire label{ color: var(--text1) !important; opacity: 0.7; }
+.kanha-kisli-tour-package #enquire button[type="submit"]{ background-color: var(--text2) !important; color: #fff !important; }
+.kanha-kisli-tour-package #enquire button[type="submit"]:hover{ background-color: #6b1010 !important; }
+.kanha-kisli-tour-package 
+/* ── Awards ── */
+.awards-section{ background-color: var(--bg1) !important; }
+.kanha-kisli-tour-package .award-card .group-hover\:shadow-amber-500\/30{ --tw-shadow-color: rgba(142, 22, 22, 0.2) !important; }
+.kanha-kisli-tour-package .award-card > div{ transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.kanha-kisli-tour-package .award-card:hover > div{
+    transform: translateY(-6px) !important;
+    box-shadow: 0 12px 30px rgba(142, 22, 22, 0.2) !important;
+}
+.kanha-kisli-tour-package 
+/* ── FAQ Cards ── */
+.faq-item.bg-black{
+    background-color: var(--bg2) !important;
+    border-color: rgba(142, 22, 22, 0.25) !important;
+    box-shadow: 0 2px 8px rgba(142, 22, 22, 0.06);
+}
+.kanha-kisli-tour-package .faq-item.bg-black:hover{ border-color: var(--text2) !important; }
+.kanha-kisli-tour-package .faq-question:hover{ background-color: rgba(232, 201, 153, 0.5) !important; }
+.kanha-kisli-tour-package .faq-answer > div{
+    background-color: rgba(232, 201, 153, 0.3) !important;
+    border-top-color: rgba(142, 22, 22, 0.2) !important;
+}
+.kanha-kisli-tour-package .faq-icon{ color: var(--text2) !important; }
+.kanha-kisli-tour-package .faq-question span{ color: var(--text1) !important; }
+.kanha-kisli-tour-package 
+/* FAQ section bg */
+section.py-12.md\:py-20.px-4.md\:px-6.bg-neutral-900{ background-color: var(--bg2) !important; }
+.kanha-kisli-tour-package 
+/* ── Special Offer floating button ── */
+#specialOfferBtn{
+    background: linear-gradient(to right, var(--text2), #b01e1e) !important;
+}
+.kanha-kisli-tour-package #specialOfferBtn:hover{ background: linear-gradient(to right, #6b1010, var(--text2)) !important; }
+.kanha-kisli-tour-package #specialOfferBtn .bg-red-500{ background-color: var(--bg1) !important; color: var(--text2) !important; }
+.kanha-kisli-tour-package 
+/* ── Special Offer Popup ── */
+#specialOfferPopup .bg-neutral-900{
+    background-color: var(--bg2) !important;
+    border-color: var(--text2) !important;
+}
+.kanha-kisli-tour-package #specialOfferPopup .bg-gradient-to-r{
+    background: linear-gradient(to right, var(--text2), #b01e1e) !important;
+}
+.kanha-kisli-tour-package #specialOfferPopup .bg-black{
+    background-color: var(--bg1) !important;
+}
+.kanha-kisli-tour-package #specialOfferPopup .border-amber-500\/30{ border-color: rgba(142, 22, 22, 0.3) !important; }
+.kanha-kisli-tour-package #specialOfferPopup .hover\:border-amber-500:hover{ border-color: var(--text2) !important; }
+.kanha-kisli-tour-package #specialOfferPopup h4.text-white{ color: var(--text1) !important; }
+.kanha-kisli-tour-package #specialOfferPopup .text-amber-500{ color: var(--text2) !important; }
+.kanha-kisli-tour-package #specialOfferPopup .text-gray-300{ color: var(--text1) !important; opacity: 0.85; }
+.kanha-kisli-tour-package #specialOfferPopup .text-gray-400.line-through{ color: rgba(0,0,0,0.4) !important; }
+.kanha-kisli-tour-package #specialOfferPopup .text-gray-400{ color: rgba(0,0,0,0.5) !important; }
+.kanha-kisli-tour-package #specialOfferPopup .text-amber-100{ color: var(--bg1) !important; }
+.kanha-kisli-tour-package #specialOfferPopup .bg-amber-500\/10{ background-color: rgba(232, 201, 153, 0.3) !important; }
+.kanha-kisli-tour-package #specialOfferPopup .border-t.border-amber-500\/30{ border-color: rgba(142, 22, 22, 0.3) !important; }
+.kanha-kisli-tour-package #specialOfferPopup .text-2xl.text-amber-500{ color: var(--text2) !important; }
+.kanha-kisli-tour-package #specialOfferPopup .text-2xl.font-bold.text-amber-500{ color: var(--text2) !important; }
+.kanha-kisli-tour-package #specialOfferPopup button.text-white{ color: var(--text1) !important; }
+.kanha-kisli-tour-package #specialOfferPopup button.hover\:text-amber-500:hover{ color: var(--text2) !important; }
+.kanha-kisli-tour-package 
+/* Popup Book Now button */
+.bg-amber-500.hover\:bg-amber-600{ background-color: var(--text2) !important; color: var(--bg2) !important; }
+.kanha-kisli-tour-package .bg-amber-500.hover\:bg-amber-600:hover{ background-color: #6b1010 !important; }
+.kanha-kisli-tour-package 
+/* Offer badges */
+.bg-green-500{ background-color: #2a6e3f !important; }
+.kanha-kisli-tour-package .bg-blue-500{ background-color: #1a4a7a !important; }
+.kanha-kisli-tour-package .text-green-500{ color: #2a6e3f !important; }
+.kanha-kisli-tour-package .text-blue-500{ color: #1a4a7a !important; }
+.kanha-kisli-tour-package 
+/* WhatsApp stays green */
+a.bg-green-500.hover\:bg-green-600{ background-color: #25D366 !important; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.kanha-super-deluxe-rooms-in-kanha /* ============================================================
+   ROOT CSS VARIABLES — 4 BRAND COLORS
+   ============================================================ */
+:root{
+    --bg1: #E8C999;
+    --bg2: #F8EEDF;
+    --txt1: #000000;
+    --txt2: #8E1616;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+@keyframes slideIn{
+.kanha-super-deluxe-rooms-in-kanha     from{
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+    }
+.kanha-super-deluxe-rooms-in-kanha 
+    to{
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.animate-slideIn{
+    animation: slideIn 0.3s ease-out;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+/* Popup scrollbar hide */
+#specialOfferPopup>div{
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+#specialOfferPopup>div::-webkit-scrollbar{
+    display: none;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+/* ============================================================
+   FEATURE CARDS
+   ============================================================ */
+.feature-card{
+    background: var(--bg1);
+    border: 1px solid rgba(142, 22, 22, 0.15);
+    border-radius: 1rem;
+    padding: 2rem 1.5rem;
+    text-align: left;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.feature-card:hover{
+    transform: translateY(-5px);
+    border-color: rgba(142, 22, 22, 0.4);
+    box-shadow: 0 10px 30px rgba(142, 22, 22, 0.15);
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.feature-card .icon-box{
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--txt2) 0%, #5a0e0e 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 8px 20px rgba(142, 22, 22, 0.25);
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.feature-card .icon-box i{
+    font-size: 1.75rem;
+    color: #fff;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+/* ============================================================
+   GALLERY
+   ============================================================ */
+.gallery-item{
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.gallery-item:hover{
+    transform: scale(1.02);
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.gallery-item img{
+    transition: transform 0.5s ease;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.gallery-item:hover img{
+    transform: scale(1.1);
+}
+.kanha-super-deluxe-rooms-in-kanha 
+/* ============================================================
+   AMENITY LIST ITEMS
+   ============================================================ */
+.amenity-item{
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.amenity-item i{
+    color: var(--txt2);
+    font-size: 1.25rem;
+    margin-top: 0.125rem;
+    flex-shrink: 0;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.amenity-item h4{
+    color: var(--txt1) !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.amenity-item p{
+    color: var(--txt1) !important;
+    opacity: 0.65;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+/* ============================================================
+   TABS
+   ============================================================ */
+.tab-button{
+    position: relative;
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+    color: var(--txt1);
+    opacity: 0.6;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.tab-button:hover{
+    opacity: 1;
+    color: var(--txt2);
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.tab-button.active{
+    color: var(--txt2);
+    border-bottom-color: var(--txt2);
+    opacity: 1;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.tab-content{
+    display: none;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.tab-content.active{
+    display: block;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+/* ============================================================
+   FAQ GRID
+   ============================================================ */
+.faq-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-items: start;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.faq-col{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    min-width: 0;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.faq-question{
+    min-height: 64px;
+    height: 64px;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.faq-question span{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    font-size: 15px !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+@media screen and (max-width: 860px){
+.kanha-super-deluxe-rooms-in-kanha     .faq-grid{
+        grid-template-columns: 1fr !important;
+    }
+.kanha-super-deluxe-rooms-in-kanha 
+    .faq-question{
+        height: auto !important;
+        min-height: unset !important;
+    }
+.kanha-super-deluxe-rooms-in-kanha 
+    .faq-question span{
+        white-space: normal !important;
+        overflow: visible !important;
+        text-overflow: unset !important;
+        font-size: 14px !important;
+    }
+}
+.kanha-super-deluxe-rooms-in-kanha 
+/* ============================================================
+   SECTION-LEVEL BACKGROUNDS & TEXT
+   ============================================================ */
+
+/* Hero header — keeps image, just overlay tweak */
+header.hero-header{
+    background-color: var(--txt1);
+}
+.kanha-super-deluxe-rooms-in-kanha 
+/* Description Section */
+.section-desc{
+    background-color: var(--bg2);
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.section-desc h2{
+    color: var(--txt1);
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.section-desc p{
+    color: var(--txt1);
+    opacity: 0.8;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.section-desc .text-amber-500{
+    color: var(--txt2) !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.section-desc .border-amber-500\/20{
+    border-color: rgba(142, 22, 22, 0.2) !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+/* Room Highlights */
+.section-highlights{
+    background-color: var(--bg2);
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.section-highlights h2{
+    color: var(--txt1);
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.section-highlights h3{
+    color: var(--txt2) !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.highlight-card{
+    background-color: var(--bg1) !important;
+    border: 1px solid rgba(142, 22, 22, 0.15) !important;
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.highlight-card:hover{
+    border-color: rgba(142, 22, 22, 0.5) !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.highlight-card .icon-circle{
+    background-color: var(--txt2) !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.highlight-card .icon-circle i{
+    color: #fff !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.highlight-card h4{
+    color: var(--txt1) !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.highlight-card p{
+    color: var(--txt1) !important;
+    opacity: 0.75;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+/* What We Offer (Amenities) */
+.section-amenities{
+    background-color: var(--bg2);
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.section-amenities .text-amber-500{
+    color: var(--txt2) !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.section-amenities h2{
+    color: var(--txt1);
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.section-amenities .border-neutral-800{
+    border-color: rgba(142, 22, 22, 0.2) !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+/* Gallery */
+.section-gallery{
+    background-color: var(--txt1);
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.section-gallery h2{
+    color: var(--bg2);
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.section-gallery .text-amber-500{
+    color: var(--bg1) !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+/* CTA */
+.section-cta{
+    background: linear-gradient(to right, var(--txt2), #5a0e0e) !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.section-cta h2{
+    color: #fff;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.section-cta p{
+    color: var(--bg1);
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.section-cta .bg-white{
+    background-color: var(--bg2) !important;
+    color: var(--txt2) !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.section-cta .bg-white:hover{
+    background-color: var(--bg1) !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.section-cta .border-white{
+    border-color: var(--bg2) !important;
+    color: var(--bg2) !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.section-cta .border-white:hover{
+    background-color: var(--bg2) !important;
+    color: var(--txt2) !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+/* Awards */
+.section-awards{
+    background-color: var(--bg2);
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.section-awards h2{
+    color: var(--txt1);
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.section-awards .text-amber-500{
+    color: var(--txt2) !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.section-awards p.text-gray-300{
+    color: var(--txt1);
+    opacity: 0.75;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.award-card>div{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.award-card:hover>div{
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(142, 22, 22, 0.2) !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.award-image{
+    transition: transform 0.3s ease;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.award-card:hover .award-image{
+    transform: scale(1.05);
+}
+.kanha-super-deluxe-rooms-in-kanha 
+/* FAQ */
+.section-faq{
+    background-color: var(--bg2);
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.section-faq .text-amber-500{
+    color: var(--txt2) !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.section-faq h2{
+    color: var(--txt1);
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.section-faq p.text-gray-300{
+    color: var(--txt1);
+    opacity: 0.75;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.faq-item{
+    background-color: #fff !important;
+    border: 1px solid rgba(142, 22, 22, 0.2) !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.faq-question{
+    background-color: transparent;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.faq-question:hover{
+    background-color: var(--bg1) !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.faq-question span{
+    color: var(--txt1) !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.faq-icon{
+    color: var(--txt2) !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.faq-answer>div{
+    background-color: var(--bg1) !important;
+    border-top-color: rgba(142, 22, 22, 0.2) !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+.faq-answer p{
+    color: var(--txt1) !important;
+    opacity: 0.85;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+/* Special Offer Popup */
+#specialOfferBtn{
+    background: linear-gradient(to right, var(--txt2), #6b1010) !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+#specialOfferPopup>div{
+    background-color: var(--bg2) !important;
+    border-color: rgba(142, 22, 22, 0.5) !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+#specialOfferPopup .bg-gradient-to-r{
+    background: linear-gradient(to right, var(--txt2), #6b1010) !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+#specialOfferPopup .text-amber-100{
+    color: var(--bg1) !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+#specialOfferPopup .text-amber-500{
+    color: var(--txt2) !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+#specialOfferPopup .bg-black{
+    background-color: #fff !important;
+    border-color: rgba(142, 22, 22, 0.25) !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+#specialOfferPopup .bg-black:hover{
+    border-color: var(--txt2) !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+#specialOfferPopup h4{
+    color: var(--txt1) !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+#specialOfferPopup .text-white{
+    color: var(--txt1) !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+#specialOfferPopup .text-gray-300,
+#specialOfferPopup li{
+    color: var(--txt1) !important;
+    opacity: 0.8;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+#specialOfferPopup .line-through{
+    color: var(--txt1) !important;
+    opacity: 0.45;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+#specialOfferPopup .text-amber-500.font-bold{
+    color: var(--txt2) !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+#specialOfferPopup .bg-amber-500{
+    background-color: var(--txt2) !important;
+    color: #fff !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+#specialOfferPopup a.bg-amber-500,
+#specialOfferPopup a.flex-1{
+    background-color: var(--txt2) !important;
+    color: #fff !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+#specialOfferPopup a.bg-amber-500:hover,
+#specialOfferPopup a.flex-1:hover{
+    background-color: #6b1010 !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+#specialOfferPopup .bg-amber-500\/10{
+    background-color: rgba(142, 22, 22, 0.08) !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+#specialOfferPopup .border-amber-500\/30{
+    border-color: rgba(142, 22, 22, 0.3) !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+#specialOfferPopup .text-green-500{
+    color: #1a7a1a !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+#specialOfferPopup .text-blue-500{
+    color: #1a4a8a !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+#specialOfferPopup .bg-green-500{
+    background-color: #1a7a1a !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+#specialOfferPopup .bg-blue-500{
+    background-color: #1a4a8a !important;
+}
+.kanha-super-deluxe-rooms-in-kanha 
+#specialOfferPopup .text-gray-400.text-xs{
+    color: var(--txt1) !important;
+    opacity: 0.55;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.family-double-bedded-rooms-in-kanha /* Only minimal CSS that Tailwind can't do — animations & FAQ accordion logic */
+@keyframes slideIn{
+.family-double-bedded-rooms-in-kanha   from{ opacity: 0; transform: scale(0.9) translateY(20px); }
+.family-double-bedded-rooms-in-kanha   to{ opacity: 1; transform: scale(1)   translateY(0);    }
+}
+.family-double-bedded-rooms-in-kanha .animate-slideIn{ animation: slideIn 0.3s ease-out; }
+.family-double-bedded-rooms-in-kanha 
+#specialOfferPopup > div{ scrollbar-width: none; -ms-overflow-style: none; }
+.family-double-bedded-rooms-in-kanha #specialOfferPopup > div::-webkit-scrollbar{ display: none; }
+.family-double-bedded-rooms-in-kanha 
+.tab-content{ display: none; }
+.family-double-bedded-rooms-in-kanha .tab-content.active{ display: block; }
+.family-double-bedded-rooms-in-kanha 
+.faq-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+.family-double-bedded-rooms-in-kanha .faq-col{ display: flex; flex-direction: column; gap: 14px; width: 100%; min-width: 0; }
+.family-double-bedded-rooms-in-kanha .faq-question{ min-height: 64px; height: 64px; }
+.family-double-bedded-rooms-in-kanha .faq-question span{ white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; font-size: 15px !important; }
+.family-double-bedded-rooms-in-kanha 
+@media screen and (max-width: 860px){
+.family-double-bedded-rooms-in-kanha   .faq-grid{ grid-template-columns: 1fr !important; }
+.family-double-bedded-rooms-in-kanha   .faq-question{ height: auto !important; min-height: unset !important; }
+.family-double-bedded-rooms-in-kanha   .faq-question span{ white-space: normal !important; overflow: visible !important; text-overflow: unset !important; font-size: 14px !important; }
+}
+.family-double-bedded-rooms-in-kanha 
+/* Gallery hover */
+.gallery-item{ position: relative; overflow: hidden; border-radius: 1rem; cursor: pointer; transition: transform 0.3s ease; }
+.family-double-bedded-rooms-in-kanha .gallery-item:hover{ transform: scale(1.02); }
+.family-double-bedded-rooms-in-kanha .gallery-item img{ transition: transform 0.5s ease; }
+.family-double-bedded-rooms-in-kanha .gallery-item:hover img{ transform: scale(1.1); }
+
+
+
+
+
+
+
+
+
+
+
+
+.kanha-accommodation /* ===== ROOT COLOR VARIABLES ===== */
+:root{
+    --bg1: #E8C999;
+    --bg2: #F8EEDF;
+    --text1: #000000;
+    --text2: #8E1616;
+}
+.kanha-accommodation 
+@keyframes slideIn{
+.kanha-accommodation     from{
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+    }
+.kanha-accommodation 
+    to{
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+.kanha-accommodation 
+.animate-slideIn{
+    animation: slideIn 0.3s ease-out;
+}
+.kanha-accommodation 
+/* Smooth scroll for popup content */
+#specialOfferPopup>div{
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.kanha-accommodation 
+#specialOfferPopup>div::-webkit-scrollbar{
+    display: none;
+}
+.kanha-accommodation 
+#specialOfferPopup>div::-webkit-scrollbar-track{
+    background: var(--bg2);
+}
+.kanha-accommodation 
+#specialOfferPopup>div::-webkit-scrollbar-thumb{
+    background: var(--text2);
+    border-radius: 3px;
+}
+.kanha-accommodation 
+/* Amenities Icon Colors */
+.amenity-icon{
+    color: var(--text2) !important;
+}
+.kanha-accommodation 
+/* Gallery Hover Effect */
+.gallery-item{
+    position: relative;
+    overflow: hidden;
+}
+.kanha-accommodation 
+.gallery-item img{
+    transition: transform 0.5s ease;
+}
+.kanha-accommodation 
+.gallery-item:hover img{
+    transform: scale(1.1);
+}
+.kanha-accommodation 
+.gallery-item::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.kanha-accommodation 
+.gallery-item:hover::after{
+    opacity: 1;
+}
+.kanha-accommodation 
+/* Map responsive */
+.map-container{
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+.kanha-accommodation 
+.map-container iframe{
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.kanha-accommodation 
+/* Fix container overflow */
+section{
+    overflow-x: hidden;
+}
+.kanha-accommodation 
+/* Responsive text */
+@media (max-width: 768px){
+.kanha-accommodation     body{
+        font-size: 14px;
+    }
+.kanha-accommodation 
+    h2{
+        font-size: 1.5rem;
+    }
+.kanha-accommodation 
+    h3{
+        font-size: 1.25rem;
+    }
+.kanha-accommodation 
+    p,
+    span,
+    a,
+    li{
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+}
+.kanha-accommodation 
+/* Tabs styling */
+.tab-btn{
+    position: relative;
+    transition: color 0.3s ease;
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: var(--text2);
+    padding-bottom: 0.75rem;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.kanha-accommodation 
+@media (min-width: 768px){
+.kanha-accommodation     .tab-btn{
+        font-size: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+.kanha-accommodation 
+.tab-btn:hover{
+    color: #6e1010;
+}
+.kanha-accommodation 
+.tab-btn.active{
+    color: var(--text1);
+}
+.kanha-accommodation 
+.tab-btn.active::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: var(--text2);
+}
+.kanha-accommodation 
+.tab-btn-a{
+    position: relative;
+    transition: color 0.3s ease;
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: var(--text2);
+    padding-bottom: 0.75rem;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.kanha-accommodation 
+@media (min-width: 768px){
+.kanha-accommodation     .tab-btn-a{
+        font-size: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+.kanha-accommodation 
+.tab-btn-a:hover{
+    color: #6e1010;
+}
+.kanha-accommodation 
+.tab-btn-a.active{
+    color: var(--text1);
+}
+.kanha-accommodation 
+.tab-btn-a.active::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: var(--text2);
+}
+.kanha-accommodation 
+/* FAQ */
+.faq-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-items: start;
+}
+.kanha-accommodation 
+.faq-col{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    min-width: 0;
+}
+.kanha-accommodation 
+.faq-question{
+    min-height: 64px;
+    height: 64px;
+}
+.kanha-accommodation 
+.faq-question span{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    font-size: 15px !important;
+}
+.kanha-accommodation 
+@media screen and (max-width: 860px){
+.kanha-accommodation     .faq-grid{
+        grid-template-columns: 1fr !important;
+    }
+.kanha-accommodation 
+    .faq-question{
+        height: auto !important;
+        min-height: unset !important;
+    }
+.kanha-accommodation 
+    .faq-question span{
+        white-space: normal !important;
+        overflow: visible !important;
+        text-overflow: unset !important;
+        font-size: 14px !important;
+    }
+}
+.kanha-accommodation 
+/* ===== GLOBAL THEME OVERRIDES ===== */
+
+/* Section backgrounds */
+section.bg-neutral-900{
+    background-color: var(--bg2) !important;
+}
+.kanha-accommodation 
+section.bg-black{
+    background-color: var(--bg1) !important;
+}
+.kanha-accommodation 
+/* Headings */
+h1,
+h2,
+h3,
+h4{
+    color: var(--text2) !important;
+}
+.kanha-accommodation 
+.text-amber-100{
+    color: var(--text2) !important;
+}
+.kanha-accommodation 
+/* Body text */
+.text-gray-300{
+    color: var(--text1) !important;
+}
+.kanha-accommodation 
+p{
+    color: var(--text1);
+}
+.kanha-accommodation 
+/* Amber accents */
+.text-amber-500,
+.text-amber-400{
+    color: var(--text2) !important;
+}
+.kanha-accommodation 
+/* Borders */
+.border-neutral-800{
+    border-color: rgba(142, 22, 22, 0.25) !important;
+}
+.kanha-accommodation 
+.border-neutral-700{
+    border-color: rgba(142, 22, 22, 0.2) !important;
+}
+.kanha-accommodation 
+.border-amber-600{
+    border-color: var(--text2) !important;
+}
+.kanha-accommodation 
+/* Sticky tab bar background */
+.sticky.bg-neutral-900{
+    background-color: var(--bg2) !important;
+    border-bottom-color: rgba(142, 22, 22, 0.2) !important;
+}
+.kanha-accommodation 
+/* Know More / Book Now buttons */
+.bg-amber-600,
+.bg-amber-500{
+    background-color: var(--text2) !important;
+    color: var(--bg2) !important;
+}
+.kanha-accommodation 
+.bg-amber-600:hover,
+.bg-amber-500:hover,
+.hover\:bg-amber-700:hover,
+.hover\:bg-amber-600:hover{
+    background-color: #6e1010 !important;
+    color: var(--bg2) !important;
+}
+.kanha-accommodation 
+/* FAQ Cards */
+.faq-item.bg-black{
+    background-color: var(--bg2) !important;
+    border-color: rgba(142, 22, 22, 0.25) !important;
+    box-shadow: 0 2px 8px rgba(142, 22, 22, 0.07);
+}
+.kanha-accommodation 
+.faq-question:hover{
+    background-color: rgba(232, 201, 153, 0.5) !important;
+}
+.kanha-accommodation 
+.faq-answer>div{
+    background-color: rgba(232, 201, 153, 0.3) !important;
+    border-top-color: rgba(142, 22, 22, 0.2) !important;
+}
+.kanha-accommodation 
+.faq-icon{
+    color: var(--text2) !important;
+}
+.kanha-accommodation 
+.faq-question span{
+    color: var(--text1) !important;
+}
+.kanha-accommodation 
+/* Travel method / content cards */
+.bg-black.rounded-xl{
+    background-color: var(--bg2) !important;
+}
+.kanha-accommodation 
+/* Info card */
+.info-card{
+    background-color: rgba(232, 201, 153, 0.2) !important;
+    border-color: rgba(142, 22, 22, 0.3) !important;
+}
+.kanha-accommodation 
+/* li > strong text */
+li strong.text-white{
+    color: var(--text1) !important;
+}
+.kanha-accommodation 
+/* Awards section */
+.awards-section{
+    background-color: var(--bg1) !important;
+}
+.kanha-accommodation 
+/* Special Offer Popup */
+#specialOfferPopup .bg-neutral-900{
+    background-color: var(--bg2) !important;
+    border-color: var(--text2) !important;
+}
+.kanha-accommodation 
+#specialOfferPopup .bg-gradient-to-r{
+    background: linear-gradient(to right, var(--text2), #b01e1e) !important;
+}
+.kanha-accommodation 
+#specialOfferPopup .bg-black{
+    background-color: var(--bg1) !important;
+}
+.kanha-accommodation 
+#specialOfferPopup .border-amber-500\/30{
+    border-color: rgba(142, 22, 22, 0.3) !important;
+}
+.kanha-accommodation 
+#specialOfferPopup h4.text-white{
+    color: var(--text1) !important;
+}
+.kanha-accommodation 
+#specialOfferPopup .text-amber-500{
+    color: var(--text2) !important;
+}
+.kanha-accommodation 
+#specialOfferPopup .bg-amber-500\/10{
+    background-color: rgba(232, 201, 153, 0.3) !important;
+}
+.kanha-accommodation 
+#specialOfferPopup .text-amber-100{
+    color: var(--bg2) !important;
+}
+.kanha-accommodation 
+#specialOfferPopup .text-gray-400.line-through{
+    color: rgba(0, 0, 0, 0.4) !important;
+}
+.kanha-accommodation 
+#specialOfferPopup .text-gray-400{
+    color: rgba(0, 0, 0, 0.5) !important;
+}
+.kanha-accommodation 
+/* Floating special offer button */
+#specialOfferBtn{
+    background: linear-gradient(to right, var(--text2), #b01e1e) !important;
+}
+.kanha-accommodation 
+#specialOfferBtn:hover{
+    background: linear-gradient(to right, #6e1010, var(--text2)) !important;
+}
+.kanha-accommodation 
+#specialOfferBtn .bg-red-500{
+    background-color: var(--bg1) !important;
+    color: var(--text2) !important;
+}
+.kanha-accommodation 
+/* EXCELLENCE tracking text */
+.text-amber-500.text-xs.tracking-widest{
+    color: var(--text2) !important;
+}
+.kanha-accommodation 
+/* Popup close button */
+#specialOfferPopup button.text-white{
+    color: var(--text1) !important;
+}
+.kanha-accommodation 
+#specialOfferPopup button.hover\:text-amber-500:hover{
+    color: var(--text2) !important;
+}
+.kanha-accommodation 
+/* Offer badges */
+.bg-green-500:not(.hover\:bg-green-600){
+    background-color: #2a6e3f !important;
+}
+.kanha-accommodation 
+.bg-blue-500{
+    background-color: #1a4a7a !important;
+}
+.kanha-accommodation 
+/* WhatsApp stays green */
+a.bg-green-500.hover\:bg-green-600{
+    background-color: #25D366 !important;
+}
+.kanha-accommodation 
+a.bg-green-500.hover\:bg-green-600:hover{
+    background-color: #1ebe5d !important;
+}
