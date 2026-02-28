@@ -336,6 +336,7 @@ body {
 
     .award-card>div {
         min-height: 280px !important;
+        transition: all 0.3s ease;
     }
 
     .award-image {
@@ -854,15 +855,12 @@ footer i:hover {
     transition: transform 0.3s ease;
 }
 
+
 .award-card:hover .award-image {
     transform: scale(1.05);
 }
 
-
-.award-card>div {
-    transition: all 0.3s ease;
-}
-
+/* ===== SPECIAL OFFER POPUP ===== */
 @keyframes slideIn {
     from {
         opacity: 0;
@@ -923,6 +921,7 @@ footer i:hover {
     text-overflow: ellipsis;
     display: block;
     font-size: 15px !important;
+    color: var(--text1) !important;
 }
 
 @media screen and (max-width: 860px) {
@@ -983,16 +982,21 @@ button[onclick^="nextSlide"] {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
+    background: rgba(248, 238, 223, 0.9) !important;
+    color: var(--text2) !important;
 }
 
 /* ===== GLOBAL THEME OVERRIDES ===== */
+.bg-neutral-900,
 section.bg-neutral-900 {
     background-color: var(--bg2) !important;
 }
 
+.bg-black,
 section.bg-black {
     background-color: var(--bg1) !important;
 }
+
 
 h1,
 h2,
@@ -1001,6 +1005,8 @@ h4 {
     color: var(--text2) !important;
 }
 
+.text-amber-500,
+.text-amber-400,
 .text-amber-100 {
     color: var(--text2) !important;
 }
@@ -1013,10 +1019,6 @@ p {
     color: var(--text1);
 }
 
-.text-amber-500,
-.text-amber-400 {
-    color: var(--text2) !important;
-}
 
 .border-neutral-800 {
     border-color: rgba(142, 22, 22, 0.25) !important;
@@ -1103,12 +1105,7 @@ p {
     color: var(--text1) !important;
 }
 
-/* Carousel Arrows */
-button[onclick^="prevSlide"],
-button[onclick^="nextSlide"] {
-    background: rgba(248, 238, 223, 0.9) !important;
-    color: var(--text2) !important;
-}
+
 
 button[onclick^="prevSlide"]:hover,
 button[onclick^="nextSlide"]:hover {
@@ -1172,7 +1169,7 @@ button[onclick^="nextSlide"]:hover {
     background-color: var(--bg1) !important;
 }
 
-.roots-content {
+.roots-content .location-contact-section .bg-neutral-800 .section-bg-dark{
     background-color: #c9a96e !important;
 }
 
@@ -1237,8 +1234,6 @@ button[onclick^="nextSlide"]:hover {
     background: var(--bg1) !important;
 }
 
-/* Testimonial dots */
-.testimonial-nav-dot {}
 
 /* View all reviews button */
 .testimonial-section a[href*="google"] {
@@ -1293,10 +1288,6 @@ button[onclick^="nextSlide"]:hover {
     color: var(--bg2) !important;
 }
 
-/* Location Contact Section */
-.location-contact-section .bg-neutral-800 {
-    background-color: #c9a96e !important;
-}
 
 .location-contact-section h2 {
     color: var(--text2) !important;
@@ -1375,8 +1366,9 @@ section.py-12.md\:py-20.px-4.md\:px-6.bg-neutral-900 {
     color: var(--text2) !important;
 }
 
-.faq-question span {
-    color: var(--text1) !important;
+.faq-item {
+    background-color: var(--bg2) !important;
+    border-color: rgba(142, 22, 22, 0.25) !important;
 }
 
 /* Special Offer Popup */
@@ -1447,6 +1439,7 @@ section.py-12.md\:py-20.px-4.md\:px-6.bg-neutral-900 {
 .bg-amber-600,
 .hover\:bg-amber-700 {
     background-color: var(--text2) !important;
+    color: var(--bg2) !important;
 }
 
 .bg-amber-600:hover {
@@ -1481,11 +1474,6 @@ section.py-12.md\:py-20.px-4.md\:px-6.bg-neutral-900 {
     color: #d97706 !important;
 }
 
-
-
-
-
-
 h1,
 h2,
 h3,
@@ -1499,11 +1487,7 @@ li {
     color: var(--text1);
 }
 
-.text-amber-500,
-.text-amber-400,
-.text-amber-100 {
-    color: var(--text2) !important;
-}
+
 
 .text-gray-300,
 .text-gray-400 {
@@ -1514,39 +1498,9 @@ li {
     color: var(--text1) !important;
 }
 
-/* bg overrides */
-.bg-neutral-900,
-section.bg-neutral-900 {
-    background-color: var(--bg2) !important;
-}
-
-.bg-black,
-section.bg-black {
-    background-color: var(--bg1) !important;
-}
 
 .bg-neutral-800 {
     background-color: #d4ae7a !important;
-}
-
-/* borders */
-.border-neutral-800 {
-    border-color: rgba(142, 22, 22, 0.25) !important;
-}
-
-.border-neutral-700 {
-    border-color: rgba(142, 22, 22, 0.2) !important;
-}
-
-/* Buttons */
-.bg-amber-600,
-.hover\:bg-amber-700 {
-    background-color: var(--text2) !important;
-    color: var(--bg2) !important;
-}
-
-.bg-amber-600:hover {
-    background-color: #6e1010 !important;
 }
 
 .border-2.border-white {
@@ -1631,137 +1585,10 @@ section.bg-black {
     border-color: rgba(142, 22, 22, 0.3) !important;
 }
 
-.bg-amber-500\/20 {
-    background-color: rgba(142, 22, 22, 0.15) !important;
-}
-
 .text-amber-500.text-3xl {
     color: var(--text2) !important;
 }
 
-/* ===== AWARDS ===== */
-.award-card {
-    transition: transform 0.3s ease;
-}
-
-.award-card:hover {
-    transform: translateY(-4px);
-}
-
-.award-image {
-    transition: transform 0.3s ease;
-}
-
-.award-card:hover .award-image {
-    transform: scale(1.05);
-}
-
-/* ===== FAQ ===== */
-.faq-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    align-items: start;
-}
-
-.faq-col {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    width: 100%;
-    min-width: 0;
-}
-
-.faq-question {
-    min-height: 64px;
-    height: 64px;
-}
-
-.faq-question span {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: block;
-    font-size: 15px !important;
-}
-
-@media screen and (max-width: 860px) {
-    .faq-grid {
-        grid-template-columns: 1fr !important;
-    }
-
-    .faq-question {
-        height: auto !important;
-        min-height: unset !important;
-    }
-
-    .faq-question span {
-        white-space: normal !important;
-        overflow: visible !important;
-        text-overflow: unset !important;
-        font-size: 14px !important;
-    }
-}
-
-.faq-item {
-    background-color: var(--bg2) !important;
-    border-color: rgba(142, 22, 22, 0.25) !important;
-}
-
-.faq-question:hover {
-    background-color: rgba(232, 201, 153, 0.5) !important;
-}
-
-.faq-answer>div {
-    background-color: rgba(232, 201, 153, 0.3) !important;
-    border-top-color: rgba(142, 22, 22, 0.2) !important;
-}
-
-.faq-icon {
-    color: var(--text2) !important;
-}
-
-.faq-question span {
-    color: var(--text1) !important;
-}
-
-/* ===== SPECIAL OFFER POPUP ===== */
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: scale(0.9) translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-    }
-}
-
-.animate-slideIn {
-    animation: slideIn 0.3s ease-out;
-}
-
-#specialOfferPopup>div {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-
-#specialOfferBtn {
-    background: linear-gradient(to right, var(--text2), #b01e1e) !important;
-}
-
-#specialOfferBtn:hover {
-    background: linear-gradient(to right, #6e1010, var(--text2)) !important;
-}
-
-/* rating stars keep amber */
-.text-amber-400.text-2xl,
-.text-amber-400.text-3xl,
-.text-amber-400.text-lg {
-    color: #d97706 !important;
-}
 
 /* Section backgrounds explicitly */
 .section-bg1 {
@@ -1770,8 +1597,4 @@ section.bg-black {
 
 .section-bg2 {
     background-color: var(--bg2) !important;
-}
-
-.section-bg-dark {
-    background-color: #c9a96e !important;
 }
