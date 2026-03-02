@@ -166,7 +166,6 @@
         padding: 0.4rem 0;
         font-size: 0.75rem;
         font-weight: 600;
-        /* ← Added Bold */
         color: var(--txt1);
         white-space: nowrap;
         text-decoration: none;
@@ -239,7 +238,6 @@
         padding: 0.6rem 1rem;
         font-size: 0.875rem;
         font-weight: 700;
-        /* ← added */
         color: var(--txt1);
         text-decoration: none;
         border-bottom: 1px solid rgba(232, 201, 153, 0.3);
@@ -259,7 +257,6 @@
         padding: 0.6rem 1rem;
         font-size: 0.875rem;
         font-weight: 700;
-        /* ← added */
         color: var(--txt1);
         background: none;
         border: none;
@@ -288,11 +285,8 @@
         display: block;
         padding: 0.6rem 2rem;
         font-size: 0.85rem;
-        /* slightly larger */
         font-weight: 700;
-        /* ← More Bold */
         letter-spacing: 0.02em;
-        /* subtle premium feel */
         color: var(--txt1);
         text-decoration: none;
         border-bottom: 1px solid rgba(0, 0, 0, 0.06);
@@ -387,7 +381,7 @@ function navActive($slug, $pageSlug) {
 
     <!-- ── SPECIAL OFFER BUTTON ── -->
     <button id="specialOfferBtn"
-        class="fixed bottom-20 right-4 md:bottom-24 mb-8 md:right-8 text-white w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-2xl z-50 transition transform hover:scale-110 animate-pulse"
+        class="fixed bottom-40 right-4 md:bottom-48 md:right-8 text-white w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-2xl z-50 transition transform hover:scale-110 animate-pulse"
         style="background: linear-gradient(to right, var(--txt2), #b01e1e);" aria-label="Special Offer"
         onclick="toggleSpecialOfferPopup()">
         <svg class="w-8 h-8 md:w-10 md:h-10" fill="currentColor" viewBox="0 0 20 20">
@@ -396,7 +390,7 @@ function navActive($slug, $pageSlug) {
                 clip-rule="evenodd"></path>
         </svg>
         <span class="absolute -top-1 -right-1 text-white text-xs font-bold px-1.5 py-0.5 rounded-full animate-bounce"
-            style="background-color: var(--bg1); color: var(--txt2);">New</span>
+            style="background-color: var(--bg1); color: var(--txt2);">Offers</span>
     </button>
 
     <!-- ── SPECIAL OFFER POPUP ── -->
@@ -420,7 +414,7 @@ function navActive($slug, $pageSlug) {
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
                     </svg>
-                    <h3 class="text-2xl md:text-3xl font-serif font-bold" style="color: var(--bg2);">Special Offers</h3>
+                    <h3 class="text-2xl md:text-3xl font-serif font-bold text-white" style="color: #ffffff !important;">Special Offers</h3>
                 </div>
                 <p class="text-sm" style="color: rgba(248,238,223,0.9);">Limited time deals on resort packages & safari
                     tours</p>
@@ -533,11 +527,22 @@ function navActive($slug, $pageSlug) {
         </div>
     </div>
 
+    <!-- ── CALL FLOATING BUTTON ── -->
+    <a href="tel:+918830996719"
+        class="fixed bottom-24 right-4 md:bottom-28 md:right-8 bg-blue-600 hover:bg-blue-700 w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-2xl z-50 transition transform hover:scale-110"
+        aria-label="Call Us">
+        <svg class="w-6 h-6 md:w-8 md:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path
+                d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1C10.56 21 3 13.44 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.01l-2.2 2.21z" />
+        </svg>
+    </a>
+
     <!-- ── WHATSAPP FLOATING BUTTON ── -->
     <a href="https://wa.me/918830996719?text=Hello%20I%20would%20like%20to%20enquire%20about%20room%20availability%20and%20packages%20at%20Wildmark%20Resort.%20Please%20share%20details."
         target="_blank"
         class="fixed bottom-8 right-4 md:bottom-8 md:right-8 bg-green-500 hover:bg-green-600 w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-2xl z-50 transition transform hover:scale-110"
-        data-aos="zoom-in"  aria-label="WhatsApp">
+        aria-label="WhatsApp">
+
         <svg class="w-6 h-6 md:w-8 md:h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
             <path
                 d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />

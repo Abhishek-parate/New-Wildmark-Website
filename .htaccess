@@ -4,6 +4,7 @@ RewriteEngine On
 # 1️⃣ Force specific 301 redirect (OLD → NEW)
 # -----------------------------------------
 RewriteRule ^kanha-tour-package/?$ https://wildmarkresort.com/kanha-tour-package/ [R=301,L]
+RewriteRule ^thank-you/?$ https://wildmarkresort.com/thank-you/ [R=301,L]
 
 # -----------------------------------------
 # 2️⃣ Remove index.php from URL

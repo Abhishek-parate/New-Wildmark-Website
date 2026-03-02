@@ -132,12 +132,6 @@ include 'includes/header.php';
             </iframe>
         </div>
 
-        <div class="mt-6 text-center" data-aos="fade-up" data-aos-delay="200">
-            <p class="text-sm flex items-center justify-center gap-2">
-                <i class="fa-solid fa-location-dot text-amber-500"></i>
-                <span>Wild Mark Resort, Kanha National Park, Madhya Pradesh</span>
-            </p>
-        </div>
     </div>
 </section>
 
