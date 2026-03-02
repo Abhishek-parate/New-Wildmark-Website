@@ -174,7 +174,7 @@ include 'includes/header.php';
   </style>
 
 <header class="relative h-[50vh] md:h-[60vh] lg:h-[100vh] flex items-end"
-    style="background: url('images/about3.webp') center/cover no-repeat">
+    style="background: url('http://localhost/wildmarkresort/images/webp/rooms/sdrb1.webp') center/cover no-repeat">
     <div class="absolute inset-0 to-transparent"></div>
   </header>
 
@@ -215,7 +215,7 @@ include 'includes/header.php';
       <!-- Right Image -->
       <div class="relative" data-aos="fade-left">
         <div class="rounded-2xl overflow-hidden shadow-2xl border border-amber-500/20">
-          <img src="images/delux2.jpeg" alt="Super Deluxe Room Interior with Open Shower" 
+          <img src="http://localhost/wildmarkresort/images/delux2.webp" alt="Super Deluxe Room Interior with Open Shower" 
                class="w-full h-[400px] md:h-[450px] object-cover hover:scale-105 transition-transform duration-500">
         </div>
       </div>
@@ -228,7 +228,7 @@ include 'includes/header.php';
       <!-- Left Image -->
       <div class="relative order-2 lg:order-1" data-aos="fade-right">
         <div class="rounded-2xl overflow-hidden shadow-2xl border border-amber-500/20">
-          <img src="images/delux3.jpg" alt="Super Deluxe Room Garden View and Sitout" 
+          <img src="http://localhost/wildmarkresort/images/delux3.webp" alt="Super Deluxe Room Garden View and Sitout" 
                class="w-full h-[450px] md:h-[550px] object-cover hover:scale-105 transition-transform duration-500">
         </div>
       </div>
@@ -550,15 +550,15 @@ include 'includes/header.php';
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
-          <img src="images/delux4.jpeg" alt="Super Deluxe Room View"
+          <img src="http://localhost/wildmarkresort/images/delux4.webp" alt="Super Deluxe Room View"
             class="w-full h-80 object-cover" />
         </div>
         <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
-          <img src="images/delux5.JPG" alt="Room Interior"
+          <img src="http://localhost/wildmarkresort/images/delux5.webp" alt="Room Interior"
             class="w-full h-80 object-cover" />
         </div>
         <div class="gallery-item" data-aos="fade-up" >
-          <img src="images/delux7.JPG" alt="Resort View"
+          <img src="http://localhost/wildmarkresort/images/delux7.webp" alt="Resort View"
             class="w-full h-80 object-cover" />
         </div>
       </div>
@@ -611,7 +611,7 @@ include 'includes/header.php';
         <div class="award-card group" data-aos="fade-up"  data-aos-delay="100">
           <div
             class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/30 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
-            <img src="images/testimonials1.png  " alt="TripAdvisor Travellers' Choice Award 2020"
+            <img src="http://localhost/wildmarkresort/images/testimonials1.webp" alt="TripAdvisor Travellers' Choice Award 2020"
               class="w-full h-auto max-w-[280px] object-contain award-image">
           </div>
         </div>
@@ -620,7 +620,7 @@ include 'includes/header.php';
         <div class="award-card group" data-aos="fade-up"  data-aos-delay="200">
           <div
             class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/30 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
-            <img src="images/testimonials2.png" alt="TripAdvisor Travellers' Choice Award 2021"
+            <img src="http://localhost/wildmarkresort/images/testimonials2.webp" alt="TripAdvisor Travellers' Choice Award 2021"
               class="w-full h-auto max-w-[280px] object-contain award-image">
           </div>
         </div>
@@ -629,7 +629,7 @@ include 'includes/header.php';
         <div class="award-card group" data-aos="fade-up"  >
           <div
             class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/30 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
-            <img src="images/testimonials3.png" alt="TripAdvisor Travellers' Choice Award 2022"
+            <img src="http://localhost/wildmarkresort/images/testimonials3.webp" alt="TripAdvisor Travellers' Choice Award 2022"
               class="w-full h-auto max-w-[280px] object-contain award-image">
           </div>
         </div>
@@ -638,7 +638,7 @@ include 'includes/header.php';
         <div class="award-card group" data-aos="fade-up"    style="background-color: #39DCA1;border-radius: 9px;">
           <div
             class="bg-transparent rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 group-hover:shadow-emerald-500/40 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
-            <img src="images/testimonials4.jpeg" alt="TripAdvisor Travelers' Choice Award 2025"
+            <img src="http://localhost/wildmarkresort/images/testimonials4.webp" alt="TripAdvisor Travelers' Choice Award 2025"
               class="w-full h-full object-cover rounded-2xl award-image">
           </div>
         </div>
