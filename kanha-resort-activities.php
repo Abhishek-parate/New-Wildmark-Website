@@ -9,7 +9,7 @@ include 'includes/header.php';
 
 <!-- HERO -->
 <header class="relative h-[50vh] md:h-[60vh] lg:h-[100vh] flex items-end"
-    style="background: url('http://localhost/wildmarkresort/images/webp/wildmarkresort (44).webp') center/cover no-repeat; max-width: 100%; overflow: hidden;">
+    style="background: url('http://localhost/wildmarkresort/images/webp/ktpdd1.webp') center/cover no-repeat; max-width: 100%; overflow: hidden;">
     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
 </header>
 
@@ -164,7 +164,7 @@ include 'includes/header.php';
         <div class="library-grid">
 
             <div class="library-img-wrap" data-aos="fade-right" >
-                <img src="http://localhost/wildmarkresort/images/webp/main-outdoor.webp" alt="Mini Library" class="w-full h-full object-cover">
+                <img src="http://localhost/wildmarkresort/images/webp/ktpe.webp" alt="Mini Library" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
             </div>
 
@@ -453,30 +453,27 @@ include 'includes/header.php';
         <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
             <div class="award-card group" data-aos="fade-up"  data-aos-delay="100">
                 <div class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]" style="box-shadow: 0 4px 24px rgba(142,22,22,0.08);">
-                    <img src="https://wildmarkresort.com/images/testimonials1.png" alt="TripAdvisor Award 2020" class="w-full h-auto max-w-[280px] object-contain award-image">
+                    <img src="http://localhost/wildmarkresort/images/webp/testimonials1.webp" alt="TripAdvisor Award 2020" class="w-full h-auto max-w-[280px] object-contain award-image">
                 </div>
             </div>
             <div class="award-card group" data-aos="fade-up"  data-aos-delay="200">
                 <div class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
-                    <img src="https://wildmarkresort.com/images/testimonials2.png" alt="TripAdvisor Award 2021" class="w-full h-auto max-w-[280px] object-contain award-image">
+                    <img src="http://localhost/wildmarkresort/images/webp/testimonials2.webp" alt="TripAdvisor Award 2021" class="w-full h-auto max-w-[280px] object-contain award-image">
                 </div>
             </div>
             <div class="award-card group" data-aos="fade-up"  >
                 <div class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
-                    <img src="https://wildmarkresort.com/images/testimonials3.png" alt="TripAdvisor Award 2022" class="w-full h-auto max-w-[280px] object-contain award-image">
+                    <img src="http://localhost/wildmarkresort/images/webp/testimonials3.webp" alt="TripAdvisor Award 2022" class="w-full h-auto max-w-[280px] object-contain award-image">
                 </div>
             </div>
             <div class="award-card group" data-aos="fade-up"   style="background-color: #39DCA1; border-radius: 9px;">
                 <div class="bg-transparent rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
-                    <img src="https://wildmarkresort.com/images/testimonials4.jpeg" alt="TripAdvisor Award 2025" class="w-full h-full object-cover rounded-2xl award-image">
+                    <img src="http://localhost/wildmarkresort/images/webp/testimonials4.webp" alt="TripAdvisor Award 2025" class="w-full h-full object-cover rounded-2xl award-image">
                 </div>
             </div>
         </div>
     </div>
 </section>
-
-
-
 <script>
 // FAQ Accordion
 document.addEventListener('DOMContentLoaded', function() {

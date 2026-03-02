@@ -126,7 +126,7 @@ include 'includes/header.php';
 
             <!-- Image -->
             <div class="order-1 md:order-1">
-                <img src="https://wildmarkresort.com/images/beded3.jpeg" class="rounded-xl w-full h-64 object-cover"
+                <img src="http://localhost/wildmarkresort/images/webp/accbeded3.webp" class="rounded-xl w-full h-64 object-cover"
                     alt="Super Deluxe Room" />
             </div>
 
@@ -158,7 +158,7 @@ include 'includes/header.php';
 
             <!-- Image (Now First On Mobile) -->
             <div class="order-1 md:order-2">
-                <img src="https://wildmarkresort.com/images/beded3.jpeg" class="rounded-xl w-full h-64 object-cover"
+                <img src="http://localhost/wildmarkresort/images/webp/accfamily1.webp" class="rounded-xl w-full h-64 object-cover"
                     alt="Family Double Room" />
             </div>
 
@@ -210,7 +210,7 @@ include 'includes/header.php';
             <!-- Card 1 -->
             <div class="tour-card group" data-aos="fade-up" data-aos-delay="100">
                 <div class="relative h-[240px] overflow-hidden rounded-t-2xl">
-                    <img src="https://wildmarkresort.com/images/card1.webp" alt="Kanha Holiday Tour Package"
+                    <img src="http://localhost/wildmarkresort/images/webp/kanha-safari.webp" alt="Kanha Holiday Tour Package"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                     <div class="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent"></div>
                     <div class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold tracking-wider text-white"
@@ -311,7 +311,7 @@ include 'includes/header.php';
             <!-- Card 4 -->
             <div class="tour-card group" data-aos="fade-up">
                 <div class="relative h-[240px] overflow-hidden rounded-t-2xl">
-                    <img src="https://wildmarkresort.com/images/home4.webp" alt="Kanha Tiger Safari Package"
+                    <img src="http://localhost/wildmarkresort/images/webp/hometiger.webp" alt="Kanha Tiger Safari Package"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                     <div class="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent"></div>
                     <div class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold tracking-wider text-white"
@@ -422,7 +422,7 @@ include 'includes/header.php';
             <div class="carousel-container overflow-hidden rounded-lg">
                 <div class="carousel-slides flex transition-transform duration-500 ease-in-out" id="carousel">
                     <div class="carousel-slide w-full flex-shrink-0">
-                        <img src="http://localhost/wildmarkresort/images/webp/safari.webp" alt="Tiger Safari"
+                        <img src="http://localhost/wildmarkresort/images/webp/kktpb.webp" alt="Tiger Safari"
                             class="w-full h-screen object-cover" />
                     </div>
                     <div class="carousel-slide w-full flex-shrink-0">
@@ -766,6 +766,93 @@ include 'includes/header.php';
         </div>
     </div>
 </section>
+<section class="guest-stories-section">
+  <div class="gs-container">
+
+    <!-- Header -->
+    <span class="gs-label">Guest Stories</span>
+    <h2 class="gs-title">What Our <em>Guests Say</em></h2>
+    <p class="gs-subtitle">Real experiences from travelers who have discovered the magic of Kanha Kisli Resort.</p>
+
+    <!-- 3 Video Cards -->
+    <div class="gs-video-grid">
+
+      <!-- Video 1 -->
+      <div class="gs-video-card">
+        <div class="gs-video-wrap">
+          <video
+            src="https://wildmarkresort.com/images/IMG_8309.mp4"
+            controls
+            playsinline
+            preload="metadata"
+            title="Guest Story 1">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="gs-card-header">
+          <div class="gs-card-header-top">
+            <p class="gs-video-title">Experience Nature Like Never Before 🌿 | Kanha Kisli Resort #guestfeedback #resortstay #kanha #stay</p>
+            <i class="fas fa-share gs-share-icon"></i>
+          </div>
+          <div class="gs-channel-row">
+            <div class="gs-channel-logo"><i class="fas fa-play"></i></div>
+            <span class="gs-channel-name">Kanha Kisli Resort</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 2 -->
+      <div class="gs-video-card">
+        <div class="gs-video-wrap">
+          <video
+            src="video/guest-story-2.mp4"
+            controls
+            playsinline
+            preload="metadata"
+            title="Guest Story 2">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="gs-card-header">
+          <div class="gs-card-header-top">
+            <p class="gs-video-title">Why Guests Love Kanha Kisli Resort | A Quick Peek #kanha #resortstay #resortvibes #jungle</p>
+            <i class="fas fa-share gs-share-icon"></i>
+          </div>
+          <div class="gs-channel-row">
+            <div class="gs-channel-logo"><i class="fas fa-play"></i></div>
+            <span class="gs-channel-name">Kanha Kisli Resort</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 3 -->
+      <div class="gs-video-card">
+        <div class="gs-video-wrap">
+          <video
+            src="video/guest-story-3.mp4"
+            controls
+            playsinline
+            preload="metadata"
+            title="Guest Story 3">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="gs-card-header">
+          <div class="gs-card-header-top">
+            <p class="gs-video-title">Kanha Kisli Resort | Where Comfort Meets Adventure #kanha #resort #jungleadventure #safari</p>
+            <i class="fas fa-share gs-share-icon"></i>
+          </div>
+          <div class="gs-channel-row">
+            <div class="gs-channel-logo"><i class="fas fa-play"></i></div>
+            <span class="gs-channel-name">Kanha Kisli Resort</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
 <!-- Awards Section -->
 <section class="py-12 md:py-20 px-4 md:px-6 awards-section overflow-hidden" style="background-color: var(--bg1);">
     <div class="container mx-auto max-w-7xl">
@@ -787,7 +874,7 @@ include 'includes/header.php';
             <div class="award-card group" data-aos="fade-up" data-aos-delay="100">
                 <div
                     class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
-                    <img src="https://wildmarkresort.com/images/testimonials1.png"
+                    <img src="http://localhost/wildmarkresort/images/webp/testimonials1.webp"
                         alt="TripAdvisor Travellers' Choice Award 2020"
                         class="w-full h-auto max-w-[280px] object-contain award-image">
                 </div>
@@ -795,7 +882,7 @@ include 'includes/header.php';
             <div class="award-card group" data-aos="fade-up" data-aos-delay="200">
                 <div
                     class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
-                    <img src="https://wildmarkresort.com/images/testimonials2.png"
+                    <img src="http://localhost/wildmarkresort/images/webp/testimonials2.webp"
                         alt="TripAdvisor Travellers' Choice Award 2021"
                         class="w-full h-auto max-w-[280px] object-contain award-image">
                 </div>
@@ -803,7 +890,7 @@ include 'includes/header.php';
             <div class="award-card group" data-aos="fade-up">
                 <div
                     class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
-                    <img src="https://wildmarkresort.com/images/testimonials3.png"
+                    <img src="http://localhost/wildmarkresort/images/webp/testimonials3.webp"
                         alt="TripAdvisor Travellers' Choice Award 2022"
                         class="w-full h-auto max-w-[280px] object-contain award-image">
                 </div>
@@ -811,7 +898,7 @@ include 'includes/header.php';
             <div class="award-card group" data-aos="fade-up" style="background-color: #39DCA1; border-radius: 9px;">
                 <div
                     class="bg-transparent rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
-                    <img src="https://wildmarkresort.com/images/testimonials4.jpeg"
+                    <img src="http://localhost/wildmarkresort/images/webp/testimonials4.webp"
                         alt="TripAdvisor Travelers' Choice Award 2025"
                         class="w-full h-full object-cover rounded-2xl award-image">
                 </div>
