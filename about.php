@@ -11,7 +11,7 @@ include 'includes/header.php';
 
 <!-- HERO -->
  <header class="relative h-[50vh] md:h-[60vh] lg:h-[120vh] flex items-end"
-        style="background: url('https://wildmarkresort.com/images/Tiger2.webp') center/cover no-repeat">
+        style="background: url('http://localhost/wildmarkresort/images/webp/wildmarkresort (41).webp') center/cover no-repeat">
         <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
     </header>
 
@@ -39,7 +39,7 @@ include 'includes/header.php';
 
             <!-- Right Image -->
             <div data-aos="fade-left">
-                <img src="https://wildmarkresort.com/images/small_tiger.webp" alt="Wildmark Resort Kanha"
+                <img src="http://localhost/wildmarkresort/images/webp/main-outdoor.webp" alt="Wildmark Resort Kanha"
                     class="rounded-2xl shadow-2xl w-full h-[400px] md:h-[500px] object-cover" />
             </div>
         </div>
@@ -58,7 +58,7 @@ include 'includes/header.php';
 
         <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div data-aos="fade-right" >
-                <img src="https://wildmarkresort.com/images/Tiger.webp" alt="Wildmark Resort" class="rounded-2xl shadow-2xl w-full h-[400px] md:h-[500px] object-cover" />
+                <img src="http://localhost/wildmarkresort/images/webp/wildmarkresort (32).webp" alt="Wildmark Resort" class="rounded-2xl shadow-2xl w-full h-[400px] md:h-[500px] object-cover" />
             </div>
             <div data-aos="fade-left" >
                 <h3 class="text-2xl md:text-3xl font-serif mb-6">A Unique Resort Experience</h3>
@@ -77,7 +77,7 @@ include 'includes/header.php';
                 <p class="text-sm md:text-base leading-relaxed text-justify" style="color: var(--text1);">Wild Mark Kanha resort is one of the magnificent locations for all the nature lovers. Our commitment to excellence ensures that every guest experiences the perfect balance of adventure and comfort during their stay.</p>
             </div>
             <div class="order-1 lg:order-2" data-aos="fade-left" >
-                <img src="https://wildmarkresort.com/images/bear.webp" alt="Kanha Wildlife" class="rounded-2xl shadow-2xl w-full h-[400px] md:h-[500px] object-cover" />
+                <img src="http://localhost/wildmarkresort/images/webp/wildmarkresort (18).webp" alt="Kanha Wildlife" class="rounded-2xl shadow-2xl w-full h-[400px] md:h-[500px] object-cover" />
             </div>
         </div>
     </div>

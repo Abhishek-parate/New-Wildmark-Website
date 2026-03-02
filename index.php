@@ -140,7 +140,7 @@ include 'includes/header.php';
             <div class="carousel-container overflow-hidden rounded-lg">
                 <div class="carousel-slides flex transition-transform duration-500 ease-in-out" id="carousel">
                     <div class="carousel-slide w-full flex-shrink-0">
-                        <img src="http://localhost/wildmarkresort/images/webp/safari.webp" alt="Tiger Safari"
+                        <img src="http://localhost/wildmarkresort/images/webp/wildmarkresort (26).webp" alt="Tiger Safari"
                             class="w-full h-screen object-cover" />
                     </div>
                     <div class="carousel-slide w-full flex-shrink-0">
@@ -148,7 +148,7 @@ include 'includes/header.php';
                             class="w-full h-screen object-cover" />
                     </div>
                     <div class="carousel-slide w-full flex-shrink-0">
-                        <img src="http://localhost/wildmarkresort/images/webp/main-outdoor.webp" alt="Safari Jeep"
+                        <img src="http://localhost/wildmarkresort/images/webp/wildmarkresort (44).webp" alt="Safari Jeep"
                             class="w-full h-screen object-cover" />
                     </div>
                 </div>
@@ -202,7 +202,7 @@ include 'includes/header.php';
         <!-- Tab Content -->
         <div class="grid md:grid-cols-2 gap-8 md:gap-12">
             <div class="panel" data-tab="machaan">
-                <img src="https://wildmarkresort.com/images/beded3.jpeg" class="rounded-xl w-full h-64 object-cover"
+                <img src="http://localhost/wildmarkresort/images/webp/deluxroom.webp" class="rounded-xl w-full h-64 object-cover"
                     alt="Machaan" />
             </div>
             <div class="panel" data-tab="machaan">
@@ -376,7 +376,7 @@ include 'includes/header.php';
                             <div class="flex items-center mb-4">
                                 <div
                                     class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-white font-bold text-xl md:text-2xl mr-3 flex-shrink-0 shadow-md">
-                                    D</div>
+                                    </div>
                                 <div>
                                     <h3 class="font-bold text-base md:text-lg" style="color: #1a1a1a !important;">Divya
                                         Lalwani</h3>
@@ -545,7 +545,7 @@ include 'includes/header.php';
             <!-- Card 1 -->
             <div class="tour-card group" data-aos="fade-up"  data-aos-delay="100">
                 <div class="relative h-[240px] overflow-hidden rounded-t-2xl">
-                    <img src="https://wildmarkresort.com/images/card1.webp" alt="Kanha Holiday Tour Package"
+                    <img src="http://localhost/wildmarkresort/images/webp/wildmarkresort (35).webp" alt="Kanha Holiday Tour Package"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                     <div class="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent"></div>
                     <div class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold tracking-wider text-white"
@@ -580,7 +580,7 @@ include 'includes/header.php';
             <!-- Card 2 -->
             <div class="tour-card group" data-aos="fade-up"  data-aos-delay="200">
                 <div class="relative h-[240px] overflow-hidden rounded-t-2xl">
-                    <img src="https://wildmarkresort.com/images/Tiger.webp" alt="Kanha Safari Tour Package"
+                    <img src="http://localhost/wildmarkresort/images/webp/wildmarkresort (41).webp" alt="Kanha Safari Tour Package"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                     <div class="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent"></div>
                     <div
@@ -613,7 +613,7 @@ include 'includes/header.php';
             <!-- Card 3 -->
             <div class="tour-card group" data-aos="fade-up"  >
                 <div class="relative h-[240px] overflow-hidden rounded-t-2xl">
-                    <img src="https://wildmarkresort.com/images/Tiger5.webp" alt="Kanha Kisli Tour Package"
+                    <img src="http://localhost/wildmarkresort/images/webp/wildmarkresort (44).webp" alt="Kanha Kisli Tour Package"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                     <div class="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent"></div>
                     <div
@@ -646,7 +646,7 @@ include 'includes/header.php';
             <!-- Card 4 -->
             <div class="tour-card group" data-aos="fade-up"  >
                 <div class="relative h-[240px] overflow-hidden rounded-t-2xl">
-                    <img src="https://wildmarkresort.com/images/home4.webp" alt="Kanha Tiger Safari Package"
+                    <img src="http://localhost/wildmarkresort/images/webp/bannerhome.webp" alt="Kanha Tiger Safari Package"
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                     <div class="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent"></div>
                     <div class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold tracking-wider text-white"
