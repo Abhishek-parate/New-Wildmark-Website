@@ -8,7 +8,7 @@ include 'includes/header.php';
 
 
 <header class="relative h-[50vh] md:h-[60vh] lg:h-[100vh] flex items-end"
-    style="background: url('https://wildmarkresort.com/images/Tiger5.webp') center/cover no-repeat">
+    style="background: url('http://localhost/wildmarkresort/images/webp/bannerhome.webp') center/cover no-repeat">
     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
 </header>
 
@@ -140,16 +140,16 @@ include 'includes/header.php';
             <div class="carousel-container overflow-hidden rounded-lg">
                 <div class="carousel-slides flex transition-transform duration-500 ease-in-out" id="carousel">
                     <div class="carousel-slide w-full flex-shrink-0">
-                        <img src="https://wildmarkresort.com/images/Tiger.webp" alt="Tiger Safari"
-                            class="w-full h-[250px] sm:h-[350px] md:h-[450px] lg:h-[550px] object-cover" />
+                        <img src="http://localhost/wildmarkresort/images/webp/safari.webp" alt="Tiger Safari"
+                            class="w-full h-screen object-cover" />
                     </div>
                     <div class="carousel-slide w-full flex-shrink-0">
-                        <img src="https://wildmarkresort.com/images/deer.webp" alt="Wildlife Experience"
-                            class="w-full h-[250px] sm:h-[350px] md:h-[450px] lg:h-[550px] object-cover" />
+                        <img src="http://localhost/wildmarkresort/images/webp/hometiger.webp" alt="Wildlife Experience"
+                            class="w-full h-screen object-cover" />
                     </div>
                     <div class="carousel-slide w-full flex-shrink-0">
-                        <img src="https://wildmarkresort.com/images/Tiger5.webp" alt="Safari Jeep"
-                            class="w-full h-[250px] sm:h-[350px] md:h-[450px] lg:h-[550px] object-cover" />
+                        <img src="http://localhost/wildmarkresort/images/webp/main-outdoor.webp" alt="Safari Jeep"
+                            class="w-full h-screen object-cover" />
                     </div>
                 </div>
             </div>
@@ -219,7 +219,7 @@ include 'includes/header.php';
             </div>
             <div class="panel md:col-span-2 text-center mt-8" data-tab="machaan">
                 <div class="flex justify-center">
-                    <a href="https://wildmarkresort.com/kanha-super-deluxe-rooms-in-kanha/"
+                    <a href="http://localhost/wildmarkresort/images/webp/deluxroom.webp"
                         class="px-10 py-3 transition font-semibold text-base rounded-lg shadow-lg text-white"
                         style="background-color: var(--text2);">
                         KNOW MORE
@@ -228,7 +228,7 @@ include 'includes/header.php';
             </div>
 
             <div class="panel hidden" data-tab="superdeluxe">
-                <img src="https://wildmarkresort.com/images/beded1.webp" class="rounded-xl w-full h-64 object-cover"
+                <img src="http://localhost/wildmarkresort/images/webp/superdeluxe.webp" class="rounded-xl w-full h-64 object-cover"
                     alt="Super Deluxe" />
             </div>
             <div class="panel hidden" data-tab="superdeluxe">
@@ -307,7 +307,7 @@ include 'includes/header.php';
     <div class="w-full">
         <div class="grid lg:grid-cols-2">
             <div class="relative h-[400px] md:h-[600px] roots-image" data-aos="fade-right" >
-                <img src="https://wildmarkresort.com/images/small_tiger.webp" alt="Kanha Tiger"
+                <img src="http://localhost/wildmarkresort/images/webp/kanha-safari.webp" alt="Kanha Tiger"
                     class="w-full h-full object-cover" />
             </div>
             <div class="flex items-center px-6 md:px-12 lg:px-12 py-12 md:py-12 roots-content"
