@@ -578,7 +578,7 @@ include 'includes/header.php';
             <!-- Card 1 -->
             <div class="tour-card group" data-aos="fade-up"  data-aos-delay="100">
                 <div class="relative h-[240px] overflow-hidden rounded-t-2xl">
-                    <img src="http://localhost/wildmarkresort/images/webp/wildmarkresort (35).webp" alt="Kanha Holiday Tour Package"
+                    <img src="http://localhost/wildmarkresort/images/webp/wildmarkresort (35).webp" alt="Kanha Tour Package "
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                     <div class="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent"></div>
                     <div class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold tracking-wider text-white"
@@ -599,7 +599,7 @@ include 'includes/header.php';
                                 style="color: var(--text2);"></i><span>1 Safari</span></div>
                     </div>
                     <p class="text-xs leading-relaxed flex-grow mb-4" style="color: rgba(0,0,0,0.5);">Experience the
-                        thrill of nature with our Kanha Holiday Tour Package, offering 1 Night / 2 Days stay and 1
+                        thrill of nature with our Kanha Tour Package , offering 1 Night / 2 Days stay and 1
                         exciting jungle safaris</p>
                     <a href="https://wildmarkresort.com/kanha-tour-package/"
                         class="inline-flex items-center gap-2 text-sm font-semibold transition-colors group/btn mt-auto"
