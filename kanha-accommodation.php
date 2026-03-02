@@ -12,7 +12,7 @@ include 'includes/header.php';
 
 <!-- Hero Banner -->
 <header class="relative h-[50vh] md:h-[60vh] lg:h-[100vh] flex items-end"
-    style="background: url('https://wildmarkresort.com/images/Tiger.webp') center/cover no-repeat">
+    style="background: url('http://localhost/wildmarkresort/images/webp/acc/acc-banner.webp') center/cover no-repeat">
     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
 </header>
 
@@ -46,16 +46,16 @@ include 'includes/header.php';
             <!-- Right Column - Images -->
             <div class="space-y-4" data-aos="fade-left">
                 <div class="rounded-xl overflow-hidden">
-                    <img src="https://wildmarkresort.com/images/beded3.jpeg" class="w-full h-64 object-cover"
+                    <img src="http://localhost/wildmarkresort/images/webp/acc/acc-deluxroom.webp" class="w-full h-64 object-cover"
                         alt="Resort Interior" />
                 </div>
                 <div class="grid grid-cols-2 gap-4">
                     <div class="rounded-xl overflow-hidden">
-                        <img src="https://wildmarkresort.com/images/delux5.JPG" class="w-full h-40 object-cover"
+                        <img src="http://localhost/wildmarkresort/images/webp/acc/accdeluxe5.webp" class="w-full h-40 object-cover"
                             alt="Room" />
                     </div>
                     <div class="rounded-xl overflow-hidden">
-                        <img src="https://wildmarkresort.com/images/delux7.JPG" class="w-full h-40 object-cover"
+                        <img src="http://localhost/wildmarkresort/images/webp/acc/accdeluxe7.webp" class="w-full h-40 object-cover"
                             alt="Dining" />
                     </div>
                 </div>
@@ -70,7 +70,7 @@ include 'includes/header.php';
         <div class="grid lg:grid-cols-2 gap-8 items-center">
             <!-- Room Image -->
             <div data-aos="fade-right">
-                <img src="https://wildmarkresort.com/images/family1.jpeg"
+                <img src="http://localhost/wildmarkresort/images/webp/acc/accfamily1.webp"
                     class="w-full h-80 md:h-96 object-cover rounded-xl" alt="Deluxe Room" />
             </div>
             <!-- Room Description -->
@@ -106,84 +106,232 @@ include 'includes/header.php';
 </section>
 
 <!-- Rooms Section -->
-<section id="rooms" class="py-12 md:py-16 bg-neutral-900">
+<section id="rooms" class="py-12 md:py-16" style="background-color: var(--bg2);">
     <div class="max-w-6xl mx-auto px-4 md:px-6">
+
         <div class="text-center mb-8">
-            <h2 class="text-3xl md:text-4xl font-serif font-bold text-amber-100">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold">
                 Explore Our Accommodation Options
             </h2>
         </div>
 
-        <!-- Tabs - Sticky -->
-        <div class="sticky top-[60px] md:top-[80px] z-40 bg-neutral-900 border-b border-neutral-800 py-4 mb-8">
-            <div class="flex justify-center gap-4 md:gap-8 overflow-x-visible">
-                <button class="tab-btn active" data-tab="machaan">
-                    Super Deluxe Rooms
-                </button>
-                <button class="tab-btn" data-tab="superdeluxe">
-                    Family Double Bedded Rooms
-                </button>
-            </div>
-        </div>
+        <!-- ================= FIRST ROOM ================= -->
+        <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
 
-        <!-- Tab Content -->
-        <div class="grid md:grid-cols-2 gap-8 md:gap-12">
-            <!-- Machaan -->
-            <div class="panel" data-tab="machaan">
+            <!-- Image -->
+            <div class="order-1 md:order-1">
                 <img src="https://wildmarkresort.com/images/beded3.jpeg" class="rounded-xl w-full h-64 object-cover"
-                    alt="Machaan" />
+                    alt="Super Deluxe Room" />
             </div>
-            <div class="panel" data-tab="machaan">
-                <h5 class="text-xl md:text-xl lg:text-xl text-amber-500 font-serif font-light tracking-wide hero-title mt-4"
-                    data-aos="fade-up"  >
+
+            <!-- Content -->
+            <div class="order-2 md:order-2">
+                <h5 class="text-xl font-serif font-light tracking-wide" style="color: var(--text2);">
                     Super Deluxe Rooms with Open Shower
                 </h5>
-                <p class="text-sm md:text-base text-gray-300 mb-2 md:mb-4 leading-relaxed text-justify mt-4">
-                    The Super Deluxe Room with Private Sit-Outs offers a refined
-                    retreat blending comfort with natural elegance. This
-                    well-appointed room features a private outdoor seating area, plush
-                    bedding, modern furnishings, and air conditioning for a relaxing
-                    stay. Enjoy contemporary decor, thoughtful amenities, and a serene
-                    view for an unforgettable escape.
+
+                <p class="text-sm md:text-base mb-4 leading-relaxed text-justify mt-4">
+                    The Super Deluxe Room with Private Sit-Outs offers a refined retreat blending comfort with natural
+                    elegance. This well-appointed room features a private outdoor seating area, plush bedding, modern
+                    furnishings, and air conditioning for a relaxing stay. Enjoy contemporary decor, thoughtful
+                    amenities, and a serene view for an unforgettable escape.
                 </p>
+
+                <a href="http://localhost/wildmarkresort/kanha-super-deluxe-rooms-in-kanha/"
+                    class="px-10 py-3 transition font-semibold text-base rounded-lg shadow-lg text-white inline-block"
+                    style="background-color: var(--text2);">
+                    KNOW MORE
+                </a>
             </div>
 
-            <!-- Know More Button for Super Deluxe Rooms -->
-            <div class="panel md:col-span-2 text-center mt-8" data-tab="machaan">
-                <div class="flex justify-center">
-                    <a href="https://wildmarkresort.com/kanha-super-deluxe-rooms-in-kanha/"
-                        class="bg-amber-600 hover:bg-amber-700 text-white px-10 py-3 transition font-semibold text-base rounded-lg shadow-lg">
-                        KNOW MORE
+        </div>
+
+
+        <!-- ================= SECOND ROOM ================= -->
+        <div class="grid md:grid-cols-2 gap-8 md:gap-12 mt-12 items-center">
+
+            <!-- Image (Now First On Mobile) -->
+            <div class="order-1 md:order-2">
+                <img src="https://wildmarkresort.com/images/beded3.jpeg" class="rounded-xl w-full h-64 object-cover"
+                    alt="Family Double Room" />
+            </div>
+
+            <!-- Content -->
+            <div class="order-2 md:order-1">
+                <h5 class="text-xl font-serif font-light tracking-wide" style="color: var(--text2);">
+                    Family Double Bedded Rooms
+                </h5>
+
+                <p class="text-sm md:text-base mb-4 leading-relaxed text-justify mt-4">
+                    The Super Deluxe Family Room is designed to comfortably accommodate families, offering spacious
+                    living areas and extra sleeping options. This room features elegant decor, modern amenities, and air
+                    conditioning to ensure a relaxing stay. Enjoy a harmonious blend of style and functionality,
+                    perfect for memorable family getaways.
+                </p>
+
+                <a href="https://wildmarkresort.com/family-double-bedded-rooms-in-kanha/"
+                    class="px-10 py-3 transition font-semibold text-base rounded-lg shadow-lg text-white inline-block"
+                    style="background-color: var(--text2);">
+                    KNOW MORE
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- Tour Package Section -->
+<section id="destinations" class="py-12 md:py-20 px-4 md:px-6 destinations-section overflow-hidden"
+    style="background-color: var(--bg1);">
+    <div class="container mx-auto max-w-7xl">
+        <div class="text-center mb-10 md:mb-16">
+            <p class="text-xs tracking-widest mb-3 md:mb-4 font-light" style="color: var(--text2);"
+                data-aos="fade-down">
+                BIODIVERSITY • CONSERVATION • NATURE
+            </p>
+            <h2 class="text-3xl md:text-5xl lg:text-6xl font-serif mb-4 md:mb-6" data-aos="zoom-in">
+                Popular Kanha Tour Package
+            </h2>
+            <p class="text-sm md:text-base max-w-5xl mx-auto mb-2 md:mb-3 leading-relaxed" data-aos="fade-up"
+                data-aos-delay="200">
+                Choose from our curated safari packages designed to give you the ultimate Kanha wildlife experience.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Card 1 -->
+            <div class="tour-card group" data-aos="fade-up" data-aos-delay="100">
+                <div class="relative h-[240px] overflow-hidden rounded-t-2xl">
+                    <img src="https://wildmarkresort.com/images/card1.webp" alt="Kanha Holiday Tour Package"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div class="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent"></div>
+                    <div class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold tracking-wider text-white"
+                        style="background-color: var(--text2);">Popular</div>
+                    <div
+                        class="absolute top-3 right-3 bg-black/70 backdrop-blur-sm text-white px-2.5 py-1 rounded-full text-xs font-semibold flex items-center gap-1">
+                        <i class="fas fa-star" style="color: var(--text2);"></i><span>5</span>
+                    </div>
+                </div>
+                <div class="p-5 rounded-b-2xl h-auto flex flex-col" style="background-color: var(--bg2);">
+                    <h3 class="text-lg font-serif font-bold mb-3 leading-tight">Kanha Tour Package</h3>
+                    <div class="flex items-center gap-3 mb-3 text-xs" style="color: rgba(0,0,0,0.5);">
+                        <div class="flex items-center gap-1.5"><i class="fas fa-map-marker-alt"
+                                style="color: var(--text2);"></i><span>Kanha</span></div>
+                        <div class="flex items-center gap-1.5"><i class="fas fa-clock"
+                                style="color: var(--text2);"></i><span>1N/2D</span></div>
+                        <div class="flex items-center gap-1.5"><i class="fas fa-binoculars"
+                                style="color: var(--text2);"></i><span>1 Safari</span></div>
+                    </div>
+                    <p class="text-xs leading-relaxed flex-grow mb-4" style="color: rgba(0,0,0,0.5);">Experience the
+                        thrill of nature with our Kanha Holiday Tour Package, offering 1 Night / 2 Days stay and 1
+                        exciting jungle...</p>
+                    <a href="https://wildmarkresort.com/kanha-tour-package/"
+                        class="inline-flex items-center gap-2 text-sm font-semibold transition-colors group/btn mt-auto"
+                        style="color: var(--text1);" onmouseover="this.style.color='var(--text2)';"
+                        onmouseout="this.style.color='var(--text1)';">
+                        <span>View Details</span>
+                        <i class="fas fa-arrow-right transform group-hover/btn:translate-x-1 transition-transform"></i>
                     </a>
                 </div>
             </div>
-
-            <!-- Super Deluxe - Family Double Bedded Rooms Tab -->
-            <div class="panel hidden" data-tab="superdeluxe">
-                <img src="https://wildmarkresort.com/images/beded1.webp" class="rounded-xl w-full h-64 object-cover"
-                    alt="Super Deluxe" />
+            <!-- Card 2 -->
+            <div class="tour-card group" data-aos="fade-up" data-aos-delay="200">
+                <div class="relative h-[240px] overflow-hidden rounded-t-2xl">
+                    <img src="https://wildmarkresort.com/images/Tiger.webp" alt="Kanha Safari Tour Package"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div class="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent"></div>
+                    <div
+                        class="absolute top-3 right-3 bg-black/70 backdrop-blur-sm text-white px-2.5 py-1 rounded-full text-xs font-semibold flex items-center gap-1">
+                        <i class="fas fa-star" style="color: var(--text2);"></i><span>5</span>
+                    </div>
+                </div>
+                <div class="p-5 rounded-b-2xl h-auto flex flex-col" style="background-color: var(--bg2);">
+                    <h3 class="text-lg font-serif font-bold mb-3 leading-tight">Kanha Safari Tour Package</h3>
+                    <div class="flex items-center gap-3 mb-3 text-xs" style="color: rgba(0,0,0,0.5);">
+                        <div class="flex items-center gap-1.5"><i class="fas fa-map-marker-alt"
+                                style="color: var(--text2);"></i><span>Kanha</span></div>
+                        <div class="flex items-center gap-1.5"><i class="fas fa-clock"
+                                style="color: var(--text2);"></i><span>2N/3D</span></div>
+                        <div class="flex items-center gap-1.5"><i class="fas fa-binoculars"
+                                style="color: var(--text2);"></i><span>2 Safaris</span></div>
+                    </div>
+                    <p class="text-xs leading-relaxed flex-grow mb-4" style="color: rgba(0,0,0,0.5);">Discover the
+                        beauty of Kanha with 2 Nights / 3 Days of adventure, including 2 exciting jungle safaris perfect
+                        for nature lovers.</p>
+                    <a href="https://wildmarkresort.com/kanha-safari-tour-package/"
+                        class="inline-flex items-center gap-2 text-sm font-semibold transition-colors group/btn mt-auto"
+                        style="color: var(--text1);" onmouseover="this.style.color='var(--text2)';"
+                        onmouseout="this.style.color='var(--text1)';">
+                        <span>View Details</span>
+                        <i class="fas fa-arrow-right transform group-hover/btn:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
             </div>
-            <div class="panel hidden" data-tab="superdeluxe">
-                <h5 class="text-xl md:text-xl lg:text-xl text-amber-500 font-serif font-light tracking-wide hero-title mt-4"
-                    data-aos="fade-up"  >
-                    Family Double Bedded Rooms
-                </h5>
-                <p class="text-sm md:text-base text-gray-300 mb-2 md:mb-4 leading-relaxed text-justify mt-4">
-                    The Super Deluxe Family Room is designed to comfortably
-                    accommodate families, offering spacious living areas and extra
-                    sleeping options. This room features elegant decor, modern
-                    amenities, and air conditioning to ensure a relaxing stay. Enjoy a
-                    harmonious blend of style and functionality, perfect for memorable
-                    family getaways.
-                </p>
+            <!-- Card 3 -->
+            <div class="tour-card group" data-aos="fade-up">
+                <div class="relative h-[240px] overflow-hidden rounded-t-2xl">
+                    <img src="https://wildmarkresort.com/images/Tiger5.webp" alt="Kanha Kisli Tour Package"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div class="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent"></div>
+                    <div
+                        class="absolute top-3 right-3 bg-black/70 backdrop-blur-sm text-white px-2.5 py-1 rounded-full text-xs font-semibold flex items-center gap-1">
+                        <i class="fas fa-star" style="color: var(--text2);"></i><span>5</span>
+                    </div>
+                </div>
+                <div class="p-5 rounded-b-2xl h-auto flex flex-col" style="background-color: var(--bg2);">
+                    <h3 class="text-lg font-serif font-bold mb-3 leading-tight">Kanha Kisli Tour Package</h3>
+                    <div class="flex items-center gap-3 mb-3 text-xs" style="color: rgba(0,0,0,0.5);">
+                        <div class="flex items-center gap-1.5"><i class="fas fa-map-marker-alt"
+                                style="color: var(--text2);"></i><span>Kanha</span></div>
+                        <div class="flex items-center gap-1.5"><i class="fas fa-clock"
+                                style="color: var(--text2);"></i><span>2N/3D</span></div>
+                        <div class="flex items-center gap-1.5"><i class="fas fa-binoculars"
+                                style="color: var(--text2);"></i><span>4 Safaris</span></div>
+                    </div>
+                    <p class="text-xs leading-relaxed flex-grow mb-4" style="color: rgba(0,0,0,0.5);">This 2 Nights / 3
+                        Days package includes 4 exciting jungle safaris, giving you a chance to see amazing wildlife and
+                        enjoy the...</p>
+                    <a href="https://wildmarkresort.com/kanha-kisli-tour-package/"
+                        class="inline-flex items-center gap-2 text-sm font-semibold transition-colors group/btn mt-auto"
+                        style="color: var(--text1);" onmouseover="this.style.color='var(--text2)';"
+                        onmouseout="this.style.color='var(--text1)';">
+                        <span>View Details</span>
+                        <i class="fas fa-arrow-right transform group-hover/btn:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
             </div>
-
-            <!-- Know More Button for Family Double Bedded Rooms -->
-            <div class="panel hidden md:col-span-2 text-center mt-8" data-tab="superdeluxe">
-                <div class="flex justify-center">
-                    <a href="https://wildmarkresort.com/family-double-bedded-rooms-in-kanha/"
-                        class="bg-amber-600 hover:bg-amber-700 text-white px-10 py-3 transition font-semibold text-base rounded-lg shadow-lg">
-                        KNOW MORE
+            <!-- Card 4 -->
+            <div class="tour-card group" data-aos="fade-up">
+                <div class="relative h-[240px] overflow-hidden rounded-t-2xl">
+                    <img src="https://wildmarkresort.com/images/home4.webp" alt="Kanha Tiger Safari Package"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div class="absolute inset-0 bg-gradient-to-b from-black/20 to-transparent"></div>
+                    <div class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold tracking-wider text-white"
+                        style="background-color: var(--text2);">Popular</div>
+                    <div
+                        class="absolute top-3 right-3 bg-black/70 backdrop-blur-sm text-white px-2.5 py-1 rounded-full text-xs font-semibold flex items-center gap-1">
+                        <i class="fas fa-star" style="color: var(--text2);"></i><span>5</span>
+                    </div>
+                </div>
+                <div class="p-5 rounded-b-2xl h-auto flex flex-col" style="background-color: var(--bg2);">
+                    <h3 class="text-lg font-serif font-bold mb-3 leading-tight">Kanha Tiger Safari Package</h3>
+                    <div class="flex items-center gap-3 mb-3 text-xs" style="color: rgba(0,0,0,0.5);">
+                        <div class="flex items-center gap-1.5"><i class="fas fa-map-marker-alt"
+                                style="color: var(--text2);"></i><span>Kanha</span></div>
+                        <div class="flex items-center gap-1.5"><i class="fas fa-clock"
+                                style="color: var(--text2);"></i><span>3N/4D</span></div>
+                        <div class="flex items-center gap-1.5"><i class="fas fa-binoculars"
+                                style="color: var(--text2);"></i><span>6 Safaris</span></div>
+                    </div>
+                    <p class="text-xs leading-relaxed flex-grow mb-4" style="color: rgba(0,0,0,0.5);">Experience the
+                        thrill with 3 Nights / 4 Days package including 6 exciting jungle safaris to explore Kanha
+                        National Park and spot...</p>
+                    <a href="https://wildmarkresort.com/kanha-tiger-safari-tour-package/"
+                        class="inline-flex items-center gap-2 text-sm font-semibold transition-colors group/btn mt-auto"
+                        style="color: var(--text1);" onmouseover="this.style.color='var(--text2)';"
+                        onmouseout="this.style.color='var(--text1)';">
+                        <span>View Details</span>
+                        <i class="fas fa-arrow-right transform group-hover/btn:translate-x-1 transition-transform"></i>
                     </a>
                 </div>
             </div>
@@ -194,7 +342,7 @@ include 'includes/header.php';
 <!-- Amenities & Activities Section -->
 <section class="py-6 bg-neutral-900">
     <div class="max-w-7xl mx-auto px-4 md:px-6">
-        
+
         <h2 class="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-amber-100 mb-6 text-center"
             data-aos="fade-up">
             Amenities & Activities
@@ -341,8 +489,7 @@ include 'includes/header.php';
             <p class="text-amber-500 text-xs tracking-widest mb-3 md:mb-4 font-light" data-aos="fade-down">
                 EXCELLENCE • RECOGNITION • TRUST
             </p>
-            <h2 class="text-3xl md:text-5xl lg:text-6xl font-serif mb-4 md:mb-6" data-aos="zoom-in"
-                >
+            <h2 class="text-3xl md:text-5xl lg:text-6xl font-serif mb-4 md:mb-6" data-aos="zoom-in">
                 Awards and Recognitions
             </h2>
             <p class="text-sm md:text-base text-gray-300 max-w-4xl mx-auto mb-2 md:mb-3 leading-relaxed"
@@ -353,7 +500,7 @@ include 'includes/header.php';
 
         <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
             <!-- Award Card 1 - 2020 -->
-            <div class="award-card group" data-aos="fade-up"  data-aos-delay="100">
+            <div class="award-card group" data-aos="fade-up" data-aos-delay="100">
                 <div
                     class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/30 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
                     <img src="https://wildmarkresort.com/images/testimonials1.png  "
@@ -362,7 +509,7 @@ include 'includes/header.php';
                 </div>
             </div>
             <!-- Award Card 2 - 2021 -->
-            <div class="award-card group" data-aos="fade-up"  data-aos-delay="200">
+            <div class="award-card group" data-aos="fade-up" data-aos-delay="200">
                 <div
                     class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/30 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
                     <img src="https://wildmarkresort.com/images/testimonials2.png"
@@ -371,7 +518,7 @@ include 'includes/header.php';
                 </div>
             </div>
             <!-- Award Card 3 - 2022 -->
-            <div class="award-card group" data-aos="fade-up"  >
+            <div class="award-card group" data-aos="fade-up">
                 <div
                     class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/30 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
                     <img src="https://wildmarkresort.com/images/testimonials3.png"
@@ -380,8 +527,7 @@ include 'includes/header.php';
                 </div>
             </div>
             <!-- Award Card 4 - 2025 -->
-            <div class="award-card group" data-aos="fade-up"  
-                style="background-color: #39DCA1;border-radius: 9px;">
+            <div class="award-card group" data-aos="fade-up" style="background-color: #39DCA1;border-radius: 9px;">
                 <div
                     class="bg-transparent rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 group-hover:shadow-emerald-500/40 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
                     <img src="https://wildmarkresort.com/images/testimonials4.jpeg"
@@ -409,7 +555,7 @@ include 'includes/header.php';
             </p>
         </div>
 
-        <div class="faq-grid" data-aos="fade-up" >
+        <div class="faq-grid" data-aos="fade-up">
 
             <!-- LEFT COLUMN -->
             <div class="faq-col">
