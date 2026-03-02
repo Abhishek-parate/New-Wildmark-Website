@@ -69,7 +69,7 @@ include 'includes/header.php';
             </div>
 
             <div data-aos="fade-left" class="flex items-center justify-center">
-                <img src="http://localhost/wildmarkresort/images/webp/hometiger.webp" class="w-full h-auto rounded-xl shadow-2xl"
+                <img src="http://localhost/wildmarkresort/images/webp/kktpb.webp" class="w-full h-auto rounded-xl shadow-2xl"
                     alt="Kanha National Park Map" />
             </div>
         </div>
@@ -255,7 +255,7 @@ include 'includes/header.php';
             <div class="award-card group" data-aos="fade-up" data-aos-delay="100">
                 <div
                     class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/30 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
-                    <img src="https://wildmarkresort.com/images/testimonials1.png"
+                    <img src="http://localhost/wildmarkresort/images/webp/testimonials1.webp"
                         alt="TripAdvisor Travellers' Choice Award 2020"
                         class="w-full h-auto max-w-[280px] object-contain award-image">
                 </div>
@@ -265,7 +265,7 @@ include 'includes/header.php';
             <div class="award-card group" data-aos="fade-up" data-aos-delay="200">
                 <div
                     class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/30 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
-                    <img src="https://wildmarkresort.com/images/testimonials2.png"
+                    <img src="http://localhost/wildmarkresort/images/webp/testimonials2.webp"
                         alt="TripAdvisor Travellers' Choice Award 2021"
                         class="w-full h-auto max-w-[280px] object-contain award-image">
                 </div>
@@ -275,7 +275,7 @@ include 'includes/header.php';
             <div class="award-card group" data-aos="fade-up">
                 <div
                     class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:shadow-amber-500/30 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
-                    <img src="https://wildmarkresort.com/images/testimonials3.png"
+                    <img src="http://localhost/wildmarkresort/images/webp/testimonials3.webp"
                         alt="TripAdvisor Travellers' Choice Award 2022"
                         class="w-full h-auto max-w-[280px] object-contain award-image">
                 </div>
@@ -285,7 +285,7 @@ include 'includes/header.php';
             <div class="award-card group" data-aos="fade-up" style="background-color: #39DCA1;border-radius: 9px;">
                 <div
                     class="bg-transparent rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 group-hover:shadow-emerald-500/40 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
-                    <img src="https://wildmarkresort.com/images/testimonials4.jpeg"
+                    <img src="http://localhost/wildmarkresort/images/webp/testimonials4.webp"
                         alt="TripAdvisor Travelers' Choice Award 2025"
                         class="w-full h-full object-cover rounded-2xl award-image">
                 </div>

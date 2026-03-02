@@ -6232,3 +6232,227 @@ section.py-12.md\:py-16.bg-neutral-900{
 /* Safari list items */
 .safari-list li span{ color: var(--text1) !important; }
 .cancellation-policy .safari-bullet{ color: var(--text2) !important; }
+/* ===== SECTION ===== */
+  .guest-stories-section {
+    background-color: var(--bg2);
+    padding: 5rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .guest-stories-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 15% 40%, rgba(142,22,22,0.04) 0%, transparent 50%),
+      radial-gradient(circle at 85% 60%, rgba(232,201,153,0.35) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .guest-stories-section .gs-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ===== HEADER ===== */
+  .gs-label {
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--text2);
+    display: block;
+    text-align: center;
+    margin-bottom: 0.6rem;
+  }
+
+  .gs-title {
+    font-family: "Roboto Slab", serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 700;
+    color: var(--text2) !important;
+    text-align: center;
+    margin: 0 0 0.75rem;
+    line-height: 1.2;
+  }
+
+  .gs-title em {
+    font-style: italic;
+    color: var(--text2);
+  }
+
+  .gs-subtitle {
+    text-align: center;
+    color: rgba(0,0,0,0.55);
+    font-size: 0.95rem;
+    max-width: 500px;
+    margin: 0 auto 3rem;
+    font-family: "Roboto Mono", monospace;
+    line-height: 1.7;
+  }
+
+  /* ===== VIDEO GRID ===== */
+  .gs-video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 900px) {
+    .gs-video-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .gs-video-grid .gs-video-card:last-child {
+      grid-column: 1 / -1;
+      max-width: 420px;
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .gs-video-grid {
+      grid-template-columns: 1fr;
+    }
+    .gs-video-grid .gs-video-card:last-child {
+      grid-column: auto;
+      max-width: 100%;
+    }
+  }
+
+  /* ===== VIDEO CARD ===== */
+  .gs-video-card {
+    background: #fff;
+    border: 1px solid rgba(142,22,22,0.15);
+    border-radius: 1.25rem;
+    overflow: hidden;
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+    box-shadow: 0 4px 20px rgba(142,22,22,0.08);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gs-video-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(142,22,22,0.18);
+    border-color: rgba(142,22,22,0.4);
+  }
+
+  /* Card top info row (mimics YouTube embed header) */
+  .gs-card-header {
+    padding: 0.9rem 1rem 0.75rem;
+    border-top: 1px solid rgba(142,22,22,0.1);
+    background: #fff;
+  }
+
+  .gs-card-header .gs-video-title {
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.78rem;
+    color: var(--text1);
+    line-height: 1.5;
+    margin-bottom: 0.6rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 3.5em;
+  }
+
+  .gs-card-header .gs-channel-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .gs-card-header .gs-channel-logo {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--text2), #b01e1e);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .gs-card-header .gs-channel-logo i {
+    color: #fff;
+    font-size: 0.7rem;
+  }
+
+  .gs-card-header .gs-channel-name {
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.75rem;
+    color: rgba(0,0,0,0.55);
+    font-weight: 500;
+  }
+
+  /* Share icon top right */
+  .gs-card-header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .gs-share-icon {
+    color: rgba(0,0,0,0.35);
+    font-size: 0.8rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+
+  .gs-share-icon:hover { color: var(--text2); }
+
+  /* ===== VIDEO WRAPPER ===== */
+  .gs-video-wrap {
+    width: 100%;
+    flex: 1;
+    background: #000;
+    overflow: hidden;
+    aspect-ratio: 9 / 16;
+    position: relative;
+  }
+
+  .gs-video-wrap video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    inset: 0;
+  }
+
+  /* ===== BOTTOM CTA ===== */
+  .gs-cta {
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .gs-cta a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    border: 2px solid var(--text2);
+    color: var(--text2);
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    border-radius: 999px;
+    font-family: "Roboto Slab", serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    letter-spacing: 0.03em;
+  }
+
+  .gs-cta a:hover {
+    background: var(--text2);
+    color: var(--bg2);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(142,22,22,0.25);
+  }
