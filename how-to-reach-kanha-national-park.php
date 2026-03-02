@@ -10,7 +10,7 @@ include 'includes/header.php';
 
 <!-- Hero Banner -->
 <header class="relative h-[50vh] md:h-[60vh] lg:h-[100vh] flex items-end"
-    style="background: url('http://localhost/wildmarkresort/images/webp/wildmarkresort (44).webp') center/cover no-repeat">
+    style="background: url('http://localhost/wildmarkresort/images/webp/acc/kanhpage.webp') center/cover no-repeat">
     
 </header>
 

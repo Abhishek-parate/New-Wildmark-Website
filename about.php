@@ -16,8 +16,8 @@ include 'includes/header.php';
     </header>
 
 <!-- About Wildmark Kanha Resort -->
-<section class="py-16 md:py-24 section-bg2" style="padding-bottom: 30px;">
-    <div class="container mx-auto max-w-6xl px-4 md:px-6">
+<section class="py-12 md:py-16 bg-neutral-900">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
 
         <div class="text-center mb-12">
             <p class="text-xs tracking-widest mb-4 font-light" style="color: var(--text2);" data-aos="fade-down">
@@ -47,8 +47,8 @@ include 'includes/header.php';
 </section>
 
 <!-- OUR ESSENCE -->
-<section class="py-16 md:py-24 section-bg2">
-    <div class="container mx-auto max-w-6xl px-4 md:px-6">
+<section class="py-12 md:py-16 bg-neutral-900">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
         <div class="text-center mb-12 md:mb-16">
             <p class="text-xs tracking-widest mb-4 font-light" style="color: var(--text2);" data-aos="fade-down">OUR ESSENCE</p>
             <h2 class="text-3xl md:text-5xl font-serif mb-6" data-aos="zoom-in" >
@@ -77,15 +77,15 @@ include 'includes/header.php';
                 <p class="text-sm md:text-base leading-relaxed text-justify" style="color: var(--text1);">Wild Mark Kanha resort is one of the magnificent locations for all the nature lovers. Our commitment to excellence ensures that every guest experiences the perfect balance of adventure and comfort during their stay.</p>
             </div>
             <div class="order-1 lg:order-2" data-aos="fade-left" >
-                <img src="http://localhost/wildmarkresort/images/webp/wildmarkresort (18).webp" alt="Kanha Wildlife" class="rounded-2xl shadow-2xl w-full h-[400px] md:h-[500px] object-cover" />
+                <img src="http://localhost/wildmarkresort/images/webp/acc/kanhpage.webp" alt="Kanha Wildlife" class="rounded-2xl shadow-2xl w-full h-[400px] md:h-[500px] object-cover" />
             </div>
         </div>
     </div>
 </section>
 
 <!-- NATURAL SETTING -->
-<section class="py-8 md:py-12 section-bg1">
-    <div class="container mx-auto max-w-6xl px-4 md:px-6">
+<section class="py-12 md:py-16 bg-neutral-900">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
         <div class="text-center mb-12">
             <p class="text-xs tracking-widest mb-4 font-light" style="color: var(--text2);" data-aos="fade-down">NATURAL SURROUNDINGS</p>
             <h2 class="text-3xl md:text-5xl font-serif mb-6" data-aos="zoom-in">In a Natural Setting</h2>
@@ -99,8 +99,8 @@ include 'includes/header.php';
 </section>
 
 <!-- WHY CHOOSE US -->
-<section class="py-16 md:py-24 section-bg2">
-    <div class="container mx-auto max-w-7xl px-4 md:px-6">
+<section class="py-12 md:py-16 bg-neutral-900">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
         <div class="text-center mb-12 md:mb-16">
             <p class="text-xs tracking-widest mb-4 font-light" style="color: var(--text2);" data-aos="fade-down">OUR EXCELLENCE</p>
             <h2 class="text-3xl md:text-5xl font-serif mb-6" data-aos="zoom-in">Why Choose Wildmark Resort</h2>
@@ -133,8 +133,8 @@ include 'includes/header.php';
 </section>
 
 <!-- JOURNEY TIMELINE -->
-<section class="py-16 md:py-24 section-bg1">
-    <div class="container mx-auto max-w-6xl px-4 md:px-6">
+<section class="py-12 md:py-16 bg-neutral-900">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
         <div class="text-center mb-12 md:mb-16">
             <p class="text-xs tracking-widest mb-4 font-light" style="color: var(--text2);" data-aos="fade-down">OUR LEGACY</p>
             <h2 class="text-3xl md:text-5xl font-serif mb-6" data-aos="zoom-in">Our Journey of Excellence</h2>
@@ -170,8 +170,8 @@ include 'includes/header.php';
 </section>
 
 <!-- STATS -->
-<section class="py-16 md:py-20 section-bg2">
-    <div class="container mx-auto max-w-6xl px-4 md:px-6">
+<section class="py-12 md:py-16 bg-neutral-900">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
             <div class="text-center" data-aos="fade-up" data-aos-delay="100">
                 <div class="stat-number mb-2">50+</div>
@@ -194,8 +194,8 @@ include 'includes/header.php';
 </section>
 
 <!-- CORE VALUES -->
-<section class="py-16 md:py-24 section-bg1">
-    <div class="container mx-auto max-w-7xl px-4 md:px-6">
+<section class="py-12 md:py-16 bg-neutral-900">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
         <div class="text-center mb-12 md:mb-16">
             <p class="text-xs tracking-widest mb-4 font-light" style="color: var(--text2);" data-aos="fade-down">WHAT DRIVES US</p>
             <h2 class="text-3xl md:text-5xl font-serif mb-6" data-aos="zoom-in">Our Core Values</h2>
@@ -227,31 +227,45 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- CTA -->
-<section class="py-16 md:py-20 section-bg2">
-    <div class="container mx-auto max-w-4xl px-4 md:px-6 text-center">
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif mb-6" data-aos="fade-up">
-            Ready to Experience Wildmark Resort?
-        </h2>
-        <p class="text-base md:text-lg mb-8 leading-relaxed max-w-2xl mx-auto" style="color: var(--text1);" data-aos="fade-up" data-aos-delay="200">
-            Join us for an unforgettable journey into the heart of Kanha's wilderness. Book your stay today and create memories that will last a lifetime.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" >
-            <a href="https://wildmarkresort.com/contact/" class="px-8 py-3 rounded-lg transition font-semibold text-base shadow-lg text-white" style="background-color: var(--text2);">
-                BOOK YOUR STAY
-            </a>
-            <a href="https://wildmarkresort.com/kanha-accommodation/" class="border-2 px-8 py-3 rounded-lg transition font-semibold text-base" style="border-color: var(--text2); color: var(--text2);"
-                onmouseover="this.style.backgroundColor='var(--text2)';this.style.color='var(--bg2)';"
-                onmouseout="this.style.backgroundColor='transparent';this.style.color='var(--text2)';">
-                EXPLORE ROOMS
-            </a>
+<!-- Contact Section -->
+<section id="contactSection" class="py-12 md:py-12 bg-neutral-900">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+        <div class="grid lg:grid-cols-2 gap-8 md:gap-12">
+
+            <!-- Left Side - Contact Form -->
+            <div data-aos="fade-right">
+                <div class="mb-8">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fa-solid fa-paw text-amber-500 text-2xl"></i>
+                        <span class="text-amber-500 text-xs tracking-widest font-light">CONTACT WITH US</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6">
+                        Send us a Message
+                    </h2>
+                </div>
+
+                <?php include 'includes/contact-form.php'; ?>
+            </div>
+
+            <!-- Right Side - Contact Info -->
+            <div data-aos="fade-left" class="h-full">
+                <div class="map-container rounded-xl overflow-hidden h-full min-h-[520px] lg:min-h-[500px] mt-8">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.0234567890123!2d80.5118205!3d22.315946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a2a0b67fb9e449f%3A0xb861ff4ba4e91cb5!2sWild%20Mark%20Resort%2C%20Kanha!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                        class="w-full h-full" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
 
+
 <!-- AWARDS -->
-<section class="py-12 md:py-20 px-4 md:px-6 section-bg1 overflow-hidden">
-    <div class="container mx-auto max-w-7xl">
+<section class="py-12 md:py-16 bg-neutral-900">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
         <div class="text-center mb-10 md:mb-16">
             <p class="text-xs tracking-widest mb-3 md:mb-4 font-light" style="color: var(--text2);" data-aos="fade-down">EXCELLENCE • RECOGNITION • TRUST</p>
             <h2 class="text-3xl md:text-5xl lg:text-6xl font-serif mb-4 md:mb-6" data-aos="zoom-in" >Awards and Recognitions</h2>
@@ -286,8 +300,8 @@ include 'includes/header.php';
 </section>
 
 <!-- FAQ -->
-<section class="py-12 md:py-20 px-4 md:px-6 section-bg2">
-    <div class="mx-auto w-full" style="max-width: 1280px; padding: 0 24px;">
+<section class="py-12 md:py-16 bg-neutral-900">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
 
         <div class="text-center mb-10 md:mb-14">
             <p class="text-xs tracking-widest mb-3 font-light" style="color: var(--text2);" data-aos="fade-down">GUEST INFORMATION</p>
