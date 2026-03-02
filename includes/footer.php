@@ -239,10 +239,10 @@ footer i:hover {
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
 AOS.init({
-    duration: 600, // Faster animation
-    delay: 100, // Small delay
+    duration: 400,
+    delay: 50,
     easing: 'ease-out',
-    once: true, // Animation happens only once
+    once: true,
     mirror: false
 });
 

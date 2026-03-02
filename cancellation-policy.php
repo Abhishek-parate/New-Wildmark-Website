@@ -374,8 +374,13 @@ window.addEventListener('scroll', function() {
 updateParallax();
 
 // AOS
-AOS.init({ duration: 800, once: true });
-
+AOS.init({
+    duration: 400,
+    delay: 50,
+    easing: 'ease-out',
+    once: true,
+    mirror: false
+});
 // FAQ Accordion — safe init (works whether DOM ready or not)
 function initFaqAccordion() {
     var faqItems = document.querySelectorAll('.faq-item');
