@@ -8,7 +8,7 @@ include 'includes/header.php';
      HERO HEADER
      ============================================================ -->
 <header class="hero-header relative h-[50vh] md:h-[60vh] lg:h-[100vh] flex items-end"
-    style="background: url('https://wildmarkresort.com/images/Tiger5.webp') center/cover no-repeat">
+    style="background: url('http://localhost/wildmarkresort/images/webp/rooms/sdrb1.webp') center/cover no-repeat">
     <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
 </header>
 
@@ -52,7 +52,7 @@ include 'includes/header.php';
             </div>
             <div class="relative" data-aos="fade-left">
                 <div class="rounded-2xl overflow-hidden shadow-2xl" style="border:1px solid rgba(142,22,22,0.2)">
-                    <img src="https://wildmarkresort.com/images/delux2.jpeg"
+                    <img src="http://localhost/wildmarkresort/images/webp/rooms/delux2.webp"
                         alt="Super Deluxe Room Interior with Open Shower"
                         class="w-full h-[400px] md:h-[450px] object-cover hover:scale-105 transition-transform duration-500">
                 </div>
@@ -63,7 +63,7 @@ include 'includes/header.php';
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start">
             <div class="relative order-2 lg:order-1" data-aos="fade-right">
                 <div class="rounded-2xl overflow-hidden shadow-2xl" style="border:1px solid rgba(142,22,22,0.2)">
-                    <img src="https://wildmarkresort.com/images/delux3.jpg"
+                    <img src="http://localhost/wildmarkresort/images/webp/rooms/delux3.webp"
                         alt="Super Deluxe Room Garden View and Sitout"
                         class="w-full h-[450px] md:h-[550px] object-cover hover:scale-105 transition-transform duration-500">
                 </div>
@@ -233,15 +233,15 @@ include 'includes/header.php';
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
-                <img src="https://wildmarkresort.com/images/delux4.jpeg" alt="Super Deluxe Room View"
+                <img src="http://localhost/wildmarkresort/images/webp/rooms/delux4.webp" alt="Super Deluxe Room View"
                     class="w-full h-80 object-cover" />
             </div>
             <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
-                <img src="https://wildmarkresort.com/images/delux5.JPG" alt="Room Interior"
+                <img src="http://localhost/wildmarkresort/images/webp/rooms/delux5.webp" alt="Room Interior"
                     class="w-full h-80 object-cover" />
             </div>
             <div class="gallery-item" data-aos="fade-up" >
-                <img src="https://wildmarkresort.com/images/delux7.JPG" alt="Resort View"
+                <img src="http://localhost/wildmarkresort/images/webp/rooms/delux7.webp" alt="Resort View"
                     class="w-full h-80 object-cover" />
             </div>
         </div>
@@ -250,24 +250,15 @@ include 'includes/header.php';
 
 
 <!-- Contact Section -->
-<section class="section-cta py-16 md:py-16">
-    <div class="container mx-auto max-w-8xl px-4 md:px-6 text-center">
-        <h2 class="text-3xl md:text-5xl font-serif mb-6" data-aos="fade-up">
-            Ready for Your Wilderness Retreat?
-        </h2>
-        <p class="text-lg md:text-xl mb-8" style="color:var(--bg1)" data-aos="fade-up" data-aos-delay="200">
-            Book your Super Deluxe Room today and experience luxury in the heart of Kanha
-        </p>
-    </div>
-    <div class="max-w-7xl mx-auto px-4 md:px-6 pt-4">
+<section id="contactSection" class="py-12 md:py-16 bg-neutral-900">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
         <div class="grid lg:grid-cols-2 gap-8 md:gap-12">
 
             <!-- Left Side - Contact Form -->
             <div data-aos="fade-right">
                 <div class="mb-8">
                     <div class="flex items-center gap-3 mb-4">
-                        <i class="fa-solid fa-paw text-amber-500 text-2xl"></i>
-                        <span class="text-amber-500 text-xs tracking-widest font-light">CONTACT WITH US</span>
+                        <span class="text-xs font-bold  tracking-widest ">CONTACT WITH US</span>
                     </div>
                     <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6">
                         Send us a Message
@@ -278,20 +269,18 @@ include 'includes/header.php';
             </div>
 
             <!-- Right Side - Contact Info -->
-            <div data-aos="fade-left" class="flex">
-                <div class="map-container rounded-xl overflow-hidden w-full h-full min-h-[460px] lg:min-h-[440px]">
-                    <iframe
+            <div data-aos="fade-left">
+                
+                <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.0234567890123!2d80.5118205!3d22.315946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a2a0b67fb9e449f%3A0xb861ff4ba4e91cb5!2sWild%20Mark%20Resort%2C%20Kanha!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
                         class="w-full h-full" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
-                </div>
             </div>
 
         </div>
     </div>
 </section>
-
 <!-- ============================================================
      AWARDS — bg2 background
      ============================================================ -->
@@ -315,21 +304,21 @@ include 'includes/header.php';
             <div class="award-card group" data-aos="fade-up"  data-aos-delay="100">
                 <div
                     class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl flex items-center justify-center min-h-[320px] md:min-h-[380px]">
-                    <img src="https://wildmarkresort.com/images/testimonials1.png" alt="TripAdvisor Award 2020"
+                    <img src="http://localhost/wildmarkresort/images/webp/testimonials1.webp" alt="TripAdvisor Award 2020"
                         class="w-full h-auto max-w-[280px] object-contain award-image">
                 </div>
             </div>
             <div class="award-card group" data-aos="fade-up"  data-aos-delay="200">
                 <div
                     class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl flex items-center justify-center min-h-[320px] md:min-h-[380px]">
-                    <img src="https://wildmarkresort.com/images/testimonials2.png" alt="TripAdvisor Award 2021"
+                    <img src="http://localhost/wildmarkresort/images/webp/testimonials2.webp" alt="TripAdvisor Award 2021"
                         class="w-full h-auto max-w-[280px] object-contain award-image">
                 </div>
             </div>
             <div class="award-card group" data-aos="fade-up"  >
                 <div
                     class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl flex items-center justify-center min-h-[320px] md:min-h-[380px]">
-                    <img src="https://wildmarkresort.com/images/testimonials3.png" alt="TripAdvisor Award 2022"
+                    <img src="http://localhost/wildmarkresort/images/webp/testimonials3.webp" alt="TripAdvisor Award 2022"
                         class="w-full h-auto max-w-[280px] object-contain award-image">
                 </div>
             </div>
@@ -337,7 +326,7 @@ include 'includes/header.php';
                 style="background-color:#39DCA1;border-radius:9px">
                 <div
                     class="rounded-2xl overflow-hidden shadow-2xl flex items-center justify-center min-h-[320px] md:min-h-[380px]">
-                    <img src="https://wildmarkresort.com/images/testimonials4.jpeg" alt="TripAdvisor Award 2025"
+                    <img src="http://localhost/wildmarkresort/images/webp/testimonials4.webp" alt="TripAdvisor Award 2025"
                         class="w-full h-full object-cover rounded-2xl award-image">
                 </div>
             </div>

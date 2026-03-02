@@ -534,7 +534,7 @@ include 'includes/header.php';
                             <div class="flex items-center mb-4">
                                 <div
                                     class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-white font-bold text-xl md:text-2xl mr-3 flex-shrink-0 shadow-md">
-                                    D</div>
+                                    </div>
                                 <div>
                                     <h3 class="font-bold text-base md:text-lg" style="color: #1a1a1a !important;">Divya
                                         Lalwani</h3>
@@ -735,6 +735,9 @@ include 'includes/header.php';
                                 style="color: var(--text2);">Send Email →</a>
                         </div>
                     </div>
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6">
+                        Send us a Message
+                    </h2>
                 </div>
 
                 <div class="mb-6 md:mb-8" data-aos="fade-up">
@@ -757,23 +760,19 @@ include 'includes/header.php';
                     </div>
                 </div>
 
-                <div class="pt-2 md:pt-4" data-aos="fade-up" data-aos-delay="700">
-                    <a href="https://wildmarkresort.com/contact/"
-                        class="inline-flex items-center gap-2 text-white px-6 md:px-8 py-2.5 md:py-3 rounded-lg transition group shadow-lg text-sm md:text-base"
-                        style="background: linear-gradient(to right, var(--text2), #b01e1e);">
-                        <svg class="w-4 h-4 md:w-5 md:h-5 group-hover:scale-110 transition" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                        </svg>
-                        <span class="font-bold tracking-wider">BOOK NOW</span>
-                    </a>
-                </div>
+            <!-- Right Side - Contact Info -->
+            <div data-aos="fade-left">
+                
+                <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.0234567890123!2d80.5118205!3d22.315946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a2a0b67fb9e449f%3A0xb861ff4ba4e91cb5!2sWild%20Mark%20Resort%2C%20Kanha!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                        class="w-full h-full" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
             </div>
+
         </div>
     </div>
 </section>
-
 <!-- Awards Section -->
 <section class="py-12 md:py-20 px-4 md:px-6 awards-section overflow-hidden" style="background-color: var(--bg1);">
     <div class="container mx-auto max-w-7xl">
