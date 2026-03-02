@@ -10,7 +10,7 @@ include 'includes/header.php';
 <!-- Hero Header -->
 <header class="relative h-[50vh] md:h-[60vh] lg:h-[100vh] flex items-end"
         style="background: url('https://wildmarkresort.com/images/Tiger2.webp') center/cover no-repeat">
-    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+    
 </header>
 
 <!-- ═══════════════════════════════════════════ HISTORY OF KANHA ═══ -->
