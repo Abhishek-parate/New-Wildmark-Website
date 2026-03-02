@@ -93,7 +93,7 @@ include 'includes/header.php';
       <div class="grid md:grid-cols-2 gap-8 md:gap-12">
         <!-- Machaan -->
         <div class="panel" data-tab="machaan">
-          <img src="https://wildmarkresort.com/images/delux1.webp" class="rounded-xl w-full h-64 object-cover"
+          <img src="http://localhost/wildmarkresort/images/webp/ktstpi.webp" class="rounded-xl w-full h-64 object-cover"
             alt="Machaan" />
         </div>
         <div class="panel" data-tab="machaan">
@@ -123,7 +123,7 @@ include 'includes/header.php';
 
         <!-- Super Deluxe -->
         <div class="panel hidden" data-tab="superdeluxe">
-          <img src="https://wildmarkresort.com/images/beded1.webp" class="rounded-xl w-full h-64 object-cover"
+          <img src="http://localhost/wildmarkresort/images/webp/ktstpe.webp" class="rounded-xl w-full h-64 object-cover"
             alt="Super Deluxe" />
         </div>
         <div class="panel hidden" data-tab="superdeluxe">
@@ -145,7 +145,7 @@ include 'includes/header.php';
 
         <!-- Family -->
         <div class="panel hidden" data-tab="family">
-          <img src="https://wildmarkresort.com/images/wildmark2.jpg" class="rounded-xl w-full h-64 object-cover" alt="Family" />
+          <img src="http://localhost/wildmarkresort/images/webp/ktpz.webp" class="rounded-xl w-full h-64 object-cover" alt="Family" />
         </div>
         <div class="panel hidden" data-tab="family">
           <ul class="grid grid-cols-1 sm:grid-cols-1 gap-2 text-gray-300 text-sm mt-2 text-justify">
@@ -170,8 +170,8 @@ include 'includes/header.php';
         <!-- Day 1 -->
         <div class="grid md:grid-cols-12 gap-6 items-center">
           <div class="md:col-span-6 flex gap-3">
-            <img class="w-1/2 h-32 md:h-40 object-cover rounded-lg" src="https://wildmarkresort.com/images/wildmark6.jpg" alt="Day 1" />
-            <img class="w-1/2 h-32 md:h-40 object-cover rounded-lg" src="https://wildmarkresort.com/images/wildmark7.JPG" alt="Day 1" />
+            <img class="w-1/2 h-32 md:h-40 object-cover rounded-lg" src="http://localhost/wildmarkresort/images/webp/mztpw1.webp" alt="Day 1" />
+            <img class="w-1/2 h-32 md:h-40 object-cover rounded-lg" src="http://localhost/wildmarkresort/images/webp/ktprp.webp" alt="Day 1" />
           </div>
           <div class="md:col-span-6">
             <h3 class="text-xl md:text-2xl font-serif mb-2">Day 1</h3>
@@ -208,7 +208,7 @@ include 'includes/header.php';
         <!-- Day 2 -->
         <div class="grid md:grid-cols-12 gap-6 items-center">
           <div class="md:col-span-6 md:order-2">
-            <img class="w-full h-32 md:h-40 object-cover rounded-lg" src="https://wildmarkresort.com/images/wildmark8.jpeg" alt="Day 2" />
+            <img class="w-full h-32 md:h-40 object-cover rounded-lg" src="http://localhost/wildmarkresort/images/webp/ktstpd1.webp" alt="Day 2" />
           </div>
           <div class="md:col-span-6 md:order-1">
             <h3 class="text-xl md:text-2xl font-serif mb-2">Day 2</h3>
@@ -251,8 +251,8 @@ include 'includes/header.php';
         <!-- Day 3 -->
         <div class="grid md:grid-cols-12 gap-6 items-center">
           <div class="md:col-span-6 flex gap-3">
-            <img class="w-1/2 h-32 md:h-40 object-cover rounded-lg" src="https://wildmarkresort.com/images/wildmark8.jpeg" alt="Day 3" />
-            <img class="w-1/2 h-32 md:h-40 object-cover rounded-lg" src="https://wildmarkresort.com/images/wildmark7.JPG" alt="Day 3" />
+            <img class="w-1/2 h-32 md:h-40 object-cover rounded-lg" src="http://localhost/wildmarkresort/images/webp/ktptc.webp" alt="Day 3" />
+            <img class="w-1/2 h-32 md:h-40 object-cover rounded-lg" src="http://localhost/wildmarkresort/images/webp/ktpd2.webp" alt="Day 3" />
           </div>
           <div class="md:col-span-6">
             <h3 class="text-xl md:text-2xl font-serif mb-2">Day 3</h3>
@@ -297,7 +297,7 @@ include 'includes/header.php';
       <div>
         <div class="experience-panel-a" data-tab-a="curated">
           <div class="grid md:grid-cols-2 gap-8 items-center">
-            <img src="https://wildmarkresort.com/images/Tiger.webp" class="rounded-xl w-full h-64 object-cover" alt="Payment" />
+            <img src="http://localhost/wildmarkresort/images/webp/ktpdd1.webp" class="rounded-xl w-full h-64 object-cover" alt="Payment" />
             <div>
               <h3 class="text-2xl font-serif font-bold text-amber-100 mb-4">
                 Terms & Conditions
@@ -328,7 +328,7 @@ include 'includes/header.php';
 
         <div class="experience-panel-a hidden" data-tab-a="dining">
           <div class="grid md:grid-cols-2 gap-8 items-center">
-            <img src="https://wildmarkresort.com/images/Tiger5.webp" class="rounded-xl w-full h-64 object-cover" alt="Cancellation" />
+            <img src="http://localhost/wildmarkresort/images/webp/mztprp.webp" class="rounded-xl w-full h-64 object-cover" alt="Cancellation" />
             <div>
               <h3 class="text-2xl font-serif font-bold text-amber-100 mb-4">
                 Refund policies:
@@ -380,7 +380,7 @@ include 'includes/header.php';
               <div
                 class="bg-neutral-900 rounded-xl overflow-hidden group hover:shadow-2xl hover:shadow-amber-500/10 transition-all duration-300 h-full flex flex-col">
                 <div class="relative overflow-hidden h-56 flex-shrink-0">
-                  <img src="https://wildmarkresort.com/images/Tiger5.webp"
+                  <img src="http://localhost/wildmarkresort/images/webp/ktpdd1.webp"
                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     alt="Kanha Package" />
                 </div>
@@ -424,7 +424,7 @@ include 'includes/header.php';
               <div
                 class="bg-neutral-900 rounded-xl overflow-hidden group hover:shadow-2xl hover:shadow-amber-500/10 transition-all duration-300 h-full flex flex-col">
                 <div class="relative overflow-hidden h-56 flex-shrink-0">
-                  <img src="https://wildmarkresort.com/images/Tiger5.webp"
+                  <img src="http://localhost/wildmarkresort/images/webp/ktsptb1.webp"
                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     alt="Kanha Package" />
                 </div>
@@ -440,7 +440,7 @@ include 'includes/header.php';
                     <span class="text-xs text-gray-400">(4.9/5)</span>
                   </div>
                   <h3 class="text-xl font-serif font-bold text-amber-100 mb-2">
-                    Kanha Safari Tour Package
+                    Kanha Tiger Safari Tour Package
                   </h3>
                   <p class="text-gray-400 text-sm mb-4 line-clamp-2 flex-1">
                     Kanha National Park of Madhya Pradesh was established in
@@ -468,7 +468,7 @@ include 'includes/header.php';
               <div
                 class="bg-neutral-900 rounded-xl overflow-hidden group hover:shadow-2xl hover:shadow-amber-500/10 transition-all duration-300 h-full flex flex-col">
                 <div class="relative overflow-hidden h-56 flex-shrink-0">
-                  <img src="https://wildmarkresort.com/images/small_tiger.webp"
+                  <img src="http://localhost/wildmarkresort/images/webp/kktpb.webp"
                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     alt="Kanha Package" />
                 </div>
@@ -512,7 +512,7 @@ include 'includes/header.php';
               <div
                 class="bg-neutral-900 rounded-xl overflow-hidden group hover:shadow-2xl hover:shadow-amber-500/10 transition-all duration-300 h-full flex flex-col">
                 <div class="relative overflow-hidden h-56 flex-shrink-0">
-                  <img src="https://wildmarkresort.com/images/small_tiger.webp"
+                  <img src="http://localhost/wildmarkresort/images/webp/ktpb.webp"
                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     alt="Kanha Package" />
                 </div>
@@ -528,11 +528,10 @@ include 'includes/header.php';
                     <span class="text-xs text-gray-400">(4.9/5)</span>
                   </div>
                   <h3 class="text-xl font-serif font-bold text-amber-100 mb-2">
-                    Kanha Holiday Tour Package
+                   Kanha Tour Package
                   </h3>
                   <p class="text-gray-400 text-sm mb-4 line-clamp-2 flex-1">
-                    Kanha National Park of Madhya Pradesh was established in
-                    1955 and covers...
+                    Kanha National Park of Madhya Pradesh was established in 1955 and covers...
                   </p>
                   <div class="flex items-center gap-4 text-xs text-gray-400 mt-auto">
                     <div class="flex items-center gap-1">
@@ -543,7 +542,7 @@ include 'includes/header.php';
                       <i class="fa-solid fa-paw text-[#8E1616]"></i>
                       <span>1 Safaris</span>
                     </div>
-                    <a href="https://wildmarkresort.com/Kanha-Holiday-Tour-Package/"
+                    <a href="https://wildmarkresort.com/kanha-tour-package/"
                       class="ml-auto bg-amber-600 hover:bg-amber-700 px-5 py-2 text-sm rounded transition text-white">
                       View Details
                     </a>

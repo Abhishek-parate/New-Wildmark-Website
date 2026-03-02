@@ -13,7 +13,7 @@ include 'includes/header.php';
 
   <!-- Hero Banner -->
   <header class="relative h-[50vh] md:h-[60vh] lg:h-[70vh] flex items-end"
-    style="background: url('https://wildmarkresort.com/images/deer.webp') center/cover no-repeat">
+    style="background: url('http://localhost/wildmarkresort/images/webp/kktpb.webp') center/cover no-repeat">
     <div class="absolute inset-0 to-transparent"></div>
   </header>
 

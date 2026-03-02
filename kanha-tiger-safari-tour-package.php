@@ -139,7 +139,7 @@ include 'includes/header.php';
             <!-- Day 1 -->
             <div class="grid md:grid-cols-12 gap-6 items-center">
                 <div class="md:col-span-6 flex gap-3">
-                    <img class="w-1/2 h-32 md:h-40 object-cover rounded-lg" src="http://localhost/wildmarkresort/images/webp/ktpe.webp" alt="Day 1" />
+                    <img class="w-1/2 h-32 md:h-40 object-cover rounded-lg" src="http://localhost/wildmarkresort/images/webp/ktstpdd1.webp" alt="Day 1" />
                     <img class="w-1/2 h-32 md:h-40 object-cover rounded-lg" src="http://localhost/wildmarkresort/images/webp/ktstpd1.webp" alt="Day 1" />
                 </div>
                 <div class="md:col-span-6">
