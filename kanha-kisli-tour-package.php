@@ -407,12 +407,12 @@ include 'includes/header.php';
                     </div>
                     <span class="text-xs text-gray-400">(4.9/5)</span>
                   </div>
-                  <h3 class="text-xl font-serif font-bold text-amber-100 mb-2">Kanha Holiday Tour Package</h3>
+                  <h3 class="text-xl font-serif font-bold text-amber-100 mb-2">Kanha Tour Package </h3>
                   <p class="text-gray-400 text-sm mb-4 line-clamp-2 flex-1">Kanha National Park of Madhya Pradesh was established in 1955 and covers...</p>
                   <div class="flex items-center gap-4 text-xs text-gray-400 mt-auto">
                     <div class="flex items-center gap-1"><i class="fa-solid fa-clock" style="color: var(--text2);"></i><span>1N/2D</span></div>
                     <div class="flex items-center gap-1"><i class="fa-solid fa-paw" style="color: var(--text2);"></i><span>1 Safari</span></div>
-                    <a href="https://wildmarkresort.com/Kanha-Holiday-Tour-Package/" class="ml-auto bg-amber-600 hover:bg-amber-700 px-5 py-2 text-sm rounded transition text-white">View Details</a>
+                    <a href="https://wildmarkresort.com/kanha-tour-package/" class="ml-auto bg-amber-600 hover:bg-amber-700 px-5 py-2 text-sm rounded transition text-white">View Details</a>
                   </div>
                 </div>
               </div>
@@ -428,7 +428,7 @@ include 'includes/header.php';
 
     </div>
   </section>
-
+  
 <!-- Contact Section -->
 <section id="contactSection" class="py-12 md:py-16 bg-neutral-900">
     <div class="max-w-7xl mx-auto px-4 md:px-6">
