@@ -177,7 +177,7 @@ include 'includes/header.php';
         <!-- Day 1 -->
         <div class="grid md:grid-cols-12 gap-6 items-center">
           <div class="md:col-span-6 flex gap-3">
-            <img class="w-1/2 h-32 md:h-40 object-cover rounded-lg" src="https://wildmarkresort.com/images/wildmark2.jpg" alt="Day 1" />
+            <img class="w-1/2 h-32 md:h-40 object-cover rounded-lg" src="http://localhost/wildmarkresort/images/webp/kktp2.webp" alt="Day 1" />
             <img class="w-1/2 h-32 md:h-40 object-cover rounded-lg" src="https://wildmarkresort.com/images/wildmark4.JPG" alt="Day 1" />
           </div>
           <div class="md:col-span-6">
@@ -196,7 +196,7 @@ include 'includes/header.php';
         <!-- Day 2 -->
         <div class="grid md:grid-cols-12 gap-6 items-center">
           <div class="md:col-span-6 md:order-2">
-            <img class="w-full h-32 md:h-40 object-cover rounded-lg" src="https://wildmarkresort.com/images/wildmark5.jpg" alt="Day 2" />
+            <img class="w-full h-32 md:h-40 object-cover rounded-lg" src="http://localhost/wildmarkresort/images/webp/kktp1.webp" alt="Day 2" />
           </div>
           <div class="md:col-span-6 md:order-1">
             <h3 class="text-xl md:text-2xl font-serif mb-2">Day 2</h3>
@@ -216,7 +216,7 @@ include 'includes/header.php';
         <!-- Day 3 -->
         <div class="grid md:grid-cols-12 gap-6 items-center">
           <div class="md:col-span-6 flex gap-3">
-            <img class="w-1/2 h-32 md:h-40 object-cover rounded-lg" src="https://wildmarkresort.com/images/wildmark7.JPG" alt="Day 3" />
+            <img class="w-1/2 h-32 md:h-40 object-cover rounded-lg" src="http://localhost/wildmarkresort/images/webp/kktp3.webp" alt="Day 3" />
             <img class="w-1/2 h-32 md:h-40 object-cover rounded-lg" src="https://wildmarkresort.com/images/wildmark8.jpeg" alt="Day 3" />
           </div>
           <div class="md:col-span-6">
