@@ -564,7 +564,38 @@ include 'includes/header.php';
       </div>
     </div>
   </section>
+<!-- Contact Section -->
+<section id="contactSection" class="py-12 md:py-16 bg-neutral-900">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+        <div class="grid lg:grid-cols-2 gap-8 md:gap-12">
 
+            <!-- Left Side - Contact Form -->
+            <div data-aos="fade-right">
+                <div class="mb-8">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-xs font-bold  tracking-widest ">CONTACT WITH US</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6">
+                        Send us a Message
+                    </h2>
+                </div>
+
+                <?php include 'includes/contact-form.php'; ?>
+            </div>
+
+            <!-- Right Side - Contact Info -->
+            <div data-aos="fade-left">
+                
+                <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.0234567890123!2d80.5118205!3d22.315946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a2a0b67fb9e449f%3A0xb861ff4ba4e91cb5!2sWild%20Mark%20Resort%2C%20Kanha!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                        class="w-full h-full" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+            </div>
+
+        </div>
+    </div>
+</section>
   <!-- Call to Action -->
   <section class="py-16 md:py-24 bg-gradient-to-r from-amber-900 to-amber-700">
     <div class="container mx-auto max-w-4xl px-4 md:px-6 text-center">
