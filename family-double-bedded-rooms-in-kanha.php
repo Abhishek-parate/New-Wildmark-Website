@@ -295,26 +295,17 @@ include 'includes/header.php';
 
 
 <!-- Contact Section -->
-<section class="py-16 md:py-24" style="background:linear-gradient(to right,#8E1616,#5a0e0e)">
-  <div class="container mx-auto max-w-7xl px-4 md:px-6 text-center">
-    <h2 class="text-3xl md:text-5xl font-serif mb-6 text-white" data-aos="fade-up">
-      Create Unforgettable Family Memories
-    </h2>
-    <p class="text-lg md:text-xl mb-8" style="color:#E8C999" data-aos="fade-up" data-aos-delay="200">
-      Book your Family Double Bedded Room now and experience the perfect blend of comfort and adventure
-    </p>
-    </div>
-    <div class="max-w-7xl mx-auto px-4 md:px-6 pt-4">
+<section id="contactSection" class="py-12 md:py-16 bg-neutral-900">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
         <div class="grid lg:grid-cols-2 gap-8 md:gap-12">
 
             <!-- Left Side - Contact Form -->
             <div data-aos="fade-right">
                 <div class="mb-8">
                     <div class="flex items-center gap-3 mb-4">
-                        <i class="fa-solid fa-paw text-amber-500 text-2xl"></i>
-                        <span class="text-amber-500 text-xs tracking-widest font-light">CONTACT WITH US</span>
+                        <span class="text-xs font-bold  tracking-widest ">CONTACT WITH US</span>
                     </div>
-                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-6">
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6">
                         Send us a Message
                     </h2>
                 </div>
@@ -323,20 +314,18 @@ include 'includes/header.php';
             </div>
 
             <!-- Right Side - Contact Info -->
-            <div data-aos="fade-left" class="flex">
-                <div class="map-container rounded-xl overflow-hidden w-full h-full min-h-[460px] lg:min-h-[440px]">
-                    <iframe
+            <div data-aos="fade-left">
+                
+                <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.0234567890123!2d80.5118205!3d22.315946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a2a0b67fb9e449f%3A0xb861ff4ba4e91cb5!2sWild%20Mark%20Resort%2C%20Kanha!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
                         class="w-full h-full" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
-                </div>
             </div>
 
         </div>
     </div>
 </section>
-
 <!-- ═══════════════════════════════════════════
      AWARDS — bg: #F8EEDF
 ═══════════════════════════════════════════ -->

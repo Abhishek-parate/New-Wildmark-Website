@@ -153,31 +153,64 @@ include 'includes/header.php';
                     </div>
                 </div>
             </div>
+<div class="relative h-screen w-full overflow-hidden" data-aos="fade-up">
 
-            <button
-                class="absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition shadow-lg z-10"
-                style="background-color: rgba(248,238,223,0.9); color: var(--text2);" onclick="prevSlide()"
-                aria-label="Previous slide">
-                <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                </svg>
-            </button>
+    <!-- Slides Wrapper -->
+    <div class="carousel-container h-full w-full overflow-hidden">
+        <div class="carousel-slides flex h-full transition-transform duration-500 ease-in-out" id="carousel">
 
-            <button
-                class="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition shadow-lg z-10"
-                style="background-color: rgba(248,238,223,0.9); color: var(--text2);" onclick="nextSlide()"
-                aria-label="Next slide">
-                <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                </svg>
-            </button>
-
-            <div class="flex justify-center mt-6 md:mt-8 gap-2">
-                <button class="carousel-dot active" onclick="goToSlide(0)" aria-label="Go to slide 1"></button>
-                <button class="carousel-dot" onclick="goToSlide(1)" aria-label="Go to slide 2"></button>
-                <button class="carousel-dot" onclick="goToSlide(2)" aria-label="Go to slide 3"></button>
+            <div class="w-full h-full flex-shrink-0">
+                <img src="http://localhost/wildmarkresort/images/webp/safari.webp"
+                     alt="Tiger Safari"
+                     class="w-full h-full object-cover" />
             </div>
+
+            <div class="w-full h-full flex-shrink-0">
+                <img src="http://localhost/wildmarkresort/images/webp/hometiger.webp"
+                     alt="Wildlife Experience"
+                     class="w-full h-full object-cover" />
+            </div>
+
+            <div class="w-full h-full flex-shrink-0">
+                <img src="http://localhost/wildmarkresort/images/webp/main-outdoor.webp"
+                     alt="Safari Jeep"
+                     class="w-full h-full object-cover" />
+            </div>
+
         </div>
+    </div>
+
+    <!-- Previous Button -->
+    <button
+        class="absolute left-4 top-1/2 -translate-y-1/2
+               w-10 h-10 md:w-12 md:h-12
+               rounded-full flex items-center justify-center
+               bg-white/80 text-black shadow-lg z-10"
+        onclick="prevSlide()"
+        aria-label="Previous slide">
+
+        <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+    </button>
+
+    <!-- Next Button -->
+    <button
+        class="absolute right-4 top-1/2 -translate-y-1/2
+               w-10 h-10 md:w-12 md:h-12
+               rounded-full flex items-center justify-center
+               bg-white/80 text-black shadow-lg z-10"
+        onclick="nextSlide()"
+        aria-label="Next slide">
+
+        <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+    </button>
+
+</div>
     </div>
 </section>
 
@@ -682,104 +715,38 @@ include 'includes/header.php';
     </div>
 </section>
 
-<!-- Location & Contact Section -->
-<section class="location-contact-section px-0 md:px-12 lg:px-12 overflow-hidden" style="background-color: var(--bg1);">
-    <div class="grid lg:grid-cols-2">
-        <div class="relative h-[400px] md:h-[600px] lg:h-auto order-2 lg:order-1" data-aos="fade-right"
-            >
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.997060104769!2d80.50924557424511!3d22.31595094232998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a2a0b67fb9e449f%3A0xb861ff4ba4e91cb5!2sWild%20Mark%20Resort%2C%20Kanha!5e0!3m2!1sen!2sin!4v1764241282013!5m2!1sen!2sin"
-                width="100%" height="100%" style="border: 0" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade" class="w-full h-full"></iframe>
-        </div>
-        <div class="flex items-center px-4 md:px-4 lg:px-12 py-12 md:py-12 order-1 lg:order-2"
-            style="background-color: #c9a96e;" data-aos="fade-left" >
-            <div class="max-w-xl w-full">
-                <p class="text-xs tracking-widest mb-3 md:mb-4 font-light" style="color: var(--text2);">RESERVATIONS &
-                    INQUIRIES</p>
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif mb-6 md:mb-8 leading-tight">Contact Us</h2>
+<!-- Contact Section -->
+<section id="contactSection" class="py-12 md:py-16 bg-neutral-900">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+        <div class="grid lg:grid-cols-2 gap-8 md:gap-12">
 
-                <div class="mb-6 md:mb-8" data-aos="fade-up" data-aos-delay="200">
-                    <div class="flex items-start gap-3 md:gap-4">
-                        <div class="flex-shrink-0 mt-1">
-                            <div class="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center"
-                                style="background-color: rgba(142,22,22,0.15);">
-                                <svg class="w-5 h-5 md:w-6 md:h-6" style="color: var(--text2);" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                </svg>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-base md:text-lg mb-2">Phone / WhatsApp</h3>
-                            <p class="text-lg md:text-xl font-bold mb-1" style="color: var(--text2);">+91 8830996719</p>
-                            <a href="tel:+918830996719" class="inline-block text-xs md:text-sm transition"
-                                style="color: var(--text2);">Click to Call →</a>
-                        </div>
+            <!-- Left Side - Contact Form -->
+            <div data-aos="fade-right">
+                <div class="mb-8">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-xs font-bold  tracking-widest ">CONTACT WITH US</span>
                     </div>
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6">
+                        Send us a Message
+                    </h2>
                 </div>
 
-                <div class="mb-6 md:mb-8" data-aos="fade-up" >
-                    <div class="flex items-start gap-3 md:gap-4">
-                        <div class="flex-shrink-0 mt-1">
-                            <div class="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center"
-                                style="background-color: rgba(142,22,22,0.15);">
-                                <svg class="w-5 h-5 md:w-6 md:h-6" style="color: var(--text2);" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                </svg>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-base md:text-lg mb-2">Email Address</h3>
-                            <p class="text-sm md:text-base font-semibold mb-1" style="color: var(--text2);">
-                                wildmarkresort@gmail.com</p>
-                            <a href="mailto:wildmarkresort@gmail.com"
-                                class="inline-block text-xs md:text-sm transition mt-2"
-                                style="color: var(--text2);">Send Email →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mb-6 md:mb-8" data-aos="fade-up" >
-                    <div class="flex items-start gap-3 md:gap-4">
-                        <div class="flex-shrink-0 mt-1">
-                            <div class="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center"
-                                style="background-color: rgba(142,22,22,0.15);">
-                                <svg class="w-5 h-5 md:w-6 md:h-6" style="color: var(--text2);" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                                </svg>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-base md:text-lg mb-2">Resort Address</h3>
-                            <p class="text-sm md:text-base leading-relaxed" style="color: var(--text2);">Kanha Tiger
-                                Reserve, Near Maratha Restaurant, Mocha, Madhya Pradesh 481768</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pt-2 md:pt-4" data-aos="fade-up" data-aos-delay="700">
-                    <a href="https://wildmarkresort.com/contact/"
-                        class="inline-flex items-center gap-2 text-white px-6 md:px-8 py-2.5 md:py-3 rounded-lg transition group shadow-lg text-sm md:text-base"
-                        style="background: linear-gradient(to right, var(--text2), #b01e1e);">
-                        <svg class="w-4 h-4 md:w-5 md:h-5 group-hover:scale-110 transition" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                        </svg>
-                        <span class="font-bold tracking-wider">BOOK NOW</span>
-                    </a>
-                </div>
+                <?php include 'includes/contact-form.php'; ?>
             </div>
+
+            <!-- Right Side - Contact Info -->
+            <div data-aos="fade-left">
+                
+                <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3686.0234567890123!2d80.5118205!3d22.315946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a2a0b67fb9e449f%3A0xb861ff4ba4e91cb5!2sWild%20Mark%20Resort%2C%20Kanha!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                        class="w-full h-full" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+            </div>
+
         </div>
     </div>
 </section>
-
 <!-- Awards Section -->
 <section class="py-12 md:py-20 px-4 md:px-6 awards-section overflow-hidden" style="background-color: var(--bg1);">
     <div class="container mx-auto max-w-7xl">
