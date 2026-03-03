@@ -8,8 +8,8 @@
 
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/wildmarkresort/includes/style.css" />
-    <link rel="stylesheet" href="/wildmarkresort/includes/style.css" />
+    <link rel="stylesheet" href="https://wildmarkresort.com/includes/style.css" />
+    <link rel="stylesheet" href="https://wildmarkresort.com/includes/style.css" />
 
     <!-- AOS -->
     <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
@@ -470,7 +470,7 @@ function navActive($slug, $pageSlug) {
                             </svg>Complimentary Safari Permit Assistance
                         </li>
                     </ul>
-                    <a href="/wildmarkresort/contact/"
+                    <a href="https://wildmarkresort.com/contact/"
                         class="block text-white font-bold py-2 px-4 rounded-lg text-center text-sm"
                         style="background-color: var(--txt2);">BOOK NOW</a>
                 </div>
@@ -491,7 +491,7 @@ function navActive($slug, $pageSlug) {
                     </div>
                     <p class="text-sm mb-4" style="color: var(--txt1);">Book 30 days in advance and save 20% on all
                         resort packages. Valid for bookings made before March 31, 2026.</p>
-                    <a href="/wildmarkresort/contact/"
+                    <a href="https://wildmarkresort.com/contact/"
                         class="block text-white font-bold py-2 px-4 rounded-lg text-center text-sm"
                         style="background-color: var(--txt2);">BOOK NOW</a>
                 </div>
@@ -513,7 +513,7 @@ function navActive($slug, $pageSlug) {
                     </div>
                     <p class="text-sm mb-4" style="color: var(--txt1);">Special rates for groups of 6+ people. Perfect
                         for families, corporate outings, and wildlife photography tours.</p>
-                    <a href="/wildmarkresort/contact/"
+                    <a href="https://wildmarkresort.com/contact/"
                         class="block text-white font-bold py-2 px-4 rounded-lg text-center text-sm"
                         style="background-color: var(--txt2);">BOOK NOW</a>
                 </div>
@@ -566,20 +566,20 @@ function navActive($slug, $pageSlug) {
                     </svg>
                 </button>
                 <div class="absolute left-1/2 transform -translate-x-1/2">
-                    <a href="/wildmarkresort/">
-                        <img src="/wildmarkresort/images/WILD.png" alt="Wildmark Resort Kanha Logo"
+                    <a href="https://wildmarkresort.com/">
+                        <img src="https://wildmarkresort.com/images/WILD.png" alt="Wildmark Resort Kanha Logo"
                             class="h-12 w-auto object-contain" />
                     </a>
                 </div>
-                <a href="/wildmarkresort/contact/" class="btn-book text-xs px-3 py-2">BOOK NOW</a>
+                <a href="https://wildmarkresort.com/contact/" class="btn-book text-xs px-3 py-2">BOOK NOW</a>
             </div>
 
             <!-- DESKTOP LAYOUT -->
             <div class="hidden md:flex items-center gap-6 py-2">
 
                 <div class="flex-shrink-0" style="width:180px">
-                    <a href="/wildmarkresort/">
-                        <img src="/wildmarkresort/images/WILD.png" alt="Wildmark Resort Kanha Logo"
+                    <a href="https://wildmarkresort.com/">
+                        <img src="https://wildmarkresort.com/images/WILD.png" alt="Wildmark Resort Kanha Logo"
                             class="h-12 md:h-14 lg:h-16 w-auto object-contain" />
                     </a>
                 </div>
@@ -587,12 +587,12 @@ function navActive($slug, $pageSlug) {
                 <div class="flex-1 flex justify-center">
                     <div class="flex space-x-4 lg:space-x-8 items-center">
 
-                        <a href="/wildmarkresort/" class="nav-link <?php echo navActive('home', $pageSlug); ?>">Home</a>
+                        <a href="https://wildmarkresort.com/" class="nav-link <?php echo navActive('home', $pageSlug); ?>">Home</a>
 
-                        <a href="/wildmarkresort/about/"
+                        <a href="https://wildmarkresort.com/about/"
                             class="nav-link <?php echo navActive('about', $pageSlug); ?>">About</a>
 
-                        <a href="/wildmarkresort/how-to-reach-kanha-national-park/"
+                        <a href="https://wildmarkresort.com/how-to-reach-kanha-national-park/"
                             class="nav-link <?php echo navActive('how-to-reach-kanha-national-park', $pageSlug); ?>">How
                             to Reach</a>
 
@@ -607,19 +607,19 @@ function navActive($slug, $pageSlug) {
                             </button>
                             <div class="mega-menu">
                                 <div class="mega-menu-inner">
-                                    <a href="/wildmarkresort/kanha-tour-package/"
+                                    <a href="https://wildmarkresort.com/kanha-tour-package/"
                                         class="<?php echo navActive('kanha-tour-package', $pageSlug); ?>">Kanha Tour
                                         Package</a>
-                                    <a href="/wildmarkresort/kanha-tiger-safari-tour-package/"
+                                    <a href="https://wildmarkresort.com/kanha-tiger-safari-tour-package/"
                                         class="<?php echo navActive('kanha-tiger-safari-tour-package', $pageSlug); ?>">Kanha
                                         Tiger Safari Tour Package</a>
-                                    <a href="/wildmarkresort/kanha-safari-tour-package/"
+                                    <a href="https://wildmarkresort.com/kanha-safari-tour-package/"
                                         class="<?php echo navActive('kanha-safari-tour-package', $pageSlug); ?>">Kanha
                                         Safari Tour Package</a>
-                                    <a href="/wildmarkresort/mukki-zone-tour-package/"
+                                    <a href="https://wildmarkresort.com/mukki-zone-tour-package/"
                                         class="<?php echo navActive('mukki-zone-tour-package', $pageSlug); ?>">Mukki
                                         Zone Tour Package</a>
-                                    <a href="/wildmarkresort/kanha-kisli-tour-package/"
+                                    <a href="https://wildmarkresort.com/kanha-kisli-tour-package/"
                                         class="<?php echo navActive('kanha-kisli-tour-package', $pageSlug); ?>">Kanha
                                         Kisli Tour Package</a>
                                 </div>
@@ -629,7 +629,7 @@ function navActive($slug, $pageSlug) {
                         <!-- Rooms Dropdown -->
                         <div class="dropdown">
                             <div class="flex items-center gap-1">
-                                <a href="/wildmarkresort/kanha-accommodation/"
+                                <a href="https://wildmarkresort.com/kanha-accommodation/"
                                     class="nav-link <?php echo navActive('rooms', $pageSlug); ?>">
                                     Accommodation
                                 </a>
@@ -643,26 +643,26 @@ function navActive($slug, $pageSlug) {
                             </div>
                             <div class="mega-menu">
                                 <div class="mega-menu-inner">
-                                    <a href="/wildmarkresort/kanha-super-deluxe-rooms-in-kanha/"
+                                    <a href="https://wildmarkresort.com/kanha-super-deluxe-rooms-in-kanha/"
                                         class="<?php echo navActive('kanha-super-deluxe-rooms-in-kanha', $pageSlug); ?>">Super
                                         Deluxe Rooms</a>
-                                    <a href="/wildmarkresort/family-double-bedded-rooms-in-kanha/"
+                                    <a href="https://wildmarkresort.com/family-double-bedded-rooms-in-kanha/"
                                         class="<?php echo navActive('family-double-bedded-rooms-in-kanha', $pageSlug); ?>">Family
                                         Double Bedded Rooms</a>
                                 </div>
                             </div>
                         </div>
 
-                        <a href="/wildmarkresort/know-about-kanha-national-park-in-detail/"
+                        <a href="https://wildmarkresort.com/know-about-kanha-national-park-in-detail/"
                             class="nav-link <?php echo navActive('know-about-kanha-national-park-in-detail', $pageSlug); ?>">Kanha</a>
-                        <a href="/wildmarkresort/gallery/"
+                        <a href="https://wildmarkresort.com/gallery/"
                             class="nav-link <?php echo navActive('gallery', $pageSlug); ?>">Gallery</a>
 
                     </div>
                 </div>
 
                 <div class="flex-shrink-0" style="width:150px">
-                    <a href="/wildmarkresort/contact/" class="btn-book block w-full text-center text-xs lg:text-sm">BOOK
+                    <a href="https://wildmarkresort.com/contact/" class="btn-book block w-full text-center text-xs lg:text-sm">BOOK
                         NOW</a>
                 </div>
             </div>
@@ -671,9 +671,9 @@ function navActive($slug, $pageSlug) {
         <!-- MOBILE MENU -->
         <div id="mobileMenu" class="mobile-menu md:hidden">
             <div class="py-2">
-                <a href="/wildmarkresort/" class="mobile-nav-link">Home</a>
-                <a href="/wildmarkresort/about/" class="mobile-nav-link">About</a>
-                <a href="/wildmarkresort/how-to-reach-kanha-national-park/" class="mobile-nav-link">How to Reach</a>
+                <a href="https://wildmarkresort.com/" class="mobile-nav-link">Home</a>
+                <a href="https://wildmarkresort.com/about/" class="mobile-nav-link">About</a>
+                <a href="https://wildmarkresort.com/how-to-reach-kanha-national-park/" class="mobile-nav-link">How to Reach</a>
 
                 <div>
                     <button id="mobilePackagesBtn" class="mobile-pkg-btn"
@@ -685,11 +685,11 @@ function navActive($slug, $pageSlug) {
                         </svg>
                     </button>
                     <div id="mobilePackagesDropdown" class="mobile-packages-dropdown">
-                        <a href="/wildmarkresort/kanha-tour-package/">Kanha Tour Package</a>
-                        <a href="/wildmarkresort/kanha-tiger-safari-tour-package/">Kanha Tiger Safari Tour Package</a>
-                        <a href="/wildmarkresort/kanha-safari-tour-package/">Kanha Safari Tour Package</a>
-                        <a href="/wildmarkresort/mukki-zone-tour-package/">Mukki Zone Tour Package</a>
-                        <a href="/wildmarkresort/kanha-kisli-tour-package/">Kanha Kisli Tour Package</a>
+                        <a href="https://wildmarkresort.com/kanha-tour-package/">Kanha Tour Package</a>
+                        <a href="https://wildmarkresort.com/kanha-tiger-safari-tour-package/">Kanha Tiger Safari Tour Package</a>
+                        <a href="https://wildmarkresort.com/kanha-safari-tour-package/">Kanha Safari Tour Package</a>
+                        <a href="https://wildmarkresort.com/mukki-zone-tour-package/">Mukki Zone Tour Package</a>
+                        <a href="https://wildmarkresort.com/kanha-kisli-tour-package/">Kanha Kisli Tour Package</a>
                     </div>
                 </div>
 
@@ -697,7 +697,7 @@ function navActive($slug, $pageSlug) {
                     <div class="flex items-center justify-between border-b border-[rgba(232,201,153,0.3)]">
 
                         <!-- Clickable Rooms Page -->
-                        <a href="/wildmarkresort/kanha-accommodation/" class="mobile-nav-link border-none flex-1">
+                        <a href="https://wildmarkresort.com/kanha-accommodation/" class="mobile-nav-link border-none flex-1">
                             Accommodation
                         </a>
 
@@ -714,13 +714,13 @@ function navActive($slug, $pageSlug) {
                     </div>
 
                     <div id="mobileRoomsDropdown" class="mobile-packages-dropdown">
-                        <a href="/wildmarkresort/kanha-super-deluxe-rooms-in-kanha/">Super Deluxe Rooms</a>
-                        <a href="/wildmarkresort/family-double-bedded-rooms-in-kanha/">Family Double Bedded Rooms</a>
+                        <a href="https://wildmarkresort.com/kanha-super-deluxe-rooms-in-kanha/">Super Deluxe Rooms</a>
+                        <a href="https://wildmarkresort.com/family-double-bedded-rooms-in-kanha/">Family Double Bedded Rooms</a>
                     </div>
                 </div>
 
-                <a href="/wildmarkresort/know-about-kanha-national-park-in-detail/" class="mobile-nav-link">Kanha</a>
-                <a href="/wildmarkresort/gallery/" class="mobile-nav-link">Gallery</a>
+                <a href="https://wildmarkresort.com/know-about-kanha-national-park-in-detail/" class="mobile-nav-link">Kanha</a>
+                <a href="https://wildmarkresort.com/gallery/" class="mobile-nav-link">Gallery</a>
             </div>
         </div>
 

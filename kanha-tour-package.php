@@ -12,7 +12,7 @@ include 'includes/header.php';
 
 <!-- Hero Banner -->
 <header class="relative h-[50vh] md:h-[60vh] lg:h-[80vh] flex items-end"
-  style="background: url('http://localhost/wildmarkresort/images/webp/ktpb.webp') center/cover no-repeat">
+  style="background: url('https://wildmarkresort.com/images/webp/ktpb.webp') center/cover no-repeat">
   <div class="absolute inset-0 to-transparent"></div>
 </header>
 
@@ -83,7 +83,7 @@ include 'includes/header.php';
     <div class="grid md:grid-cols-2 gap-8 md:gap-12">
       <!-- Machaan -->
       <div class="panel" data-tab="machaan">
-        <img src="http://localhost/wildmarkresort/images/webp/ktpi.webp" class="rounded-xl w-full h-64 object-cover" alt="Machaan" />
+        <img src="https://wildmarkresort.com/images/webp/ktpi.webp" class="rounded-xl w-full h-64 object-cover" alt="Machaan" />
       </div>
       <div class="panel" data-tab="machaan">
         <ul class="grid grid-cols-1 sm:grid-cols-1 gap-2 text-gray-300 text-sm mt-8">
@@ -97,7 +97,7 @@ include 'includes/header.php';
 
       <!-- Super Deluxe -->
       <div class="panel hidden" data-tab="superdeluxe">
-        <img src="http://localhost/wildmarkresort/images/webp/ktpe.webp" class="rounded-xl w-full h-64 object-cover" alt="Super Deluxe" />
+        <img src="https://wildmarkresort.com/images/webp/ktpe.webp" class="rounded-xl w-full h-64 object-cover" alt="Super Deluxe" />
       </div>
       <div class="panel hidden" data-tab="superdeluxe">
         <ul class="grid grid-cols-1 sm:grid-cols-1 gap-2 text-gray-300 text-sm mt-12">
@@ -109,7 +109,7 @@ include 'includes/header.php';
 
       <!-- Family -->
       <div class="panel hidden" data-tab="family">
-        <img src="http://localhost/wildmarkresort/images/webp/ktpz.webp" class="rounded-xl w-full h-64 object-cover" alt="Family" />
+        <img src="https://wildmarkresort.com/images/webp/ktpz.webp" class="rounded-xl w-full h-64 object-cover" alt="Family" />
       </div>
       <div class="panel hidden" data-tab="family">
         <ul class="grid grid-cols-1 sm:grid-cols-1 gap-2 text-gray-300 text-sm mt-2 text-justify">
@@ -130,8 +130,8 @@ include 'includes/header.php';
       <!-- Day 1 -->
       <div class="grid md:grid-cols-12 gap-6 items-center">
         <div class="md:col-span-6 flex gap-3">
-          <img class="w-1/2 h-32 md:h-40 object-cover rounded-lg" src="http://localhost/wildmarkresort/images/webp/ktpdd1.webp" alt="Day 1" />
-          <img class="w-1/2 h-32 md:h-40 object-cover rounded-lg" src="http://localhost/wildmarkresort/images/webp/ktpd1.webp" alt="Day 1" />
+          <img class="w-1/2 h-32 md:h-40 object-cover rounded-lg" src="https://wildmarkresort.com/images/webp/ktpdd1.webp" alt="Day 1" />
+          <img class="w-1/2 h-32 md:h-40 object-cover rounded-lg" src="https://wildmarkresort.com/images/webp/ktpd1.webp" alt="Day 1" />
         </div>
         <div class="md:col-span-6">
           <h3 class="text-xl md:text-2xl font-serif mb-2">Day 1</h3>
@@ -145,7 +145,7 @@ include 'includes/header.php';
       <!-- Day 2 -->
       <div class="grid md:grid-cols-12 gap-6 items-center">
         <div class="md:col-span-6 md:order-2">
-          <img class="w-full h-32 md:h-40 object-cover rounded-lg" src="http://localhost/wildmarkresort/images/webp/ktpd2.webp" alt="Day 2" />
+          <img class="w-full h-32 md:h-40 object-cover rounded-lg" src="https://wildmarkresort.com/images/webp/ktpd2.webp" alt="Day 2" />
         </div>
         <div class="md:col-span-6 md:order-1">
           <h3 class="text-xl md:text-2xl font-serif mb-2">Day 2</h3>
@@ -170,7 +170,7 @@ include 'includes/header.php';
     <div>
       <div class="experience-panel-a" data-tab-a="curated">
         <div class="grid md:grid-cols-2 gap-8 items-center">
-          <img src="http://localhost/wildmarkresort/images/webp/ktptc.webp" class="rounded-xl w-full h-64 object-cover" alt="Payment" />
+          <img src="https://wildmarkresort.com/images/webp/ktptc.webp" class="rounded-xl w-full h-64 object-cover" alt="Payment" />
           <div>
             <h3 class="text-2xl font-serif font-bold text-amber-100 mb-4">Terms & Conditions</h3>
             <ul class="space-y-2 text-gray-300 text-sm">
@@ -185,7 +185,7 @@ include 'includes/header.php';
 
       <div class="experience-panel-a hidden" data-tab-a="dining">
         <div class="grid md:grid-cols-2 gap-8 items-center">
-          <img src="http://localhost/wildmarkresort/images/webp/ktprp.webp" class="rounded-xl w-full h-64 object-cover" alt="Cancellation" />
+          <img src="https://wildmarkresort.com/images/webp/ktprp.webp" class="rounded-xl w-full h-64 object-cover" alt="Cancellation" />
           <div>
             <h3 class="text-2xl font-serif font-bold text-amber-100 mb-4">Refund policies:</h3>
             <ul class="space-y-2 text-gray-300 text-sm">
@@ -215,7 +215,7 @@ include 'includes/header.php';
         <div class="swiper-slide">
           <div class="bg-neutral-900 rounded-xl overflow-hidden group hover:shadow-2xl hover:shadow-amber-500/10 transition-all duration-300 h-full">
             <div class="relative overflow-hidden h-56">
-              <img src="http://localhost/wildmarkresort/images/webp/ktpdd1.webp" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Kanha Package" />
+              <img src="https://wildmarkresort.com/images/webp/ktpdd1.webp" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Kanha Package" />
             </div>
             <div class="p-6">
               <div class="flex items-center gap-2 mb-3">
@@ -236,7 +236,7 @@ include 'includes/header.php';
         <div class="swiper-slide">
           <div class="bg-neutral-900 rounded-xl overflow-hidden group hover:shadow-2xl hover:shadow-amber-500/10 transition-all duration-300 h-full">
             <div class="relative overflow-hidden h-56">
-              <img src="http://localhost/wildmarkresort/images/webp/kktpb.webp" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Kanha Package" />
+              <img src="https://wildmarkresort.com/images/webp/kktpb.webp" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Kanha Package" />
             </div>
             <div class="p-6">
               <div class="flex items-center gap-2 mb-3">
@@ -257,7 +257,7 @@ include 'includes/header.php';
         <div class="swiper-slide">
           <div class="bg-neutral-900 rounded-xl overflow-hidden group hover:shadow-2xl hover:shadow-amber-500/10 transition-all duration-300 h-full">
             <div class="relative overflow-hidden h-56">
-              <img src="http://localhost/wildmarkresort/images/webp/mxtpb.webp" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Kanha Package" />
+              <img src="https://wildmarkresort.com/images/webp/mxtpb.webp" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Kanha Package" />
             </div>
             <div class="p-6">
               <div class="flex items-center gap-2 mb-3">
@@ -278,7 +278,7 @@ include 'includes/header.php';
         <div class="swiper-slide">
           <div class="bg-neutral-900 rounded-xl overflow-hidden group hover:shadow-2xl hover:shadow-amber-500/10 transition-all duration-300 h-full">
             <div class="relative overflow-hidden h-56">
-              <img src="http://localhost/wildmarkresort/images/webp/ktsptb1.webp" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Kanha Package" />
+              <img src="https://wildmarkresort.com/images/webp/ktsptb1.webp" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Kanha Package" />
             </div>
             <div class="p-6">
               <div class="flex items-center gap-2 mb-3">

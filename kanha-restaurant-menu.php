@@ -282,7 +282,7 @@ include 'includes/header.php';
 
 <!-- HERO -->
 <header class="relative h-[50vh] md:h-[60vh] lg:h-[100vh] flex items-end"
-        style="background: url('http://localhost/wildmarkresort/images/webp/wildmarkresort (19).webp') center/cover no-repeat">
+        style="background: url('https://wildmarkresort.com/images/webp/wildmarkresort (19).webp') center/cover no-repeat">
     <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
 </header>
 

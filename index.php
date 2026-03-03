@@ -8,7 +8,7 @@ include 'includes/header.php';
 
 
 <header class="relative h-[50vh] md:h-[60vh] lg:h-[100vh] flex items-end"
-    style="background: url('http://localhost/wildmarkresort/images/webp/bannerhome.webp') center/cover no-repeat">
+    style="background: url('https://wildmarkresort.com/images/webp/bannerhome.webp') center/cover no-repeat">
     
 </header>
 
@@ -143,7 +143,7 @@ include 'includes/header.php';
                     amenities, and a serene view for an unforgettable escape.
                 </p>
 
-                <a href="http://localhost/wildmarkresort/kanha-super-deluxe-rooms-in-kanha/"
+                <a href="https://wildmarkresort.com/kanha-super-deluxe-rooms-in-kanha/"
                     class="px-10 py-3 transition font-semibold text-base rounded-lg shadow-lg text-white inline-block"
                     style="background-color: var(--text2);">
                     KNOW MORE
@@ -422,15 +422,15 @@ include 'includes/header.php';
             <div class="carousel-container overflow-hidden rounded-lg">
                 <div class="carousel-slides flex transition-transform duration-500 ease-in-out" id="carousel">
                     <div class="carousel-slide w-full flex-shrink-0">
-                        <img src="http://localhost/wildmarkresort/images/webp/safari.webp" alt="Tiger Safari"
+                        <img src="https://wildmarkresort.com/images/webp/safari.webp" alt="Tiger Safari"
                             class="w-full h-screen object-cover" />
                     </div>
                     <div class="carousel-slide w-full flex-shrink-0">
-                        <img src="http://localhost/wildmarkresort/images/webp/hometiger.webp" alt="Wildlife Experience"
+                        <img src="https://wildmarkresort.com/images/webp/hometiger.webp" alt="Wildlife Experience"
                             class="w-full h-screen object-cover" />
                     </div>
                     <div class="carousel-slide w-full flex-shrink-0">
-                        <img src="http://localhost/wildmarkresort/images/webp/main-outdoor.webp" alt="Safari Jeep"
+                        <img src="https://wildmarkresort.com/images/webp/main-outdoor.webp" alt="Safari Jeep"
                             class="w-full h-screen object-cover" />
                     </div>
                 </div>
@@ -468,7 +468,7 @@ include 'includes/header.php';
     <div class="w-full">
         <div class="grid lg:grid-cols-2">
             <div class="relative h-[400px] md:h-[600px] roots-image" data-aos="fade-right">
-                <img src="http://localhost/wildmarkresort/images/webp/kanha-safari.webp" alt="Kanha Tiger"
+                <img src="https://wildmarkresort.com/images/webp/kanha-safari.webp" alt="Kanha Tiger"
                     class="w-full h-full object-cover" />
             </div>
             <div class="flex items-center px-6 md:px-12 lg:px-12 py-12 md:py-12 roots-content"

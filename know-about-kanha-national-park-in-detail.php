@@ -213,7 +213,7 @@ include 'includes/header.php';
     <div id="panel-zones">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
         <div class="zone-card h-[420px]" data-aos="fade-up" data-aos-delay="100">
-          <img src="http://localhost/wildmarkresort/images/webp/kanha/kanhatiger7.webp" alt="Kanha Core Zone" />
+          <img src="https://wildmarkresort.com/images/webp/kanha/kanhatiger7.webp" alt="Kanha Core Zone" />
           <div class="zone-card-overlay"></div>
           <div class="zone-card-content">
             <span class="zone-badge">Core Zone</span>
@@ -227,7 +227,7 @@ include 'includes/header.php';
           </div>
         </div>
         <div class="zone-card h-[420px]" data-aos="fade-up" data-aos-delay="200">
-          <img src="http://localhost/wildmarkresort/images/webp/kanha/kanhatiger8.webp" alt="Kisli Zone" />
+          <img src="https://wildmarkresort.com/images/webp/kanha/kanhatiger8.webp" alt="Kisli Zone" />
           <div class="zone-card-overlay"></div>
           <div class="zone-card-content">
             <span class="zone-badge">Core Zone</span>
@@ -255,7 +255,7 @@ include 'includes/header.php';
           </div>
         </div>
         <div class="zone-card h-[420px]" data-aos="fade-up" >
-          <img src="http://localhost/wildmarkresort/images/webp/kanha/kanhatiger10.webp" alt="Sarhi Zone" />
+          <img src="https://wildmarkresort.com/images/webp/kanha/kanhatiger10.webp" alt="Sarhi Zone" />
           <div class="zone-card-overlay"></div>
           <div class="zone-card-content">
             <span class="zone-badge">Core Zone</span>
@@ -309,7 +309,7 @@ include 'includes/header.php';
     <div id="panel-options" class="hidden">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
         <div class="zone-card h-[420px]" data-aos="fade-up" data-aos-delay="100">
-          <img src="http://localhost/wildmarkresort/images/webp/kanha/kanhatiger9.webp" alt="Jeep Safari" />
+          <img src="https://wildmarkresort.com/images/webp/kanha/kanhatiger9.webp" alt="Jeep Safari" />
           <div class="zone-card-overlay"></div>
           <div class="zone-card-content">
             <span class="zone-badge">Popular</span>
@@ -322,7 +322,7 @@ include 'includes/header.php';
           </div>
         </div>
         <div class="zone-card h-[420px]" data-aos="fade-up" data-aos-delay="200">
-          <img src="http://localhost/wildmarkresort/images/webp/kanha/kanhatiger11.webp" alt="Full-Day Jeep Safari" />
+          <img src="https://wildmarkresort.com/images/webp/kanha/kanhatiger11.webp" alt="Full-Day Jeep Safari" />
           <div class="zone-card-overlay"></div>
           <div class="zone-card-content">
             <span class="zone-badge" style="background:#2a6e3f;">Best Value</span>
@@ -335,7 +335,7 @@ include 'includes/header.php';
           </div>
         </div>
         <div class="zone-card h-[420px]" data-aos="fade-up" >
-          <img src="http://localhost/wildmarkresort/images/webp/kanha/kanhatiger13.webp" alt="Elephant Safari" />
+          <img src="https://wildmarkresort.com/images/webp/kanha/kanhatiger13.webp" alt="Elephant Safari" />
           <div class="zone-card-overlay"></div>
           <div class="zone-card-content">
             <span class="zone-badge" style="background:#1a4a7a;">Unique</span>
@@ -348,7 +348,7 @@ include 'includes/header.php';
           </div>
         </div>
         <div class="zone-card h-[420px]" data-aos="fade-up" >
-          <img src="http://localhost/wildmarkresort/images/webp/kanha/kanhatiger12.webp" alt="Nature Walk" />
+          <img src="https://wildmarkresort.com/images/webp/kanha/kanhatiger12.webp" alt="Nature Walk" />
           <div class="zone-card-overlay"></div>
           <div class="zone-card-content">
             <span class="zone-badge" style="background:#5b21b6;">Relaxing</span>
@@ -420,7 +420,7 @@ include 'includes/header.php';
                 <div>
                     <div class="relative">
                         <div style="position:absolute;top:16px;left:16px;right:-16px;bottom:-16px;border:1px solid rgba(142,22,22,0.25);border-radius:1rem;z-index:0;"></div>
-                        <img src="http://localhost/wildmarkresort/images/webp/kanha/card1.webp" alt="Kanha Core Zone" class="w-full h-[380px] md:h-[460px] object-cover rounded-2xl shadow-2xl" style="position:relative;z-index:1;" />
+                        <img src="https://wildmarkresort.com/images/webp/kanha/card1.webp" alt="Kanha Core Zone" class="w-full h-[380px] md:h-[460px] object-cover rounded-2xl shadow-2xl" style="position:relative;z-index:1;" />
                         <div style="position:absolute;bottom:20px;left:20px;z-index:2;background:rgba(248,238,223,0.93);backdrop-filter:blur(8px);border-left:3px solid var(--text2);padding:0.5rem 1rem;">
                             <p style="color:var(--text2);font-size:0.65rem;letter-spacing:0.15em;font-family:'Roboto Mono',monospace;margin:0;text-transform:uppercase;">Core Zone</p>
                             <p style="color:var(--text1);font-size:0.6rem;margin:0;font-family:'Roboto Mono',monospace;">Rich in Tiger & Sloth Bear Sightings</p>
@@ -507,7 +507,7 @@ include 'includes/header.php';
                 <div>
                     <div class="relative">
                         <div style="position:absolute;top:16px;right:16px;left:-16px;bottom:-16px;border:1px solid rgba(142,22,22,0.25);border-radius:1rem;z-index:0;"></div>
-                        <img src="http://localhost/wildmarkresort/images/webp/kanhatiger.webp" alt="Sarhi Zone" class="w-full h-[380px] md:h-[460px] object-cover rounded-2xl shadow-2xl" style="position:relative;z-index:1;" />
+                        <img src="https://wildmarkresort.com/images/webp/kanhatiger.webp" alt="Sarhi Zone" class="w-full h-[380px] md:h-[460px] object-cover rounded-2xl shadow-2xl" style="position:relative;z-index:1;" />
                         <div style="position:absolute;bottom:20px;right:20px;z-index:2;background:rgba(248,238,223,0.93);backdrop-filter:blur(8px);border-left:3px solid var(--text2);padding:0.5rem 1rem;">
                             <p style="color:var(--text2);font-size:0.65rem;letter-spacing:0.15em;font-family:'Roboto Mono',monospace;margin:0;text-transform:uppercase;">Core Zone</p>
                             <p style="color:var(--text1);font-size:0.6rem;margin:0;font-family:'Roboto Mono',monospace;">Quiet Wilderness Experience</p>
@@ -560,7 +560,7 @@ include 'includes/header.php';
                 <div>
                     <div class="relative">
                         <div style="position:absolute;top:16px;left:16px;right:-16px;bottom:-16px;border:1px solid rgba(142,22,22,0.25);border-radius:1rem;z-index:0;"></div>
-                        <img src="http://localhost/wildmarkresort/images/webp/kanha/kanhatiger2.webp" alt="Khatia Gate" class="w-full h-[380px] md:h-[460px] object-cover rounded-2xl shadow-2xl" style="position:relative;z-index:1;" />
+                        <img src="https://wildmarkresort.com/images/webp/kanha/kanhatiger2.webp" alt="Khatia Gate" class="w-full h-[380px] md:h-[460px] object-cover rounded-2xl shadow-2xl" style="position:relative;z-index:1;" />
                         <div style="position:absolute;bottom:20px;left:20px;z-index:2;background:rgba(248,238,223,0.93);backdrop-filter:blur(8px);border-left:3px solid var(--text2);padding:0.5rem 1rem;">
                             <p style="color:var(--text2);font-size:0.65rem;letter-spacing:0.15em;font-family:'Roboto Mono',monospace;margin:0;text-transform:uppercase;">Entry Gate</p>
                             <p style="color:var(--text1);font-size:0.6rem;margin:0;font-family:'Roboto Mono',monospace;">Most Famous & Accessible</p>
@@ -576,7 +576,7 @@ include 'includes/header.php';
                 <div>
                     <div class="relative">
                         <div style="position:absolute;top:16px;right:16px;left:-16px;bottom:-16px;border:1px solid rgba(142,22,22,0.25);border-radius:1rem;z-index:0;"></div>
-                        <img src="http://localhost/wildmarkresort/images/webp/kanha/kanhatiger3.webp" alt="Mukki Gate" class="w-full h-[380px] md:h-[460px] object-cover rounded-2xl shadow-2xl" style="position:relative;z-index:1;" />
+                        <img src="https://wildmarkresort.com/images/webp/kanha/kanhatiger3.webp" alt="Mukki Gate" class="w-full h-[380px] md:h-[460px] object-cover rounded-2xl shadow-2xl" style="position:relative;z-index:1;" />
                         <div style="position:absolute;bottom:20px;right:20px;z-index:2;background:rgba(248,238,223,0.93);backdrop-filter:blur(8px);border-left:3px solid var(--text2);padding:0.5rem 1rem;">
                             <p style="color:var(--text2);font-size:0.65rem;letter-spacing:0.15em;font-family:'Roboto Mono',monospace;margin:0;text-transform:uppercase;">Entry Gate</p>
                             <p style="color:var(--text1);font-size:0.6rem;margin:0;font-family:'Roboto Mono',monospace;">Southern Access Point</p>
@@ -623,7 +623,7 @@ include 'includes/header.php';
                 <div>
                     <div class="relative">
                         <div style="position:absolute;top:16px;left:16px;right:-16px;bottom:-16px;border:1px solid rgba(142,22,22,0.25);border-radius:1rem;z-index:0;"></div>
-                        <img src="http://localhost/wildmarkresort/images/webp/kanha/kanhatiger4.webp" alt="Sarhi Gate" class="w-full h-[380px] md:h-[460px] object-cover rounded-2xl shadow-2xl" style="position:relative;z-index:1;" />
+                        <img src="https://wildmarkresort.com/images/webp/kanha/kanhatiger4.webp" alt="Sarhi Gate" class="w-full h-[380px] md:h-[460px] object-cover rounded-2xl shadow-2xl" style="position:relative;z-index:1;" />
                         <div style="position:absolute;bottom:20px;left:20px;z-index:2;background:rgba(248,238,223,0.93);backdrop-filter:blur(8px);border-left:3px solid var(--text2);padding:0.5rem 1rem;">
                             <p style="color:var(--text2);font-size:0.65rem;letter-spacing:0.15em;font-family:'Roboto Mono',monospace;margin:0;text-transform:uppercase;">Entry Gate</p>
                             <p style="color:var(--text1);font-size:0.6rem;margin:0;font-family:'Roboto Mono',monospace;">Peaceful Wilderness Entry</p>
@@ -725,7 +725,7 @@ include 'includes/header.php';
                 </div>
             </div>
             <div class="relative h-[500px] md:h-[600px]" data-aos="fade-left" >
-                <img src="http://localhost/wildmarkresort/images/webp/kanha/kanhatiger5.webp" alt="Tiger at Kanha" class="w-full h-full object-cover rounded-2xl shadow-2xl" style="border:2px solid rgba(142,22,22,0.2);" />
+                <img src="https://wildmarkresort.com/images/webp/kanha/kanhatiger5.webp" alt="Tiger at Kanha" class="w-full h-full object-cover rounded-2xl shadow-2xl" style="border:2px solid rgba(142,22,22,0.2);" />
                 <div style="position:absolute;bottom:1.5rem;left:1.5rem;right:1.5rem;background:rgba(248,238,223,0.93);backdrop-filter:blur(10px);border:1px solid rgba(142,22,22,0.2);border-radius:.75rem;padding:1rem 1.25rem;">
                     <div class="flex items-center justify-between">
                         <div>
@@ -784,7 +784,7 @@ include 'includes/header.php';
                 <div>
                     <div class="relative">
                         <div style="position:absolute;top:16px;left:16px;right:-16px;bottom:-16px;border:1px solid rgba(142,22,22,0.25);border-radius:1rem;z-index:0;"></div>
-                        <img src="http://localhost/wildmarkresort/images/webp/kanha/kanhaflora.webp" alt="Kanha Flora" class="w-full h-[380px] md:h-[460px] object-cover rounded-2xl shadow-2xl" style="position:relative;z-index:1;" />
+                        <img src="https://wildmarkresort.com/images/webp/kanha/kanhaflora.webp" alt="Kanha Flora" class="w-full h-[380px] md:h-[460px] object-cover rounded-2xl shadow-2xl" style="position:relative;z-index:1;" />
                         <div style="position:absolute;bottom:20px;left:20px;z-index:2;background:rgba(248,238,223,0.93);backdrop-filter:blur(8px);border-left:3px solid var(--text2);padding:0.5rem 1rem;">
                             <p style="color:var(--text2);font-size:0.65rem;letter-spacing:0.15em;font-family:'Roboto Mono',monospace;margin:0;text-transform:uppercase;">Flora</p>
                             <p style="color:var(--text1);font-size:0.6rem;margin:0;font-family:'Roboto Mono',monospace;">1000+ Flowering Plant Species</p>
@@ -800,7 +800,7 @@ include 'includes/header.php';
                 <div>
                     <div class="relative">
                         <div style="position:absolute;top:16px;right:16px;left:-16px;bottom:-16px;border:1px solid rgba(142,22,22,0.25);border-radius:1rem;z-index:0;"></div>
-                        <img src="http://localhost/wildmarkresort/images/webp/kanha/kanhatiger6.webp" alt="Kanha Fauna" class="w-full h-[380px] md:h-[460px] object-cover rounded-2xl shadow-2xl" style="position:relative;z-index:1;" />
+                        <img src="https://wildmarkresort.com/images/webp/kanha/kanhatiger6.webp" alt="Kanha Fauna" class="w-full h-[380px] md:h-[460px] object-cover rounded-2xl shadow-2xl" style="position:relative;z-index:1;" />
                         <div style="position:absolute;bottom:20px;right:20px;z-index:2;background:rgba(248,238,223,0.93);backdrop-filter:blur(8px);border-left:3px solid var(--text2);padding:0.5rem 1rem;">
                             <p style="color:var(--text2);font-size:0.65rem;letter-spacing:0.15em;font-family:'Roboto Mono',monospace;margin:0;text-transform:uppercase;">Fauna</p>
                             <p style="color:var(--text1);font-size:0.6rem;margin:0;font-family:'Roboto Mono',monospace;">300+ Bird Species · ~60 Royal Bengal Tigers</p>

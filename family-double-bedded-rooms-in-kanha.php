@@ -9,7 +9,7 @@ include 'includes/header.php';
      HERO
 ═══════════════════════════════════════════ -->
 <header class="relative h-[50vh] md:h-[60vh] lg:h-[100vh] flex items-end"
-        style="background: url('http://localhost/wildmarkresort/images/fdbrb.webp') center/cover no-repeat">
+        style="background: url('https://wildmarkresort.com/images/fdbrb.webp') center/cover no-repeat">
   <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
 </header>
 
@@ -40,7 +40,7 @@ include 'includes/header.php';
       </div>
       <div class="relative" data-aos="fade-left">
         <div class="rounded-2xl overflow-hidden shadow-2xl border" style="border-color:rgba(142,22,22,0.2)">
-          <img src="http://localhost/wildmarkresort/images/family1.webp" alt="Family Double Bedded Room Interior"
+          <img src="https://wildmarkresort.com/images/family1.webp" alt="Family Double Bedded Room Interior"
                class="w-full h-[200px] md:h-[300px] object-cover hover:scale-105 transition-transform duration-500">
         </div>
       </div>
@@ -50,7 +50,7 @@ include 'includes/header.php';
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
       <div class="relative order-2 lg:order-1" data-aos="fade-right">
         <div class="rounded-2xl overflow-hidden shadow-2xl border" style="border-color:rgba(142,22,22,0.2)">
-          <img src="http://localhost/wildmarkresort/images/double-beded.webp" alt="Family Room Outdoor Sitout"
+          <img src="https://wildmarkresort.com/images/double-beded.webp" alt="Family Room Outdoor Sitout"
                class="w-full h-[450px] md:h-[560px] object-cover hover:scale-105 transition-transform duration-500">
         </div>
       </div>
@@ -281,13 +281,13 @@ include 'includes/header.php';
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
-        <img src="http://localhost/wildmarkresort/images/webp/rooms/family2.webp" alt="Family Room View"    class="w-full h-80 object-cover"/>
+        <img src="https://wildmarkresort.com/images/webp/rooms/family2.webp" alt="Family Room View"    class="w-full h-80 object-cover"/>
       </div>
       <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
-        <img src="http://localhost/wildmarkresort/images/family1.webp" alt="Resort Exterior"     class="w-full h-80 object-cover"/>
+        <img src="https://wildmarkresort.com/images/family1.webp" alt="Resort Exterior"     class="w-full h-80 object-cover"/>
       </div>
       <div class="gallery-item" data-aos="fade-up" >
-        <img src="http://localhost/wildmarkresort/images/webp/rooms/family4.webp"  alt="Resort Gardens"      class="w-full h-80 object-cover"/>
+        <img src="https://wildmarkresort.com/images/webp/rooms/family4.webp"  alt="Resort Gardens"      class="w-full h-80 object-cover"/>
       </div>
     </div>
   </div>
@@ -348,23 +348,23 @@ include 'includes/header.php';
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
       <div class="group" data-aos="fade-up"  data-aos-delay="100">
         <div class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:-translate-y-3 group-hover:shadow-[0_12px_30px_rgba(142,22,22,0.2)] flex items-center justify-center min-h-[320px] md:min-h-[380px]">
-          <img src="http://localhost/wildmarkresort/images/webp/rooms/testimonials1.webp" alt="TripAdvisor Award 2020" class="w-full h-auto max-w-[280px] object-contain transition-transform duration-300 group-hover:scale-105">
+          <img src="https://wildmarkresort.com/images/webp/rooms/testimonials1.webp" alt="TripAdvisor Award 2020" class="w-full h-auto max-w-[280px] object-contain transition-transform duration-300 group-hover:scale-105">
         </div>
       </div>
       <div class="group" data-aos="fade-up"  data-aos-delay="200">
         <div class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:-translate-y-3 group-hover:shadow-[0_12px_30px_rgba(142,22,22,0.2)] flex items-center justify-center min-h-[320px] md:min-h-[380px]">
-          <img src="http://localhost/wildmarkresort/images/webp/rooms/testimonials2.webp" alt="TripAdvisor Award 2021" class="w-full h-auto max-w-[280px] object-contain transition-transform duration-300 group-hover:scale-105">
+          <img src="https://wildmarkresort.com/images/webp/rooms/testimonials2.webp" alt="TripAdvisor Award 2021" class="w-full h-auto max-w-[280px] object-contain transition-transform duration-300 group-hover:scale-105">
         </div>
       </div>
       <div class="group" data-aos="fade-up"  >
         <div class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl transition-all duration-300 group-hover:-translate-y-3 group-hover:shadow-[0_12px_30px_rgba(142,22,22,0.2)] flex items-center justify-center min-h-[320px] md:min-h-[380px]">
-          <img src="http://localhost/wildmarkresort/images/webp/rooms/testimonials3.webp" alt="TripAdvisor Award 2022" class="w-full h-auto max-w-[280px] object-contain transition-transform duration-300 group-hover:scale-105">
+          <img src="https://wildmarkresort.com/images/webp/rooms/testimonials3.webp" alt="TripAdvisor Award 2022" class="w-full h-auto max-w-[280px] object-contain transition-transform duration-300 group-hover:scale-105">
         </div>
       </div>
       <div class="group" data-aos="fade-up"  
            style="background-color:#39DCA1;border-radius:9px">
         <div class="rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 group-hover:-translate-y-3 flex items-center justify-center min-h-[320px] md:min-h-[380px]">
-          <img src="http://localhost/wildmarkresort/images/webp/rooms/testimonials4.webp" alt="TripAdvisor Award 2025" class="w-full h-full object-cover rounded-2xl">
+          <img src="https://wildmarkresort.com/images/webp/rooms/testimonials4.webp" alt="TripAdvisor Award 2025" class="w-full h-full object-cover rounded-2xl">
         </div>
       </div>
     </div>

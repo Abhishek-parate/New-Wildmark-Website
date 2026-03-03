@@ -9,7 +9,7 @@ include 'includes/header.php';
 
 <!-- HERO -->
 <header class="relative h-[50vh] md:h-[60vh] lg:h-[100vh] flex items-end"
-    style="background: url('http://localhost/wildmarkresort/images/webp/wildmarkresort (44).webp') center/cover no-repeat; max-width: 100%; overflow: hidden;">
+    style="background: url('https://wildmarkresort.com/images/webp/wildmarkresort (44).webp') center/cover no-repeat; max-width: 100%; overflow: hidden;">
     
 </header>
 
@@ -164,7 +164,7 @@ include 'includes/header.php';
         <div class="library-grid">
 
             <div class="library-img-wrap" data-aos="fade-right" >
-                <img src="http://localhost/wildmarkresort/images/webp/main-outdoor.webp" alt="Mini Library" class="w-full h-full object-cover">
+                <img src="https://wildmarkresort.com/images/webp/main-outdoor.webp" alt="Mini Library" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
             </div>
 

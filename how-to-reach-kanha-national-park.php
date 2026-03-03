@@ -10,7 +10,7 @@ include 'includes/header.php';
 
 <!-- Hero Banner -->
 <header class="relative h-[50vh] md:h-[60vh] lg:h-[100vh] flex items-end"
-    style="background: url('http://localhost/wildmarkresort/images/webp/acc/kanhpage.webp') center/cover no-repeat">
+    style="background: url('https://wildmarkresort.com/images/webp/acc/kanhpage.webp') center/cover no-repeat">
     
 </header>
 
@@ -69,7 +69,7 @@ include 'includes/header.php';
             </div>
 
             <div data-aos="fade-left" class="flex items-center justify-center">
-                <img src="http://localhost/wildmarkresort/images/webp/hometiger.webp" class="w-full h-auto rounded-xl shadow-2xl"
+                <img src="https://wildmarkresort.com/images/webp/hometiger.webp" class="w-full h-auto rounded-xl shadow-2xl"
                     alt="Kanha National Park Map" />
             </div>
         </div>
@@ -88,7 +88,7 @@ include 'includes/header.php';
             <!-- Tiger Image -->
             <div data-aos="fade-right" class="order-2 lg:order-1">
                 <div class="rounded-xl overflow-hidden">
-                    <img src="http://localhost/wildmarkresort/images/webp/kanha-safari.webp" class="w-full h-80 md:h-96 object-cover"
+                    <img src="https://wildmarkresort.com/images/webp/kanha-safari.webp" class="w-full h-80 md:h-96 object-cover"
                         alt="Bengal Tiger" />
                 </div>
             </div>

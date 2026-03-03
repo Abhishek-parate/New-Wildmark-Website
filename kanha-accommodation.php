@@ -12,7 +12,7 @@ include 'includes/header.php';
 
 <!-- Hero Banner -->
 <header class="relative h-[50vh] md:h-[60vh] lg:h-[100vh] flex items-end"
-    style="background: url('http://localhost/wildmarkresort/images/webp/acc/acc-banner.webp') center/cover no-repeat">
+    style="background: url('https://wildmarkresort.com/images/webp/acc/acc-banner.webp') center/cover no-repeat">
     
 </header>
 
@@ -46,16 +46,16 @@ include 'includes/header.php';
             <!-- Right Column - Images -->
             <div class="space-y-4" data-aos="fade-left">
                 <div class="rounded-xl overflow-hidden">
-                    <img src="http://localhost/wildmarkresort/images/webp/acc/acc-deluxroom.webp" class="w-full h-64 object-cover"
+                    <img src="https://wildmarkresort.com/images/webp/acc/acc-deluxroom.webp" class="w-full h-64 object-cover"
                         alt="Resort Interior" />
                 </div>
                 <div class="grid grid-cols-2 gap-4">
                     <div class="rounded-xl overflow-hidden">
-                        <img src="http://localhost/wildmarkresort/images/webp/acc/accdeluxe5.webp" class="w-full h-40 object-cover"
+                        <img src="https://wildmarkresort.com/images/webp/acc/accdeluxe5.webp" class="w-full h-40 object-cover"
                             alt="Room" />
                     </div>
                     <div class="rounded-xl overflow-hidden">
-                        <img src="http://localhost/wildmarkresort/images/webp/acc/accdeluxe7.webp" class="w-full h-40 object-cover"
+                        <img src="https://wildmarkresort.com/images/webp/acc/accdeluxe7.webp" class="w-full h-40 object-cover"
                             alt="Dining" />
                     </div>
                 </div>
@@ -70,7 +70,7 @@ include 'includes/header.php';
         <div class="grid lg:grid-cols-2 gap-8 items-center">
             <!-- Room Image -->
             <div data-aos="fade-right">
-                <img src="http://localhost/wildmarkresort/images/webp/acc/accfamily1.webp"
+                <img src="https://wildmarkresort.com/images/webp/acc/accfamily1.webp"
                     class="w-full h-80 md:h-96 object-cover rounded-xl" alt="Deluxe Room" />
             </div>
             <!-- Room Description -->
@@ -137,7 +137,7 @@ include 'includes/header.php';
                     amenities, and a serene view for an unforgettable escape.
                 </p>
 
-                <a href="http://localhost/wildmarkresort/kanha-super-deluxe-rooms-in-kanha/"
+                <a href="https://wildmarkresort.com/kanha-super-deluxe-rooms-in-kanha/"
                     class="px-10 py-3 transition font-semibold text-base rounded-lg shadow-lg text-white inline-block"
                     style="background-color: var(--text2);">
                     KNOW MORE
